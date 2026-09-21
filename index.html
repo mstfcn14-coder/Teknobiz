@@ -1,1 +1,276 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeknoBiz | Teknolojinin Değerli Hali</title>
 
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b0b;
+            color: white;
+        }
+
+        header {
+            background: #111;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #00e5ff;
+        }
+
+        .slogan {
+            color: #aaa;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .cart {
+            background: #00e5ff;
+            color: #000;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #111, #00191d);
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #aaa;
+            font-size: 18px;
+        }
+
+        .categories {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .categories button {
+            background: #151515;
+            color: white;
+            border: 1px solid #333;
+            padding: 12px 20px;
+            margin: 5px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .categories button:hover {
+            background: #00e5ff;
+            color: black;
+        }
+
+        .products {
+            padding: 20px 8% 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .product {
+            background: #151515;
+            border: 1px solid #242424;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            border-color: #00e5ff;
+        }
+
+        .product-image {
+            height: 180px;
+            background: #222;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            margin-bottom: 15px;
+            font-size: 50px;
+        }
+
+        .product h3 {
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: #00e5ff;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .product button {
+            background: #00e5ff;
+            color: #000;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .product button:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #111;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 5%;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .cart {
+                padding: 8px 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div>
+        <div class="logo">TEKNOBİZ</div>
+        <div class="slogan">Teknolojinin Değerli Hali</div>
+    </div>
+
+    <div class="cart">
+        🛒 Sepet: <span id="sepetSayisi">0</span>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Teknolojinin Değerli Hali</h1>
+    <p>Telefon aksesuarları, ses sistemleri ve teknoloji ürünleri</p>
+</section>
+
+<div class="categories">
+    <button onclick="filtrele('hepsi')">Tümü</button>
+    <button onclick="filtrele('kilif')">📱 Telefon Kılıfları</button>
+    <button onclick="filtrele('cam')">🛡️ Kırılmaz Cam</button>
+    <button onclick="filtrele('ses')">🔊 Ses Sistemleri</button>
+</div>
+
+<section class="products">
+
+    <div class="product" data-category="kilif">
+        <div class="product-image">📱</div>
+        <h3>Premium Telefon Kılıfı</h3>
+        <p>Şık ve dayanıklı telefon kılıfı.</p>
+        <div class="price">299 TL</div>
+        <button onclick="sepeteEkle()">🛒 Sepete Ekle</button>
+    </div>
+
+    <div class="product" data-category="cam">
+        <div class="product-image">🛡️</div>
+        <h3>9D Kırılmaz Cam</h3>
+        <p>Telefon ekranınızı koruyun.</p>
+        <div class="price">149 TL</div>
+        <button onclick="sepeteEkle()">🛒 Sepete Ekle</button>
+    </div>
+
+    <div class="product" data-category="ses">
+        <div class="product-image">🔊</div>
+        <h3>Bluetooth Hoparlör</h3>
+        <p>Güçlü ses ve taşınabilir tasarım.</p>
+        <div class="price">699 TL</div>
+        <button onclick="sepeteEkle()">🛒 Sepete Ekle</button>
+    </div>
+
+    <div class="product" data-category="ses">
+        <div class="product-image">🎧</div>
+        <h3>Bluetooth Kulaklık</h3>
+        <p>Kablosuz ve kaliteli ses deneyimi.</p>
+        <div class="price">499 TL</div>
+        <button onclick="sepeteEkle()">🛒 Sepete Ekle</button>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 TeknoBiz
+    <br>
+    Teknolojinin Değerli Hali
+</footer>
+
+<script>
+
+let sepet = 0;
+
+function sepeteEkle() {
+    sepet++;
+    document.getElementById("sepetSayisi").innerText = sepet;
+    alert("Ürün sepete eklendi! 🛒");
+}
+
+function filtrele(kategori) {
+
+    const urunler = document.querySelectorAll(".product");
+
+    urunler.forEach(function(urun) {
+
+        if (
+            kategori === "hepsi" ||
+            urun.dataset.category === kategori
+        ) {
+            urun.style.display = "block";
+        } else {
+            urun.style.display = "none";
+        }
+
+    });
+}
+
+</script>
+
+</body>
+</html>
