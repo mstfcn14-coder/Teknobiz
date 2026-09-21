@@ -1,926 +1,1536 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>TeknoBiz | Since 2016</title>
-
-    <meta name="description" content="TeknoBiz - 2016'dan beri temiz işçilik, kaliteli ürün ve güvenilir hizmet.">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #080808;
-            color: #fff;
-        }
-
-        /* NAVBAR */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(0, 0, 0, 0.97);
-            border-bottom: 1px solid #252525;
-        }
-
-        .navbar {
-            max-width: 1200px;
-            margin: auto;
-            min-height: 85px;
-            padding: 15px 25px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .logo {
-            font-size: 31px;
-            font-weight: 900;
-            letter-spacing: 2px;
-        }
-
-        .logo span {
-            color: #e50914;
-        }
-
-        .since-badge {
-            border-left: 2px solid #e50914;
-            padding-left: 14px;
-        }
-
-        .since-badge strong {
-            display: block;
-            color: #fff;
-            font-size: 17px;
-            letter-spacing: 2px;
-        }
-
-        .since-badge small {
-            color: #e50914;
-            font-size: 10px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        nav {
-            display: flex;
-            gap: 28px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #e50914;
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: 680px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 80px 20px;
-            position: relative;
-            overflow: hidden;
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    #350000 0%,
-                    #150000 28%,
-                    #080808 68%
-                );
-        }
-
-        .hero-content {
-            max-width: 900px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .since-hero {
-            color: #e50914;
-            font-weight: 900;
-            font-size: 15px;
-            letter-spacing: 5px;
-            margin-bottom: 22px;
-        }
-
-        .hero h1 {
-            font-size: clamp(48px, 8vw, 90px);
-            line-height: 0.95;
-            font-weight: 900;
-            margin-bottom: 25px;
-        }
-
-        .hero h1 span {
-            color: #e50914;
-        }
-
-        .hero h2 {
-            font-size: clamp(20px, 3vw, 30px);
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            max-width: 720px;
-            margin: auto;
-            color: #aaa;
-            line-height: 1.8;
-            font-size: 17px;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 35px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            transition: 0.3s;
-        }
-
-        .btn-red {
-            background: #e50914;
-            color: white;
-        }
-
-        .btn-red:hover {
-            background: #ff202b;
-            transform: translateY(-3px);
-        }
-
-        .btn-dark {
-            border: 1px solid #444;
-            color: white;
-        }
-
-        .btn-dark:hover {
-            border-color: #e50914;
-            color: #e50914;
-        }
-
-        /* GENEL */
-
-        section {
-            padding: 90px 20px;
-        }
-
-        .container {
-            max-width: 1150px;
-            margin: auto;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title small {
-            color: #e50914;
-            font-weight: bold;
-            letter-spacing: 3px;
-        }
-
-        .section-title h2 {
-            font-size: 40px;
-            margin-top: 12px;
-        }
-
-        .section-title p {
-            color: #888;
-            margin-top: 12px;
-        }
-
-        /* 10 YIL */
-
-        .years {
-            background: #101010;
-        }
-
-        .years-box {
-            background: #090909;
-            border: 1px solid #292929;
-            padding: 60px 30px;
-            text-align: center;
-        }
-
-        .years-number {
-            color: #e50914;
-            font-size: 110px;
-            line-height: 1;
-            font-weight: 900;
-        }
-
-        .years-box h3 {
-            font-size: 30px;
-            margin: 15px 0;
-        }
-
-        .years-box p {
-            max-width: 720px;
-            margin: auto;
-            color: #999;
-            line-height: 1.8;
-        }
-
-        /* DEĞERLER */
-
-        .values {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .value-card {
-            background: #101010;
-            border: 1px solid #252525;
-            padding: 35px 25px;
-            transition: 0.3s;
-        }
-
-        .value-card:hover {
-            border-color: #e50914;
-            transform: translateY(-5px);
-        }
-
-        .value-number {
-            color: #e50914;
-            font-weight: bold;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .value-card h3 {
-            font-size: 22px;
-            margin-bottom: 14px;
-        }
-
-        .value-card p {
-            color: #999;
-            line-height: 1.7;
-        }
-
-        /* ÖZLÜ SÖZLER */
-
-        .quotes {
-            background: #0d0d0d;
-        }
-
-        .quote-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .quote {
-            background: #111;
-            border-left: 4px solid #e50914;
-            padding: 40px;
-        }
-
-        .quote p {
-            font-size: 22px;
-            font-weight: bold;
-            line-height: 1.5;
-        }
-
-        .quote span {
-            display: block;
-            margin-top: 18px;
-            color: #e50914;
-            font-size: 11px;
-            letter-spacing: 2px;
-            font-weight: bold;
-        }
-
-        /* HAKKIMIZDA */
-
-        .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about small {
-            color: #e50914;
-            letter-spacing: 3px;
-            font-weight: bold;
-        }
-
-        .about h2 {
-            font-size: 43px;
-            margin: 15px 0 25px;
-        }
-
-        .about h2 span {
-            color: #e50914;
-        }
-
-        .about p {
-            color: #999;
-            line-height: 1.9;
-            margin-bottom: 15px;
-        }
-
-        .about-box {
-            background: #101010;
-            border: 1px solid #292929;
-            padding: 45px;
-        }
-
-        .about-box strong {
-            display: block;
-            color: #e50914;
-            font-size: 48px;
-            margin-bottom: 5px;
-        }
-
-        .about-box h3 {
-            margin-bottom: 12px;
-        }
-
-        .about-box p {
-            margin-bottom: 30px;
-        }
-
-        /* ÇALIŞMA SAATLERİ */
-
-        .hours {
-            background: #101010;
-        }
-
-        .hours-box {
-            max-width: 800px;
-            margin: auto;
-            background: #090909;
-            border: 1px solid #292929;
-        }
-
-        .hour-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 25px;
-            border-bottom: 1px solid #222;
-            color: #ddd;
-        }
-
-        .hour-row:last-child {
-            border-bottom: none;
-        }
-
-        .hour-row span:last-child {
-            font-weight: bold;
-        }
-
-        .closed {
-            color: #e50914 !important;
-        }
-
-        /* İLETİŞİM */
-
-        .contact {
-            background: #e50914;
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
-
-        .contact p {
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
-
-        .contact-btn {
-            display: inline-block;
-            background: #080808;
-            color: white;
-            text-decoration: none;
-            padding: 16px 32px;
-            font-weight: bold;
-            border-radius: 4px;
-        }
-
-        /* FOOTER */
-
-        footer {
-            background: #050505;
-            text-align: center;
-            padding: 50px 20px 25px;
-        }
-
-        .footer-logo {
-            font-size: 30px;
-            font-weight: 900;
-        }
-
-        .footer-logo span {
-            color: #e50914;
-        }
-
-        .footer-since {
-            color: #e50914;
-            font-weight: bold;
-            letter-spacing: 4px;
-            font-size: 12px;
-            margin-top: 10px;
-        }
-
-        footer p {
-            color: #666;
-            margin-top: 15px;
-        }
-
-        .footer-line {
-            max-width: 800px;
-            height: 1px;
-            background: #222;
-            margin: 30px auto 20px;
-        }
-
-        .copyright {
-            color: #444;
-            font-size: 12px;
-        }
-
-        /* MOBİL */
-
-        @media (max-width: 800px) {
-
-            .navbar {
-                flex-direction: column;
-                gap: 18px;
-            }
-
-            .brand {
-                flex-direction: column;
-                gap: 8px;
-            }
-
-            .since-badge {
-                border-left: none;
-                border-top: 1px solid #e50914;
-                padding-left: 0;
-                padding-top: 7px;
-                text-align: center;
-            }
-
-            nav {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .values {
-                grid-template-columns: 1fr;
-            }
-
-            .quote-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about {
-                grid-template-columns: 1fr;
-            }
-
-            .about h2 {
-                font-size: 35px;
-            }
-
-            .years-number {
-                font-size: 80px;
-            }
-
-            .quote p {
-                font-size: 19px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TeknoBiz | Since 2016</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#080808;
+    color:#fff;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(5,5,5,.97);
+    border-bottom:1px solid #292929;
+}
+
+.navbar{
+    max-width:1200px;
+    min-height:85px;
+    margin:auto;
+    padding:15px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    font-size:31px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#e50914;
+}
+
+.since{
+    border-left:2px solid #e50914;
+    padding-left:14px;
+}
+
+.since strong{
+    display:block;
+    font-size:16px;
+    letter-spacing:2px;
+}
+
+.since small{
+    color:#e50914;
+    letter-spacing:2px;
+    font-size:9px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:24px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#e50914;
+}
+
+/* SEPET BUTONU */
+
+.cart-button{
+    border:1px solid #e50914;
+    background:#e50914;
+    color:#fff;
+    padding:11px 17px;
+    border-radius:4px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.cart-button:hover{
+    background:#ff1c27;
+}
+
+.cart-count{
+    background:#fff;
+    color:#e50914;
+    border-radius:50%;
+    padding:2px 7px;
+    margin-left:5px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px;
+
+    background:
+    radial-gradient(
+        circle at center,
+        #350000 0%,
+        #150000 30%,
+        #080808 70%
+    );
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero-since{
+    color:#e50914;
+    font-size:16px;
+    font-weight:bold;
+    letter-spacing:6px;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-size:clamp(48px,8vw,90px);
+    line-height:.95;
+    font-weight:900;
+}
+
+.hero h1 span{
+    color:#e50914;
+}
+
+.hero h2{
+    margin-top:25px;
+    font-size:28px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:20px auto;
+    color:#aaa;
+    line-height:1.8;
+    font-size:17px;
+}
+
+.hero-buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 30px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:4px;
+}
+
+.btn-red{
+    background:#e50914;
+    color:#fff;
+}
+
+.btn-dark{
+    border:1px solid #444;
+    color:#fff;
+}
+
+.btn-dark:hover{
+    border-color:#e50914;
+    color:#e50914;
+}
+
+/* =========================
+   GENEL
+========================= */
+
+section{
+    padding:90px 20px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title small{
+    color:#e50914;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.section-title h2{
+    font-size:40px;
+    margin-top:12px;
+}
+
+.section-title p{
+    color:#888;
+    margin-top:10px;
+}
+
+/* =========================
+   10 YIL
+========================= */
+
+.years{
+    background:#101010;
+}
+
+.years-box{
+    background:#080808;
+    border:1px solid #292929;
+    padding:55px 30px;
+    text-align:center;
+}
+
+.years-number{
+    color:#e50914;
+    font-size:110px;
+    font-weight:900;
+    line-height:1;
+}
+
+.years-box h3{
+    font-size:30px;
+    margin:15px 0;
+}
+
+.years-box p{
+    max-width:720px;
+    margin:auto;
+    color:#999;
+    line-height:1.8;
+}
+
+/* =========================
+   ÜRÜNLER
+========================= */
+
+.products{
+    background:#080808;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.product-card{
+    background:#111;
+    border:1px solid #292929;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.product-card:hover{
+    border-color:#e50914;
+    transform:translateY(-5px);
+}
+
+.product-image{
+    height:220px;
+    background:#181818;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:70px;
+}
+
+.product-info{
+    padding:25px;
+}
+
+.product-category{
+    color:#e50914;
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.product-info h3{
+    margin:10px 0;
+    font-size:21px;
+}
+
+.product-info p{
+    color:#888;
+    font-size:14px;
+    line-height:1.6;
+    min-height:45px;
+}
+
+.product-bottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:20px;
+}
+
+.price{
+    color:#fff;
+    font-size:21px;
+    font-weight:900;
+}
+
+.add-cart{
+    border:0;
+    background:#e50914;
+    color:#fff;
+    padding:11px 15px;
+    border-radius:4px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.add-cart:hover{
+    background:#ff202b;
+}
+
+/* =========================
+   DEĞERLER
+========================= */
+
+.values{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.value-card{
+    background:#101010;
+    border:1px solid #292929;
+    padding:32px 25px;
+}
+
+.value-number{
+    color:#e50914;
+    font-weight:bold;
+    margin-bottom:17px;
+}
+
+.value-card h3{
+    margin-bottom:12px;
+    font-size:21px;
+}
+
+.value-card p{
+    color:#999;
+    line-height:1.7;
+}
+
+/* =========================
+   ÖZLÜ SÖZLER
+========================= */
+
+.quotes{
+    background:#0d0d0d;
+}
+
+.quote-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.quote{
+    background:#111;
+    border-left:4px solid #e50914;
+    padding:40px;
+}
+
+.quote p{
+    font-size:22px;
+    font-weight:bold;
+    line-height:1.5;
+}
+
+.quote span{
+    display:block;
+    margin-top:18px;
+    color:#e50914;
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+/* =========================
+   HAKKIMIZDA
+========================= */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about small{
+    color:#e50914;
+    letter-spacing:3px;
+    font-weight:bold;
+}
+
+.about h2{
+    font-size:43px;
+    margin:15px 0 25px;
+}
+
+.about h2 span{
+    color:#e50914;
+}
+
+.about p{
+    color:#999;
+    line-height:1.9;
+    margin-bottom:15px;
+}
+
+.about-box{
+    background:#101010;
+    border:1px solid #292929;
+    padding:45px;
+}
+
+.about-box strong{
+    display:block;
+    color:#e50914;
+    font-size:48px;
+}
+
+.about-box h3{
+    margin:5px 0 10px;
+}
+
+.about-box p{
+    margin-bottom:30px;
+}
+
+/* =========================
+   ÇALIŞMA SAATLERİ
+========================= */
+
+.hours{
+    background:#101010;
+}
+
+.hours-box{
+    max-width:800px;
+    margin:auto;
+    background:#080808;
+    border:1px solid #292929;
+}
+
+.hour-row{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 25px;
+    border-bottom:1px solid #222;
+}
+
+.hour-row:last-child{
+    border-bottom:none;
+}
+
+.closed{
+    color:#e50914;
+    font-weight:bold;
+}
+
+/* =========================
+   İLETİŞİM
+========================= */
+
+.contact{
+    background:#e50914;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.contact p{
+    margin-bottom:25px;
+    font-size:18px;
+}
+
+.contact-btn{
+    display:inline-block;
+    background:#080808;
+    color:#fff;
+    padding:15px 30px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:4px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#050505;
+    text-align:center;
+    padding:50px 20px 25px;
+}
+
+.footer-logo{
+    font-size:30px;
+    font-weight:900;
+}
+
+.footer-logo span{
+    color:#e50914;
+}
+
+.footer-since{
+    color:#e50914;
+    letter-spacing:4px;
+    font-size:12px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+footer p{
+    color:#666;
+    margin-top:15px;
+}
+
+.footer-line{
+    max-width:800px;
+    height:1px;
+    background:#222;
+    margin:30px auto 20px;
+}
+
+.copyright{
+    color:#444;
+    font-size:12px;
+}
+
+/* =========================
+   SEPET PANELİ
+========================= */
+
+.cart-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.7);
+    z-index:1999;
+    display:none;
+}
+
+.cart-overlay.active{
+    display:block;
+}
+
+.cart-panel{
+    position:fixed;
+    right:-430px;
+    top:0;
+    width:400px;
+    max-width:90%;
+    height:100vh;
+    background:#101010;
+    z-index:2000;
+    border-left:1px solid #333;
+    transition:.3s;
+    display:flex;
+    flex-direction:column;
+}
+
+.cart-panel.active{
+    right:0;
+}
+
+.cart-header{
+    padding:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #292929;
+}
+
+.cart-header h2{
+    font-size:23px;
+}
+
+.close-cart{
+    background:none;
+    border:0;
+    color:#fff;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.cart-items{
+    flex:1;
+    overflow-y:auto;
+    padding:20px;
+}
+
+.empty-cart{
+    text-align:center;
+    color:#777;
+    margin-top:60px;
+}
+
+.cart-item{
+    background:#181818;
+    border:1px solid #292929;
+    padding:15px;
+    margin-bottom:12px;
+}
+
+.cart-item-top{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.cart-item h4{
+    font-size:15px;
+}
+
+.remove-item{
+    color:#e50914;
+    background:none;
+    border:0;
+    cursor:pointer;
+}
+
+.cart-item-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:12px;
+}
+
+.quantity{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.quantity button{
+    width:28px;
+    height:28px;
+    border:1px solid #444;
+    background:#222;
+    color:#fff;
+    cursor:pointer;
+}
+
+.cart-footer{
+    padding:20px;
+    border-top:1px solid #292929;
+}
+
+.total{
+    display:flex;
+    justify-content:space-between;
+    font-size:21px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.checkout{
+    width:100%;
+    padding:15px;
+    border:0;
+    background:#e50914;
+    color:#fff;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:4px;
+}
+
+.checkout:hover{
+    background:#ff202b;
+}
+
+/* =========================
+   MOBİL
+========================= */
+
+@media(max-width:850px){
+
+    .navbar{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .brand{
+        flex-direction:column;
+    }
+
+    .since{
+        border-left:0;
+        border-top:2px solid #e50914;
+        padding-left:0;
+        padding-top:8px;
+        text-align:center;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .values{
+        grid-template-columns:1fr;
+    }
+
+    .quote-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
-<!-- NAVBAR -->
+<!-- =========================
+     NAVBAR
+========================= -->
 
 <header>
-    <div class="navbar">
 
-        <div class="brand">
+<div class="navbar">
 
-            <div class="logo">
-                TEKNO<span>BİZ</span>
-            </div>
+    <div class="brand">
 
-            <div class="since-badge">
-                <strong>SINCE 2016</strong>
-                <small>10 YILLIK TECRÜBE</small>
-            </div>
+        <div class="logo">
+            TEKNO<span>BİZ</span>
+        </div>
+
+        <div class="since">
+
+            <strong>SINCE 2016</strong>
+
+            <small>
+                10 YILLIK TECRÜBE
+            </small>
 
         </div>
 
-        <nav>
-            <a href="#anasayfa">Ana Sayfa</a>
-            <a href="#hakkimizda">Hakkımızda</a>
-            <a href="#degerlerimiz">Değerlerimiz</a>
-            <a href="#saatler">Çalışma Saatleri</a>
-            <a href="#iletisim">İletişim</a>
-        </nav>
-
     </div>
+
+
+    <nav>
+
+        <a href="#anasayfa">Ana Sayfa</a>
+
+        <a href="#urunler">Ürünler</a>
+
+        <a href="#hakkimizda">Hakkımızda</a>
+
+        <a href="#saatler">Çalışma Saatleri</a>
+
+        <button class="cart-button" onclick="openCart()">
+
+            🛒 Sepet
+
+            <span class="cart-count" id="cartCount">
+                0
+            </span>
+
+        </button>
+
+    </nav>
+
+</div>
+
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="anasayfa">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <div class="since-hero">
-            SINCE 2016
-        </div>
-
-        <h1>
-            İŞİMİZİ<br>
-            <span>TEMİZ YAPIYORUZ.</span>
-        </h1>
-
-        <h2>
-            10 Yıldır Değişmeyen Bir İlke.
-        </h2>
-
-        <p>
-            Kaliteli ürün, temiz işçilik ve güvenilir hizmet
-            anlayışıyla 2016'dan beri aynı özenle çalışıyoruz.
-        </p>
-
-        <div class="buttons">
-            <a href="#hakkimizda" class="btn btn-red">
-                BİZ KİMİZ?
-            </a>
-
-            <a href="#saatler" class="btn btn-dark">
-                ÇALIŞMA SAATLERİ
-            </a>
-        </div>
-
+    <div class="hero-since">
+        SINCE 2016
     </div>
 
-</section>
-
-
-<!-- 10 YIL -->
-
-<section class="years">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <small>SINCE 2016</small>
-
-            <h2>10 Yıllık Tecrübe</h2>
-
-            <p>
-                Yıllar değişti, işimize verdiğimiz önem değişmedi.
-            </p>
-
-        </div>
-
-        <div class="years-box">
-
-            <div class="years-number">10</div>
-
-            <h3>YILDIR AYNI ÖZEN</h3>
-
-            <p>
-                2016 yılında başlayan TeknoBiz yolculuğumuzda
-                en büyük önceliğimiz her zaman temiz iş yapmak,
-                müşterimize karşı dürüst olmak ve yaptığımız
-                işin arkasında durmak oldu.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- DEĞERLER -->
-
-<section id="degerlerimiz">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <small>TEKNOBİZ</small>
-
-            <h2>Değerlerimiz</h2>
-
-            <p>
-                İşimizi doğru yapmak için önem verdiğimiz ilkeler.
-            </p>
-
-        </div>
-
-        <div class="values">
-
-            <div class="value-card">
-                <div class="value-number">01</div>
-                <h3>Temiz İşçilik</h3>
-                <p>
-                    Yapılan işin düzgün, özenli ve temiz olması
-                    bizim için en önemli ilkelerden biridir.
-                </p>
-            </div>
-
-            <div class="value-card">
-                <div class="value-number">02</div>
-                <h3>Dürüst Hizmet</h3>
-                <p>
-                    Müşterilerimize karşı açık, net ve dürüst
-                    bir hizmet anlayışıyla çalışıyoruz.
-                </p>
-            </div>
-
-            <div class="value-card">
-                <div class="value-number">03</div>
-                <h3>Kaliteli Ürün</h3>
-                <p>
-                    Ürün seçiminde kaliteye ve güvenilirliğe
-                    önem veriyoruz.
-                </p>
-            </div>
-
-            <div class="value-card">
-                <div class="value-number">04</div>
-                <h3>Güven</h3>
-                <p>
-                    10 yıldır kurduğumuz ilişkilerin temelinde
-                    güven ve karşılıklı saygı bulunuyor.
-                </p>
-            </div>
-
-            <div class="value-card">
-                <div class="value-number">05</div>
-                <h3>Tecrübe</h3>
-                <p>
-                    Yılların getirdiği deneyimi her yeni işimize
-                    yansıtmaya devam ediyoruz.
-                </p>
-            </div>
-
-            <div class="value-card">
-                <div class="value-number">06</div>
-                <h3>İşimizin Arkasındayız</h3>
-                <p>
-                    Bizim için iş teslim edildiğinde bitmez.
-                    Müşteri memnuniyetini önemsiyoruz.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- SADECE 2 ÖZLÜ SÖZ -->
-
-<section class="quotes">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <small>SINCE 2016</small>
-
-            <h2>Bizim İçin İş</h2>
-
-        </div>
-
-        <div class="quote-grid">
-
-            <div class="quote">
-
-                <p>
-                    “10 yıldır değişmeyen bir ilke:
-                    Temiz iş, dürüst hizmet.”
-                </p>
-
-                <span>
-                    TEKNOBİZ • SINCE 2016
-                </span>
-
-            </div>
-
-            <div class="quote">
-
-                <p>
-                    “Temiz yapılan iş, uzun süre konuşur.”
-                </p>
-
-                <span>
-                    TEKNOBİZ • SINCE 2016
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- HAKKIMIZDA -->
-
-<section id="hakkimizda">
-
-    <div class="container">
-
-        <div class="about">
-
-            <div>
-
-                <small>
-                    TEKNOBİZ • SINCE 2016
-                </small>
-
-                <h2>
-                    2016'dan beri<br>
-                    <span>aynı özenle.</span>
-                </h2>
-
-                <p>
-                    TeknoBiz olarak yıllardır işimizi temiz,
-                    düzenli ve güvenilir şekilde yapmaya önem veriyoruz.
-                </p>
-
-                <p>
-                    Bizim için yapılan her iş, ismimizi temsil eder.
-                    Bu nedenle işimizi mümkün olduğunca özenli
-                    ve düzgün şekilde tamamlamaya çalışıyoruz.
-                </p>
-
-                <p>
-                    10 yıllık tecrübemizi her yeni güne taşıyor
-                    ve kendimizi geliştirmeye devam ediyoruz.
-                </p>
-
-            </div>
-
-            <div class="about-box">
-
-                <strong>2016</strong>
-
-                <h3>Başladığımız Yıl</h3>
-
-                <p>
-                    TeknoBiz'in yolculuğunun başladığı yıl.
-                </p>
-
-                <strong>10+</strong>
-
-                <h3>Yıllık Tecrübe</h3>
-
-                <p>
-                    Değişmeyen çalışma anlayışımız:
-                    temiz iş, dürüst hizmet ve güven.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ÇALIŞMA SAATLERİ -->
-
-<section class="hours" id="saatler">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <small>TEKNOBİZ • SINCE 2016</small>
-
-            <h2>Çalışma Saatlerimiz</h2>
-
-            <p>
-                Haftanın 6 günü sizlerleyiz.
-            </p>
-
-        </div>
-
-        <div class="hours-box">
-
-            <div class="hour-row">
-                <span>Pazartesi</span>
-                <span>09:00 - 21:00</span>
-            </div>
-
-            <div class="hour-row">
-                <span>Salı</span>
-                <span>09:00 - 21:00</span>
-            </div>
-
-            <div class="hour-row">
-                <span>Çarşamba</span>
-                <span>09:00 - 21:00</span>
-            </div>
-
-            <div class="hour-row">
-                <span>Perşembe</span>
-                <span>09:00 - 21:00</span>
-            </div>
-
-            <div class="hour-row">
-                <span>Cuma</span>
-                <span>09:00 - 21:00</span>
-            </div>
-
-            <div class="hour-row">
-                <span>Cumartesi</span>
-                <span>09:00 - 21:00</span>
-            </div>
-
-            <div class="hour-row">
-                <span>Pazar</span>
-                <span class="closed">KAPALI</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- İLETİŞİM -->
-
-<section class="contact" id="iletisim">
-
-    <div class="container">
-
-        <h2>TEKNOBİZ'E HOŞ GELDİNİZ</h2>
-
-        <p>
-            2016'dan beri temiz iş, dürüst hizmet.
-        </p>
-
-        <a
-            href="mailto:teknobiz15@gmail.com"
-            class="contact-btn"
-        >
-            BİZE ULAŞ
+    <h1>
+        İŞİMİZİ<br>
+        <span>TEMİZ YAPIYORUZ.</span>
+    </h1>
+
+    <h2>
+        10 Yıldır Değişmeyen Bir İlke.
+    </h2>
+
+    <p>
+        Kaliteli ürün, temiz işçilik ve güvenilir hizmet
+        anlayışıyla 2016'dan beri aynı özenle çalışıyoruz.
+    </p>
+
+    <div class="hero-buttons">
+
+        <a href="#urunler" class="btn btn-red">
+            ÜRÜNLERİ İNCELE
+        </a>
+
+        <a href="#hakkimizda" class="btn btn-dark">
+            BİZ KİMİZ?
         </a>
 
     </div>
 
+</div>
+
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     10 YIL
+========================= -->
+
+<section class="years">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <small>
+            TEKNOBİZ • SINCE 2016
+        </small>
+
+        <h2>
+            10 Yıllık Tecrübe
+        </h2>
+
+        <p>
+            Yıllar değişti, işimize verdiğimiz önem değişmedi.
+        </p>
+
+    </div>
+
+
+    <div class="years-box">
+
+        <div class="years-number">
+            10
+        </div>
+
+        <h3>
+            YILDIR AYNI ÖZEN
+        </h3>
+
+        <p>
+            2016 yılında başlayan TeknoBiz yolculuğumuzda
+            en büyük önceliğimiz temiz iş yapmak,
+            müşterimize karşı dürüst olmak ve
+            yaptığımız işin arkasında durmak oldu.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ÜRÜNLER
+========================= -->
+
+<section class="products" id="urunler">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <small>
+            TEKNOBİZ MAĞAZA
+        </small>
+
+        <h2>
+            Ürünlerimiz
+        </h2>
+
+        <p>
+            İhtiyacınıza uygun teknoloji ürünlerini keşfedin.
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- ÜRÜN 1 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                📱
+            </div>
+
+            <div class="product-info">
+
+                <div class="product-category">
+                    TELEFON AKSESUARI
+                </div>
+
+                <h3>
+                    Telefon Kılıfı
+                </h3>
+
+                <p>
+                    Şık ve dayanıklı telefon kılıfları.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        199,90 TL
+                    </div>
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart('Telefon Kılıfı',199.90)"
+                    >
+                        Sepete Ekle
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ÜRÜN 2 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                🛡️
+            </div>
+
+            <div class="product-info">
+
+                <div class="product-category">
+                    EKRAN KORUMA
+                </div>
+
+                <h3>
+                    Kırılmaz Cam
+                </h3>
+
+                <p>
+                    Telefon ekranınız için dayanıklı koruma.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        149,90 TL
+                    </div>
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart('Kırılmaz Cam',149.90)"
+                    >
+                        Sepete Ekle
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ÜRÜN 3 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                🔊
+            </div>
+
+            <div class="product-info">
+
+                <div class="product-category">
+                    SES SİSTEMİ
+                </div>
+
+                <h3>
+                    Bluetooth Hoparlör
+                </h3>
+
+                <p>
+                    Taşınabilir kablosuz Bluetooth hoparlör.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        599,90 TL
+                    </div>
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart('Bluetooth Hoparlör',599.90)"
+                    >
+                        Sepete Ekle
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ÜRÜN 4 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                🎧
+            </div>
+
+            <div class="product-info">
+
+                <div class="product-category">
+                    SES
+                </div>
+
+                <h3>
+                    Kablosuz Kulaklık
+                </h3>
+
+                <p>
+                    Günlük kullanım için kablosuz kulaklık.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        749,90 TL
+                    </div>
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart('Kablosuz Kulaklık',749.90)"
+                    >
+                        Sepete Ekle
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ÜRÜN 5 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                🔌
+            </div>
+
+            <div class="product-info">
+
+                <div class="product-category">
+                    ŞARJ
+                </div>
+
+                <h3>
+                    Hızlı Şarj Adaptörü
+                </h3>
+
+                <p>
+                    Hızlı ve güvenilir şarj çözümü.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        399,90 TL
+                    </div>
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart('Hızlı Şarj Adaptörü',399.90)"
+                    >
+                        Sepete Ekle
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ÜRÜN 6 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                🔋
+            </div>
+
+            <div class="product-info">
+
+                <div class="product-category">
+                    AKSESUAR
+                </div>
+
+                <h3>
+                    Powerbank
+                </h3>
+
+                <p>
+                    Günlük kullanım için taşınabilir güç.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        899,90 TL
+                    </div>
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart('Powerbank',899.90)"
+                    >
+                        Sepete Ekle
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     DEĞERLER
+========================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="section-title">
+
+        <small>
+            TEKNOBİZ
+        </small>
+
+        <h2>
+            Değerlerimiz
+        </h2>
+
+        <p>
+            İşimizi doğru yapmak için önem verdiğimiz ilkeler.
+        </p>
+
+    </div>
+
+
+    <div class="values">
+
+        <div class="value-card">
+            <div class="value-number">01</div>
+            <h3>Temiz İşçilik</h3>
+            <p>
+                Yapılan işin düzgün, özenli ve temiz olması
+                bizim için önemlidir.
+            </p>
+        </div>
+
+
+        <div class="value-card">
+            <div class="value-number">02</div>
+            <h3>Dürüst Hizmet</h3>
+            <p>
+                Müşterilerimize karşı açık, net ve dürüst
+                bir hizmet anlayışıyla çalışıyoruz.
+            </p>
+        </div>
+
+
+        <div class="value-card">
+            <div class="value-number">03</div>
+            <h3>Kaliteli Ürün</h3>
+            <p>
+                Ürün seçiminde kaliteye ve güvenilirliğe
+                önem veriyoruz.
+            </p>
+        </div>
+
+
+        <div class="value-card">
+            <div class="value-number">04</div>
+            <h3>Güven</h3>
+            <p>
+                10 yıldır kurduğumuz ilişkilerin temelinde
+                güven bulunuyor.
+            </p>
+        </div>
+
+
+        <div class="value-card">
+            <div class="value-number">05</div>
+            <h3>Tecrübe</h3>
+            <p>
+                Yılların getirdiği deneyimi her yeni işimize
+                yansıtıyoruz.
+            </p>
+        </div>
+
+
+        <div class="value-card">
+            <div class="value-number">06</div>
+            <h3>İşimizin Arkasındayız</h3>
+            <p>
+                Bizim için iş teslim edildiğinde bitmez.
+                Müşteri memnuniyetini önemsiyoruz.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     2 ÖZLÜ SÖZ
+========================= -->
+
+<section class="quotes">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <small>
+            SINCE 2016
+        </small>
+
+        <h2>
+            Bizim İçin İş
+        </h2>
+
+    </div>
+
+
+    <div class="quote-grid">
+
+        <div class="quote">
+
+            <p>
+                “10 yıldır değişmeyen bir ilke:
+                Temiz iş, dürüst hizmet.”
+            </p>
+
+            <span>
+                TEKNOBİZ • SINCE 2016
+            </span>
+
+        </div>
+
+
+        <div class="quote">
+
+            <p>
+                “Temiz yapılan iş, uzun süre konuşur.”
+            </p>
+
+            <span>
+                TEKNOBİZ • SINCE 2016
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     HAKKIMIZDA
+========================= -->
+
+<section id="hakkimizda">
+
+<div class="container">
+
+    <div class="about">
+
+        <div>
+
+            <small>
+                TEKNOBİZ • SINCE 2016
+            </small>
+
+            <h2>
+                2016'dan beri<br>
+                <span>aynı özenle.</span>
+            </h2>
+
+            <p>
+                TeknoBiz olarak yıllardır işimizi temiz,
+                düzenli ve güvenilir şekilde yapmaya önem veriyoruz.
+            </p>
+
+            <p>
+                Bizim için yapılan her iş ismimizi temsil eder.
+                Bu nedenle işimizi özenli ve düzgün şekilde
+                tamamlamaya çalışıyoruz.
+            </p>
+
+            <p>
+                10 yıllık tecrübemizi her yeni güne taşıyor
+                ve kendimizi geliştirmeye devam ediyoruz.
+            </p>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <strong>2016</strong>
+
+            <h3>
+                Başladığımız Yıl
+            </h3>
+
+            <p>
+                TeknoBiz yolculuğunun başladığı yıl.
+            </p>
+
+
+            <strong>10+</strong>
+
+            <h3>
+                Yıllık Tecrübe
+            </h3>
+
+            <p>
+                Temiz iş, dürüst hizmet ve güven.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ÇALIŞMA SAATLERİ
+========================= -->
+
+<section class="hours" id="saatler">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <small>
+            TEKNOBİZ • SINCE 2016
+        </small>
+
+        <h2>
+            Çalışma Saatlerimiz
+        </h2>
+
+        <p>
+            Haftanın 6 günü sizlerleyiz.
+        </p>
+
+    </div>
+
+
+    <div class="hours-box">
+
+        <div class="hour-row">
+            <span>Pazartesi</span>
+            <span>09:00 - 21:00</span>
+        </div>
+
+        <div class="hour-row">
+            <span>Salı</span>
+            <span>09:00 - 21:00</span>
+        </div>
+
+        <div class="hour-row">
+            <span>Çarşamba</span>
+            <span>09:00 - 21:00</span>
+        </div>
+
+        <div class="hour-row">
+            <span>Perşembe</span>
+            <span>09:00 - 21:00</span>
+        </div>
+
+        <div class="hour-row">
+            <span>Cuma</span>
+            <span>09:00 - 21:00</span>
+        </div>
+
+        <div class="hour-row">
+            <span>Cumartesi</span>
+            <span>09:00 - 21:00</span>
+        </div>
+
+        <div class="hour-row">
+            <span>Pazar</span>
+            <span class="closed">KAPALI</span>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     İLETİŞİM
+========================= -->
+
+<section class="contact">
+
+<div class="container">
+
+    <h2>
+        TEKNOBİZ'E HOŞ GELDİNİZ
+    </h2>
+
+    <p>
+        2016'dan beri temiz iş, dürüst hizmet.
+    </p>
+
+    <a
+        href="mailto:teknobiz15@gmail.com"
+        class="contact-btn"
+    >
+        BİZE ULAŞ
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -943,6 +1553,326 @@
     </div>
 
 </footer>
+
+
+<!-- =========================
+     SEPET
+========================= -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay"
+    onclick="closeCart()">
+</div>
+
+
+<div class="cart-panel" id="cartPanel">
+
+    <div class="cart-header">
+
+        <h2>
+            🛒 Sepetim
+        </h2>
+
+        <button
+            class="close-cart"
+            onclick="closeCart()">
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-items"
+        id="cartItems">
+
+        <div class="empty-cart">
+            Sepetiniz şu anda boş.
+        </div>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="total">
+
+            <span>
+                Toplam
+            </span>
+
+            <span id="cartTotal">
+                0,00 TL
+            </span>
+
+        </div>
+
+        <button
+            class="checkout"
+            onclick="checkout()">
+
+            SİPARİŞİ TAMAMLA
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+let cart = [];
+
+
+/* SEPETE ÜRÜN EKLE */
+
+function addToCart(name, price){
+
+    const existing = cart.find(
+        item => item.name === name
+    );
+
+    if(existing){
+
+        existing.quantity++;
+
+    }else{
+
+        cart.push({
+            name:name,
+            price:price,
+            quantity:1
+        });
+
+    }
+
+    updateCart();
+
+    openCart();
+}
+
+
+/* SEPETİ GÜNCELLE */
+
+function updateCart(){
+
+    const cartItems =
+        document.getElementById("cartItems");
+
+    const cartCount =
+        document.getElementById("cartCount");
+
+    const cartTotal =
+        document.getElementById("cartTotal");
+
+
+    cartItems.innerHTML = "";
+
+
+    if(cart.length === 0){
+
+        cartItems.innerHTML = `
+            <div class="empty-cart">
+                Sepetiniz şu anda boş.
+            </div>
+        `;
+
+    }
+
+
+    let total = 0;
+    let count = 0;
+
+
+    cart.forEach((item,index)=>{
+
+        total += item.price * item.quantity;
+
+        count += item.quantity;
+
+
+        const itemElement =
+        document.createElement("div");
+
+        itemElement.className =
+        "cart-item";
+
+
+        itemElement.innerHTML = `
+
+            <div class="cart-item-top">
+
+                <h4>
+                    ${item.name}
+                </h4>
+
+                <button
+                    class="remove-item"
+                    onclick="removeItem(${index})">
+                    Sil
+                </button>
+
+            </div>
+
+
+            <div class="cart-item-bottom">
+
+                <div class="quantity">
+
+                    <button
+                        onclick="changeQuantity(${index},-1)">
+                        -
+                    </button>
+
+                    <span>
+                        ${item.quantity}
+                    </span>
+
+                    <button
+                        onclick="changeQuantity(${index},1)">
+                        +
+                    </button>
+
+                </div>
+
+
+                <strong>
+                    ${(item.price * item.quantity)
+                    .toFixed(2)
+                    .replace(".",",")} TL
+                </strong>
+
+            </div>
+        `;
+
+
+        cartItems.appendChild(itemElement);
+
+    });
+
+
+    cartCount.innerText = count;
+
+
+    cartTotal.innerText =
+        total.toFixed(2).replace(".",",")
+        + " TL";
+}
+
+
+/* ADET DEĞİŞTİR */
+
+function changeQuantity(index,change){
+
+    cart[index].quantity += change;
+
+
+    if(cart[index].quantity <= 0){
+
+        cart.splice(index,1);
+
+    }
+
+
+    updateCart();
+}
+
+
+/* ÜRÜN SİL */
+
+function removeItem(index){
+
+    cart.splice(index,1);
+
+    updateCart();
+}
+
+
+/* SEPETİ AÇ */
+
+function openCart(){
+
+    document
+        .getElementById("cartPanel")
+        .classList.add("active");
+
+    document
+        .getElementById("cartOverlay")
+        .classList.add("active");
+}
+
+
+/* SEPETİ KAPAT */
+
+function closeCart(){
+
+    document
+        .getElementById("cartPanel")
+        .classList.remove("active");
+
+    document
+        .getElementById("cartOverlay")
+        .classList.remove("active");
+}
+
+
+/* SİPARİŞ */
+
+function checkout(){
+
+    if(cart.length === 0){
+
+        alert("Sepetiniz boş.");
+
+        return;
+    }
+
+
+    let message =
+        "Merhaba TeknoBiz, sipariş vermek istiyorum:%0A%0A";
+
+
+    cart.forEach(item=>{
+
+        message +=
+        item.name +
+        " x" +
+        item.quantity +
+        " - " +
+        (item.price * item.quantity)
+        .toFixed(2)
+        .replace(".",",") +
+        " TL%0A";
+
+    });
+
+
+    let total = cart.reduce(
+        (sum,item)=>
+        sum + item.price * item.quantity,
+        0
+    );
+
+
+    message +=
+        "%0AToplam: " +
+        total.toFixed(2).replace(".",",") +
+        " TL";
+
+
+    window.location.href =
+        "mailto:teknobiz15@gmail.com?subject=TeknoBiz Sipariş&body="
+        + message;
+
+}
+
+</script>
 
 </body>
 </html>
