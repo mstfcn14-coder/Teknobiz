@@ -3,271 +3,1074 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>TeknoBiz | Teknolojinin Değerli Hali</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
+
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #0b0b0b;
-            color: white;
+            font-family: "Inter", sans-serif;
+            background: #f5f7fa;
+            color: #111827;
         }
+
+        /* ================= HEADER ================= */
 
         header {
-            background: #111;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #222;
+            width: 100%;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        .logo {
-            font-size: 30px;
-            font-weight: bold;
-            color: #00e5ff;
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            height: 76px;
+            padding: 0 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: #0d6efd;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 800;
+            color: #111827;
+            letter-spacing: -1px;
+        }
+
+        .logo-text span {
+            color: #0d6efd;
         }
 
         .slogan {
-            color: #aaa;
-            font-size: 14px;
-            margin-top: 4px;
+            font-size: 11px;
+            color: #6b7280;
+            margin-top: 2px;
         }
 
-        .cart {
-            background: #00e5ff;
-            color: #000;
-            padding: 10px 16px;
-            border-radius: 8px;
-            font-weight: bold;
+        .cart-button {
+            border: none;
+            background: #111827;
+            color: white;
+
+            padding: 11px 17px;
+            border-radius: 10px;
+
+            font-family: inherit;
+            font-weight: 600;
+            cursor: pointer;
+
+            transition: 0.2s;
         }
+
+        .cart-button:hover {
+            background: #0d6efd;
+        }
+
+        /* ================= HERO ================= */
 
         .hero {
-            text-align: center;
-            padding: 70px 20px;
-            background: linear-gradient(135deg, #111, #00191d);
+            background:
+                linear-gradient(
+                    135deg,
+                    #050505 0%,
+                    #111827 55%,
+                    #0d6efd 150%
+                );
+
+            color: white;
+            padding: 90px 20px;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .hero small {
+            color: #60a5fa;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
 
         .hero h1 {
-            font-size: 45px;
-            margin-bottom: 15px;
+            font-size: clamp(38px, 6vw, 68px);
+            line-height: 1.05;
+            max-width: 750px;
+            margin: 15px 0 20px;
+
+            letter-spacing: -3px;
+        }
+
+        .hero h1 span {
+            color: #3b82f6;
         }
 
         .hero p {
-            color: #aaa;
-            font-size: 18px;
+            color: #d1d5db;
+            font-size: 17px;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 30px;
+
+            background: #0d6efd;
+            color: white;
+
+            padding: 14px 23px;
+            border-radius: 10px;
+
+            text-decoration: none;
+            font-weight: 700;
+
+            transition: 0.2s;
+        }
+
+        .hero-button:hover {
+            background: #3b82f6;
+            transform: translateY(-2px);
+        }
+
+        /* ================= CATEGORIES ================= */
+
+        .category-section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 45px 20px 20px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 20px;
         }
 
         .categories {
-            text-align: center;
-            padding: 30px 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
         }
 
-        .categories button {
-            background: #151515;
-            color: white;
-            border: 1px solid #333;
-            padding: 12px 20px;
-            margin: 5px;
-            border-radius: 8px;
+        .category {
+            border: 1px solid #d1d5db;
+            background: white;
+
+            padding: 11px 18px;
+            border-radius: 9px;
+
             cursor: pointer;
+            font-family: inherit;
+            font-weight: 600;
+
+            transition: 0.2s;
         }
 
-        .categories button:hover {
-            background: #00e5ff;
-            color: black;
+        .category:hover,
+        .category.active {
+            background: #0d6efd;
+            border-color: #0d6efd;
+            color: white;
         }
+
+        /* ================= PRODUCTS ================= */
 
         .products {
-            padding: 20px 8% 60px;
+            max-width: 1200px;
+            margin: auto;
+
+            padding: 25px 20px 80px;
+
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
         }
 
         .product {
-            background: #151515;
-            border: 1px solid #242424;
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            transition: 0.3s;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+
+            padding: 15px;
+
+            transition: 0.25s;
         }
 
         .product:hover {
             transform: translateY(-5px);
-            border-color: #00e5ff;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
         }
 
         .product-image {
-            height: 180px;
-            background: #222;
-            border-radius: 10px;
+            width: 100%;
+            height: 220px;
+
+            border-radius: 12px;
+            background: #f1f5f9;
+
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #777;
-            margin-bottom: 15px;
-            font-size: 50px;
+
+            font-size: 70px;
+        }
+
+        .product-info {
+            padding: 15px 4px 4px;
+        }
+
+        .product-category {
+            color: #0d6efd;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
         }
 
         .product h3 {
-            margin-bottom: 10px;
+            font-size: 17px;
+            margin: 7px 0;
         }
 
-        .product p {
-            color: #aaa;
-            margin-bottom: 15px;
+        .product-description {
+            color: #6b7280;
+            font-size: 13px;
+            line-height: 1.5;
+            min-height: 40px;
+        }
+
+        .product-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin-top: 15px;
         }
 
         .price {
-            color: #00e5ff;
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: 800;
+            color: #111827;
         }
 
-        .product button {
-            background: #00e5ff;
-            color: #000;
+        .add-cart {
+            background: #0d6efd;
+            color: white;
+
             border: none;
-            padding: 12px 20px;
-            border-radius: 8px;
+            border-radius: 9px;
+
+            padding: 10px 13px;
+
             cursor: pointer;
-            font-weight: bold;
-            width: 100%;
+            font-family: inherit;
+            font-weight: 700;
+
+            transition: 0.2s;
         }
 
-        .product button:hover {
-            opacity: 0.8;
+        .add-cart:hover {
+            background: #111827;
         }
+
+        /* ================= CART ================= */
+
+        .cart-panel {
+            position: fixed;
+            top: 0;
+            right: -420px;
+
+            width: 400px;
+            max-width: 90%;
+
+            height: 100vh;
+
+            background: white;
+
+            box-shadow: -10px 0 40px rgba(0,0,0,0.15);
+
+            z-index: 2000;
+
+            transition: 0.3s;
+
+            padding: 25px;
+        }
+
+        .cart-panel.open {
+            right: 0;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .cart-header h2 {
+            font-size: 22px;
+        }
+
+        .close-cart {
+            border: none;
+            background: #f3f4f6;
+
+            width: 35px;
+            height: 35px;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        #cartItems {
+            padding: 20px 0;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+
+            padding: 13px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-item-name {
+            font-weight: 600;
+        }
+
+        .cart-item-price {
+            color: #0d6efd;
+            font-weight: 700;
+        }
+
+        .remove-item {
+            margin-top: 6px;
+            border: none;
+            background: none;
+            color: #ef4444;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .cart-total {
+            border-top: 1px solid #e5e7eb;
+            padding-top: 20px;
+
+            display: flex;
+            justify-content: space-between;
+
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .checkout {
+            width: 100%;
+
+            margin-top: 20px;
+            padding: 15px;
+
+            border: none;
+            border-radius: 10px;
+
+            background: #0d6efd;
+            color: white;
+
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        /* ================= FOOTER ================= */
 
         footer {
+            background: #050505;
+            color: #9ca3af;
+
             text-align: center;
-            padding: 30px;
-            background: #111;
-            color: #777;
+
+            padding: 35px 20px;
+
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 900px) {
+
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
         }
 
         @media (max-width: 600px) {
-            header {
-                padding: 15px 5%;
+
+            .navbar {
+                height: 68px;
             }
 
-            .logo {
-                font-size: 24px;
+            .logo-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 18px;
+            }
+
+            .logo-text {
+                font-size: 20px;
+            }
+
+            .slogan {
+                font-size: 9px;
+            }
+
+            .cart-button {
+                padding: 9px 11px;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 65px 20px;
             }
 
             .hero h1 {
-                font-size: 32px;
+                letter-spacing: -2px;
             }
 
-            .cart {
-                padding: 8px 10px;
-                font-size: 13px;
+            .hero p {
+                font-size: 15px;
             }
+
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .product {
+                padding: 10px;
+                border-radius: 12px;
+            }
+
+            .product-image {
+                height: 150px;
+                font-size: 48px;
+            }
+
+            .product-info {
+                padding: 10px 2px;
+            }
+
+            .product h3 {
+                font-size: 14px;
+            }
+
+            .product-description {
+                font-size: 11px;
+            }
+
+            .price {
+                font-size: 16px;
+            }
+
+            .add-cart {
+                padding: 8px 9px;
+                font-size: 11px;
+            }
+
+            .category-section {
+                padding: 30px 15px 10px;
+            }
+
+            .section-title {
+                font-size: 23px;
+            }
+
         }
+
     </style>
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
-    <div>
-        <div class="logo">TEKNOBİZ</div>
-        <div class="slogan">Teknolojinin Değerli Hali</div>
+
+    <div class="navbar">
+
+        <div class="logo-area">
+
+            <div class="logo-icon">
+                T
+            </div>
+
+            <div>
+                <div class="logo-text">
+                    TEKNO<span>BİZ</span>
+                </div>
+
+                <div class="slogan">
+                    Teknolojinin Değerli Hali
+                </div>
+            </div>
+
+        </div>
+
+        <button class="cart-button" onclick="openCart()">
+            Sepet
+            (<span id="cartCount">0</span>)
+        </button>
+
     </div>
 
-    <div class="cart">
-        🛒 Sepet: <span id="sepetSayisi">0</span>
-    </div>
 </header>
 
+
+<!-- ================= HERO ================= -->
+
 <section class="hero">
-    <h1>Teknolojinin Değerli Hali</h1>
-    <p>Telefon aksesuarları, ses sistemleri ve teknoloji ürünleri</p>
+
+    <div class="hero-content">
+
+        <small>TEKNOBİZ'E HOŞ GELDİNİZ</small>
+
+        <h1>
+            Teknolojinin
+            <span>Değerli Hali.</span>
+        </h1>
+
+        <p>
+            Telefon aksesuarlarından ses ürünlerine kadar
+            günlük teknoloji ihtiyaçlarınızı sade ve güvenilir
+            alışveriş deneyimiyle keşfedin.
+        </p>
+
+        <a href="#urunler" class="hero-button">
+            Ürünleri Keşfet
+        </a>
+
+    </div>
+
 </section>
 
-<div class="categories">
-    <button onclick="filtrele('hepsi')">Tümü</button>
-    <button onclick="filtrele('kilif')">📱 Telefon Kılıfları</button>
-    <button onclick="filtrele('cam')">🛡️ Kırılmaz Cam</button>
-    <button onclick="filtrele('ses')">🔊 Ses Sistemleri</button>
-</div>
 
-<section class="products">
+<!-- ================= CATEGORIES ================= -->
+
+<section class="category-section">
+
+    <h2 class="section-title">
+        Kategoriler
+    </h2>
+
+    <div class="categories">
+
+        <button
+            class="category active"
+            onclick="filterProducts('all', this)">
+            Tümü
+        </button>
+
+        <button
+            class="category"
+            onclick="filterProducts('kilif', this)">
+            Telefon Kılıfları
+        </button>
+
+        <button
+            class="category"
+            onclick="filterProducts('cam', this)">
+            Kırılmaz Cam
+        </button>
+
+        <button
+            class="category"
+            onclick="filterProducts('ses', this)">
+            Ses Ürünleri
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products" id="urunler">
+
 
     <div class="product" data-category="kilif">
-        <div class="product-image">📱</div>
-        <h3>Premium Telefon Kılıfı</h3>
-        <p>Şık ve dayanıklı telefon kılıfı.</p>
-        <div class="price">299 TL</div>
-        <button onclick="sepeteEkle()">🛒 Sepete Ekle</button>
+
+        <div class="product-image">
+            📱
+        </div>
+
+        <div class="product-info">
+
+            <div class="product-category">
+                Telefon Kılıfı
+            </div>
+
+            <h3>
+                Premium Telefon Kılıfı
+            </h3>
+
+            <p class="product-description">
+                Şık görünüm ve günlük kullanım için dayanıklı tasarım.
+            </p>
+
+            <div class="product-bottom">
+
+                <div class="price">
+                    299 TL
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Premium Telefon Kılıfı', 299)">
+                    Sepete Ekle
+                </button>
+
+            </div>
+
+        </div>
+
     </div>
+
+
 
     <div class="product" data-category="cam">
-        <div class="product-image">🛡️</div>
-        <h3>9D Kırılmaz Cam</h3>
-        <p>Telefon ekranınızı koruyun.</p>
-        <div class="price">149 TL</div>
-        <button onclick="sepeteEkle()">🛒 Sepete Ekle</button>
+
+        <div class="product-image">
+            🛡️
+        </div>
+
+        <div class="product-info">
+
+            <div class="product-category">
+                Ekran Koruma
+            </div>
+
+            <h3>
+                9D Kırılmaz Cam
+            </h3>
+
+            <p class="product-description">
+                Telefon ekranınızı günlük çizilmelere karşı koruyun.
+            </p>
+
+            <div class="product-bottom">
+
+                <div class="price">
+                    149 TL
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('9D Kırılmaz Cam', 149)">
+                    Sepete Ekle
+                </button>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="product" data-category="ses">
-        <div class="product-image">🔊</div>
-        <h3>Bluetooth Hoparlör</h3>
-        <p>Güçlü ses ve taşınabilir tasarım.</p>
-        <div class="price">699 TL</div>
-        <button onclick="sepeteEkle()">🛒 Sepete Ekle</button>
-    </div>
+
 
     <div class="product" data-category="ses">
-        <div class="product-image">🎧</div>
-        <h3>Bluetooth Kulaklık</h3>
-        <p>Kablosuz ve kaliteli ses deneyimi.</p>
-        <div class="price">499 TL</div>
-        <button onclick="sepeteEkle()">🛒 Sepete Ekle</button>
+
+        <div class="product-image">
+            🔊
+        </div>
+
+        <div class="product-info">
+
+            <div class="product-category">
+                Ses Ürünleri
+            </div>
+
+            <h3>
+                Bluetooth Hoparlör
+            </h3>
+
+            <p class="product-description">
+                Taşınabilir tasarım ve güçlü ses deneyimi.
+            </p>
+
+            <div class="product-bottom">
+
+                <div class="price">
+                    699 TL
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Bluetooth Hoparlör', 699)">
+                    Sepete Ekle
+                </button>
+
+            </div>
+
+        </div>
+
     </div>
+
+
+
+    <div class="product" data-category="ses">
+
+        <div class="product-image">
+            🎧
+        </div>
+
+        <div class="product-info">
+
+            <div class="product-category">
+                Ses Ürünleri
+            </div>
+
+            <h3>
+                Bluetooth Kulaklık
+            </h3>
+
+            <p class="product-description">
+                Kablosuz kullanım ve günlük müzik deneyimi.
+            </p>
+
+            <div class="product-bottom">
+
+                <div class="price">
+                    499 TL
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Bluetooth Kulaklık', 499)">
+                    Sepete Ekle
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
 
 </section>
 
+
+<!-- ================= CART ================= -->
+
+<div class="cart-panel" id="cartPanel">
+
+    <div class="cart-header">
+
+        <h2>
+            Sepetim
+        </h2>
+
+        <button
+            class="close-cart"
+            onclick="closeCart()">
+            ×
+        </button>
+
+    </div>
+
+
+    <div id="cartItems">
+
+        <p style="color:#777;">
+            Sepetiniz şu anda boş.
+        </p>
+
+    </div>
+
+
+    <div class="cart-total">
+
+        <span>
+            Toplam
+        </span>
+
+        <span id="cartTotal">
+            0 TL
+        </span>
+
+    </div>
+
+
+    <button
+        class="checkout"
+        onclick="checkout()">
+
+        Satın Alma İşlemine Geç
+
+    </button>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
-    © 2026 TeknoBiz
-    <br>
+
+    <strong>TEKNOBİZ</strong>
+
+    <br><br>
+
     Teknolojinin Değerli Hali
+
+    <br><br>
+
+    © 2026 TeknoBiz. Tüm hakları saklıdır.
+
 </footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
-let sepet = 0;
+let cart = [];
 
-function sepeteEkle() {
-    sepet++;
-    document.getElementById("sepetSayisi").innerText = sepet;
-    alert("Ürün sepete eklendi! 🛒");
+
+/* SEPETE ÜRÜN EKLE */
+
+function addToCart(name, price) {
+
+    cart.push({
+        name: name,
+        price: price
+    });
+
+    updateCart();
+
+    alert("Ürün sepetinize eklendi.");
+
 }
 
-function filtrele(kategori) {
 
-    const urunler = document.querySelectorAll(".product");
+/* SEPETİ GÜNCELLE */
 
-    urunler.forEach(function(urun) {
+function updateCart() {
+
+    document.getElementById("cartCount").innerText = cart.length;
+
+    const cartItems =
+        document.getElementById("cartItems");
+
+    const cartTotal =
+        document.getElementById("cartTotal");
+
+
+    if (cart.length === 0) {
+
+        cartItems.innerHTML =
+            '<p style="color:#777;">Sepetiniz şu anda boş.</p>';
+
+        cartTotal.innerText = "0 TL";
+
+        return;
+
+    }
+
+
+    let total = 0;
+
+    cartItems.innerHTML = "";
+
+
+    cart.forEach(function(item, index) {
+
+        total += item.price;
+
+
+        const div =
+            document.createElement("div");
+
+        div.className = "cart-item";
+
+
+        div.innerHTML = `
+
+            <div>
+
+                <div class="cart-item-name">
+                    ${item.name}
+                </div>
+
+                <button
+                    class="remove-item"
+                    onclick="removeFromCart(${index})">
+
+                    Ürünü kaldır
+
+                </button>
+
+            </div>
+
+            <div class="cart-item-price">
+                ${item.price} TL
+            </div>
+
+        `;
+
+
+        cartItems.appendChild(div);
+
+    });
+
+
+    cartTotal.innerText =
+        total.toLocaleString("tr-TR") + " TL";
+
+}
+
+
+/* ÜRÜN SİL */
+
+function removeFromCart(index) {
+
+    cart.splice(index, 1);
+
+    updateCart();
+
+}
+
+
+/* SEPETİ AÇ */
+
+function openCart() {
+
+    document
+        .getElementById("cartPanel")
+        .classList.add("open");
+
+}
+
+
+/* SEPETİ KAPAT */
+
+function closeCart() {
+
+    document
+        .getElementById("cartPanel")
+        .classList.remove("open");
+
+}
+
+
+/* KATEGORİ FİLTRELEME */
+
+function filterProducts(category, button) {
+
+    const products =
+        document.querySelectorAll(".product");
+
+    const buttons =
+        document.querySelectorAll(".category");
+
+
+    buttons.forEach(function(btn) {
+
+        btn.classList.remove("active");
+
+    });
+
+
+    button.classList.add("active");
+
+
+    products.forEach(function(product) {
 
         if (
-            kategori === "hepsi" ||
-            urun.dataset.category === kategori
+            category === "all" ||
+            product.dataset.category === category
         ) {
-            urun.style.display = "block";
+
+            product.style.display = "block";
+
         } else {
-            urun.style.display = "none";
+
+            product.style.display = "none";
+
         }
 
     });
+
+}
+
+
+/* SATIN ALMA */
+
+function checkout() {
+
+    if (cart.length === 0) {
+
+        alert("Önce sepetinize ürün ekleyin.");
+
+        return;
+
+    }
+
+
+    alert(
+        "Satın alma sistemi bir sonraki aşamada aktif edilecek."
+    );
+
 }
 
 </script>
