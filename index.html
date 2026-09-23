@@ -6,8 +6,6 @@
 
 <title>TeknoBiz | Teknoloji & Aksesuar</title>
 
-<meta name="description" content="TeknoBiz teknoloji ve telefon aksesuarları mağazası.">
-
 <style>
 
 *{
@@ -17,41 +15,37 @@
     font-family:Arial,Helvetica,sans-serif;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#05070a;
-    color:white;
-}
-
-/* =========================
-   DEĞİŞKENLER
-========================= */
-
 :root{
     --black:#05070a;
     --black2:#0a0f16;
     --navy:#0b1f3a;
     --navy2:#16365f;
     --navy3:#234c78;
-    --white:#ffffff;
+    --white:#fff;
     --gray:#9ca3af;
     --line:#1d2b3d;
     --whatsapp:#25d366;
 }
 
-/* =========================
-   HEADER
-========================= */
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--black);
+    color:white;
+}
+
+/* =====================================================
+HEADER
+===================================================== */
 
 header{
     position:sticky;
     top:0;
     z-index:1000;
     background:rgba(5,7,10,.96);
-    backdrop-filter:blur(12px);
+    backdrop-filter:blur(15px);
     border-bottom:1px solid var(--line);
 }
 
@@ -66,7 +60,7 @@ header{
 }
 
 .logo{
-    font-size:27px;
+    font-size:28px;
     font-weight:900;
     white-space:nowrap;
 }
@@ -82,12 +76,12 @@ header{
 
 .search input{
     width:100%;
-    background:#0c121b;
-    border:1px solid #243449;
-    color:white;
     padding:14px 45px 14px 17px;
     border-radius:12px;
+    border:1px solid #26384d;
     outline:none;
+    background:#0c121b;
+    color:white;
     font-size:15px;
 }
 
@@ -98,14 +92,14 @@ header{
 .search-icon{
     position:absolute;
     right:15px;
-    top:12px;
-    font-size:20px;
+    top:11px;
     color:#9ca3af;
+    font-size:22px;
 }
 
 .nav-buttons{
     display:flex;
-    gap:9px;
+    gap:8px;
 }
 
 .nav-btn{
@@ -122,19 +116,19 @@ header{
     background:var(--navy);
 }
 
-/* =========================
-   HERO
-========================= */
+/* =====================================================
+HERO
+===================================================== */
 
 .hero{
     max-width:1250px;
     margin:25px auto;
-    padding:65px 30px;
-    border:1px solid #1c3048;
+    padding:70px 30px;
+    border:1px solid #1d3650;
     border-radius:22px;
     background:
-        radial-gradient(circle at 85% 20%,#173d6b55,transparent 30%),
-        linear-gradient(135deg,#0a1018,#0b1f3a);
+    radial-gradient(circle at 85% 20%,#214e7b55,transparent 30%),
+    linear-gradient(135deg,#0a1018,#0b1f3a);
     text-align:center;
 }
 
@@ -148,11 +142,11 @@ header{
 }
 
 .hero p{
-    color:#c1c9d4;
-    font-size:18px;
-    max-width:650px;
+    max-width:700px;
     margin:auto;
+    color:#c3ccd7;
     line-height:1.7;
+    font-size:18px;
 }
 
 .hero-buttons{
@@ -184,9 +178,9 @@ header{
     border:1px solid #31577e;
 }
 
-/* =========================
-   KATEGORİLER
-========================= */
+/* =====================================================
+SECTIONS
+===================================================== */
 
 .section{
     max-width:1250px;
@@ -198,8 +192,8 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:end;
-    margin-bottom:20px;
     gap:20px;
+    margin-bottom:20px;
 }
 
 .section-title h2{
@@ -208,31 +202,27 @@ header{
 
 .section-title p{
     color:var(--gray);
+    margin-top:5px;
 }
+
+/* =====================================================
+CATEGORIES
+===================================================== */
 
 .categories{
     display:flex;
     gap:10px;
     overflow-x:auto;
-    padding-bottom:8px;
-}
-
-.categories::-webkit-scrollbar{
-    height:5px;
-}
-
-.categories::-webkit-scrollbar-thumb{
-    background:#253d59;
-    border-radius:20px;
+    padding-bottom:7px;
 }
 
 .category{
     flex:0 0 auto;
-    background:#0d141d;
-    color:white;
-    border:1px solid #223348;
     padding:12px 17px;
     border-radius:10px;
+    border:1px solid #26384d;
+    background:#0d141d;
+    color:white;
     cursor:pointer;
 }
 
@@ -242,19 +232,18 @@ header{
     border-color:#4773a2;
 }
 
-/* =========================
-   KAMPANYALAR
-========================= */
+/* =====================================================
+CAMPAIGNS
+===================================================== */
 
 .campaign-wrapper{
     overflow:hidden;
-    width:100%;
 }
 
 .campaign-track{
     display:flex;
-    gap:16px;
     width:max-content;
+    gap:16px;
     animation:campaignMove 28s linear infinite;
 }
 
@@ -270,19 +259,6 @@ header{
     border:1px solid #294461;
     background:linear-gradient(135deg,#0c1724,#102b4d);
     flex-shrink:0;
-    position:relative;
-    overflow:hidden;
-}
-
-.campaign::after{
-    content:"";
-    position:absolute;
-    width:130px;
-    height:130px;
-    right:-50px;
-    bottom:-50px;
-    border-radius:50%;
-    background:#315d8c33;
 }
 
 .campaign small{
@@ -301,21 +277,45 @@ header{
 .campaign strong{
     display:block;
     margin-top:15px;
-    font-size:22px;
+    font-size:21px;
 }
 
 @keyframes campaignMove{
     from{
         transform:translateX(0);
     }
+
     to{
         transform:translateX(-50%);
     }
 }
 
-/* =========================
-   ÜRÜNLER
-========================= */
+/* =====================================================
+MODELS
+===================================================== */
+
+.model-boxes{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+}
+
+.model-box{
+    padding:10px 14px;
+    border-radius:9px;
+    border:1px solid #26384d;
+    background:#0c121a;
+    color:white;
+    cursor:pointer;
+}
+
+.model-box:hover{
+    background:#132d4c;
+}
+
+/* =====================================================
+PRODUCTS
+===================================================== */
 
 .products{
     display:grid;
@@ -339,10 +339,10 @@ header{
 .product-image{
     height:210px;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     background:
-        radial-gradient(circle,#18375a 0%,#0a0f16 65%);
+    radial-gradient(circle,#18375a 0%,#0a0f16 65%);
     font-size:85px;
 }
 
@@ -368,9 +368,9 @@ header{
 }
 
 .price{
+    margin:15px 0;
     font-size:21px;
     font-weight:900;
-    margin:15px 0;
 }
 
 .product-buttons{
@@ -382,7 +382,6 @@ header{
     flex:1;
     padding:11px 8px;
     border-radius:9px;
-    border:1px solid #2b425a;
     cursor:pointer;
     font-weight:bold;
 }
@@ -390,40 +389,18 @@ header{
 .add-cart{
     background:#102a49;
     color:white;
+    border:1px solid #2b425a;
 }
 
 .buy-now{
     background:white;
     color:#05070a;
+    border:1px solid white;
 }
 
-/* =========================
-   MODEL SEÇİCİ
-========================= */
-
-.model-boxes{
-    display:flex;
-    gap:9px;
-    flex-wrap:wrap;
-    margin-bottom:22px;
-}
-
-.model-box{
-    background:#0c121a;
-    border:1px solid #26384d;
-    padding:10px 14px;
-    border-radius:9px;
-    color:#d9e0e8;
-    cursor:pointer;
-}
-
-.model-box:hover{
-    background:#132d4c;
-}
-
-/* =========================
-   YORUMLAR
-========================= */
+/* =====================================================
+REVIEWS
+===================================================== */
 
 .reviews{
     display:grid;
@@ -453,9 +430,9 @@ header{
     margin-top:14px;
 }
 
-/* =========================
-   İLETİŞİM
-========================= */
+/* =====================================================
+CONTACT
+===================================================== */
 
 .contact-grid{
     display:grid;
@@ -472,15 +449,15 @@ header{
 }
 
 .contact-icon{
-    width:48px;
-    height:48px;
+    width:50px;
+    height:50px;
     margin:0 auto 13px;
     display:flex;
     justify-content:center;
     align-items:center;
     border-radius:12px;
     background:#102a48;
-    font-size:22px;
+    font-size:23px;
 }
 
 .contact-card h3{
@@ -497,10 +474,6 @@ header{
     color:white;
     text-decoration:none;
 }
-
-/* =========================
-   ADRES
-========================= */
 
 .address{
     margin-top:18px;
@@ -519,9 +492,9 @@ header{
     color:#c3ccd7;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* =====================================================
+FOOTER
+===================================================== */
 
 footer{
     margin-top:60px;
@@ -560,9 +533,9 @@ footer{
     text-decoration:none;
 }
 
-/* =========================
-   WHATSAPP
-========================= */
+/* =====================================================
+WHATSAPP
+===================================================== */
 
 .whatsapp{
     position:fixed;
@@ -571,20 +544,20 @@ footer{
     width:60px;
     height:60px;
     border-radius:50%;
-    background:var(--whatsapp);
+    background:#25d366;
     color:white;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:30px;
+    font-size:29px;
     text-decoration:none;
     box-shadow:0 10px 30px #0008;
     z-index:2000;
 }
 
-/* =========================
-   CHAT
-========================= */
+/* =====================================================
+CHAT BUTTON
+===================================================== */
 
 .chat-button{
     position:fixed;
@@ -596,43 +569,71 @@ footer{
     background:#173a63;
     border:1px solid #4a719b;
     color:white;
-    font-size:26px;
+    font-size:27px;
     cursor:pointer;
-    z-index:2000;
+    z-index:2500;
+    box-shadow:0 8px 25px #0008;
 }
+
+.chat-button:hover{
+    transform:scale(1.05);
+}
+
+/* =====================================================
+CHAT BOX
+===================================================== */
 
 .chat-box{
     position:fixed;
     right:20px;
     bottom:165px;
-    width:350px;
+    width:370px;
+    height:550px;
     max-width:calc(100% - 30px);
-    height:500px;
     background:#080d14;
     border:1px solid #29415c;
-    border-radius:18px;
+    border-radius:20px;
     overflow:hidden;
     display:none;
     flex-direction:column;
     z-index:3000;
-    box-shadow:0 20px 70px #000b;
+    box-shadow:0 25px 80px #000c;
 }
 
 .chat-header{
     padding:17px;
-    background:#0d2440;
+    background:linear-gradient(135deg,#0d2440,#102e50);
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
-.chat-header strong{
-    font-size:16px;
+.chat-profile{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.profile-icon{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#234c78;
+    font-size:20px;
+}
+
+.chat-profile small{
+    display:block;
+    color:#9eb3c9;
+    margin-top:3px;
 }
 
 .chat-close{
     cursor:pointer;
-    font-size:20px;
+    font-size:25px;
 }
 
 .chat-messages{
@@ -642,29 +643,48 @@ footer{
 }
 
 .message{
-    margin-bottom:10px;
-    max-width:85%;
+    margin-bottom:11px;
+    max-width:88%;
     padding:11px 13px;
-    border-radius:12px;
-    line-height:1.4;
+    border-radius:13px;
+    line-height:1.5;
     font-size:14px;
+    word-wrap:break-word;
 }
 
 .bot{
     background:#111b27;
     color:#d6dde6;
+    border-bottom-left-radius:4px;
 }
 
 .user{
     background:#173a63;
+    color:white;
     margin-left:auto;
+    border-bottom-right-radius:4px;
+}
+
+.message a{
+    color:#8db7ff;
+}
+
+.message .whatsapp-link{
+    display:inline-block;
+    margin-top:10px;
+    padding:9px 13px;
+    background:#25d366;
+    color:white;
+    border-radius:9px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 .quick-buttons{
     display:flex;
     gap:7px;
     overflow-x:auto;
-    padding:10px;
+    padding:9px;
     border-top:1px solid #1c2b3c;
 }
 
@@ -698,16 +718,17 @@ footer{
     color:white;
     border:none;
     cursor:pointer;
+    font-size:18px;
 }
 
-/* =========================
-   MODAL
-========================= */
+/* =====================================================
+MODAL
+===================================================== */
 
 .modal{
     position:fixed;
     inset:0;
-    background:#000b;
+    background:#000c;
     display:none;
     justify-content:center;
     align-items:center;
@@ -790,9 +811,9 @@ footer{
     color:#05070a;
 }
 
-/* =========================
-   CART
-========================= */
+/* =====================================================
+CART
+===================================================== */
 
 .cart-items{
     margin-bottom:15px;
@@ -832,9 +853,9 @@ footer{
     margin:20px 0;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* =====================================================
+RESPONSIVE
+===================================================== */
 
 @media(max-width:1000px){
 
@@ -864,16 +885,12 @@ footer{
 
     .search{
         order:3;
-        width:100%;
         flex-basis:100%;
-    }
-
-    .nav-buttons{
-        margin-left:auto;
     }
 
     .hero{
         padding:45px 18px;
+        margin:15px;
     }
 
     .hero h1{
@@ -922,6 +939,7 @@ footer{
         right:10px;
         bottom:145px;
         width:calc(100% - 20px);
+        height:530px;
     }
 
     .whatsapp{
@@ -945,10 +963,6 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .nav-btn{
-        padding:10px;
-    }
-
     .section{
         padding:0 13px;
     }
@@ -960,9 +974,9 @@ footer{
 
 <body>
 
-<!-- =========================
+<!-- =====================================================
 HEADER
-========================= -->
+===================================================== -->
 
 <header>
 
@@ -973,22 +987,35 @@ TEKNO<span>BİZ</span>
 </div>
 
 <div class="search">
+
 <input
-type="text"
 id="searchInput"
+type="text"
 placeholder="Ürün veya model ara..."
 oninput="searchProducts()">
-<div class="search-icon">⌕</div>
+
+<div class="search-icon">
+⌕
+</div>
+
 </div>
 
 <div class="nav-buttons">
 
-<button class="nav-btn" onclick="openCart()">
+<button
+class="nav-btn"
+onclick="openCart()">
+
 🛒 <span id="cartCount">0</span>
+
 </button>
 
-<button class="nav-btn" onclick="openPurchase()">
+<button
+class="nav-btn"
+onclick="openPurchase()">
+
 Satın Al
+
 </button>
 
 </div>
@@ -998,9 +1025,9 @@ Satın Al
 </header>
 
 
-<!-- =========================
+<!-- =====================================================
 HERO
-========================= -->
+===================================================== -->
 
 <section class="hero">
 
@@ -1009,22 +1036,26 @@ Teknoloji <span>Burada.</span>
 </h1>
 
 <p>
-Telefon, aksesuar, şarj ürünleri, kulaklık, hoparlör
-ve teknoloji ürünlerinde TeknoBiz yanınızda.
+Telefon, telefon aksesuarları, kulaklık, hoparlör,
+şarj ürünleri ve teknoloji ürünlerinde TeknoBiz.
 </p>
 
 <div class="hero-buttons">
 
 <button
 class="primary-btn"
-onclick="document.getElementById('products').scrollIntoView()">
+onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+
 Ürünleri İncele
+
 </button>
 
 <button
 class="secondary-btn"
 onclick="openChat()">
-💬 Canlı Destek
+
+💬 Mustafa Bey'e Ulaş
+
 </button>
 
 </div>
@@ -1032,17 +1063,22 @@ onclick="openChat()">
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
 KAMPANYALAR
-========================= -->
+===================================================== -->
 
 <section class="section">
 
 <div class="section-title">
 
 <div>
+
 <h2>🔥 Kampanyalı Ürünler</h2>
-<p>Seçili ürünlerde özel fırsatlar</p>
+
+<p>
+Seçili ürünlerde özel fırsatlar
+</p>
+
 </div>
 
 </div>
@@ -1052,45 +1088,97 @@ KAMPANYALAR
 <div class="campaign-track">
 
 <div class="campaign">
+
 <small>TEKNO BİZ</small>
-<h3>Telefon Kılıfları</h3>
-<p>Seçili modellerde özel fiyatlar</p>
-<strong>499 TL'den başlayan</strong>
+
+<h3>
+Telefon Kılıfları
+</h3>
+
+<p>
+Seçili modellerde özel fiyatlar
+</p>
+
+<strong>
+499 TL'den başlayan
+</strong>
+
 </div>
 
+
 <div class="campaign">
+
 <small>AKSESUAR</small>
-<h3>Hızlı Şarj</h3>
-<p>Günlük kullanım için hızlı çözümler</p>
-<strong>399 TL'den başlayan</strong>
+
+<h3>
+Hızlı Şarj
+</h3>
+
+<p>
+Günlük kullanım için hızlı çözümler
+</p>
+
+<strong>
+399 TL'den başlayan
+</strong>
+
 </div>
 
+
 <div class="campaign">
+
 <small>SES</small>
-<h3>Kulaklıklar</h3>
-<p>Bluetooth modeller</p>
-<strong>799 TL'den başlayan</strong>
+
+<h3>
+Kulaklıklar
+</h3>
+
+<p>
+Bluetooth modeller
+</p>
+
+<strong>
+799 TL'den başlayan
+</strong>
+
 </div>
 
+
 <div class="campaign">
+
 <small>POWER</small>
-<h3>Powerbank</h3>
-<p>Gün boyu enerji</p>
-<strong>899 TL'den başlayan</strong>
+
+<h3>
+Powerbank
+</h3>
+
+<p>
+Gün boyu enerji
+</p>
+
+<strong>
+899 TL'den başlayan
+</strong>
+
 </div>
 
+
 <div class="campaign">
+
 <small>TEKNO BİZ</small>
-<h3>Telefon Kılıfları</h3>
-<p>Seçili modellerde özel fiyatlar</p>
-<strong>499 TL'den başlayan</strong>
-</div>
 
-<div class="campaign">
-<small>AKSESUAR</small>
-<h3>Hızlı Şarj</h3>
-<p>Günlük kullanım için hızlı çözümler</p>
-<strong>399 TL'den başlayan</strong>
+<h3>
+Telefon Kılıfları
+</h3>
+
+<p>
+Seçili modellerde özel fiyatlar
+</p>
+
+<strong>
+499 TL'den başlayan
+</strong>
+
 </div>
 
 </div>
@@ -1100,52 +1188,75 @@ KAMPANYALAR
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
 KATEGORİLER
-========================= -->
+===================================================== -->
 
 <section class="section">
 
 <div class="section-title">
 
 <div>
-<h2>Kategoriler</h2>
-<p>İhtiyacına göre ürünleri bul</p>
+
+<h2>
+Kategoriler
+</h2>
+
+<p>
+İhtiyacına göre ürünleri bul
+</p>
+
 </div>
 
 </div>
 
 <div class="categories">
 
-<button class="category active" onclick="filterCategory('all',this)">
+<button
+class="category active"
+onclick="filterCategory('all',this)">
 Tümü
 </button>
 
-<button class="category" onclick="filterCategory('Telefon',this)">
+<button
+class="category"
+onclick="filterCategory('Telefon',this)">
 📱 Telefon
 </button>
 
-<button class="category" onclick="filterCategory('Kılıf',this)">
+<button
+class="category"
+onclick="filterCategory('Kılıf',this)">
 🛡️ Kılıf
 </button>
 
-<button class="category" onclick="filterCategory('Şarj',this)">
+<button
+class="category"
+onclick="filterCategory('Şarj',this)">
 🔌 Şarj
 </button>
 
-<button class="category" onclick="filterCategory('Kulaklık',this)">
+<button
+class="category"
+onclick="filterCategory('Kulaklık',this)">
 🎧 Kulaklık
 </button>
 
-<button class="category" onclick="filterCategory('Hoparlör',this)">
+<button
+class="category"
+onclick="filterCategory('Hoparlör',this)">
 🔊 Hoparlör
 </button>
 
-<button class="category" onclick="filterCategory('Powerbank',this)">
+<button
+class="category"
+onclick="filterCategory('Powerbank',this)">
 🔋 Powerbank
 </button>
 
-<button class="category" onclick="filterCategory('Saat',this)">
+<button
+class="category"
+onclick="filterCategory('Saat',this)">
 ⌚ Saat
 </button>
 
@@ -1154,52 +1265,75 @@ Tümü
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
 MODELLER
-========================= -->
+===================================================== -->
 
 <section class="section">
 
 <div class="section-title">
 
 <div>
-<h2>Popüler Modeller</h2>
-<p>Hızlı model seçimi</p>
+
+<h2>
+Popüler Modeller
+</h2>
+
+<p>
+Hızlı model seçimi
+</p>
+
 </div>
 
 </div>
 
 <div class="model-boxes">
 
-<button class="model-box" onclick="searchModel('iPhone 17')">
+<button
+class="model-box"
+onclick="searchModel('iPhone 17')">
 iPhone 17
 </button>
 
-<button class="model-box" onclick="searchModel('iPhone 17 Pro')">
+<button
+class="model-box"
+onclick="searchModel('iPhone 17 Pro')">
 iPhone 17 Pro
 </button>
 
-<button class="model-box" onclick="searchModel('iPhone 17 Pro Max')">
+<button
+class="model-box"
+onclick="searchModel('iPhone 17 Pro Max')">
 iPhone 17 Pro Max
 </button>
 
-<button class="model-box" onclick="searchModel('iPhone 18')">
+<button
+class="model-box"
+onclick="searchModel('iPhone 18')">
 iPhone 18
 </button>
 
-<button class="model-box" onclick="searchModel('iPhone 18 Pro')">
+<button
+class="model-box"
+onclick="searchModel('iPhone 18 Pro')">
 iPhone 18 Pro
 </button>
 
-<button class="model-box" onclick="searchModel('Samsung S26')">
+<button
+class="model-box"
+onclick="searchModel('Galaxy S26')">
 Samsung S26
 </button>
 
-<button class="model-box" onclick="searchModel('Samsung S26 Ultra')">
+<button
+class="model-box"
+onclick="searchModel('Galaxy S26 Ultra')">
 Samsung S26 Ultra
 </button>
 
-<button class="model-box" onclick="searchModel('Xiaomi 17')">
+<button
+class="model-box"
+onclick="searchModel('Xiaomi 17')">
 Xiaomi 17
 </button>
 
@@ -1208,46 +1342,71 @@ Xiaomi 17
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
 ÜRÜNLER
-========================= -->
+===================================================== -->
 
-<section class="section" id="products">
+<section
+class="section"
+id="products">
 
 <div class="section-title">
 
 <div>
-<h2>Ürünler</h2>
-<p id="productResult">Tüm ürünler</p>
-</div>
+
+<h2>
+Ürünler
+</h2>
+
+<p id="productResult">
+Tüm ürünler
+</p>
 
 </div>
 
-<div class="products" id="productList"></div>
+</div>
+
+<div
+class="products"
+id="productList">
+</div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
 YORUMLAR
-========================= -->
+===================================================== -->
 
 <section class="section">
 
 <div class="section-title">
 
 <div>
-<h2>⭐ Müşteri Yorumları</h2>
-<p>TeknoBiz hakkında müşterilerimiz ne diyor?</p>
+
+<h2>
+⭐ Müşteri Yorumları
+</h2>
+
+<p>
+TeknoBiz hakkında müşterilerimiz ne diyor?
+</p>
+
 </div>
 
-<button class="secondary-btn" onclick="openReview()">
+<button
+class="secondary-btn"
+onclick="openReview()">
+
 Yorum Yap
+
 </button>
 
 </div>
 
-<div class="reviews" id="reviews">
+<div
+class="reviews"
+id="reviews">
 
 <div class="review">
 
@@ -1259,9 +1418,12 @@ Yorum Yap
 Ürünümü hızlı aldım, iletişim konusunda da yardımcı oldular.
 </p>
 
-<strong>Ahmet K.</strong>
+<strong>
+Ahmet K.
+</strong>
 
 </div>
+
 
 <div class="review">
 
@@ -1273,9 +1435,12 @@ Yorum Yap
 Telefon kılıfı ve ekran koruyucu aldım. Gayet memnun kaldım.
 </p>
 
-<strong>Mehmet Y.</strong>
+<strong>
+Mehmet Y.
+</strong>
 
 </div>
+
 
 <div class="review">
 
@@ -1287,7 +1452,9 @@ Telefon kılıfı ve ekran koruyucu aldım. Gayet memnun kaldım.
 WhatsApp üzerinden hızlıca bilgi alabildim.
 </p>
 
-<strong>Emre T.</strong>
+<strong>
+Emre T.
+</strong>
 
 </div>
 
@@ -1296,17 +1463,24 @@ WhatsApp üzerinden hızlıca bilgi alabildim.
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
 İLETİŞİM
-========================= -->
+===================================================== -->
 
 <section class="section">
 
 <div class="section-title">
 
 <div>
-<h2>📞 İletişim</h2>
-<p>Bize ulaşmanın tüm yolları</p>
+
+<h2>
+📞 İletişim
+</h2>
+
+<p>
+TeknoBiz'e ulaşın
+</p>
+
 </div>
 
 </div>
@@ -1316,10 +1490,35 @@ WhatsApp üzerinden hızlıca bilgi alabildim.
 <div class="contact-card">
 
 <div class="contact-icon">
+☎
+</div>
+
+<h3>
+Telefon
+</h3>
+
+<p>
+0505 999 90 09
+</p>
+
+<br>
+
+<a href="tel:050599999009">
+Hemen Ara
+</a>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="contact-icon">
 💬
 </div>
 
-<h3>WhatsApp</h3>
+<h3>
+WhatsApp
+</h3>
 
 <p>
 0505 999 90 09
@@ -1341,31 +1540,12 @@ WhatsApp'tan Yaz
 <div class="contact-card">
 
 <div class="contact-icon">
-📞
-</div>
-
-<h3>Telefon</h3>
-
-<p>
-0505 999 90 09
-</p>
-
-<br>
-
-<a href="tel:050599999009">
-Hemen Ara
-</a>
-
-</div>
-
-
-<div class="contact-card">
-
-<div class="contact-icon">
 📸
 </div>
 
-<h3>Instagram</h3>
+<h3>
+Instagram
+</h3>
 
 <p>
 @Teknobiz7
@@ -1390,7 +1570,9 @@ Instagram'a Git
 ✉️
 </div>
 
-<h3>E-Mail</h3>
+<h3>
+E-Mail
+</h3>
 
 <p>
 teknobiz15@gmail.com
@@ -1411,7 +1593,9 @@ Mail Gönder
 
 <div class="address">
 
-<h3>📍 Mağazamız</h3>
+<h3>
+📍 TeknoBiz Mağaza
+</h3>
 
 <p>
 Süleyman Demirel Bulvarı No:15,
@@ -1419,7 +1603,7 @@ Bucak / Burdur
 </p>
 
 <p style="margin-top:10px;">
-🕘 Çalışma Saatleri: 09:00 - 21:00
+🕘 Her gün 09:00 - 21:00
 </p>
 
 </div>
@@ -1427,9 +1611,9 @@ Bucak / Burdur
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
 FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
@@ -1453,7 +1637,8 @@ Teknoloji ve aksesuarın adresi.
 Ürünler
 </a>
 
-<a href="#"
+<a
+href="#"
 onclick="openChat();return false;">
 Canlı Destek
 </a>
@@ -1477,24 +1662,23 @@ WhatsApp
 </footer>
 
 
-<!-- =========================
-WHATSAPP
-========================= -->
+<!-- =====================================================
+WHATSAPP BUTONU
+===================================================== -->
 
 <a
 class="whatsapp"
 href="https://wa.me/905059999009?text=Merhaba%20TeknoBiz,%20bilgi%20almak%20istiyorum."
-target="_blank"
-title="WhatsApp">
+target="_blank">
 
 ☎
 
 </a>
 
 
-<!-- =========================
-CHAT BUTTON
-========================= -->
+<!-- =====================================================
+CANLI DESTEK BUTONU
+===================================================== -->
 
 <button
 class="chat-button"
@@ -1505,22 +1689,42 @@ onclick="openChat()">
 </button>
 
 
-<!-- =========================
-CHAT BOX
-========================= -->
+<!-- =====================================================
+CANLI DESTEK
+===================================================== -->
 
-<div class="chat-box" id="chatBox">
+<div
+class="chat-box"
+id="chatBox">
 
 <div class="chat-header">
 
-<strong>🤖 TeknoBiz Destek</strong>
+<div class="chat-profile">
 
-<span
+<div class="profile-icon">
+🤖
+</div>
+
+<div>
+
+<strong>
+TeknoBiz Destek
+</strong>
+
+<small>
+Çevrimiçi • Otomatik Destek
+</small>
+
+</div>
+
+</div>
+
+<div
 class="chat-close"
 onclick="closeChat()">
 
 ×
-</span>
+</div>
 
 </div>
 
@@ -1531,12 +1735,23 @@ id="chatMessages">
 
 <div class="message bot">
 
-Merhaba! 👋<br><br>
+<strong>
+Merhaba Mustafa Bey 👋
+</strong>
 
-Ben TeknoBiz otomatik destek asistanıyım.
 <br><br>
 
-Ürünler, fiyatlar, adres, çalışma saatleri ve iletişim konusunda yardımcı olabilirim.
+TeknoBiz destek hattına hoş geldiniz.
+
+<br><br>
+
+Size ürünler, fiyatlar, stok, adres, çalışma saatleri ve iletişim konusunda yardımcı olabilirim.
+
+<br><br>
+
+<strong>
+Nasıl yardımcı olabilirim?
+</strong>
 
 </div>
 
@@ -1545,24 +1760,34 @@ Ben TeknoBiz otomatik destek asistanıyım.
 
 <div class="quick-buttons">
 
-<button onclick="quickChat('telefon')">
-☎ Telefon
+<button
+onclick="quickChat('telefon')">
+☎ Numara
 </button>
 
-<button onclick="quickChat('adres')">
+<button
+onclick="quickChat('adres')">
 📍 Adres
 </button>
 
-<button onclick="quickChat('whatsapp')">
+<button
+onclick="quickChat('whatsapp')">
 💬 WhatsApp
 </button>
 
-<button onclick="quickChat('saat')">
+<button
+onclick="quickChat('saat')">
 🕘 Saat
 </button>
 
-<button onclick="quickChat('instagram')">
+<button
+onclick="quickChat('instagram')">
 📸 Instagram
+</button>
+
+<button
+onclick="quickChat('ürünler')">
+📱 Ürünler
 </button>
 
 </div>
@@ -1572,11 +1797,15 @@ Ben TeknoBiz otomatik destek asistanıyım.
 
 <input
 id="chatInput"
+type="text"
 placeholder="Mesajınızı yazın..."
-onkeydown="if(event.key==='Enter') sendMessage()">
+autocomplete="off">
 
-<button onclick="sendMessage()">
+<button
+onclick="sendMessage()">
+
 ➤
+
 </button>
 
 </div>
@@ -1584,17 +1813,21 @@ onkeydown="if(event.key==='Enter') sendMessage()">
 </div>
 
 
-<!-- =========================
-CART MODAL
-========================= -->
+<!-- =====================================================
+SEPET
+===================================================== -->
 
-<div class="modal" id="cartModal">
+<div
+class="modal"
+id="cartModal">
 
 <div class="modal-content">
 
 <div class="modal-header">
 
-<h2>🛒 Sepetim</h2>
+<h2>
+🛒 Sepetim
+</h2>
 
 <span
 class="close"
@@ -1611,7 +1844,9 @@ id="cartItems">
 
 <div class="cart-total">
 
-<span>Toplam</span>
+<span>
+Toplam
+</span>
 
 <span id="cartTotal">
 0 TL
@@ -1633,17 +1868,21 @@ Satın Alma Ekranına Geç
 </div>
 
 
-<!-- =========================
-PURCHASE MODAL
-========================= -->
+<!-- =====================================================
+SATIN ALMA
+===================================================== -->
 
-<div class="modal" id="purchaseModal">
+<div
+class="modal"
+id="purchaseModal">
 
 <div class="modal-content">
 
 <div class="modal-header">
 
-<h2>🛍️ Sipariş Bilgileri</h2>
+<h2>
+🛍️ Sipariş Bilgileri
+</h2>
 
 <span
 class="close"
@@ -1655,7 +1894,9 @@ onclick="closePurchase()">
 
 <div class="form-group">
 
-<label>Ad Soyad</label>
+<label>
+Ad Soyad
+</label>
 
 <input
 id="customerName"
@@ -1665,7 +1906,9 @@ placeholder="Adınız Soyadınız">
 
 <div class="form-group">
 
-<label>Telefon</label>
+<label>
+Telefon
+</label>
 
 <input
 id="customerPhone"
@@ -1675,7 +1918,9 @@ placeholder="05xx xxx xx xx">
 
 <div class="form-group">
 
-<label>Adres</label>
+<label>
+Adres
+</label>
 
 <textarea
 id="customerAddress"
@@ -1685,7 +1930,9 @@ placeholder="Teslimat adresiniz"></textarea>
 
 <div class="form-group">
 
-<label>Sipariş Notu</label>
+<label>
+Sipariş Notu
+</label>
 
 <textarea
 id="customerNote"
@@ -1718,17 +1965,21 @@ WhatsApp'tan Sipariş Ver
 </div>
 
 
-<!-- =========================
-REVIEW MODAL
-========================= -->
+<!-- =====================================================
+YORUM
+===================================================== -->
 
-<div class="modal" id="reviewModal">
+<div
+class="modal"
+id="reviewModal">
 
 <div class="modal-content">
 
 <div class="modal-header">
 
-<h2>⭐ Yorum Yap</h2>
+<h2>
+⭐ Yorum Yap
+</h2>
 
 <span
 class="close"
@@ -1740,7 +1991,9 @@ onclick="closeReview()">
 
 <div class="form-group">
 
-<label>Adınız</label>
+<label>
+Adınız
+</label>
 
 <input
 id="reviewName"
@@ -1750,7 +2003,9 @@ placeholder="Adınız">
 
 <div class="form-group">
 
-<label>Yorumunuz</label>
+<label>
+Yorumunuz
+</label>
 
 <textarea
 id="reviewText"
@@ -1785,9 +2040,9 @@ Yorumu Gönder
 
 <script>
 
-/* =========================
+/* =====================================================
 ÜRÜNLER
-========================= */
+===================================================== */
 
 const products = [
 
@@ -1904,7 +2159,7 @@ price:499
 {
 id:12,
 brand:"Samsung",
-model:"S24 Kılıf",
+model:"Samsung S24 Kılıf",
 category:"Kılıf",
 icon:"🛡️",
 description:"Samsung S24 silikon kılıf",
@@ -1973,25 +2228,25 @@ price:12999
 
 ];
 
-let cart = [];
+let cart=[];
 
-let currentCategory = "all";
+let currentCategory="all";
 
 
-/* =========================
-ÜRÜNLERİ GÖSTER
-========================= */
+/* =====================================================
+ÜRÜN GÖSTER
+===================================================== */
 
-function renderProducts(list = products){
+function renderProducts(list=products){
 
-const container =
+const container=
 document.getElementById("productList");
 
-container.innerHTML = "";
+container.innerHTML="";
 
-if(list.length === 0){
+if(list.length===0){
 
-container.innerHTML = `
+container.innerHTML=`
 
 <div style="
 grid-column:1/-1;
@@ -2000,7 +2255,7 @@ padding:50px;
 color:#8995a5;
 ">
 
-🔎 Aradığınız ürün bulunamadı.
+🔎 Ürün bulunamadı.
 
 </div>
 
@@ -2010,13 +2265,14 @@ return;
 
 }
 
-list.forEach(product => {
+list.forEach(product=>{
 
-const div = document.createElement("div");
+const div=
+document.createElement("div");
 
-div.className = "product";
+div.className="product";
 
-div.innerHTML = `
+div.innerHTML=`
 
 <div class="product-image">
 ${product.icon}
@@ -2068,20 +2324,20 @@ container.appendChild(div);
 
 });
 
-document.getElementById("productResult").textContent =
-list.length + " ürün gösteriliyor";
+document.getElementById("productResult").textContent=
+list.length+" ürün gösteriliyor";
 
 }
 
 
-/* =========================
+/* =====================================================
 SEPET
-========================= */
+===================================================== */
 
 function addToCart(id){
 
-const product =
-products.find(p => p.id === id);
+const product=
+products.find(p=>p.id===id);
 
 if(!product) return;
 
@@ -2089,14 +2345,17 @@ cart.push(product);
 
 updateCart();
 
-alert(product.model + " sepete eklendi.");
+alert(
+product.model+
+" sepete eklendi."
+);
 
 }
 
 
 function updateCart(){
 
-document.getElementById("cartCount").textContent =
+document.getElementById("cartCount").textContent=
 cart.length;
 
 renderCart();
@@ -2106,12 +2365,12 @@ renderCart();
 
 function renderCart(){
 
-const box =
+const box=
 document.getElementById("cartItems");
 
-if(cart.length === 0){
+if(cart.length===0){
 
-box.innerHTML = `
+box.innerHTML=`
 
 <div style="
 text-align:center;
@@ -2125,31 +2384,32 @@ Sepetiniz boş 🛒
 
 `;
 
-document.getElementById("cartTotal").textContent =
-"0 TL";
+document.getElementById("cartTotal").textContent="0 TL";
 
 return;
 
 }
 
-box.innerHTML = "";
+box.innerHTML="";
 
-let total = 0;
+let total=0;
 
 cart.forEach((item,index)=>{
 
-total += item.price;
+total+=item.price;
 
-const div =
+const div=
 document.createElement("div");
 
-div.className = "cart-item";
+div.className="cart-item";
 
-div.innerHTML = `
+div.innerHTML=`
 
 <div class="cart-item-info">
 
-<strong>${item.model}</strong>
+<strong>
+${item.model}
+</strong>
 
 <br>
 
@@ -2173,8 +2433,8 @@ box.appendChild(div);
 
 });
 
-document.getElementById("cartTotal").textContent =
-total.toLocaleString("tr-TR") + " TL";
+document.getElementById("cartTotal").textContent=
+total.toLocaleString("tr-TR")+" TL";
 
 }
 
@@ -2192,27 +2452,25 @@ function openCart(){
 
 renderCart();
 
-document.getElementById("cartModal").style.display =
-"flex";
+document.getElementById("cartModal").style.display="flex";
 
 }
 
 
 function closeCart(){
 
-document.getElementById("cartModal").style.display =
-"none";
+document.getElementById("cartModal").style.display="none";
 
 }
 
 
-/* =========================
+/* =====================================================
 SATIN AL
-========================= */
+===================================================== */
 
 function buyProduct(id){
 
-const product =
+const product=
 products.find(p=>p.id===id);
 
 if(product){
@@ -2230,94 +2488,88 @@ openPurchase();
 
 function openPurchase(){
 
-if(cart.length === 0){
+if(cart.length===0){
 
-alert("Önce sepete bir ürün ekleyin.");
+alert("Önce sepete ürün ekleyin.");
 
 return;
 
 }
 
-document.getElementById("purchaseModal").style.display =
-"flex";
+document.getElementById("purchaseModal").style.display="flex";
 
 }
 
 
 function closePurchase(){
 
-document.getElementById("purchaseModal").style.display =
-"none";
+document.getElementById("purchaseModal").style.display="none";
 
 }
 
 
 function sendOrder(){
 
-const name =
+const name=
 document.getElementById("customerName").value.trim();
 
-const phone =
+const phone=
 document.getElementById("customerPhone").value.trim();
 
-const address =
+const address=
 document.getElementById("customerAddress").value.trim();
 
-const note =
+const note=
 document.getElementById("customerNote").value.trim();
 
 if(!name || !phone || !address){
 
-alert("Lütfen ad, telefon ve adres bilgilerinizi doldurun.");
+alert(
+"Lütfen ad, telefon ve adres bilgilerinizi doldurun."
+);
 
 return;
 
 }
 
-let total = 0;
+let total=0;
 
-let order = "";
+let order="";
 
 cart.forEach(item=>{
 
-total += item.price;
+total+=item.price;
 
-order +=
-"• " +
-item.model +
-" - " +
-item.price.toLocaleString("tr-TR") +
+order+=
+"• "+
+item.model+
+" - "+
+item.price.toLocaleString("tr-TR")+
 " TL\n";
 
 });
 
-const message =
+const message=
 
-"Merhaba TeknoBiz! 🛍️\n\n" +
-
-"Yeni sipariş vermek istiyorum.\n\n" +
-
-"👤 Ad Soyad: " + name + "\n" +
-
-"📞 Telefon: " + phone + "\n\n" +
-
-"📦 Ürünler:\n" +
-
-order +
-
-"\n💰 Toplam: " +
-total.toLocaleString("tr-TR") +
-" TL\n\n" +
-
-"📍 Adres:\n" +
-address +
-"\n\n" +
-
-"📝 Not:\n" +
-(note || "Yok");
+"Merhaba TeknoBiz! 🛍️\n\n"+
+"Yeni sipariş vermek istiyorum.\n\n"+
+"👤 Ad Soyad: "+
+name+
+"\n📞 Telefon: "+
+phone+
+"\n\n📦 Ürünler:\n"+
+order+
+"\n💰 Toplam: "+
+total.toLocaleString("tr-TR")+
+" TL\n\n"+
+"📍 Adres:\n"+
+address+
+"\n\n"+
+"📝 Not:\n"+
+(note||"Yok");
 
 window.open(
-"https://wa.me/905059999009?text=" +
+"https://wa.me/905059999009?text="+
 encodeURIComponent(message),
 "_blank"
 );
@@ -2325,34 +2577,35 @@ encodeURIComponent(message),
 }
 
 
-/* =========================
+/* =====================================================
 ARAMA
-========================= */
+===================================================== */
 
 function searchProducts(){
 
-const value =
-document.getElementById("searchInput")
+const value=
+document
+.getElementById("searchInput")
 .value
 .toLowerCase()
 .trim();
 
-let result =
-products.filter(product =>
+let result=
+products.filter(product=>
 
-product.model.toLowerCase().includes(value) ||
+product.model.toLowerCase().includes(value)||
 
-product.brand.toLowerCase().includes(value) ||
+product.brand.toLowerCase().includes(value)||
 
 product.category.toLowerCase().includes(value)
 
 );
 
-if(currentCategory !== "all"){
+if(currentCategory!=="all"){
 
-result =
-result.filter(product =>
-product.category === currentCategory
+result=
+result.filter(product=>
+product.category===currentCategory
 );
 
 }
@@ -2364,12 +2617,12 @@ renderProducts(result);
 
 function searchModel(model){
 
-document.getElementById("searchInput").value =
-model;
+document.getElementById("searchInput").value=model;
 
 searchProducts();
 
-document.getElementById("products")
+document
+.getElementById("products")
 .scrollIntoView({
 behavior:"smooth"
 });
@@ -2377,17 +2630,17 @@ behavior:"smooth"
 }
 
 
-/* =========================
+/* =====================================================
 KATEGORİ
-========================= */
+===================================================== */
 
 function filterCategory(category,button){
 
-currentCategory = category;
+currentCategory=category;
 
 document
 .querySelectorAll(".category")
-.forEach(btn =>
+.forEach(btn=>
 btn.classList.remove("active")
 );
 
@@ -2398,249 +2651,698 @@ searchProducts();
 }
 
 
-/* =========================
-CHAT
-========================= */
+/* =====================================================
+CANLI DESTEK
+===================================================== */
 
 function openChat(){
 
-document.getElementById("chatBox").style.display =
-"flex";
+document.getElementById("chatBox").style.display="flex";
+
+setTimeout(()=>{
+
+document.getElementById("chatInput").focus();
+
+},100);
 
 }
 
 
 function closeChat(){
 
-document.getElementById("chatBox").style.display =
-"none";
+document.getElementById("chatBox").style.display="none";
 
 }
 
 
+/* =====================================================
+MESAJ EKLE
+===================================================== */
+
 function addMessage(text,type){
 
-const messages =
+const messages=
 document.getElementById("chatMessages");
 
-const div =
+const div=
 document.createElement("div");
 
-div.className =
-"message " + type;
+div.className="message "+type;
 
-div.innerHTML =
-text;
+div.innerHTML=text;
 
 messages.appendChild(div);
 
-messages.scrollTop =
+messages.scrollTop=
 messages.scrollHeight;
 
 }
 
 
-function botReply(text){
+/* =====================================================
+YAZIYOR ANİMASYONU
+===================================================== */
 
-const msg =
-text.toLowerCase();
+function typingMessage(){
 
-let reply = "";
+const messages=
+document.getElementById("chatMessages");
 
-if(
-msg.includes("merhaba") ||
-msg.includes("selam")
-){
+const div=
+document.createElement("div");
 
-reply =
-"Merhaba! 👋 TeknoBiz destek hattına hoş geldiniz. Size nasıl yardımcı olabilirim?";
+div.className="message bot";
+
+div.id="typingMessage";
+
+div.innerHTML=
+"● ● ●";
+
+messages.appendChild(div);
+
+messages.scrollTop=
+messages.scrollHeight;
 
 }
 
+
+function removeTyping(){
+
+const typing=
+document.getElementById("typingMessage");
+
+if(typing){
+
+typing.remove();
+
+}
+
+}
+
+
+/* =====================================================
+BOT CEVAP SİSTEMİ
+===================================================== */
+
+function botReply(text){
+
+const msg=
+text
+.toLocaleLowerCase("tr-TR")
+.trim();
+
+let reply="";
+
+
+/* SELAMLAMA */
+
+if(
+msg.includes("merhaba")||
+msg.includes("selam")||
+msg.includes("sa")
+){
+
+reply=
+`Merhaba Mustafa Bey 👋<br><br>
+TeknoBiz'e hoş geldiniz.
+Size nasıl yardımcı olabilirim?`;
+
+
+}
+
+
+/* NUMARA */
+
 else if(
-msg.includes("telefon") ||
-msg.includes("numara") ||
+msg.includes("numara")||
+msg.includes("telefon")||
+msg.includes("iletişim")||
 msg.includes("ara")
 ){
 
-reply =
-"📞 TeknoBiz mağaza telefon numarası: <strong>0505 999 90 09</strong><br><br>" +
-'<a href="tel:050599999009" style="color:#8db7ff;">Hemen Ara</a>';
+reply=
+`📞 <strong>TeknoBiz İletişim</strong><br><br>
+
+Mağaza telefonumuz:<br>
+
+<strong style="font-size:17px;">
+0505 999 90 09
+</strong>
+
+<br><br>
+
+<a href="tel:050599999009">
+📞 Hemen Ara
+</a>
+
+<br><br>
+
+<a
+class="whatsapp-link"
+href="https://wa.me/905059999009"
+target="_blank">
+
+💬 WhatsApp'tan Yaz
+
+</a>`;
 
 }
 
+
+/* WHATSAPP */
+
 else if(
-msg.includes("whatsapp")
+msg.includes("whatsapp")||
+msg.includes("wp")
 ){
 
-reply =
-"💬 WhatsApp destek hattımız:<br><br>" +
-"<strong>0505 999 90 09</strong><br><br>" +
-'<a href="https://wa.me/905059999009" target="_blank" style="color:#25d366;">WhatsApp'tan Yaz</a>';
+reply=
+`💬 <strong>WhatsApp Destek</strong><br><br>
+
+<strong>
+0505 999 90 09
+</strong>
+
+<br><br>
+
+<a
+class="whatsapp-link"
+href="https://wa.me/905059999009"
+target="_blank">
+
+WhatsApp'tan Yaz
+
+</a>`;
 
 }
 
+
+/* ADRES */
+
 else if(
-msg.includes("adres") ||
-msg.includes("nerede") ||
-msg.includes("konum")
+msg.includes("adres")||
+msg.includes("nerede")||
+msg.includes("konum")||
+msg.includes("mağaza")
 ){
 
-reply =
-"📍 Mağazamız:<br><br>" +
-"<strong>Süleyman Demirel Bulvarı No:15<br>Bucak / Burdur</strong>";
+reply=
+`📍 <strong>TeknoBiz Mağaza</strong><br><br>
+
+Süleyman Demirel Bulvarı No:15<br>
+Bucak / Burdur
+
+<br><br>
+
+🕘 Çalışma saatleri:<br>
+<strong>09:00 - 21:00</strong>`;
 
 }
 
+
+/* ÇALIŞMA SAATİ */
+
 else if(
-msg.includes("saat") ||
-msg.includes("açık") ||
-msg.includes("kapan")
+msg.includes("saat")||
+msg.includes("açık")||
+msg.includes("kapan")||
+msg.includes("çalışma")
 ){
 
-reply =
-"🕘 Çalışma saatlerimiz:<br><br>" +
-"<strong>09:00 - 21:00</strong>";
+reply=
+`🕘 <strong>Çalışma Saatlerimiz</strong><br><br>
+
+Her gün:<br>
+
+<strong>
+09:00 - 21:00
+</strong>
+
+<br><br>
+
+Mağazamıza bekleriz Mustafa Bey. 😊`;
 
 }
 
+
+/* INSTAGRAM */
+
 else if(
-msg.includes("instagram")
+msg.includes("instagram")||
+msg.includes("insta")
 ){
 
-reply =
-"📸 Instagram hesabımız:<br><br>" +
-"<strong>@Teknobiz7</strong><br><br>" +
-'<a href="https://instagram.com/Teknobiz7" target="_blank" style="color:#8db7ff;">Instagram'a Git</a>';
+reply=
+`📸 <strong>Instagram</strong><br><br>
+
+Instagram hesabımız:<br>
+
+<strong>
+@Teknobiz7
+</strong>
+
+<br><br>
+
+<a
+href="https://instagram.com/Teknobiz7"
+target="_blank">
+
+Instagram'a Git
+
+</a>`;
 
 }
 
+
+/* E-MAIL */
+
 else if(
-msg.includes("mail") ||
-msg.includes("email")
+msg.includes("mail")||
+msg.includes("email")||
+msg.includes("e-mail")
 ){
 
-reply =
-"✉️ E-Mail adresimiz:<br><br>" +
-"<strong>teknobiz15@gmail.com</strong>";
+reply=
+`✉️ <strong>E-Mail</strong><br><br>
+
+<strong>
+teknobiz15@gmail.com
+</strong>
+
+<br><br>
+
+<a
+href="mailto:teknobiz15@gmail.com">
+
+Mail Gönder
+
+</a>`;
 
 }
 
+
+/* ÜRÜN */
+
 else if(
-msg.includes("fiyat") ||
-msg.includes("kaç") ||
+msg.includes("ürün")||
+msg.includes("neler")||
+msg.includes("ne sat")||
+msg.includes("satıyorsunuz")
+){
+
+reply=
+`📱 <strong>TeknoBiz'de bulunan ürünler:</strong><br><br>
+
+• Telefonlar<br>
+• Telefon kılıfları<br>
+• Ekran koruyucular<br>
+• Kulaklıklar<br>
+• Bluetooth hoparlörler<br>
+• Şarj adaptörleri<br>
+• Kablolar<br>
+• Powerbankler<br>
+• Akıllı saatler<br>
+• Teknoloji aksesuarları<br><br>
+
+Belirli bir model arıyorsanız model adını yazabilirsiniz. 🔎`;
+
+}
+
+
+/* FİYAT */
+
+else if(
+msg.includes("fiyat")||
+msg.includes("kaç tl")||
+msg.includes("ne kadar")||
 msg.includes("ücret")
 ){
 
-reply =
-"💰 Güncel sitedeki örnek fiyatları görmek için ürünler bölümüne bakabilirsiniz. Gerçek stok ve fiyat bilgisi için mağazamızla WhatsApp üzerinden iletişime geçebilirsiniz.";
+reply=
+`💰 Fiyat bilgisi ürün ve modele göre değişiyor.
+
+Sitedeki ürünler bölümünden mevcut ürünleri inceleyebilirsiniz.
+
+Belirli bir ürünün güncel fiyatını soruyorsanız ürünün adını yazın.
+
+📞 Güncel stok ve fiyat için:
+<strong>0505 999 90 09</strong>`;
 
 }
+
+
+/* STOK */
 
 else if(
-msg.includes("ürün") ||
-msg.includes("ne sat")
+msg.includes("stok")||
+msg.includes("var mı")||
+msg.includes("mevcut")
 ){
 
-reply =
-"📱 Telefonlar<br>" +
-"🛡️ Kılıflar<br>" +
-"🔌 Şarj ürünleri<br>" +
-"🎧 Kulaklıklar<br>" +
-"🔊 Hoparlörler<br>" +
-"🔋 Powerbankler<br>" +
-"⌚ Akıllı saatler<br><br>" +
-"Ürünlerimizi sitedeki Ürünler bölümünden inceleyebilirsiniz.";
+reply=
+`📦 Stok durumu modele göre değişebilir.
+
+Aradığınız ürünün veya telefon modelinin adını yazarsanız yardımcı olmaya çalışırım.
+
+Kesin stok bilgisi için:
+
+<strong>
+0505 999 90 09
+</strong>
+
+<br><br>
+
+<a
+class="whatsapp-link"
+href="https://wa.me/905059999009"
+target="_blank">
+
+💬 Stok Sor
+
+</a>`;
 
 }
+
+
+/* KILIF */
 
 else if(
-msg.includes("insan") ||
-msg.includes("yetkili") ||
-msg.includes("müşteri hizmet")
+msg.includes("kılıf")||
+msg.includes("kilif")
 ){
 
-reply =
-"Tabii. 👤 Mağaza yetkilisine ulaşabilirsiniz.<br><br>" +
-"📞 <strong>0505 999 90 09</strong><br><br>" +
-'<a href="https://wa.me/905059999009" target="_blank" style="color:#25d366;">WhatsApp'tan Yetkiliye Ulaş</a>';
+reply=
+`🛡️ Telefon kılıflarında birçok model bulunabilir.
+
+Hangi telefon modeli için kılıf arıyorsunuz?
+
+Örneğin:
+<br><br>
+
+<strong>
+iPhone 17 Pro<br>
+iPhone 17 Pro Max<br>
+Samsung S26 Ultra
+</strong>
+
+<br><br>
+
+Modeli yazarsanız ilgili ürünleri arayabilirsiniz.`;
 
 }
+
+
+/* KULAKLIK */
 
 else if(
-msg.includes("teşekkür") ||
-msg.includes("sağol")
+msg.includes("kulaklık")||
+msg.includes("kulaklik")||
+msg.includes("airpods")
 ){
 
-reply =
-"Rica ederiz! 😊 TeknoBiz olarak yardımcı olmaktan mutluluk duyarız.";
+reply=
+`🎧 Kulaklık kategorimizde Bluetooth ve kablosuz modeller bulunuyor.
+
+Belirli bir marka/model arıyorsanız adını yazabilirsiniz.
+
+Güncel stok için:
+<strong>0505 999 90 09</strong>`;
 
 }
+
+
+/* ŞARJ */
 
 else if(
-msg.includes("stok")
+msg.includes("şarj")||
+msg.includes("sarj")||
+msg.includes("adaptör")||
+msg.includes("kablo")
 ){
 
-reply =
-"Stok durumları modele göre değişebilir. 📦 Güncel stok için <strong>0505 999 90 09</strong> numarasından WhatsApp üzerinden bilgi alabilirsiniz.";
+reply=
+`🔌 Şarj ürünleri kategorimizde adaptör, kablo ve hızlı şarj ürünleri bulunuyor.
+
+İsterseniz aradığınız telefon modelini yazın, uygun ürün konusunda mağazamızdan bilgi alabilirsiniz.
+
+📞 0505 999 90 09`;
 
 }
+
+
+/* SİPARİŞ */
+
+else if(
+msg.includes("sipariş")||
+msg.includes("siparis")||
+msg.includes("satın")||
+msg.includes("almak")
+){
+
+reply=
+`🛍️ Sipariş vermek için ürünleri sepete ekleyip "Satın Al" bölümünden bilgilerinizi doldurabilirsiniz.
+
+İsterseniz WhatsApp üzerinden de sipariş konusunda mağazamızla iletişime geçebilirsiniz.
+
+<br><br>
+
+<a
+class="whatsapp-link"
+href="https://wa.me/905059999009"
+target="_blank">
+
+💬 WhatsApp'tan Sipariş Ver
+
+</a>`;
+
+}
+
+
+/* KARGO */
+
+else if(
+msg.includes("kargo")||
+msg.includes("teslimat")||
+msg.includes("gönderim")
+){
+
+reply=
+`📦 Kargo ve teslimat bilgileri siparişe göre değişebilir.
+
+Güncel bilgi için mağazamızla iletişime geçebilirsiniz:
+
+<strong>
+0505 999 90 09
+</strong>
+
+<br><br>
+
+<a
+class="whatsapp-link"
+href="https://wa.me/905059999009"
+target="_blank">
+
+💬 Kargo Bilgisi Al
+
+</a>`;
+
+}
+
+
+/* YETKİLİ */
+
+else if(
+msg.includes("yetkili")||
+msg.includes("insan")||
+msg.includes("mustafa")||
+msg.includes("mustafa bey")||
+msg.includes("sahibi")
+){
+
+reply=
+`Tabii Mustafa Bey. 👤
+
+Mağaza yetkilisine ulaşmak için:
+
+<br><br>
+
+📞 <strong>
+0505 999 90 09
+</strong>
+
+<br><br>
+
+<a
+class="whatsapp-link"
+href="https://wa.me/905059999009"
+target="_blank">
+
+💬 Yetkiliye WhatsApp'tan Ulaş
+
+</a>`;
+
+}
+
+
+/* TEŞEKKÜR */
+
+else if(
+msg.includes("teşekkür")||
+msg.includes("tesekkur")||
+msg.includes("sağol")||
+msg.includes("eyvallah")
+){
+
+reply=
+`Rica ederiz Mustafa Bey. 😊<br><br>
+
+TeknoBiz olarak yardımcı olmaktan mutluluk duyarız.`;
+
+}
+
+
+/* GÜNAYDIN */
+
+else if(
+msg.includes("günaydın")||
+msg.includes("gunaydin")
+){
+
+reply=
+`Günaydın Mustafa Bey ☀️<br><br>
+
+TeknoBiz destek hattına hoş geldiniz.
+Size nasıl yardımcı olabilirim?`;
+
+}
+
+
+/* İYİ AKŞAMLAR */
+
+else if(
+msg.includes("iyi akşam")||
+msg.includes("iyi aksam")
+){
+
+reply=
+`İyi akşamlar Mustafa Bey. 🌙<br><br>
+
+TeknoBiz'e hoş geldiniz.
+Nasıl yardımcı olabilirim?`;
+
+}
+
+
+/* BİLİNMEYEN */
 
 else{
 
-reply =
-"Bu konuda size yardımcı olmak için mağaza yetkilisine bağlanabilirsiniz. 📞<br><br>" +
-"<strong>0505 999 90 09</strong><br><br>" +
-'<a href="https://wa.me/905059999009" target="_blank" style="color:#25d366;">WhatsApp'tan Yaz</a>';
+reply=
+`Mustafa Bey, bu konuda size en doğru bilgiyi mağaza yetkilimiz verebilir. 😊
+
+<br><br>
+
+📞 <strong>
+0505 999 90 09
+</strong>
+
+<br><br>
+
+<a
+class="whatsapp-link"
+href="https://wa.me/905059999009"
+target="_blank">
+
+💬 WhatsApp'tan Yetkiliye Ulaş
+
+</a>`;
 
 }
+
+
+typingMessage();
 
 setTimeout(()=>{
 
+removeTyping();
+
 addMessage(reply,"bot");
 
-},500);
+},700);
 
 }
 
 
+/* =====================================================
+MESAJ GÖNDER
+===================================================== */
+
 function sendMessage(){
 
-const input =
+const input=
 document.getElementById("chatInput");
 
-const text =
+const text=
 input.value.trim();
 
 if(!text) return;
 
 addMessage(text,"user");
 
-input.value = "";
+input.value="";
 
 botReply(text);
 
 }
 
 
+/* ENTER
+===================================================== */
+
+document
+.getElementById("chatInput")
+.addEventListener("keydown",function(e){
+
+if(e.key==="Enter"){
+
+sendMessage();
+
+}
+
+});
+
+
+/* =====================================================
+HIZLI BUTONLAR
+===================================================== */
+
 function quickChat(type){
 
-let text = "";
+let text="";
 
-if(type==="telefon")
+if(type==="telefon"){
 text="Telefon numaranız nedir?";
+}
 
-if(type==="adres")
+if(type==="adres"){
 text="Adresiniz nerede?";
+}
 
-if(type==="whatsapp")
+if(type==="whatsapp"){
 text="WhatsApp numaranız nedir?";
+}
 
-if(type==="saat")
+if(type==="saat"){
 text="Çalışma saatleriniz nedir?";
+}
 
-if(type==="instagram")
+if(type==="instagram"){
 text="Instagram hesabınız nedir?";
+}
+
+if(type==="ürünler"){
+text="Hangi ürünleri satıyorsunuz?";
+}
 
 addMessage(text,"user");
 
@@ -2649,35 +3351,31 @@ botReply(text);
 }
 
 
-/* =========================
-YORUM
-========================= */
+/* =====================================================
+YORUMLAR
+===================================================== */
 
 function openReview(){
 
-document.getElementById("reviewModal").style.display =
-"flex";
+document.getElementById("reviewModal").style.display="flex";
 
 }
-
 
 function closeReview(){
 
-document.getElementById("reviewModal").style.display =
-"none";
+document.getElementById("reviewModal").style.display="none";
 
 }
 
-
 function addReview(){
 
-const name =
+const name=
 document.getElementById("reviewName").value.trim();
 
-const text =
+const text=
 document.getElementById("reviewText").value.trim();
 
-if(!name || !text){
+if(!name||!text){
 
 alert("Lütfen adınızı ve yorumunuzu yazın.");
 
@@ -2685,12 +3383,12 @@ return;
 
 }
 
-const review =
+const review=
 document.createElement("div");
 
-review.className = "review";
+review.className="review";
 
-review.innerHTML = `
+review.innerHTML=`
 
 <div class="stars">
 ★★★★★
@@ -2710,9 +3408,9 @@ document
 .getElementById("reviews")
 .appendChild(review);
 
-document.getElementById("reviewName").value = "";
+document.getElementById("reviewName").value="";
 
-document.getElementById("reviewText").value = "";
+document.getElementById("reviewText").value="";
 
 closeReview();
 
@@ -2721,26 +3419,28 @@ alert("Yorumunuz eklendi. ⭐");
 }
 
 
-/* =========================
+/* =====================================================
 BAŞLANGIÇ
-========================= */
+===================================================== */
 
 renderProducts();
 
 updateCart();
 
 
-/* =========================
+/* =====================================================
 MODAL DIŞINA TIKLAMA
-========================= */
+===================================================== */
 
 window.addEventListener("click",function(e){
 
-document.querySelectorAll(".modal").forEach(modal=>{
+document
+.querySelectorAll(".modal")
+.forEach(modal=>{
 
-if(e.target === modal){
+if(e.target===modal){
 
-modal.style.display = "none";
+modal.style.display="none";
 
 }
 
