@@ -3,13 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>TeknoBiz | Teknoloji Mağazası</title>
 
-<meta name="description" content="TeknoBiz telefon, telefon aksesuarları, kulaklık, akıllı saat, şarj ürünleri, powerbank ve teknoloji ürünleri.">
-
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -21,14 +17,13 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#05070d;
-    color:white;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#080808;
+    color:#fff;
 }
 
-button,
-input{
-    font-family:inherit;
+button,input{
+    font:inherit;
 }
 
 a{
@@ -42,16 +37,16 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(5,7,13,.96);
-    border-bottom:1px solid #172033;
-    backdrop-filter:blur(15px);
+    background:rgba(8,8,8,.96);
+    border-bottom:1px solid #242424;
+    backdrop-filter:blur(12px);
 }
 
 .navbar{
-    max-width:1250px;
+    max-width:1400px;
     margin:auto;
     min-height:75px;
-    padding:0 20px;
+    padding:12px 25px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -59,149 +54,117 @@ header{
 }
 
 .logo{
-    font-size:27px;
+    font-size:29px;
     font-weight:900;
-    letter-spacing:1px;
+    letter-spacing:-1px;
 }
 
 .logo span{
-    color:#2563eb;
+    color:#e50914;
 }
 
 .nav-links{
     display:flex;
-    gap:22px;
+    gap:25px;
     align-items:center;
 }
 
 .nav-links a{
-    color:#d7dce7;
+    color:#ddd;
     font-size:14px;
+    transition:.2s;
 }
 
 .nav-links a:hover{
-    color:#3b82f6;
+    color:#e50914;
 }
 
 .cart-btn{
-    border:1px solid #243047;
-    background:#0c1220;
+    border:1px solid #333;
+    background:#151515;
     color:white;
-    padding:11px 15px;
-    border-radius:12px;
+    padding:10px 16px;
+    border-radius:10px;
     cursor:pointer;
 }
 
-.cart-count{
-    color:#60a5fa;
-    font-weight:bold;
+.cart-btn:hover{
+    border-color:#e50914;
 }
 
 /* HERO */
 
 .hero{
-    max-width:1250px;
-    margin:auto;
-    padding:80px 20px 55px;
-    display:grid;
-    grid-template-columns:1.2fr .8fr;
-    gap:30px;
-    align-items:center;
+    max-width:1400px;
+    margin:25px auto;
+    padding:55px 35px;
+    border-radius:25px;
+    background:
+        radial-gradient(circle at 85% 20%,rgba(229,9,20,.28),transparent 35%),
+        linear-gradient(135deg,#161616,#080808);
+    border:1px solid #292929;
+    overflow:hidden;
 }
 
 .hero h1{
-    font-size:56px;
-    line-height:1.05;
-    margin-bottom:20px;
+    font-size:clamp(35px,6vw,72px);
+    line-height:1;
+    max-width:800px;
 }
 
 .hero h1 span{
-    color:#2563eb;
+    color:#e50914;
 }
 
 .hero p{
-    color:#9ca7ba;
-    font-size:18px;
-    line-height:1.7;
+    margin-top:18px;
+    color:#aaa;
     max-width:650px;
+    font-size:17px;
+    line-height:1.6;
 }
 
 .hero-buttons{
-    margin-top:28px;
     display:flex;
     gap:12px;
+    margin-top:28px;
     flex-wrap:wrap;
 }
 
-.primary-btn{
-    background:#2563eb;
-    color:white;
-    border:none;
-    padding:14px 20px;
+.primary-btn,
+.secondary-btn{
+    border:0;
+    padding:14px 22px;
     border-radius:12px;
-    font-weight:bold;
     cursor:pointer;
+    font-weight:bold;
+}
+
+.primary-btn{
+    background:#e50914;
+    color:white;
 }
 
 .secondary-btn{
-    background:#101827;
+    background:#202020;
     color:white;
-    border:1px solid #26344d;
-    padding:14px 20px;
-    border-radius:12px;
-    cursor:pointer;
+    border:1px solid #333;
 }
 
-.hero-box{
-    background:
-        radial-gradient(circle at center,#102452 0,#080d18 55%,#05070d 100%);
-    min-height:320px;
-    border:1px solid #1c2940;
-    border-radius:30px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-}
+/* CAMPAIGNS */
 
-.hero-box strong{
-    font-size:80px;
-    color:#2563eb;
-}
-
-/* SEARCH */
-
-.search-area{
-    max-width:1250px;
-    margin:auto;
-    padding:0 20px 30px;
-}
-
-.search-box{
-    width:100%;
-    padding:17px 20px;
-    border-radius:15px;
-    background:#0c1220;
-    border:1px solid #22304a;
-    color:white;
-    outline:none;
-    font-size:16px;
-}
-
-.search-box:focus{
-    border-color:#2563eb;
-}
-
-/* SECTION */
-
-section{
-    max-width:1250px;
-    margin:auto;
-    padding:45px 20px;
+.section{
+    max-width:1400px;
+    margin:55px auto;
+    padding:0 25px;
 }
 
 .section-title{
-    margin-bottom:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:20px;
+    gap:15px;
 }
 
 .section-title h2{
@@ -209,194 +172,245 @@ section{
 }
 
 .section-title p{
-    color:#7f8ba1;
-    margin-top:8px;
+    color:#888;
+    font-size:14px;
 }
 
-/* CATEGORY */
+.campaign-window{
+    overflow:hidden;
+    border-radius:22px;
+    border:1px solid #2b2b2b;
+}
+
+.campaign-track{
+    display:flex;
+    width:max-content;
+    animation:campaignMove 30s linear infinite;
+}
+
+.campaign-window:hover .campaign-track{
+    animation-play-state:paused;
+}
+
+.campaign{
+    width:330px;
+    min-height:240px;
+    margin-right:15px;
+    padding:25px;
+    background:linear-gradient(145deg,#191919,#0d0d0d);
+    border:1px solid #292929;
+    position:relative;
+}
+
+.campaign .badge{
+    display:inline-block;
+    background:#e50914;
+    padding:7px 10px;
+    border-radius:7px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.campaign h3{
+    margin-top:18px;
+    font-size:22px;
+}
+
+.campaign .old{
+    margin-top:20px;
+    color:#777;
+    text-decoration:line-through;
+}
+
+.campaign .price{
+    font-size:28px;
+    font-weight:900;
+    margin-top:4px;
+}
+
+.campaign .price span{
+    color:#e50914;
+}
+
+@keyframes campaignMove{
+    0%{transform:translateX(0)}
+    100%{transform:translateX(-50%)}
+}
+
+/* SEARCH */
+
+.search-area{
+    display:flex;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.search-area input{
+    width:100%;
+    background:#111;
+    border:1px solid #303030;
+    color:white;
+    padding:16px 18px;
+    border-radius:12px;
+    outline:none;
+}
+
+.search-area input:focus{
+    border-color:#e50914;
+}
+
+/* CATEGORY BOXES */
 
 .category-grid{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:13px;
+    grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+    gap:10px;
 }
 
-.category-btn{
-    background:#0c1220;
-    border:1px solid #1c2940;
-    color:white;
-    padding:17px 12px;
-    border-radius:14px;
+.category-box{
+    background:#111;
+    border:1px solid #292929;
+    border-radius:12px;
+    padding:17px 10px;
+    text-align:center;
     cursor:pointer;
     transition:.2s;
 }
 
-.category-btn:hover,
-.category-btn.active{
-    border-color:#2563eb;
-    background:#0e1930;
+.category-box:hover,
+.category-box.active{
+    border-color:#e50914;
+    background:#191919;
     transform:translateY(-2px);
 }
 
-/* FILTER PANEL */
-
-.filter-panel{
-    margin-top:25px;
-    padding:22px;
-    border-radius:18px;
-    background:#080d18;
-    border:1px solid #1b2840;
+.category-box .icon{
+    font-size:25px;
+    margin-bottom:8px;
 }
 
-.filter-title{
-    font-size:14px;
-    color:#8c98ac;
+.category-box strong{
+    display:block;
+    font-size:13px;
+}
+
+/* MODEL AREA */
+
+.model-area{
+    margin-top:25px;
+    background:#0e0e0e;
+    border:1px solid #272727;
+    border-radius:18px;
+    padding:20px;
+}
+
+.model-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
     margin-bottom:15px;
 }
 
-.filter-options{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
+.model-header h3{
+    font-size:18px;
 }
 
-.option-btn{
-    background:#0e1625;
-    color:#dbe3f1;
-    border:1px solid #263650;
-    padding:10px 13px;
-    border-radius:10px;
+.model-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(125px,1fr));
+    gap:8px;
+}
+
+.model-btn{
+    background:#171717;
+    color:#ddd;
+    border:1px solid #2b2b2b;
+    border-radius:9px;
+    padding:10px 7px;
     cursor:pointer;
+    font-size:12px;
 }
 
-.option-btn:hover,
-.option-btn.active{
-    background:#2563eb;
-    border-color:#2563eb;
-    color:white;
+.model-btn:hover,
+.model-btn.active{
+    background:#e50914;
+    color:#fff;
+    border-color:#e50914;
 }
 
 /* PRODUCTS */
 
 .products{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
+    grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+    gap:16px;
 }
 
 .product{
-    background:#0b111d;
-    border:1px solid #19263b;
-    border-radius:18px;
+    background:#111;
+    border:1px solid #272727;
+    border-radius:17px;
     overflow:hidden;
     transition:.25s;
 }
 
 .product:hover{
-    transform:translateY(-4px);
-    border-color:#29446e;
+    transform:translateY(-5px);
+    border-color:#444;
 }
 
 .product-image{
     height:190px;
-    background:
-        radial-gradient(circle,#182b4e 0,#0d1626 50%,#080c14 100%);
+    background:linear-gradient(145deg,#1b1b1b,#090909);
     display:flex;
-    justify-content:center;
     align-items:center;
-    font-size:54px;
+    justify-content:center;
+    font-size:65px;
 }
 
-.product-content{
-    padding:18px;
+.product-info{
+    padding:16px;
 }
 
 .product-brand{
-    color:#568cff;
-    font-size:12px;
+    color:#e50914;
+    font-size:11px;
     font-weight:bold;
     text-transform:uppercase;
-    margin-bottom:6px;
 }
 
 .product h3{
-    font-size:17px;
-    margin-bottom:8px;
+    margin-top:6px;
+    font-size:16px;
 }
 
 .product p{
-    color:#8995a9;
-    font-size:13px;
-    line-height:1.5;
-    min-height:39px;
-}
-
-.product-buttons{
-    margin-top:15px;
-    display:flex;
-    gap:8px;
-}
-
-.add-btn,
-.whatsapp-btn{
-    flex:1;
-    padding:11px 8px;
-    border-radius:10px;
-    border:none;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.add-btn{
-    background:#18253a;
-    color:white;
-}
-
-.whatsapp-btn{
-    background:#128c4a;
-    color:white;
-}
-
-/* CONTACT */
-
-.contact-box{
-    background:#0b111d;
-    border:1px solid #1c2940;
-    border-radius:20px;
-    padding:30px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
-
-.contact-item{
-    background:#0e1625;
-    border-radius:13px;
-    padding:18px;
-}
-
-.contact-item span{
-    color:#738097;
+    color:#888;
     font-size:12px;
-}
-
-.contact-item strong{
-    display:block;
     margin-top:7px;
 }
 
-/* FOOTER */
-
-footer{
-    border-top:1px solid #182338;
-    margin-top:40px;
-    padding:35px 20px;
-    text-align:center;
-    color:#69758a;
+.price-row{
+    margin-top:15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
 }
 
-footer strong{
-    color:white;
+.price{
+    font-weight:900;
+    font-size:18px;
+}
+
+.add-btn{
+    border:0;
+    background:#e50914;
+    color:#fff;
+    padding:9px 11px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:12px;
 }
 
 /* CART */
@@ -404,12 +418,12 @@ footer strong{
 .cart-overlay{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.72);
+    background:rgba(0,0,0,.75);
     z-index:2000;
     display:none;
 }
 
-.cart-overlay.show{
+.cart-overlay.open{
     display:block;
 }
 
@@ -417,1974 +431,1398 @@ footer strong{
     position:absolute;
     right:0;
     top:0;
-    width:min(450px,100%);
     height:100%;
-    background:#080d17;
-    border-left:1px solid #24334d;
-    padding:25px;
+    width:min(430px,100%);
+    background:#101010;
+    border-left:1px solid #333;
+    padding:22px;
     overflow:auto;
 }
 
-.cart-header{
+.cart-top{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
 .close-cart{
-    background:none;
+    background:#222;
     color:white;
-    border:none;
-    font-size:25px;
+    border:0;
+    width:38px;
+    height:38px;
+    border-radius:9px;
     cursor:pointer;
 }
 
 .cart-item{
-    border:1px solid #1d2a40;
-    padding:14px;
-    border-radius:12px;
-    margin-bottom:10px;
+    padding:14px 0;
+    border-bottom:1px solid #292929;
 }
 
 .cart-item strong{
     display:block;
-    margin-bottom:5px;
 }
 
-.remove-btn{
-    margin-top:9px;
-    border:none;
-    background:#30151a;
-    color:#ff7c86;
-    padding:7px 10px;
-    border-radius:7px;
-    cursor:pointer;
+.cart-item small{
+    color:#888;
 }
 
-.cart-total{
-    border-top:1px solid #24334b;
-    padding-top:20px;
-    margin-top:20px;
-    font-size:18px;
+.cart-bottom{
+    margin-top:25px;
+}
+
+.total{
+    display:flex;
+    justify-content:space-between;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:18px;
 }
 
 .whatsapp-order{
     width:100%;
-    margin-top:15px;
+    background:#25d366;
+    color:#fff;
+    border:0;
     padding:15px;
-    background:#16a34a;
-    border:none;
-    color:white;
-    border-radius:12px;
+    border-radius:11px;
     font-weight:bold;
     cursor:pointer;
 }
 
-/* MOBILE */
+/* WHATSAPP */
 
-@media(max-width:1000px){
-
-    .category-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .products{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .hero{
-        grid-template-columns:1fr;
-    }
-
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:62px;
+    height:62px;
+    border-radius:50%;
+    background:#25d366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:31px;
+    z-index:1500;
+    box-shadow:0 5px 25px rgba(0,0,0,.5);
+    transition:.2s;
 }
 
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+
+.whatsapp-label{
+    position:fixed;
+    right:92px;
+    bottom:34px;
+    background:#151515;
+    border:1px solid #292929;
+    color:#fff;
+    padding:8px 12px;
+    border-radius:8px;
+    font-size:12px;
+    z-index:1499;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:70px;
+    padding:40px 25px;
+    border-top:1px solid #252525;
+    background:#050505;
+}
+
+.footer-inner{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:30px;
+}
+
+footer h3{
+    margin-bottom:12px;
+}
+
+footer p,
+footer a{
+    color:#888;
+    line-height:1.8;
+    font-size:14px;
+}
+
+footer a:hover{
+    color:#fff;
+}
+
+/* MOBILE */
+
 @media(max-width:700px){
+
+    .navbar{
+        padding:12px 15px;
+    }
+
+    .logo{
+        font-size:23px;
+    }
 
     .nav-links{
         display:none;
     }
 
     .hero{
-        padding-top:50px;
+        margin:15px;
+        padding:35px 22px;
     }
 
-    .hero h1{
-        font-size:40px;
+    .hero p{
+        font-size:14px;
     }
 
-    .category-grid{
-        grid-template-columns:repeat(2,1fr);
+    .section{
+        padding:0 15px;
+        margin:40px auto;
     }
 
-    .products{
-        grid-template-columns:repeat(2,1fr);
+    .section-title h2{
+        font-size:23px;
     }
 
-    .contact-box{
-        grid-template-columns:1fr;
-    }
-
-}
-
-@media(max-width:480px){
-
-    .navbar{
-        padding:0 12px;
-    }
-
-    .logo{
-        font-size:21px;
-    }
-
-    section{
-        padding:35px 12px;
-    }
-
-    .search-area{
-        padding:0 12px 20px;
+    .campaign{
+        width:280px;
     }
 
     .products{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .product-image{
+        height:145px;
+        font-size:50px;
+    }
+
+    .product-info{
+        padding:11px;
+    }
+
+    .product h3{
+        font-size:14px;
+    }
+
+    .price{
+        font-size:15px;
+    }
+
+    .add-btn{
+        padding:8px;
+    }
+
+    .footer-inner{
         grid-template-columns:1fr;
     }
 
-    .category-grid{
-        grid-template-columns:1fr 1fr;
+    .whatsapp{
+        right:15px;
+        bottom:15px;
+        width:58px;
+        height:58px;
     }
 
+    .whatsapp-label{
+        display:none;
+    }
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
+    <div class="navbar">
+        <a href="#" class="logo">TEKNO<span>BİZ</span></a>
 
-<div class="navbar">
+        <nav class="nav-links">
+            <a href="#kampanyalar">Kampanyalar</a>
+            <a href="#urunler">Ürünler</a>
+            <a href="#modeller">Modeller</a>
+            <a href="#iletisim">İletişim</a>
+        </nav>
 
-<div class="logo">
-TEKNO<span>BİZ</span>
-</div>
-
-<nav class="nav-links">
-<a href="#urunler">Ürünler</a>
-<a href="#kategoriler">Kategoriler</a>
-<a href="#iletisim">İletişim</a>
-</nav>
-
-<button class="cart-btn" onclick="openCart()">
-🛒 Sepet
-<span class="cart-count" id="cartCount">0</span>
-</button>
-
-</div>
-
+        <button class="cart-btn" onclick="openCart()">
+            🛒 Sepet <span id="cartCount">0</span>
+        </button>
+    </div>
 </header>
 
+<main>
 
-<!-- HERO -->
+<section class="hero">
+    <h1>Teknoloji<br><span>Burada.</span></h1>
 
-<div class="hero">
+    <p>
+        Telefon, aksesuar, kulaklık, şarj ürünleri,
+        akıllı saat ve daha fazlası TeknoBiz'de.
+    </p>
 
-<div>
+    <div class="hero-buttons">
+        <button class="primary-btn" onclick="document.getElementById('kampanyalar').scrollIntoView()">
+            Kampanyaları Gör
+        </button>
 
-<h1>
-Teknolojinin<br>
-<span>Yeni Adresi</span>
-</h1>
+        <button class="secondary-btn" onclick="document.getElementById('urunler').scrollIntoView()">
+            Ürünlere Bak
+        </button>
+    </div>
+</section>
 
-<p>
-Telefonlardan akıllı saatlere, AirPods modellerinden
-şarj ürünlerine, powerbanklerden bilgisayar ve araç
-aksesuarlarına kadar teknoloji dünyasının birçok ürünü.
-</p>
 
-<div class="hero-buttons">
+<!-- KAMPANYALAR -->
 
-<button class="primary-btn" onclick="document.getElementById('kategoriler').scrollIntoView()">
-Ürünleri İncele
-</button>
+<section class="section" id="kampanyalar">
 
-<a class="secondary-btn" href="https://wa.me/905059999009" target="_blank">
-WhatsApp
+    <div class="section-title">
+        <div>
+            <h2>🔥 Kampanyalı Ürünler</h2>
+            <p>Seçili ürünlerde özel fiyatlar</p>
+        </div>
+    </div>
+
+    <div class="campaign-window">
+        <div class="campaign-track">
+
+            <div class="campaign">
+                <span class="badge">%20 İNDİRİM</span>
+                <h3>iPhone 17 Pro</h3>
+                <div class="old">79.999 TL</div>
+                <div class="price"><span>63.999 TL</span></div>
+            </div>
+
+            <div class="campaign">
+                <span class="badge">%15 İNDİRİM</span>
+                <h3>AirPods Pro</h3>
+                <div class="old">9.999 TL</div>
+                <div class="price"><span>8.499 TL</span></div>
+            </div>
+
+            <div class="campaign">
+                <span class="badge">%18 İNDİRİM</span>
+                <h3>Galaxy S26 Ultra</h3>
+                <div class="old">74.999 TL</div>
+                <div class="price"><span>61.499 TL</span></div>
+            </div>
+
+            <div class="campaign">
+                <span class="badge">%25 İNDİRİM</span>
+                <h3>JBL Bluetooth Hoparlör</h3>
+                <div class="old">4.999 TL</div>
+                <div class="price"><span>3.749 TL</span></div>
+            </div>
+
+            <div class="campaign">
+                <span class="badge">%20 İNDİRİM</span>
+                <h3>Apple Watch</h3>
+                <div class="old">18.999 TL</div>
+                <div class="price"><span>15.199 TL</span></div>
+            </div>
+
+            <!-- tekrarları sliderın kesintisiz görünmesi için -->
+
+            <div class="campaign">
+                <span class="badge">%20 İNDİRİM</span>
+                <h3>iPhone 17 Pro</h3>
+                <div class="old">79.999 TL</div>
+                <div class="price"><span>63.999 TL</span></div>
+            </div>
+
+            <div class="campaign">
+                <span class="badge">%15 İNDİRİM</span>
+                <h3>AirPods Pro</h3>
+                <div class="old">9.999 TL</div>
+                <div class="price"><span>8.499 TL</span></div>
+            </div>
+
+            <div class="campaign">
+                <span class="badge">%18 İNDİRİM</span>
+                <h3>Galaxy S26 Ultra</h3>
+                <div class="old">74.999 TL</div>
+                <div class="price"><span>61.499 TL</span></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- MODELLER -->
+
+<section class="section" id="modeller">
+
+    <div class="section-title">
+        <div>
+            <h2>📱 Marka & Model</h2>
+            <p>İstediğin markayı seç, modelleri görüntüle</p>
+        </div>
+    </div>
+
+    <div class="search-area">
+        <input
+            type="text"
+            id="search"
+            placeholder="Ürün, marka veya model ara..."
+            oninput="searchProducts()"
+        >
+    </div>
+
+    <div class="category-grid">
+
+        <div class="category-box active" onclick="selectBrand('Tümü',this)">
+            <div class="icon">🔥</div>
+            <strong>Tümü</strong>
+        </div>
+
+        <div class="category-box" onclick="selectBrand('Apple',this)">
+            <div class="icon"></div>
+            <strong>Apple</strong>
+        </div>
+
+        <div class="category-box" onclick="selectBrand('Samsung',this)">
+            <div class="icon">📱</div>
+            <strong>Samsung</strong>
+        </div>
+
+        <div class="category-box" onclick="selectBrand('Xiaomi',this)">
+            <div class="icon">⚡</div>
+            <strong>Xiaomi</strong>
+        </div>
+
+        <div class="category-box" onclick="selectBrand('Redmi',this)">
+            <div class="icon">🔴</div>
+            <strong>Redmi</strong>
+        </div>
+
+        <div class="category-box" onclick="selectBrand('POCO',this)">
+            <div class="icon">🟡</div>
+            <strong>POCO</strong>
+        </div>
+
+        <div class="category-box" onclick="selectBrand('Huawei',this)">
+            <div class="icon">⌚</div>
+            <strong>Huawei</strong>
+        </div>
+
+        <div class="category-box" onclick="selectBrand('JBL',this)">
+            <div class="icon">🔊</div>
+            <strong>JBL</strong>
+        </div>
+
+        <div class="category-box" onclick="selectBrand('Sony',this)">
+            <div class="icon">🎧</div>
+            <strong>Sony</strong>
+        </div>
+
+        <div class="category-box" onclick="selectBrand('Anker',this)">
+            <div class="icon">🔋</div>
+            <strong>Anker</strong>
+        </div>
+
+        <div class="category-box" onclick="selectBrand('Logitech',this)">
+            <div class="icon">🖱️</div>
+            <strong>Logitech</strong>
+        </div>
+
+        <div class="category-box" onclick="selectBrand('Baseus',this)">
+            <div class="icon">🔌</div>
+            <strong>Baseus</strong>
+        </div>
+
+    </div>
+
+    <div class="model-area">
+        <div class="model-header">
+            <h3 id="modelTitle">Tüm Modeller</h3>
+        </div>
+
+        <div class="model-list" id="modelList"></div>
+    </div>
+
+</section>
+
+
+<!-- ÜRÜNLER -->
+
+<section class="section" id="urunler">
+
+    <div class="section-title">
+        <div>
+            <h2>🛍️ Ürünler</h2>
+            <p id="productResult">Tüm ürünler</p>
+        </div>
+    </div>
+
+    <div class="products" id="products"></div>
+
+</section>
+
+</main>
+
+
+<!-- SEPET -->
+
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart(event)">
+
+    <div class="cart" onclick="event.stopPropagation()">
+
+        <div class="cart-top">
+            <h2>🛒 Sepetim</h2>
+            <button class="close-cart" onclick="closeCart()">✕</button>
+        </div>
+
+        <div id="cartItems">
+            <p style="color:#777;">Sepetiniz boş.</p>
+        </div>
+
+        <div class="cart-bottom">
+
+            <div class="total">
+                <span>Toplam</span>
+                <span id="cartTotal">0 TL</span>
+            </div>
+
+            <button class="whatsapp-order" onclick="sendCartWhatsApp()">
+                💬 WhatsApp'tan Sipariş Ver
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- WHATSAPP -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/9050599999009"
+    target="_blank"
+    title="WhatsApp"
+>
+    ☎
 </a>
 
-</div>
-
-</div>
-
-<div class="hero-box">
-<strong>T</strong>
-</div>
-
+<div class="whatsapp-label">
+    WhatsApp'tan bize ulaş
 </div>
 
 
-<!-- SEARCH -->
+<!-- FOOTER -->
 
-<div class="search-area">
+<footer id="iletisim">
 
-<input
-id="search"
-class="search-box"
-type="text"
-placeholder="🔎 Ürün, marka veya model ara..."
-oninput="searchProducts()">
+    <div class="footer-inner">
 
-</div>
+        <div>
+            <h3>TEKNO<span style="color:#e50914">BİZ</span></h3>
 
+            <p>
+                Teknoloji ve aksesuar ürünlerinde
+                TeknoBiz.
+            </p>
+        </div>
 
-<!-- CATEGORIES -->
+        <div>
+            <h3>İletişim</h3>
 
-<section id="kategoriler">
+            <p>
+                📱 0505 999 90 09
+            </p>
 
-<div class="section-title">
+            <p>
+                ✉️ teknobiz15@gmail.com
+            </p>
 
-<h2>Kategoriler</h2>
+            <p>
+                🕘 09:00 - 21:00
+            </p>
+        </div>
 
-<p>Marka ve modele göre ürünleri keşfet.</p>
+        <div>
+            <h3>Sosyal Medya</h3>
 
-</div>
+            <p>
+                <a href="https://instagram.com/teknobiz7" target="_blank">
+                    Instagram: @Teknobiz7
+                </a>
+            </p>
 
-<div class="category-grid">
+            <p>
+                <a href="https://wa.me/9050599999009" target="_blank">
+                    WhatsApp
+                </a>
+            </p>
+        </div>
 
-<button class="category-btn active" onclick="showCategory('Telefonlar',this)">📱 Telefonlar</button>
-
-<button class="category-btn" onclick="showCategory('Kılıflar',this)">📱 Kılıflar</button>
-
-<button class="category-btn" onclick="showCategory('Kırılmaz Cam',this)">🛡️ Kırılmaz Cam</button>
-
-<button class="category-btn" onclick="showCategory('Kulaklık',this)">🎧 Kulaklık</button>
-
-<button class="category-btn" onclick="showCategory('Akıllı Saat',this)">⌚ Akıllı Saat</button>
-
-<button class="category-btn" onclick="showCategory('Şarj',this)">🔌 Şarj</button>
-
-<button class="category-btn" onclick="showCategory('Powerbank',this)">🔋 Powerbank</button>
-
-<button class="category-btn" onclick="showCategory('Hoparlör',this)">🔊 Hoparlör</button>
-
-<button class="category-btn" onclick="showCategory('Bilgisayar',this)">💻 Bilgisayar</button>
-
-<button class="category-btn" onclick="showCategory('Araba',this)">🚗 Araba</button>
-
-<button class="category-btn" onclick="showCategory('Makyaj',this)">🪞 Makyaj</button>
-
-<button class="category-btn" onclick="showCategory('Gramofon',this)">📻 Gramofon</button>
-
-</div>
-
-<div class="filter-panel">
-
-<div class="filter-title">
-MARKA / MODEL / VARYANT
-</div>
-
-<div class="filter-options" id="filterOptions"></div>
-
-</div>
-
-</section>
-
-
-<!-- PRODUCTS -->
-
-<section id="urunler">
-
-<div class="section-title">
-
-<h2>Ürünler</h2>
-
-<p id="productInfo">Tüm ürünler</p>
-
-</div>
-
-<div class="products" id="products"></div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="iletisim">
-
-<div class="section-title">
-<h2>TeknoBiz</h2>
-<p>Bizimle iletişime geç.</p>
-</div>
-
-<div class="contact-box">
-
-<div class="contact-item">
-<span>📞 TELEFON</span>
-<strong>0505 999 90 09</strong>
-</div>
-
-<div class="contact-item">
-<span>💬 WHATSAPP</span>
-<strong>0505 999 90 09</strong>
-</div>
-
-<div class="contact-item">
-<span>📸 INSTAGRAM</span>
-<strong>@Teknobiz7</strong>
-</div>
-
-<div class="contact-item">
-<span>✉️ E-MAIL</span>
-<strong>teknobiz15@gmail.com</strong>
-</div>
-
-<div class="contact-item">
-<span>🕘 ÇALIŞMA SAATLERİ</span>
-<strong>09:00 - 21:00</strong>
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<strong>TEKNO BİZ</strong><br><br>
-
-Telefon • Aksesuar • Teknoloji
-
-<br><br>
-
-© 2026 TeknoBiz
+    </div>
 
 </footer>
 
 
-<!-- CART -->
-
-<div class="cart-overlay" id="cartOverlay" onclick="closeCartOutside(event)">
-
-<div class="cart">
-
-<div class="cart-header">
-
-<h2>Sepetim</h2>
-
-<button class="close-cart" onclick="closeCart()">×</button>
-
-</div>
-
-<div id="cartItems"></div>
-
-<div class="cart-total">
-
-Ürün Sayısı:
-<strong id="cartTotal">0</strong>
-
-</div>
-
-<button class="whatsapp-order" onclick="sendCartWhatsApp()">
-
-📲 WhatsApp'tan Sipariş Gönder
-
-</button>
-
-</div>
-
-</div>
-
-
 <script>
 
-/* =========================================
-   TEKNOBİZ ÜRÜN VERİTABANI
-========================================= */
+/* =========================
+   ÜRÜNLER
+========================= */
 
 const products = [
 
-/* =========================
-   IPHONE
-========================= */
+/* APPLE */
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone 17",
-variant:"128 GB / 256 GB / 512 GB",
-icon:"🍎"
+ brand:"Apple",
+ model:"iPhone 18 Pro 256 GB",
+ category:"Telefon",
+ icon:"📱",
+ price:89999
 },
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone 17e",
-variant:"256 GB",
-icon:"🍎"
+ brand:"Apple",
+ model:"iPhone 18 Pro 512 GB",
+ category:"Telefon",
+ icon:"📱",
+ price:99999
 },
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone Air",
-variant:"256 GB / 512 GB / 1 TB",
-icon:"🍎"
+ brand:"Apple",
+ model:"iPhone 18 Pro 1 TB",
+ category:"Telefon",
+ icon:"📱",
+ price:114999
 },
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone 17 Pro",
-variant:"256 GB",
-icon:"🍎"
+ brand:"Apple",
+ model:"iPhone 18 Pro Max 256 GB",
+ category:"Telefon",
+ icon:"📱",
+ price:99999
 },
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone 17 Pro",
-variant:"512 GB",
-icon:"🍎"
+ brand:"Apple",
+ model:"iPhone 18 Pro Max 512 GB",
+ category:"Telefon",
+ icon:"📱",
+ price:109999
 },
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone 17 Pro",
-variant:"1 TB",
-icon:"🍎"
+ brand:"Apple",
+ model:"iPhone 18 Pro Max 1 TB",
+ category:"Telefon",
+ icon:"📱",
+ price:124999
 },
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone 17 Pro Max",
-variant:"256 GB",
-icon:"🍎"
+ brand:"Apple",
+ model:"iPhone 17 Pro 256 GB",
+ category:"Telefon",
+ icon:"📱",
+ price:79999
 },
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone 17 Pro Max",
-variant:"512 GB",
-icon:"🍎"
+ brand:"Apple",
+ model:"iPhone 17 Pro 512 GB",
+ category:"Telefon",
+ icon:"📱",
+ price:89999
 },
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone 17 Pro Max",
-variant:"1 TB",
-icon:"🍎"
+ brand:"Apple",
+ model:"iPhone 17 Pro 1 TB",
+ category:"Telefon",
+ icon:"📱",
+ price:99999
 },
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone 18 Pro",
-variant:"256 GB",
-icon:"🍎"
+ brand:"Apple",
+ model:"iPhone 17 Pro Max 256 GB",
+ category:"Telefon",
+ icon:"📱",
+ price:84999
 },
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone 18 Pro",
-variant:"512 GB",
-icon:"🍎"
+ brand:"Apple",
+ model:"iPhone 17 Pro Max 512 GB",
+ category:"Telefon",
+ icon:"📱",
+ price:94999
 },
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone 18 Pro",
-variant:"1 TB",
-icon:"🍎"
+ brand:"Apple",
+ model:"iPhone 17 Pro Max 1 TB",
+ category:"Telefon",
+ icon:"📱",
+ price:104999
 },
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone 18 Pro Max",
-variant:"256 GB",
-icon:"🍎"
+ brand:"Apple",
+ model:"iPhone 17",
+ category:"Telefon",
+ icon:"📱",
+ price:64999
 },
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone 18 Pro Max",
-variant:"512 GB",
-icon:"🍎"
+ brand:"Apple",
+ model:"iPhone 16",
+ category:"Telefon",
+ icon:"📱",
+ price:49999
 },
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone 18 Pro Max",
-variant:"1 TB",
-icon:"🍎"
+ brand:"Apple",
+ model:"iPhone 15",
+ category:"Telefon",
+ icon:"📱",
+ price:39999
 },
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone 18",
-variant:"256 GB / 512 GB",
-icon:"🍎"
+ brand:"Apple",
+ model:"AirPods 4",
+ category:"Kulaklık",
+ icon:"🎧",
+ price:5999
 },
 
 {
-category:"Telefonlar",
-brand:"Apple",
-name:"iPhone Duo",
-variant:"Katlanabilir",
-icon:"🍎"
+ brand:"Apple",
+ model:"AirPods 4 ANC",
+ category:"Kulaklık",
+ icon:"🎧",
+ price:7999
 },
 
-/* =========================
-   SAMSUNG
-========================= */
-
-{
-category:"Telefonlar",
-brand:"Samsung",
-name:"Galaxy S26",
-variant:"128 GB / 256 GB",
-icon:"📱"
-},
-
-{
-category:"Telefonlar",
-brand:"Samsung",
-name:"Galaxy S26+",
-variant:"256 GB / 512 GB",
-icon:"📱"
-},
-
-{
-category:"Telefonlar",
-brand:"Samsung",
-name:"Galaxy S26 Ultra",
-variant:"256 GB / 512 GB / 1 TB",
-icon:"📱"
-},
-
-{
-category:"Telefonlar",
-brand:"Samsung",
-name:"Galaxy A57",
-variant:"128 GB / 256 GB",
-icon:"📱"
-},
-
-{
-category:"Telefonlar",
-brand:"Samsung",
-name:"Galaxy A37",
-variant:"128 GB / 256 GB",
-icon:"📱"
-},
-
-{
-category:"Telefonlar",
-brand:"Samsung",
-name:"Galaxy Z Fold",
-variant:"256 GB / 512 GB / 1 TB",
-icon:"📱"
-},
-
-{
-category:"Telefonlar",
-brand:"Samsung",
-name:"Galaxy Z Flip",
-variant:"256 GB / 512 GB",
-icon:"📱"
-},
-
-/* =========================
-   XIAOMI
-========================= */
-
-{
-category:"Telefonlar",
-brand:"Xiaomi",
-name:"Xiaomi 17",
-variant:"256 GB / 512 GB",
-icon:"📱"
-},
-
-{
-category:"Telefonlar",
-brand:"Xiaomi",
-name:"Xiaomi 17 Ultra",
-variant:"512 GB / 1 TB",
-icon:"📱"
-},
-
-{
-category:"Telefonlar",
-brand:"Xiaomi",
-name:"Xiaomi 17T",
-variant:"256 GB / 512 GB",
-icon:"📱"
-},
-
-{
-category:"Telefonlar",
-brand:"Xiaomi",
-name:"Xiaomi 17T Pro",
-variant:"256 GB / 512 GB / 1 TB",
-icon:"📱"
-},
-
-{
-category:"Telefonlar",
-brand:"Redmi",
-name:"Redmi Note 17",
-variant:"128 GB / 256 GB",
-icon:"📱"
-},
-
-{
-category:"Telefonlar",
-brand:"Redmi",
-name:"Redmi Note 17 5G",
-variant:"256 GB / 512 GB",
-icon:"📱"
-},
-
-{
-category:"Telefonlar",
-brand:"Redmi",
-name:"Redmi Note 17 Pro 5G",
-variant:"256 GB / 512 GB",
-icon:"📱"
-},
-
-{
-category:"Telefonlar",
-brand:"Redmi",
-name:"Redmi Note 17 Pro Max 5G",
-variant:"512 GB",
-icon:"📱"
-},
-
-{
-category:"Telefonlar",
-brand:"POCO",
-name:"POCO F8 Pro",
-variant:"256 GB / 512 GB",
-icon:"📱"
-},
-
-{
-category:"Telefonlar",
-brand:"POCO",
-name:"POCO F8 Ultra",
-variant:"256 GB / 512 GB",
-icon:"📱"
-},
-
-{
-category:"Telefonlar",
-brand:"POCO",
-name:"POCO X8 Pro",
-variant:"256 GB / 512 GB",
-icon:"📱"
-},
-
-/* =========================
-   KILIFLAR
-========================= */
-
-{
-category:"Kılıflar",
-brand:"Apple",
-name:"iPhone 11 Kılıf",
-variant:"Silikon / Şeffaf / MagSafe",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Apple",
-name:"iPhone 12 / 12 Pro Kılıf",
-variant:"Silikon / Şeffaf / MagSafe",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Apple",
-name:"iPhone 12 Mini Kılıf",
-variant:"Silikon / Şeffaf",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Apple",
-name:"iPhone 13 / 13 Pro Kılıf",
-variant:"Silikon / Şeffaf / MagSafe",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Apple",
-name:"iPhone 13 Mini Kılıf",
-variant:"Silikon / Şeffaf",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Apple",
-name:"iPhone 14 / 14 Plus Kılıf",
-variant:"Silikon / Şeffaf / MagSafe",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Apple",
-name:"iPhone 14 Pro / Pro Max Kılıf",
-variant:"MagSafe / Şeffaf",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Apple",
-name:"iPhone 15 / 15 Plus Kılıf",
-variant:"Silikon / Şeffaf / MagSafe",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Apple",
-name:"iPhone 15 Pro / Pro Max Kılıf",
-variant:"Silikon / MagSafe / Şeffaf",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Apple",
-name:"iPhone 16 / 16 Plus Kılıf",
-variant:"Silikon / MagSafe / Şeffaf",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Apple",
-name:"iPhone 16 Pro / Pro Max Kılıf",
-variant:"Silikon / MagSafe / Şeffaf",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Apple",
-name:"iPhone 17 / 17e Kılıf",
-variant:"MagSafe / Silikon / Şeffaf",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Apple",
-name:"iPhone 17 Pro Kılıf",
-variant:"MagSafe / Silikon",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Apple",
-name:"iPhone 17 Pro Max Kılıf",
-variant:"MagSafe / Silikon",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Apple",
-name:"iPhone 18 Pro Kılıf",
-variant:"MagSafe / Silikon",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Apple",
-name:"iPhone 18 Pro Max Kılıf",
-variant:"MagSafe / Silikon",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Samsung",
-name:"Galaxy S Serisi Kılıf",
-variant:"S / S+ / Ultra",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Samsung",
-name:"Galaxy A Serisi Kılıf",
-variant:"A15 / A16 / A26 / A36 / A56 / A57",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Xiaomi",
-name:"Redmi Note Serisi Kılıf",
-variant:"Note 13 / 14 / 15 / 17",
-icon:"📱"
-},
-
-{
-category:"Kılıflar",
-brand:"Xiaomi",
-name:"POCO Kılıf",
-variant:"X / F Serisi",
-icon:"📱"
-},
-
-/* =========================
-   KIRILMAZ CAM
-========================= */
-
-{
-category:"Kırılmaz Cam",
-brand:"TeknoBiz",
-name:"iPhone Tam Kaplama Cam",
-variant:"11 - 18 Pro Max",
-icon:"🛡️"
-},
-
-{
-category:"Kırılmaz Cam",
-brand:"TeknoBiz",
-name:"iPhone Gizlilik Camı",
-variant:"11 - 18 Pro Max",
-icon:"🛡️"
-},
-
 {
-category:"Kırılmaz Cam",
-brand:"TeknoBiz",
-name:"iPhone Kamera Camı",
-variant:"11 - 18 Pro Max",
-icon:"📷"
+ brand:"Apple",
+ model:"AirPods Pro 2",
+ category:"Kulaklık",
+ icon:"🎧",
+ price:9999
 },
 
 {
-category:"Kırılmaz Cam",
-brand:"Samsung",
-name:"Galaxy S Serisi Cam",
-variant:"S / S+ / Ultra",
-icon:"🛡️"
+ brand:"Apple",
+ model:"AirPods Pro 3",
+ category:"Kulaklık",
+ icon:"🎧",
+ price:11999
 },
 
 {
-category:"Kırılmaz Cam",
-brand:"Samsung",
-name:"Galaxy A Serisi Cam",
-variant:"A Serisi",
-icon:"🛡️"
+ brand:"Apple",
+ model:"AirPods Max",
+ category:"Kulaklık",
+ icon:"🎧",
+ price:21999
 },
 
 {
-category:"Kırılmaz Cam",
-brand:"Xiaomi",
-name:"Redmi Note Cam",
-variant:"Note Serisi",
-icon:"🛡️"
+ brand:"Apple",
+ model:"Apple Watch Series 12",
+ category:"Akıllı Saat",
+ icon:"⌚",
+ price:18999
 },
 
-/* =========================
-   AIRPODS
-========================= */
-
-{
-category:"Kulaklık",
-brand:"Apple",
-name:"AirPods 4",
-variant:"USB-C",
-icon:"🎧"
-},
-
-{
-category:"Kulaklık",
-brand:"Apple",
-name:"AirPods 4 ANC",
-variant:"Aktif Gürültü Engelleme",
-icon:"🎧"
-},
-
-{
-category:"Kulaklık",
-brand:"Apple",
-name:"AirPods Pro 2",
-variant:"USB-C",
-icon:"🎧"
-},
-
-{
-category:"Kulaklık",
-brand:"Apple",
-name:"AirPods Pro 3",
-variant:"Pro",
-icon:"🎧"
-},
-
-{
-category:"Kulaklık",
-brand:"Apple",
-name:"AirPods Max",
-variant:"USB-C",
-icon:"🎧"
-},
-
-{
-category:"Kulaklık",
-brand:"Apple",
-name:"AirPods Max 2",
-variant:"Kablosuz",
-icon:"🎧"
-},
-
-/* OTHER HEADPHONES */
-
-{
-category:"Kulaklık",
-brand:"Samsung",
-name:"Galaxy Buds",
-variant:"Buds Serisi",
-icon:"🎧"
-},
-
-{
-category:"Kulaklık",
-brand:"Huawei",
-name:"FreeBuds",
-variant:"FreeBuds Serisi",
-icon:"🎧"
-},
-
-{
-category:"Kulaklık",
-brand:"Xiaomi",
-name:"Redmi Buds",
-variant:"Buds Serisi",
-icon:"🎧"
-},
-
-{
-category:"Kulaklık",
-brand:"JBL",
-name:"Tune Serisi",
-variant:"Bluetooth",
-icon:"🎧"
-},
-
-{
-category:"Kulaklık",
-brand:"JBL",
-name:"Live Serisi",
-variant:"Bluetooth / ANC",
-icon:"🎧"
-},
-
-{
-category:"Kulaklık",
-brand:"Sony",
-name:"WH Serisi",
-variant:"Kablosuz / ANC",
-icon:"🎧"
-},
-
-/* =========================
-   APPLE WATCH
-========================= */
-
-{
-category:"Akıllı Saat",
-brand:"Apple",
-name:"Apple Watch Series 12",
-variant:"42 mm / 46 mm",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Apple",
-name:"Apple Watch Ultra 4",
-variant:"49 mm",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Apple",
-name:"Apple Watch SE 3",
-variant:"40 mm / 44 mm",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Apple",
-name:"Apple Watch Series 11",
-variant:"42 mm / 46 mm",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Apple",
-name:"Apple Watch Ultra 3",
-variant:"49 mm",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Apple",
-name:"Apple Watch Series 10",
-variant:"42 mm / 46 mm",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Apple",
-name:"Apple Watch Ultra 2",
-variant:"49 mm",
-icon:"⌚"
-},
-
-/* =========================
-   HUAWEI
-========================= */
-
-{
-category:"Akıllı Saat",
-brand:"Huawei",
-name:"HUAWEI WATCH GT 7",
-variant:"46 mm",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Huawei",
-name:"HUAWEI WATCH GT 7 Pro",
-variant:"Pro",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Huawei",
-name:"HUAWEI WATCH GT 6",
-variant:"46 mm",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Huawei",
-name:"HUAWEI WATCH GT 6 Pro",
-variant:"Pro",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Huawei",
-name:"HUAWEI WATCH GT 5",
-variant:"41 mm / 46 mm",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Huawei",
-name:"HUAWEI WATCH GT 5 Pro",
-variant:"Pro",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Huawei",
-name:"HUAWEI WATCH FIT 5",
-variant:"Fit",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Huawei",
-name:"HUAWEI WATCH FIT 5 Pro",
-variant:"Pro",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Huawei",
-name:"HUAWEI WATCH 4 Pro",
-variant:"Pro",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Huawei",
-name:"HUAWEI WATCH Ultimate",
-variant:"Premium",
-icon:"⌚"
-},
-
-/* =========================
-   XIAOMI WATCH
-========================= */
-
-{
-category:"Akıllı Saat",
-brand:"Xiaomi",
-name:"Xiaomi Watch 5",
-variant:"AMOLED",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Xiaomi",
-name:"Xiaomi Watch S4",
-variant:"46 mm",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Xiaomi",
-name:"Xiaomi Watch S4 41mm",
-variant:"41 mm",
-icon:"⌚"
-},
-
 {
-category:"Akıllı Saat",
-brand:"Xiaomi",
-name:"Xiaomi Watch 2",
-variant:"Wear OS",
-icon:"⌚"
+ brand:"Apple",
+ model:"Apple Watch Ultra 4",
+ category:"Akıllı Saat",
+ icon:"⌚",
+ price:32999
 },
 
 {
-category:"Akıllı Saat",
-brand:"Redmi",
-name:"Redmi Watch 6",
-variant:"Akıllı Saat",
-icon:"⌚"
+ brand:"Apple",
+ model:"Apple Watch SE 3",
+ category:"Akıllı Saat",
+ icon:"⌚",
+ price:11999
 },
 
-{
-category:"Akıllı Saat",
-brand:"Redmi",
-name:"Redmi Watch 6 Active",
-variant:"Active",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Redmi",
-name:"Redmi Watch 6 Lite",
-variant:"Lite",
-icon:"⌚"
-},
-
-{
-category:"Akıllı Saat",
-brand:"Xiaomi",
-name:"Xiaomi Smart Band 10",
-variant:"Akıllı Bileklik",
-icon:"⌚"
-},
+/* SAMSUNG */
 
 {
-category:"Akıllı Saat",
-brand:"Xiaomi",
-name:"Xiaomi Smart Band 11",
-variant:"Akıllı Bileklik",
-icon:"⌚"
+ brand:"Samsung",
+ model:"Galaxy S26",
+ category:"Telefon",
+ icon:"📱",
+ price:59999
 },
 
-/* =========================
-   ŞARJ
-========================= */
-
 {
-category:"Şarj",
-brand:"Apple",
-name:"Apple 20W USB-C Adaptör",
-variant:"USB-C",
-icon:"🔌"
+ brand:"Samsung",
+ model:"Galaxy S26+",
+ category:"Telefon",
+ icon:"📱",
+ price:69999
 },
 
 {
-category:"Şarj",
-brand:"Samsung",
-name:"Samsung 25W Adaptör",
-variant:"USB-C",
-icon:"🔌"
+ brand:"Samsung",
+ model:"Galaxy S26 Ultra",
+ category:"Telefon",
+ icon:"📱",
+ price:74999
 },
 
 {
-category:"Şarj",
-brand:"Xiaomi",
-name:"Xiaomi 33W Adaptör",
-variant:"USB-C",
-icon:"🔌"
+ brand:"Samsung",
+ model:"Galaxy S25",
+ category:"Telefon",
+ icon:"📱",
+ price:49999
 },
 
 {
-category:"Şarj",
-brand:"Apple",
-name:"USB-C / USB-C Kablo",
-variant:"1 m / 2 m",
-icon:"🔌"
+ brand:"Samsung",
+ model:"Galaxy S25 Ultra",
+ category:"Telefon",
+ icon:"📱",
+ price:69999
 },
 
 {
-category:"Şarj",
-brand:"Apple",
-name:"USB-C / Lightning Kablo",
-variant:"1 m",
-icon:"🔌"
+ brand:"Samsung",
+ model:"Galaxy A57",
+ category:"Telefon",
+ icon:"📱",
+ price:29999
 },
 
 {
-category:"Şarj",
-brand:"Samsung",
-name:"USB-C / USB-C Kablo",
-variant:"Hızlı Şarj",
-icon:"🔌"
+ brand:"Samsung",
+ model:"Galaxy A37",
+ category:"Telefon",
+ icon:"📱",
+ price:22999
 },
 
 {
-category:"Şarj",
-brand:"Anker",
-name:"Type-C Kablo",
-variant:"Örgülü",
-icon:"🔌"
+ brand:"Samsung",
+ model:"Galaxy Z Fold",
+ category:"Telefon",
+ icon:"📱",
+ price:79999
 },
 
 {
-category:"Şarj",
-brand:"UGREEN",
-name:"Type-C Kablo",
-variant:"Hızlı Şarj",
-icon:"🔌"
+ brand:"Samsung",
+ model:"Galaxy Z Flip",
+ category:"Telefon",
+ icon:"📱",
+ price:54999
 },
 
-{
-category:"Şarj",
-brand:"TeknoBiz",
-name:"3'lü Şarj Kablosu",
-variant:"Type-C / Lightning / Micro USB",
-icon:"🔌"
-},
+/* XIAOMI */
 
 {
-category:"Şarj",
-brand:"Apple",
-name:"MagSafe Şarj",
-variant:"Kablosuz",
-icon:"🧲"
+ brand:"Xiaomi",
+ model:"Xiaomi 17",
+ category:"Telefon",
+ icon:"📱",
+ price:39999
 },
 
 {
-category:"Şarj",
-brand:"Apple",
-name:"Apple Watch Şarj Cihazı",
-variant:"Manyetik",
-icon:"⌚"
+ brand:"Xiaomi",
+ model:"Xiaomi 17 Ultra",
+ category:"Telefon",
+ icon:"📱",
+ price:59999
 },
 
 {
-category:"Şarj",
-brand:"TeknoBiz",
-name:"3'lü Kablosuz Şarj Standı",
-variant:"Telefon + Watch + Kulaklık",
-icon:"⚡"
+ brand:"Xiaomi",
+ model:"Xiaomi 17T",
+ category:"Telefon",
+ icon:"📱",
+ price:32999
 },
 
 {
-category:"Şarj",
-brand:"Anker",
-name:"65W GaN Şarj",
-variant:"USB-C",
-icon:"⚡"
+ brand:"Xiaomi",
+ model:"Xiaomi 17T Pro",
+ category:"Telefon",
+ icon:"📱",
+ price:42999
 },
 
 {
-category:"Şarj",
-brand:"UGREEN",
-name:"100W GaN Şarj",
-variant:"Çoklu Port",
-icon:"⚡"
+ brand:"Xiaomi",
+ model:"Xiaomi Watch 5",
+ category:"Akıllı Saat",
+ icon:"⌚",
+ price:9999
 },
-
-/* =========================
-   POWERBANK
-========================= */
 
 {
-category:"Powerbank",
-brand:"TeknoBiz",
-name:"Powerbank",
-variant:"5.000 mAh",
-icon:"🔋"
+ brand:"Xiaomi",
+ model:"Xiaomi Watch S4",
+ category:"Akıllı Saat",
+ icon:"⌚",
+ price:7999
 },
 
 {
-category:"Powerbank",
-brand:"TeknoBiz",
-name:"Powerbank",
-variant:"10.000 mAh",
-icon:"🔋"
+ brand:"Xiaomi",
+ model:"Xiaomi Smart Band 10",
+ category:"Akıllı Bileklik",
+ icon:"⌚",
+ price:1999
 },
 
 {
-category:"Powerbank",
-brand:"TeknoBiz",
-name:"Powerbank",
-variant:"20.000 mAh",
-icon:"🔋"
+ brand:"Xiaomi",
+ model:"Xiaomi Smart Band 11",
+ category:"Akıllı Bileklik",
+ icon:"⌚",
+ price:2499
 },
 
-{
-category:"Powerbank",
-brand:"Xiaomi",
-name:"Xiaomi Powerbank",
-variant:"10.000 mAh / 33W",
-icon:"🔋"
-},
+/* REDMI */
 
 {
-category:"Powerbank",
-brand:"Anker",
-name:"Powerbank",
-variant:"10.000 mAh / 20.000 mAh",
-icon:"🔋"
+ brand:"Redmi",
+ model:"Redmi Note 17",
+ category:"Telefon",
+ icon:"📱",
+ price:15999
 },
 
 {
-category:"Powerbank",
-brand:"Anker",
-name:"Powerbank",
-variant:"20.000 mAh / 65W",
-icon:"🔋"
+ brand:"Redmi",
+ model:"Redmi Note 17 Pro",
+ category:"Telefon",
+ icon:"📱",
+ price:19999
 },
 
 {
-category:"Powerbank",
-brand:"Apple",
-name:"MagSafe Powerbank",
-variant:"Manyetik",
-icon:"🔋"
+ brand:"Redmi",
+ model:"Redmi Note 17 Pro+",
+ category:"Telefon",
+ icon:"📱",
+ price:23999
 },
 
 {
-category:"Powerbank",
-brand:"Baseus",
-name:"MagSafe Powerbank",
-variant:"Manyetik",
-icon:"🔋"
+ brand:"Redmi",
+ model:"Redmi Watch 6",
+ category:"Akıllı Saat",
+ icon:"⌚",
+ price:2999
 },
 
-/* =========================
-   HOPARLÖR
-========================= */
-
 {
-category:"Hoparlör",
-brand:"JBL",
-name:"JBL Go",
-variant:"Bluetooth",
-icon:"🔊"
+ brand:"Redmi",
+ model:"Redmi Watch 6 Active",
+ category:"Akıllı Saat",
+ icon:"⌚",
+ price:2499
 },
 
-{
-category:"Hoparlör",
-brand:"JBL",
-name:"JBL Clip",
-variant:"Bluetooth",
-icon:"🔊"
-},
+/* POCO */
 
 {
-category:"Hoparlör",
-brand:"JBL",
-name:"JBL Flip",
-variant:"Bluetooth",
-icon:"🔊"
+ brand:"POCO",
+ model:"POCO F8",
+ category:"Telefon",
+ icon:"📱",
+ price:29999
 },
 
 {
-category:"Hoparlör",
-brand:"JBL",
-name:"JBL Charge",
-variant:"Bluetooth",
-icon:"🔊"
+ brand:"POCO",
+ model:"POCO F8 Pro",
+ category:"Telefon",
+ icon:"📱",
+ price:35999
 },
 
 {
-category:"Hoparlör",
-brand:"JBL",
-name:"JBL Xtreme",
-variant:"Bluetooth",
-icon:"🔊"
+ brand:"POCO",
+ model:"POCO X8",
+ category:"Telefon",
+ icon:"📱",
+ price:21999
 },
 
 {
-category:"Hoparlör",
-brand:"Sony",
-name:"Sony SRS",
-variant:"Bluetooth",
-icon:"🔊"
+ brand:"POCO",
+ model:"POCO X8 Pro",
+ category:"Telefon",
+ icon:"📱",
+ price:25999
 },
 
-{
-category:"Hoparlör",
-brand:"Anker",
-name:"Soundcore",
-variant:"Bluetooth",
-icon:"🔊"
-},
+/* HUAWEI */
 
 {
-category:"Hoparlör",
-brand:"TeknoBiz",
-name:"LED Bluetooth Hoparlör",
-variant:"RGB / Bluetooth",
-icon:"🔊"
+ brand:"Huawei",
+ model:"Huawei Watch GT 7",
+ category:"Akıllı Saat",
+ icon:"⌚",
+ price:10999
 },
-
-/* =========================
-   BİLGİSAYAR
-========================= */
 
 {
-category:"Bilgisayar",
-brand:"Logitech",
-name:"Kablosuz Mouse",
-variant:"Bluetooth / USB",
-icon:"🖱️"
+ brand:"Huawei",
+ model:"Huawei Watch GT 7 Pro",
+ category:"Akıllı Saat",
+ icon:"⌚",
+ price:15999
 },
 
 {
-category:"Bilgisayar",
-brand:"Logitech",
-name:"Gaming Mouse",
-variant:"RGB",
-icon:"🖱️"
+ brand:"Huawei",
+ model:"Huawei Watch GT 6",
+ category:"Akıllı Saat",
+ icon:"⌚",
+ price:8999
 },
 
 {
-category:"Bilgisayar",
-brand:"Logitech",
-name:"Kablosuz Klavye",
-variant:"Bluetooth",
-icon:"⌨️"
+ brand:"Huawei",
+ model:"Huawei Watch GT 6 Pro",
+ category:"Akıllı Saat",
+ icon:"⌚",
+ price:12999
 },
 
 {
-category:"Bilgisayar",
-brand:"Redragon",
-name:"Gaming Klavye",
-variant:"RGB",
-icon:"⌨️"
+ brand:"Huawei",
+ model:"Huawei Watch FIT 5",
+ category:"Akıllı Saat",
+ icon:"⌚",
+ price:5999
 },
 
 {
-category:"Bilgisayar",
-brand:"Razer",
-name:"Gaming Mouse",
-variant:"RGB",
-icon:"🖱️"
+ brand:"Huawei",
+ model:"Huawei Watch FIT 5 Pro",
+ category:"Akıllı Saat",
+ icon:"⌚",
+ price:7999
 },
 
-{
-category:"Bilgisayar",
-brand:"Razer",
-name:"Gaming Klavye",
-variant:"RGB",
-icon:"⌨️"
-},
+/* JBL */
 
 {
-category:"Bilgisayar",
-brand:"Kingston",
-name:"USB Bellek",
-variant:"64 / 128 / 256 GB",
-icon:"💾"
+ brand:"JBL",
+ model:"JBL Charge 6",
+ category:"Hoparlör",
+ icon:"🔊",
+ price:6999
 },
 
 {
-category:"Bilgisayar",
-brand:"SanDisk",
-name:"USB Bellek",
-variant:"64 / 128 / 256 GB",
-icon:"💾"
+ brand:"JBL",
+ model:"JBL Flip 7",
+ category:"Hoparlör",
+ icon:"🔊",
+ price:4999
 },
 
 {
-category:"Bilgisayar",
-brand:"TeknoBiz",
-name:"Laptop Standı",
-variant:"Alüminyum",
-icon:"💻"
+ brand:"JBL",
+ model:"JBL Xtreme 4",
+ category:"Hoparlör",
+ icon:"🔊",
+ price:11999
 },
 
 {
-category:"Bilgisayar",
-brand:"TeknoBiz",
-name:"Laptop Soğutucu",
-variant:"RGB / Fanlı",
-icon:"❄️"
+ brand:"JBL",
+ model:"JBL PartyBox",
+ category:"Hoparlör",
+ icon:"🔊",
+ price:16999
 },
 
-/* =========================
-   ARABA
-========================= */
+/* SONY */
 
 {
-category:"Araba",
-brand:"TeknoBiz",
-name:"Araç Telefon Tutucu",
-variant:"Mıknatıslı",
-icon:"🚗"
+ brand:"Sony",
+ model:"Sony WH-1000XM6",
+ category:"Kulaklık",
+ icon:"🎧",
+ price:14999
 },
 
 {
-category:"Araba",
-brand:"Baseus",
-name:"Araç Telefon Tutucu",
-variant:"Havalandırma",
-icon:"🚗"
+ brand:"Sony",
+ model:"Sony WF-1000XM5",
+ category:"Kulaklık",
+ icon:"🎧",
+ price:9999
 },
 
-{
-category:"Araba",
-brand:"UGREEN",
-name:"Araç Şarj Adaptörü",
-variant:"USB-C",
-icon:"🔌"
-},
+/* ANKER */
 
 {
-category:"Araba",
-brand:"TeknoBiz",
-name:"Bluetooth FM Transmitter",
-variant:"Bluetooth",
-icon:"📻"
+ brand:"Anker",
+ model:"Soundcore Liberty",
+ category:"Kulaklık",
+ icon:"🎧",
+ price:4999
 },
 
 {
-category:"Araba",
-brand:"TeknoBiz",
-name:"Araç İçi LED",
-variant:"USB",
-icon:"💡"
+ brand:"Anker",
+ model:"Soundcore Space",
+ category:"Kulaklık",
+ icon:"🎧",
+ price:6999
 },
 
 {
-category:"Araba",
-brand:"TeknoBiz",
-name:"Araç Şarj Kablosu",
-variant:"Type-C / Lightning",
-icon:"🔌"
+ brand:"Anker",
+ model:"Anker PowerCore",
+ category:"Powerbank",
+ icon:"🔋",
+ price:2499
 },
 
-/* =========================
-   MAKYAJ
-========================= */
+/* BASEUS */
 
 {
-category:"Makyaj",
-brand:"TeknoBiz",
-name:"LED Makyaj Aynası",
-variant:"Masaüstü",
-icon:"🪞"
+ brand:"Baseus",
+ model:"Baseus 20W Şarj Adaptörü",
+ category:"Şarj",
+ icon:"🔌",
+ price:899
 },
 
 {
-category:"Makyaj",
-brand:"TeknoBiz",
-name:"Katlanabilir Makyaj Aynası",
-variant:"LED",
-icon:"🪞"
+ brand:"Baseus",
+ model:"Baseus 65W Şarj Adaptörü",
+ category:"Şarj",
+ icon:"🔌",
+ price:1699
 },
 
 {
-category:"Makyaj",
-brand:"TeknoBiz",
-name:"Şarjlı Makyaj Aynası",
-variant:"LED",
-icon:"🪞"
+ brand:"Baseus",
+ model:"Baseus 20.000 mAh Powerbank",
+ category:"Powerbank",
+ icon:"🔋",
+ price:1799
 },
 
-/* =========================
-   GRAMOFON
-========================= */
+/* LOGITECH */
 
 {
-category:"Gramofon",
-brand:"TeknoBiz",
-name:"Bluetooth Gramofon",
-variant:"USB / Bluetooth",
-icon:"📻"
+ brand:"Logitech",
+ model:"Logitech G502",
+ category:"Mouse",
+ icon:"🖱️",
+ price:2499
 },
 
 {
-category:"Gramofon",
-brand:"TeknoBiz",
-name:"Retro Gramofon",
-variant:"Bluetooth",
-icon:"📻"
+ brand:"Logitech",
+ model:"Logitech G Pro X",
+ category:"Klavye",
+ icon:"⌨️",
+ price:4999
 },
 
 {
-category:"Gramofon",
-brand:"TeknoBiz",
-name:"Ahşap Gramofon",
-variant:"Retro",
-icon:"📻"
+ brand:"Logitech",
+ model:"Logitech K380",
+ category:"Klavye",
+ icon:"⌨️",
+ price:1699
 }
 
 ];
 
 
-/* =========================================
+/* =========================
    DEĞİŞKENLER
-========================================= */
+========================= */
 
-let currentCategory = "Telefonlar";
-let cart = [];
+let selectedBrand="Tümü";
+let selectedModel="Tümü";
+let cart=[];
 
 
-/* =========================================
-   KATEGORİYİ GÖSTER
-========================================= */
+/* =========================
+   MODEL LİSTESİ
+========================= */
 
-function showCategory(category, button){
+function renderModels(){
 
-    currentCategory = category;
+    const list=document.getElementById("modelList");
 
-    document.querySelectorAll(".category-btn")
-    .forEach(btn => btn.classList.remove("active"));
+    let filtered=products;
 
-    if(button){
-        button.classList.add("active");
+    if(selectedBrand!=="Tümü"){
+        filtered=products.filter(p=>p.brand===selectedBrand);
     }
 
-    createFilters();
+    const models=[...new Set(filtered.map(p=>p.model))];
 
-    renderProducts(products.filter(p => p.category === category));
+    list.innerHTML=`
+        <button
+            class="model-btn ${selectedModel==="Tümü"?"active":""}"
+            onclick="selectModel('Tümü')">
+            Tümü
+        </button>
+    `;
 
-    document.getElementById("productInfo").innerText =
-        category + " ürünleri";
+    models.forEach(model=>{
 
-}
-
-
-/* =========================================
-   FİLTRELER
-========================================= */
-
-function createFilters(){
-
-    const area = document.getElementById("filterOptions");
-
-    let filtered = products.filter(
-        p => p.category === currentCategory
-    );
-
-    let brands = [...new Set(
-        filtered.map(p => p.brand)
-    )];
-
-    area.innerHTML = "";
-
-    const allBtn = document.createElement("button");
-
-    allBtn.className = "option-btn active";
-
-    allBtn.innerText = "Tümü";
-
-    allBtn.onclick = function(){
-
-        document.querySelectorAll(".option-btn")
-        .forEach(b => b.classList.remove("active"));
-
-        this.classList.add("active");
-
-        renderProducts(filtered);
-
-    };
-
-    area.appendChild(allBtn);
-
-
-    brands.forEach(brand => {
-
-        const btn = document.createElement("button");
-
-        btn.className = "option-btn";
-
-        btn.innerText = brand;
-
-        btn.onclick = function(){
-
-            document.querySelectorAll(".option-btn")
-            .forEach(b => b.classList.remove("active"));
-
-            this.classList.add("active");
-
-            const brandProducts = filtered.filter(
-                p => p.brand === brand
-            );
-
-            renderProducts(brandProducts);
-
-        };
-
-        area.appendChild(btn);
+        list.innerHTML+=`
+            <button
+                class="model-btn ${selectedModel===model?"active":""}"
+                onclick="selectModel('${model.replace(/'/g,"\\'")}')">
+                ${model}
+            </button>
+        `;
 
     });
 
-
-    /* MODEL / VARYANT SEÇENEKLERİ */
-
-    filtered.forEach(product => {
-
-        const btn = document.createElement("button");
-
-        btn.className = "option-btn";
-
-        btn.innerText = product.name;
-
-        btn.onclick = function(){
-
-            document.querySelectorAll(".option-btn")
-            .forEach(b => b.classList.remove("active"));
-
-            this.classList.add("active");
-
-            renderProducts([product]);
-
-        };
-
-        area.appendChild(btn);
-
-    });
-
+    document.getElementById("modelTitle").textContent=
+        selectedBrand==="Tümü"
+        ? "Tüm Modeller"
+        : selectedBrand+" Modelleri";
 }
 
 
-/* =========================================
+/* =========================
+   MARKA SEÇ
+========================= */
+
+function selectBrand(brand,element){
+
+    selectedBrand=brand;
+    selectedModel="Tümü";
+
+    document.querySelectorAll(".category-box")
+        .forEach(x=>x.classList.remove("active"));
+
+    if(element){
+        element.classList.add("active");
+    }
+
+    renderModels();
+    renderProducts();
+}
+
+
+/* =========================
+   MODEL SEÇ
+========================= */
+
+function selectModel(model){
+
+    selectedModel=model;
+
+    renderModels();
+    renderProducts();
+
+    document.getElementById("urunler")
+        .scrollIntoView({behavior:"smooth"});
+}
+
+
+/* =========================
    ÜRÜNLERİ GÖSTER
-========================================= */
+========================= */
 
-function renderProducts(list){
+function renderProducts(){
 
-    const container = document.getElementById("products");
+    const container=document.getElementById("products");
 
-    container.innerHTML = "";
+    const search=document.getElementById("search")
+        .value
+        .toLowerCase();
 
-    if(list.length === 0){
+    let filtered=products.filter(product=>{
 
-        container.innerHTML =
-        "<p>Ürün bulunamadı.</p>";
+        const brandOK=
+            selectedBrand==="Tümü" ||
+            product.brand===selectedBrand;
+
+        const modelOK=
+            selectedModel==="Tümü" ||
+            product.model===selectedModel;
+
+        const searchOK=
+            product.brand.toLowerCase().includes(search) ||
+            product.model.toLowerCase().includes(search) ||
+            product.category.toLowerCase().includes(search);
+
+        return brandOK && modelOK && searchOK;
+
+    });
+
+    document.getElementById("productResult").textContent=
+        filtered.length+" ürün gösteriliyor";
+
+    if(filtered.length===0){
+
+        container.innerHTML=`
+            <div style="grid-column:1/-1;padding:50px;text-align:center;color:#777">
+                Aradığın ürün bulunamadı.
+            </div>
+        `;
 
         return;
-
     }
 
+    container.innerHTML=filtered.map((product,index)=>`
 
-    list.forEach((product,index)=>{
-
-        const card = document.createElement("div");
-
-        card.className = "product";
-
-        card.innerHTML = `
+        <div class="product">
 
             <div class="product-image">
                 ${product.icon}
             </div>
 
-            <div class="product-content">
+            <div class="product-info">
 
                 <div class="product-brand">
                     ${product.brand}
                 </div>
 
-                <h3>
-                    ${product.name}
-                </h3>
+                <h3>${product.model}</h3>
 
-                <p>
-                    ${product.variant}
-                </p>
+                <p>${product.category}</p>
 
-                <div class="product-buttons">
+                <div class="price-row">
 
-                    <button
-                    class="add-btn"
-                    onclick='addToCart(${JSON.stringify(product)})'>
-                    🛒 Sepete Ekle
-                    </button>
+                    <div class="price">
+                        ${product.price.toLocaleString("tr-TR")} TL
+                    </div>
 
                     <button
-                    class="whatsapp-btn"
-                    onclick='whatsappProduct(${JSON.stringify(product)})'>
-                    WhatsApp
+                        class="add-btn"
+                        onclick="addToCart(${products.indexOf(product)})">
+                        Sepete Ekle
                     </button>
 
                 </div>
 
             </div>
 
-        `;
+        </div>
 
-        container.appendChild(card);
-
-    });
-
+    `).join("");
 }
 
 
-/* =========================================
+/* =========================
    ARAMA
-========================================= */
+========================= */
 
 function searchProducts(){
 
-    const query =
-        document.getElementById("search")
-        .value
-        .toLowerCase()
-        .trim();
+    selectedModel="Tümü";
 
-    if(!query){
-
-        renderProducts(
-            products.filter(
-                p => p.category === currentCategory
-            )
-        );
-
-        return;
-
-    }
-
-    const results = products.filter(p =>
-
-        p.name.toLowerCase().includes(query) ||
-
-        p.brand.toLowerCase().includes(query) ||
-
-        p.variant.toLowerCase().includes(query) ||
-
-        p.category.toLowerCase().includes(query)
-
-    );
-
-    document.getElementById("productInfo").innerText =
-        `"${query}" için ${results.length} ürün bulundu`;
-
-    renderProducts(results);
-
+    renderModels();
+    renderProducts();
 }
 
 
-/* =========================================
+/* =========================
    SEPET
-========================================= */
+========================= */
 
-function addToCart(product){
+function addToCart(index){
+
+    const product=products[index];
 
     cart.push(product);
 
     updateCart();
 
-    alert(
-        product.name +
-        " sepete eklendi."
-    );
-
+    openCart();
 }
 
 
 function updateCart(){
 
-    document.getElementById("cartCount")
-    .innerText = cart.length;
+    document.getElementById("cartCount").textContent=cart.length;
 
-    const container =
-        document.getElementById("cartItems");
+    const container=document.getElementById("cartItems");
 
-    container.innerHTML = "";
+    if(cart.length===0){
 
-    cart.forEach((item,index)=>{
+        container.innerHTML=`
+            <p style="color:#777;">Sepetiniz boş.</p>
+        `;
 
-        const div =
-            document.createElement("div");
+        document.getElementById("cartTotal").textContent="0 TL";
 
-        div.className = "cart-item";
+        return;
+    }
 
-        div.innerHTML = `
+    let total=0;
 
-            <strong>
-                ${item.brand} ${item.name}
-            </strong>
+    container.innerHTML=cart.map((item,index)=>{
 
-            <small>
-                ${item.variant}
-            </small>
+        total+=item.price;
 
-            <br>
+        return`
 
-            <button
-            class="remove-btn"
-            onclick="removeFromCart(${index})">
-            Ürünü Sil
-            </button>
+            <div class="cart-item">
+
+                <strong>${item.brand} ${item.model}</strong>
+
+                <small>
+                    ${item.price.toLocaleString("tr-TR")} TL
+                </small>
+
+                <button
+                    onclick="removeFromCart(${index})"
+                    style="
+                    float:right;
+                    background:none;
+                    border:0;
+                    color:#e50914;
+                    cursor:pointer;
+                    ">
+                    Sil
+                </button>
+
+            </div>
 
         `;
 
-        container.appendChild(div);
+    }).join("");
 
-    });
-
-    document.getElementById("cartTotal")
-    .innerText = cart.length;
-
+    document.getElementById("cartTotal").textContent=
+        total.toLocaleString("tr-TR")+" TL";
 }
 
 
@@ -2393,105 +1831,77 @@ function removeFromCart(index){
     cart.splice(index,1);
 
     updateCart();
-
 }
 
 
-/* =========================================
-   CART AÇ / KAPAT
-========================================= */
+/* =========================
+   CART OPEN/CLOSE
+========================= */
 
 function openCart(){
 
     document
-    .getElementById("cartOverlay")
-    .classList.add("show");
+        .getElementById("cartOverlay")
+        .classList.add("open");
 
 }
 
 
-function closeCart(){
+function closeCart(event){
 
-    document
-    .getElementById("cartOverlay")
-    .classList.remove("show");
-
-}
-
-
-function closeCartOutside(event){
-
-    if(event.target.id === "cartOverlay"){
-
-        closeCart();
-
+    if(event && event.target.id!=="cartOverlay"){
+        return;
     }
 
+    document
+        .getElementById("cartOverlay")
+        .classList.remove("open");
 }
 
 
-/* =========================================
-   WHATSAPP ÜRÜN
-========================================= */
-
-function whatsappProduct(product){
-
-    const message =
-        `Merhaba TeknoBiz, ${product.brand} ${product.name} ürününü almak istiyorum. Varyant: ${product.variant}`;
-
-    const url =
-        "https://wa.me/905059999009?text=" +
-        encodeURIComponent(message);
-
-    window.open(url,"_blank");
-
-}
-
-
-/* =========================================
-   WHATSAPP SEPET
-========================================= */
+/* =========================
+   WHATSAPP SİPARİŞ
+========================= */
 
 function sendCartWhatsApp(){
 
-    if(cart.length === 0){
+    if(cart.length===0){
 
         alert("Sepetiniz boş.");
 
         return;
-
     }
 
-    let message =
-        "Merhaba TeknoBiz, aşağıdaki ürünler hakkında bilgi almak istiyorum:%0A%0A";
+    let message=
+        "Merhaba TeknoBiz, aşağıdaki ürünleri almak istiyorum:%0A%0A";
 
-    cart.forEach((item,index)=>{
+    let total=0;
 
-        message +=
-        `${index+1}. ${item.brand} ${item.name} - ${item.variant}%0A`;
+    cart.forEach((product,index)=>{
+
+        message+=
+            `${index+1}. ${product.brand} ${product.model} - ${product.price.toLocaleString("tr-TR")} TL%0A`;
+
+        total+=product.price;
 
     });
 
-    const url =
-        "https://wa.me/905059999009?text=" +
-        message;
+    message+=
+        `%0AToplam: ${total.toLocaleString("tr-TR")} TL`;
 
-    window.open(url,"_blank");
-
+    window.open(
+        "https://wa.me/9050599999009?text="+message,
+        "_blank"
+    );
 }
 
 
-/* =========================================
-   BAŞLANGIÇ
-========================================= */
+/* =========================
+   BAŞLAT
+========================= */
 
-createFilters();
-
-renderProducts(
-    products.filter(
-        p => p.category === "Telefonlar"
-    )
-);
+renderModels();
+renderProducts();
 
 </script>
 
