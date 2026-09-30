@@ -47,9 +47,14 @@ body{
   min-height:100vh;
 }
 
+body.no-scroll{
+  overflow:hidden;
+}
+
 button,
 input,
-select{
+select,
+textarea{
   font:inherit;
 }
 
@@ -62,7 +67,9 @@ a{
   text-decoration:none;
 }
 
-/* WELCOME */
+/* =========================
+   WELCOME
+========================= */
 
 #welcome{
   position:fixed;
@@ -116,13 +123,15 @@ a{
   box-shadow:0 10px 30px rgba(20,121,255,.25);
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(5,14,27,.92);
+  background:rgba(5,14,27,.94);
   backdrop-filter:blur(18px);
   border-bottom:1px solid var(--line);
 }
@@ -185,13 +194,14 @@ header{
 
 .search input:focus{
   border-color:var(--blue);
+  box-shadow:0 0 0 3px rgba(20,121,255,.12);
 }
 
 .search-icon{
   position:absolute;
   right:14px;
-  top:11px;
-  font-size:20px;
+  top:10px;
+  font-size:22px;
 }
 
 .cart-btn{
@@ -217,7 +227,9 @@ header{
   justify-content:center;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
   max-width:1250px;
@@ -268,13 +280,15 @@ header{
   justify-content:center;
 }
 
-/* IPHONE VISUAL */
+/* =========================
+   PHONE VISUAL
+========================= */
 
 .iphone{
   width:180px;
   height:350px;
   border-radius:38px;
-  background:linear-gradient(145deg,#171717,#050505);
+  background:linear-gradient(145deg,#202020,#050505);
   border:6px solid #292929;
   position:relative;
   box-shadow:
@@ -354,51 +368,9 @@ header{
   grid-column:1;
 }
 
-.case-layer{
-  position:absolute;
-  inset:0;
-  border-radius:32px;
-  z-index:8;
-  pointer-events:none;
-  transition:.3s;
-}
-
-.case-transparent{
-  border:5px solid rgba(255,255,255,.38);
-  background:rgba(255,255,255,.04);
-  box-shadow:inset 0 0 25px rgba(255,255,255,.12);
-}
-
-.case-guess{
-  border:6px solid #d6aa4a;
-  background:rgba(208,166,71,.08);
-}
-
-.case-single{
-  border:7px solid var(--case-color,#111);
-  background:rgba(0,0,0,.08);
-}
-
-.case-rhinestone{
-  border:5px solid #f7e8ff;
-  box-shadow:
-    inset 0 0 0 2px #d5a6ff,
-    0 0 14px rgba(225,170,255,.5);
-}
-
-.case-carbon{
-  border:6px solid #252525;
-  background:
-    repeating-linear-gradient(
-      45deg,
-      rgba(255,255,255,.04) 0,
-      rgba(255,255,255,.04) 5px,
-      transparent 5px,
-      transparent 10px
-    );
-}
-
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 .section{
   max-width:1250px;
@@ -419,7 +391,9 @@ header{
   margin-top:6px;
 }
 
-/* CAMPAIGNS */
+/* =========================
+   CAMPAIGNS
+========================= */
 
 .campaigns{
   display:grid;
@@ -432,6 +406,12 @@ header{
   border-radius:20px;
   border:1px solid var(--line);
   background:linear-gradient(145deg,#0e2039,#091426);
+  transition:.25s;
+}
+
+.campaign:hover{
+  transform:translateY(-4px);
+  border-color:rgba(57,160,255,.35);
 }
 
 .campaign strong{
@@ -444,7 +424,9 @@ header{
   color:var(--muted);
 }
 
-/* FILTERS */
+/* =========================
+   FILTERS
+========================= */
 
 .filters{
   display:flex;
@@ -453,13 +435,14 @@ header{
   margin-bottom:25px;
 }
 
-.filters input,
 .filters select{
   background:#0b192d;
   color:#fff;
   border:1px solid var(--line);
   border-radius:11px;
   padding:12px;
+  min-width:180px;
+  outline:none;
 }
 
 .reset-btn{
@@ -475,7 +458,9 @@ header{
   margin-bottom:15px;
 }
 
-/* PRODUCTS */
+/* =========================
+   PRODUCTS
+========================= */
 
 .products{
   display:grid;
@@ -497,7 +482,7 @@ header{
 }
 
 .product-image{
-  height:220px;
+  height:240px;
   background:#f6f8fb;
   display:flex;
   align-items:center;
@@ -509,7 +494,8 @@ header{
   width:100%;
   height:100%;
   object-fit:contain;
-  padding:12px;
+  padding:14px;
+  display:block;
 }
 
 .product-body{
@@ -571,7 +557,9 @@ header{
   border:1px solid var(--line);
 }
 
-/* REVIEWS */
+/* =========================
+   REVIEWS
+========================= */
 
 .reviews{
   display:grid;
@@ -596,7 +584,9 @@ header{
   line-height:1.6;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact-grid{
   display:grid;
@@ -629,7 +619,9 @@ header{
   color:var(--muted);
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
   border-top:1px solid var(--line);
@@ -639,7 +631,9 @@ footer{
   color:var(--muted);
 }
 
-/* WHATSAPP */
+/* =========================
+   WHATSAPP
+========================= */
 
 .float-wa{
   position:fixed;
@@ -658,7 +652,9 @@ footer{
   box-shadow:0 12px 30px rgba(37,211,102,.3);
 }
 
-/* MODALS */
+/* =========================
+   MODALS
+========================= */
 
 .modal{
   position:fixed;
@@ -700,7 +696,9 @@ footer{
   font-size:20px;
 }
 
-/* CUSTOMIZER */
+/* =========================
+   CUSTOMIZER
+========================= */
 
 .customizer-grid{
   display:grid;
@@ -786,7 +784,9 @@ footer{
   margin-top:5px;
 }
 
-/* CART */
+/* =========================
+   CART
+========================= */
 
 .cart-list{
   display:flex;
@@ -841,7 +841,9 @@ footer{
   resize:vertical;
 }
 
-/* CHAT */
+/* =========================
+   CHAT
+========================= */
 
 .chat-button{
   position:fixed;
@@ -926,9 +928,12 @@ footer{
   border:0;
 }
 
-/* RESPONSIVE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:1000px){
+
   .products{
     grid-template-columns:repeat(3,1fr);
   }
@@ -948,9 +953,11 @@ footer{
   .preview{
     min-height:400px;
   }
+
 }
 
 @media(max-width:760px){
+
   .products{
     grid-template-columns:repeat(2,1fr);
   }
@@ -973,9 +980,11 @@ footer{
   .hero{
     padding-top:45px;
   }
+
 }
 
 @media(max-width:480px){
+
   .products{
     grid-template-columns:1fr;
   }
@@ -997,59 +1006,105 @@ footer{
   .chat-button{
     right:15px;
   }
+
+  .filters select,
+  .reset-btn{
+    width:100%;
+  }
+
 }
 </style>
 </head>
 
 <body>
 
-<!-- WELCOME -->
+<!-- =========================
+     WELCOME
+========================= -->
 
 <div id="welcome">
+
   <div class="welcome-box">
+
     <div class="welcome-logo">T</div>
+
     <h1>TeknoBiz</h1>
+
     <p>2016'dan beri teknoloji ve aksesuar.</p>
-    <button class="primary-btn" onclick="enterSite()">Siteye Gir</button>
+
+    <button class="primary-btn" onclick="enterSite()">
+      Siteye Gir
+    </button>
+
   </div>
+
 </div>
 
-<!-- HEADER -->
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
+
   <div class="nav">
 
     <a class="logo" href="#">
-      <div class="logo-mark">T</div>
+
+      <div class="logo-mark">
+        T
+      </div>
+
       <div class="logo-text">
         TeknoBiz
         <small>SINCE 2016</small>
       </div>
+
     </a>
 
     <div class="search">
+
       <input
         id="searchInput"
         type="search"
         placeholder="Ürün ara... örn. powerbank"
         oninput="applyFilters()"
       >
-      <span class="search-icon">⌕</span>
+
+      <span class="search-icon">
+        ⌕
+      </span>
+
     </div>
 
-    <button class="cart-btn" onclick="openCart()">
+    <button
+      class="cart-btn"
+      onclick="openCart()"
+    >
       🛒 Sepet
-      <span class="cart-count" id="cartCount">0</span>
+
+      <span
+        class="cart-count"
+        id="cartCount"
+      >
+        0
+      </span>
+
     </button>
 
   </div>
+
 </header>
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
   <div>
+
     <div style="color:#59aaff;font-weight:800;">
       ✦ 2016'DAN BERİ TEKNOLOJİ
     </div>
@@ -1060,12 +1115,17 @@ footer{
     </h2>
 
     <p>
-      Telefon kılıfları, Apple şarj ürünleri, aksesuarlar
-      ve günlük teknoloji ürünleri TeknoBiz'de.
+      Telefon kılıfları, Apple şarj ürünleri,
+      aksesuarlar ve günlük teknoloji ürünleri
+      TeknoBiz'de.
     </p>
 
     <div class="hero-buttons">
-      <button class="primary-btn" onclick="scrollToProducts()">
+
+      <button
+        class="primary-btn"
+        onclick="scrollToProducts()"
+      >
         Ürünleri İncele
       </button>
 
@@ -1073,193 +1133,384 @@ footer{
         class="whatsapp-btn"
         href="https://wa.me/905059999009"
         target="_blank"
+        rel="noopener"
       >
         WhatsApp'tan Ulaş
       </a>
+
     </div>
+
   </div>
 
+
   <div class="hero-phone">
-    <div class="iphone" id="heroPhone">
+
+    <div class="iphone">
+
       <div class="iphone-screen">
+
         <div class="dynamic-island"></div>
 
         <div class="camera-area pro">
+
           <div class="camera"></div>
           <div class="camera"></div>
           <div class="camera"></div>
+
         </div>
 
-        <div class="iphone-logo"></div>
+        <div class="iphone-logo">
+          
+        </div>
+
       </div>
+
     </div>
+
   </div>
 
 </section>
 
-<!-- CAMPAIGNS -->
+
+<!-- =========================
+     CAMPAIGNS
+========================= -->
 
 <section class="section">
 
   <div class="section-title">
-    <h2>Öne Çıkanlar</h2>
-    <p>TeknoBiz'de günlük teknoloji ihtiyaçların.</p>
+
+    <h2>
+      Öne Çıkanlar
+    </h2>
+
+    <p>
+      TeknoBiz'de günlük teknoloji ihtiyaçların.
+    </p>
+
   </div>
 
   <div class="campaigns">
 
     <div class="campaign">
-      <strong>📱 Telefon Kılıfları</strong>
-      <span>iPhone modellerine uygun farklı kılıf seçenekleri.</span>
+
+      <strong>
+        📱 Telefon Kılıfları
+      </strong>
+
+      <span>
+        iPhone modellerine uygun farklı
+        kılıf seçenekleri.
+      </span>
+
     </div>
 
     <div class="campaign">
-      <strong>⚡ Apple Şarj</strong>
-      <span>Apple 20W adaptör ve kablo seçenekleri.</span>
+
+      <strong>
+        ⚡ Apple Şarj
+      </strong>
+
+      <span>
+        Apple 20W adaptör ve Lightning
+        kablo seçenekleri.
+      </span>
+
     </div>
 
     <div class="campaign">
-      <strong>✨ Günlük Teknoloji</strong>
-      <span>Ev, kişisel bakım ve teknoloji aksesuarları.</span>
+
+      <strong>
+        ✨ Günlük Teknoloji
+      </strong>
+
+      <span>
+        Ev, kişisel bakım ve teknoloji
+        aksesuarları.
+      </span>
+
     </div>
 
   </div>
 
 </section>
 
-<!-- PRODUCTS -->
 
-<section class="section" id="productsSection">
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section
+  class="section"
+  id="productsSection"
+>
 
   <div class="section-title">
-    <h2>Ürünler</h2>
-    <p>Aradığın ürünü ara veya model filtresini kullan.</p>
+
+    <h2>
+      Ürünler
+    </h2>
+
+    <p>
+      Aradığın ürünü ara veya model filtresini kullan.
+    </p>
+
   </div>
+
 
   <div class="filters">
 
-    <select id="categoryFilter" onchange="applyFilters()">
-      <option value="">Tüm Kategoriler</option>
+    <select
+      id="categoryFilter"
+      onchange="applyFilters()"
+    >
+
+      <option value="">
+        Tüm Kategoriler
+      </option>
+
     </select>
 
-    <select id="modelFilter" onchange="applyFilters()">
-      <option value="">Tüm Modeller</option>
+
+    <select
+      id="modelFilter"
+      onchange="applyFilters()"
+    >
+
+      <option value="">
+        Tüm Modeller
+      </option>
+
     </select>
 
-    <button class="reset-btn" onclick="resetFilters()">
+
+    <button
+      class="reset-btn"
+      onclick="resetFilters()"
+    >
       Filtreleri Temizle
     </button>
 
   </div>
 
-  <div class="result-info" id="resultInfo"></div>
 
-  <div class="products" id="productGrid"></div>
+  <div
+    class="result-info"
+    id="resultInfo"
+  ></div>
+
+
+  <div
+    class="products"
+    id="productGrid"
+  ></div>
 
 </section>
 
-<!-- REVIEWS -->
+
+<!-- =========================
+     REVIEWS
+========================= -->
 
 <section class="section">
 
   <div class="section-title">
-    <h2>Müşteri Yorumları</h2>
-    <p>TeknoBiz müşterilerinden.</p>
+
+    <h2>
+      Müşteri Yorumları
+    </h2>
+
+    <p>
+      TeknoBiz müşterilerinden.
+    </p>
+
   </div>
+
 
   <div class="reviews">
 
     <div class="review">
-      <div class="stars">★★★★★</div>
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
       <p>
-        “Ürün çeşitleri güzel, özellikle telefon kılıflarında
-        seçenek çok.”
+        “Ürün çeşitleri güzel, özellikle telefon
+        kılıflarında seçenek çok.”
       </p>
+
       <br>
-      <strong>Ahmet K.</strong>
+
+      <strong>
+        Ahmet K.
+      </strong>
+
     </div>
 
-    <div class="review">
-      <div class="stars">★★★★★</div>
-      <p>
-        “Şarj ürünleri ve aksesuar konusunda aradığımı buldum.”
-      </p>
-      <br>
-      <strong>Mehmet A.</strong>
-    </div>
 
     <div class="review">
-      <div class="stars">★★★★★</div>
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
       <p>
-        “Kılıf seçerken telefona göre özelleştirme fikri çok iyi.”
+        “Şarj ürünleri ve aksesuar konusunda
+        aradığımı buldum.”
       </p>
+
       <br>
-      <strong>Elif T.</strong>
+
+      <strong>
+        Mehmet A.
+      </strong>
+
+    </div>
+
+
+    <div class="review">
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
+      <p>
+        “Kılıf seçerken telefona göre
+        özelleştirme fikri çok iyi.”
+      </p>
+
+      <br>
+
+      <strong>
+        Elif T.
+      </strong>
+
     </div>
 
   </div>
 
 </section>
 
-<!-- CONTACT -->
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="section">
 
   <div class="section-title">
-    <h2>İletişim</h2>
-    <p>TeknoBiz'e ulaş.</p>
+
+    <h2>
+      İletişim
+    </h2>
+
+    <p>
+      TeknoBiz'e ulaş.
+    </p>
+
   </div>
+
 
   <div class="contact-grid">
 
     <div class="contact-card">
 
       <div class="contact-item">
-        <strong>📍 Adres</strong>
+
+        <strong>
+          📍 Adres
+        </strong>
+
         <span>
           Süleyman Demirel Bulvarı No:15,
           Bucak / Burdur
         </span>
+
       </div>
 
+
       <div class="contact-item">
-        <strong>🕘 Çalışma Saatleri</strong>
+
+        <strong>
+          🕘 Çalışma Saatleri
+        </strong>
+
         <span>
-          Pazartesi - Cumartesi: 09:00 - 21:00<br>
+          Pazartesi - Cumartesi:
+          09:00 - 21:00
+          <br>
           Pazar: Kapalı
         </span>
+
       </div>
 
+
       <div class="contact-item">
-        <strong>📞 Telefon</strong>
-        <span>0505 999 90 09</span>
+
+        <strong>
+          📞 Telefon
+        </strong>
+
+        <span>
+          0505 999 90 09
+        </span>
+
       </div>
 
     </div>
 
+
     <div class="contact-card">
 
       <div class="contact-item">
-        <strong>📸 Instagram</strong>
+
+        <strong>
+          📸 Instagram
+        </strong>
+
         <span>
-          <a href="https://instagram.com/TeknoBiz7" target="_blank">
+
+          <a
+            href="https://instagram.com/TeknoBiz7"
+            target="_blank"
+            rel="noopener"
+          >
             @TeknoBiz7
           </a>
+
         </span>
+
       </div>
 
+
       <div class="contact-item">
-        <strong>📘 Facebook</strong>
+
+        <strong>
+          📘 Facebook
+        </strong>
+
         <span>
           bucakteknobiz15
         </span>
+
       </div>
 
+
       <div class="contact-item">
-        <strong>✉️ E-posta</strong>
+
+        <strong>
+          ✉️ E-posta
+        </strong>
+
         <span>
-          teknobiz15@gmail.com
+
+          <a href="mailto:teknobiz15@gmail.com">
+            teknobiz15@gmail.com
+          </a>
+
         </span>
+
       </div>
 
     </div>
@@ -1268,94 +1519,157 @@ footer{
 
 </section>
 
+
 <footer>
+
   © 2026 TeknoBiz • Since 2016 • İşimizi temiz yapıyoruz.
+
 </footer>
 
-<!-- WHATSAPP -->
+
+<!-- =========================
+     WHATSAPP
+========================= -->
 
 <a
   class="float-wa"
   href="https://wa.me/905059999009"
   target="_blank"
+  rel="noopener"
   aria-label="WhatsApp"
 >
   ☎
 </a>
 
-<!-- CHAT -->
 
-<button class="chat-button" onclick="toggleChat()">
+<!-- =========================
+     CHAT
+========================= -->
+
+<button
+  class="chat-button"
+  onclick="toggleChat()"
+>
   💬 Canlı Destek
 </button>
 
-<div class="chat-window" id="chatWindow">
+
+<div
+  class="chat-window"
+  id="chatWindow"
+>
 
   <div class="chat-header">
-    <strong>Mustafa Bey</strong>
-    <span style="color:#25d366;">● Online</span>
+
+    <strong>
+      Mustafa Bey
+    </strong>
+
+    <span style="color:#25d366;">
+      ● Online
+    </span>
+
   </div>
 
-  <div class="chat-body" id="chatBody">
+
+  <div
+    class="chat-body"
+    id="chatBody"
+  >
 
     <div class="msg bot">
+
       Merhaba 👋 TeknoBiz'e hoş geldiniz.
       Telefon, kılıf, şarj ve ürünler hakkında
       yardımcı olabilirim.
+
     </div>
 
   </div>
 
-  <form class="chat-form" onsubmit="sendChat(event)">
+
+  <form
+    class="chat-form"
+    onsubmit="sendChat(event)"
+  >
+
     <input
       id="chatInput"
       placeholder="Mesajınızı yazın..."
       autocomplete="off"
     >
-    <button>➤</button>
+
+    <button>
+      ➤
+    </button>
+
   </form>
 
 </div>
 
-<!-- CUSTOMIZER -->
 
-<div class="modal" id="customModal">
+<!-- =========================
+     CUSTOMIZER
+========================= -->
+
+<div
+  class="modal"
+  id="customModal"
+>
 
   <div class="modal-box">
 
-    <button class="close" onclick="closeCustomizer()">×</button>
+    <button
+      class="close"
+      onclick="closeCustomizer()"
+    >
+      ×
+    </button>
 
-    <h2>📱 Telefonunu Özelleştir</h2>
 
-    <p style="color:var(--muted);margin-top:6px;">
+    <h2>
+      📱 Telefonunu Özelleştir
+    </h2>
+
+
+    <p
+      style="color:var(--muted);margin-top:6px;"
+    >
       Telefon modelini ve kılıfını seç.
     </p>
 
+
     <div class="customizer-grid">
+
 
       <div class="preview">
 
-        <div class="iphone" id="customPhone">
+        <div
+          class="iphone"
+          id="customPhone"
+        >
 
           <div class="iphone-screen">
 
             <div class="dynamic-island"></div>
 
+
             <div
               class="camera-area pro"
               id="customCamera"
             >
+
               <div class="camera"></div>
               <div class="camera"></div>
               <div class="camera"></div>
+
             </div>
 
-            <div class="iphone-logo"></div>
 
-            <div
-              class="case-layer case-transparent"
-              id="caseLayer"
-            ></div>
+            <div class="iphone-logo">
+              
+            </div>
+
 
           </div>
 
@@ -1363,11 +1677,15 @@ footer{
 
       </div>
 
+
       <div class="custom-controls">
+
 
         <div class="control-group">
 
-          <label>Telefon Modeli</label>
+          <label>
+            Telefon Modeli
+          </label>
 
           <select
             id="customModel"
@@ -1376,9 +1694,12 @@ footer{
 
         </div>
 
+
         <div class="control-group">
 
-          <label>Kılıf Türü</label>
+          <label>
+            Kılıf Türü
+          </label>
 
           <div
             class="option-grid"
@@ -1387,13 +1708,16 @@ footer{
 
         </div>
 
+
         <div
           class="control-group"
           id="colorGroup"
           style="display:none;"
         >
 
-          <label>Kılıf Rengi</label>
+          <label>
+            Kılıf Rengi
+          </label>
 
           <div
             class="option-grid"
@@ -1401,6 +1725,7 @@ footer{
           ></div>
 
         </div>
+
 
         <div class="custom-summary">
 
@@ -1413,6 +1738,7 @@ footer{
           </div>
 
         </div>
+
 
         <button
           class="primary-btn"
@@ -1429,21 +1755,44 @@ footer{
 
 </div>
 
-<!-- CART -->
 
-<div class="modal" id="cartModal">
+<!-- =========================
+     CART
+========================= -->
+
+<div
+  class="modal"
+  id="cartModal"
+>
 
   <div class="modal-box">
 
-    <button class="close" onclick="closeCart()">×</button>
+    <button
+      class="close"
+      onclick="closeCart()"
+    >
+      ×
+    </button>
 
-    <h2>🛒 Sepetim</h2>
 
-    <div class="cart-list" id="cartList"></div>
+    <h2>
+      🛒 Sepetim
+    </h2>
 
-    <div class="cart-total" id="cartTotal">
+
+    <div
+      class="cart-list"
+      id="cartList"
+    ></div>
+
+
+    <div
+      class="cart-total"
+      id="cartTotal"
+    >
       Toplam: 0 TL
     </div>
+
 
     <button
       class="primary-btn"
@@ -1457,17 +1806,32 @@ footer{
 
 </div>
 
-<!-- PURCHASE -->
 
-<div class="modal" id="purchaseModal">
+<!-- =========================
+     PURCHASE
+========================= -->
+
+<div
+  class="modal"
+  id="purchaseModal"
+>
 
   <div class="modal-box">
 
-    <button class="close" onclick="closePurchase()">×</button>
+    <button
+      class="close"
+      onclick="closePurchase()"
+    >
+      ×
+    </button>
 
-    <h2>📦 Sipariş Bilgileri</h2>
+
+    <h2>
+      📦 Sipariş Bilgileri
+    </h2>
 
     <br>
+
 
     <div class="form">
 
@@ -1476,21 +1840,25 @@ footer{
         placeholder="Ad Soyad"
       >
 
+
       <input
         id="customerPhone"
         placeholder="Telefon"
         type="tel"
       >
 
+
       <input
         id="customerAddress"
         placeholder="Adres"
       >
 
+
       <textarea
         id="customerNote"
         placeholder="Sipariş notu"
       ></textarea>
+
 
       <button
         class="whatsapp-btn"
@@ -1505,11 +1873,13 @@ footer{
 
 </div>
 
+
 <script>
 
-/* =========================
+/* =========================================================
    IPHONE MODELLERİ
-========================= */
+   A17 VE IPHONE 16 PRO MAX BİLEREK YOK
+========================================================= */
 
 const iphoneModels = [
 
@@ -1554,25 +1924,27 @@ const iphoneModels = [
 
 ];
 
-/* A17 YOK */
-/* iPhone 16 Pro Max YOK */
+
+/* =========================================================
+   LIGHTNING MODELLERİ
+========================================================= */
 
 const lightningModels = iphoneModels.filter(model => {
 
-  return !(
-    model.includes("15") ||
-    model.includes("16") ||
-    model.includes("17") ||
-    model.includes("18") ||
-    model === "iPhone Air"
+  return (
+    model.includes("11") ||
+    model.includes("12") ||
+    model.includes("13") ||
+    model.includes("14")
   );
 
 });
 
 
-/* =========================
+/* =========================================================
    ANDROID
-========================= */
+   A17 BİLEREK YOK
+========================================================= */
 
 const androidModels = [
 
@@ -1604,20 +1976,20 @@ const androidModels = [
 ];
 
 
-/* =========================
-   APPLE GÖRSELLERİ
-========================= */
+/* =========================================================
+   GERÇEK APPLE ÜRÜN GÖRSELLERİ
+========================================================= */
 
 const appleAdapterImage =
-"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHJA3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1603123361000";
+"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHJA3?wid=700&hei=700&fmt=jpeg&qlt=95&.v=1603123361000";
 
 const appleLightningImage =
-"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MUQ93?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1692393326728";
+"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MUQ93?wid=700&hei=700&fmt=jpeg&qlt=95&.v=1692393326728";
 
 
-/* =========================
+/* =========================================================
    ÜRÜNLER
-========================= */
+========================================================= */
 
 const products = [
 
@@ -1626,85 +1998,105 @@ const products = [
     category:"Kılıf",
     title:"Şeffaf MagSafe Uyumlu iPhone Kılıfı",
     price:750,
-    image:"https://images.unsplash.com/photo-1603313011101-320f26a4f6f6?auto=format&fit=crop&w=700&q=80",
+    image:"https://images.unsplash.com/photo-1603313011101-320f26a4f6f6?auto=format&fit=crop&w=900&q=90",
     models:iphoneModels,
-    caseType:"transparent"
+    caseType:"transparent",
+    description:"Şeffaf MagSafe uyumlu iPhone kılıfı."
   },
+
 
   {
     id:2,
     category:"Kılıf",
     title:"Guess iPhone Kılıfı",
     price:750,
-    image:"https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=700&q=80",
+    image:"https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=900&q=90",
     models:iphoneModels,
-    caseType:"guess"
+    caseType:"guess",
+    description:"Guess tasarımlı iPhone kılıfı."
   },
+
 
   {
     id:3,
     category:"Kılıf",
     title:"Tek Renk iPhone Kılıfı",
     price:650,
-    image:"https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=700&q=80",
+    image:"https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=900&q=90",
     models:iphoneModels,
-    caseType:"single"
+    caseType:"single",
+    description:"Farklı renk seçeneklerine sahip iPhone kılıfı."
   },
+
 
   {
     id:4,
     category:"Kılıf",
     title:"Taşlı iPhone Kılıfı",
     price:650,
-    image:"https://images.unsplash.com/photo-1541877944-ac82a091518a?auto=format&fit=crop&w=700&q=80",
+    image:"https://images.unsplash.com/photo-1541877944-ac82a091518a?auto=format&fit=crop&w=900&q=90",
     models:iphoneModels,
-    caseType:"rhinestone"
+    caseType:"rhinestone",
+    description:"Taş detaylı dekoratif iPhone kılıfı."
   },
+
 
   {
     id:5,
     category:"Ekran Koruma",
     title:"Anti Statik Kırılmaz Cam",
     price:1000,
-    image:"https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=700&q=80",
-    models:iphoneModels
+    image:"https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=900&q=90",
+    models:iphoneModels,
+    description:"iPhone modelleri için ekran koruyucu."
   },
+
 
   {
     id:6,
     category:"Aksesuar",
     title:"MagSafe Uyumlu Cüzdan",
     price:500,
-    image:"https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&fit=crop&w=700&q=80"
+    image:"https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&fit=crop&w=900&q=90",
+    description:"MagSafe uyumlu telefon cüzdanı."
   },
+
 
   {
     id:7,
     category:"Kılıf",
     title:"Karbon iPhone Kılıfı",
     price:1000,
-    image:"https://images.unsplash.com/photo-1592286927505-2fd3e7a6c7c8?auto=format&fit=crop&w=700&q=80",
+    image:"https://www.carboncase.com/cdn/shop/files/iphone-carbon-fiber-case-magsafe.jpg?width=900",
     models:iphoneModels,
-    caseType:"carbon"
+    caseType:"carbon",
+    description:"Karbon fiber tasarımlı iPhone kılıfı."
   },
+
 
   {
     id:8,
     category:"Kişisel Bakım",
     title:"Işıklı Makyaj Aynası",
     price:750,
-    image:"https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=700&q=80"
+    image:"https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=90",
+    description:"LED ışıklı makyaj aynası."
   },
+
 
   {
     id:9,
     category:"Ev & Yaşam",
     title:"Aromatik Difüzör",
     price:1750,
-    image:"https://images.unsplash.com/photo-1602928298849-325b7e8f4b4d?auto=format&fit=crop&w=700&q=80"
+    image:"https://images.unsplash.com/photo-1602928298849-325b7e8f4b4d?auto=format&fit=crop&w=900&q=90",
+    description:"Aromatik koku difüzörü."
   },
 
-  /* APPLE ŞARJ */
+
+  /* =========================
+     APPLE ŞARJ
+  ========================= */
 
   {
     id:10,
@@ -1715,6 +2107,7 @@ const products = [
     description:"Apple 20W USB-C güç adaptörü."
   },
 
+
   {
     id:11,
     category:"Şarj",
@@ -1722,8 +2115,9 @@ const products = [
     price:1149,
     image:appleLightningImage,
     models:lightningModels,
-    description:"Apple USB-C - Lightning kablosu."
+    description:"Apple USB-C - Lightning kablosu 1 metre."
   },
+
 
   {
     id:12,
@@ -1735,21 +2129,22 @@ const products = [
     description:"Apple USB-C - Lightning kablosu 2 metre."
   },
 
+
   {
     id:13,
     category:"Şarj",
     title:"Apple USB-C - Lightning Adaptörü",
     price:1599,
-    image:"https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=700&q=80",
-    description:"USB-C - Lightning adaptörü."
+    image:"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MUQX3?wid=700&hei=700&fmt=jpeg&qlt=95&.v=1692393326728",
+    description:"Apple USB-C - Lightning adaptörü."
   }
 
 ];
 
 
-/* =========================
+/* =========================================================
    STATE
-========================= */
+========================================================= */
 
 let cart = [];
 
@@ -1770,9 +2165,9 @@ let customState = {
 };
 
 
-/* =========================
+/* =========================================================
    FILTERLER
-========================= */
+========================================================= */
 
 function populateFilters(){
 
@@ -1782,17 +2177,22 @@ function populateFilters(){
   const modelFilter =
     document.getElementById("modelFilter");
 
+
   const categories =
-    [...new Set(products.map(p => p.category))];
+    [...new Set(
+      products.map(product => product.category)
+    )];
+
 
   categoryFilter.innerHTML =
     `<option value="">Tüm Kategoriler</option>`;
 
+
   categories.forEach(category => {
 
     categoryFilter.innerHTML +=
-      `<option value="${category}">
-        ${category}
+      `<option value="${escapeHTML(category)}">
+        ${escapeHTML(category)}
       </option>`;
 
   });
@@ -1801,20 +2201,23 @@ function populateFilters(){
   const models = [
 
     ...new Set(
-      products
-        .flatMap(p => p.models || [])
+      products.flatMap(
+        product => product.models || []
+      )
     )
 
   ];
 
+
   modelFilter.innerHTML =
     `<option value="">Tüm Modeller</option>`;
+
 
   models.forEach(model => {
 
     modelFilter.innerHTML +=
-      `<option value="${model}">
-        ${model}
+      `<option value="${escapeHTML(model)}">
+        ${escapeHTML(model)}
       </option>`;
 
   });
@@ -1822,35 +2225,57 @@ function populateFilters(){
 }
 
 
-/* =========================
-   ÜRÜNLERİ RENDER
-========================= */
+/* =========================================================
+   ÜRÜNLERİ GÖSTER
+========================================================= */
 
 function renderProducts(list){
 
   const grid =
     document.getElementById("productGrid");
 
+  const resultInfo =
+    document.getElementById("resultInfo");
+
+
   grid.innerHTML = "";
 
-  document.getElementById("resultInfo").textContent =
-    `${list.length} ürün gösteriliyor`;
+
+  resultInfo.textContent =
+    `SONUÇ: ${list.length} ürün gösteriliyor`;
+
 
   if(!list.length){
 
     grid.innerHTML = `
+
       <div style="
         grid-column:1/-1;
-        padding:40px;
+        padding:50px 20px;
         text-align:center;
         color:#9fb0c8;
+        background:#0c1b30;
+        border:1px solid rgba(255,255,255,.08);
+        border-radius:18px;
       ">
-        🔎 Aradığınız ürüne ait sonuç bulunamadı.
+
+        <div style="font-size:38px;margin-bottom:12px;">
+          🔎
+        </div>
+
+        <strong style="font-size:20px;">
+          Sonuç bulunamadı
+        </strong>
+
+        <p style="margin-top:8px;">
+          Arama kelimesini veya filtreleri değiştirip tekrar deneyin.
+        </p>
+
       </div>
+
     `;
 
     return;
-
   }
 
 
@@ -1861,33 +2286,46 @@ function renderProducts(list){
 
     card.className = "product";
 
+
     card.innerHTML = `
 
       <div class="product-image">
 
         <img
           src="${product.image}"
-          alt="${product.title}"
+          alt="${escapeHTML(product.title)}"
+          loading="lazy"
+          referrerpolicy="no-referrer"
           onerror="imageError(this)"
         >
 
       </div>
 
+
       <div class="product-body">
 
         <span class="badge">
-          ${product.category}
+          ${escapeHTML(product.category)}
         </span>
 
-        <h3>${product.title}</h3>
+
+        <h3>
+          ${escapeHTML(product.title)}
+        </h3>
+
 
         <p>
-          ${product.description || "TeknoBiz ürün seçeneği."}
+          ${escapeHTML(
+            product.description ||
+            "TeknoBiz ürün seçeneği."
+          )}
         </p>
+
 
         <div class="price">
           ${product.price.toLocaleString("tr-TR")} TL
         </div>
+
 
         <div class="product-actions">
 
@@ -1897,6 +2335,7 @@ function renderProducts(list){
           >
             🛒 Sepete Ekle
           </button>
+
 
           ${
             product.category === "Kılıf"
@@ -1919,6 +2358,7 @@ function renderProducts(list){
 
     `;
 
+
     grid.appendChild(card);
 
   });
@@ -1926,9 +2366,9 @@ function renderProducts(list){
 }
 
 
-/* =========================
+/* =========================================================
    ARAMA
-========================= */
+========================================================= */
 
 function applyFilters(){
 
@@ -1939,8 +2379,10 @@ function applyFilters(){
       .toLowerCase()
       .trim();
 
+
   const category =
     document.getElementById("categoryFilter").value;
+
 
   const model =
     document.getElementById("modelFilter").value;
@@ -1961,18 +2403,27 @@ function applyFilters(){
 
       ).toLowerCase();
 
+
       const searchOK =
-        !search || text.includes(search);
+        !search ||
+        text.includes(search);
+
 
       const categoryOK =
         !category ||
         product.category === category;
 
+
       const modelOK =
         !model ||
         (product.models || []).includes(model);
 
-      return searchOK && categoryOK && modelOK;
+
+      return (
+        searchOK &&
+        categoryOK &&
+        modelOK
+      );
 
     });
 
@@ -1981,6 +2432,10 @@ function applyFilters(){
 
 }
 
+
+/* =========================================================
+   RESET
+========================================================= */
 
 function resetFilters(){
 
@@ -1995,6 +2450,10 @@ function resetFilters(){
 }
 
 
+/* =========================================================
+   ÜRÜNLERE GİT
+========================================================= */
+
 function scrollToProducts(){
 
   document
@@ -2006,34 +2465,47 @@ function scrollToProducts(){
 }
 
 
-/* =========================
+/* =========================================================
    CUSTOMIZER
-========================= */
+========================================================= */
 
 function openCustomizer(productId){
 
   const product =
-    products.find(p => p.id === productId);
+    products.find(
+      product => product.id === productId
+    );
+
 
   if(!product) return;
 
-  customState.productId = productId;
+
+  customState.productId =
+    productId;
+
 
   customState.model =
     (product.models || iphoneModels)[0] ||
     "iPhone 17 Pro";
 
+
   customState.caseType =
-    product.caseType || "transparent";
+    product.caseType ||
+    "transparent";
+
 
   customState.price =
     product.price;
 
+
   customState.color =
     "Şeffaf";
 
+
   customState.caseName =
-    getCaseName(customState.caseType);
+    getCaseName(
+      customState.caseType
+    );
 
 
   populateCustomModels(product);
@@ -2044,9 +2516,13 @@ function openCustomizer(productId){
 
   updatePhonePreview();
 
+
   document
     .getElementById("customModal")
     .classList.add("active");
+
+
+  document.body.classList.add("no-scroll");
 
 }
 
@@ -2056,33 +2532,46 @@ function populateCustomModels(product){
   const select =
     document.getElementById("customModel");
 
+
   const models =
-    product.models || iphoneModels;
+    product.models ||
+    iphoneModels;
+
 
   select.innerHTML = "";
+
 
   models.forEach(model => {
 
     const option =
       document.createElement("option");
 
-    option.value = model;
 
-    option.textContent = model;
+    option.value =
+      model;
+
+
+    option.textContent =
+      model;
+
 
     select.appendChild(option);
 
   });
 
+
   if(models.includes(customState.model)){
 
-    select.value = customState.model;
+    select.value =
+      customState.model;
 
   }else{
 
-    customState.model = models[0];
+    customState.model =
+      models[0];
 
-    select.value = customState.model;
+    select.value =
+      customState.model;
 
   }
 
@@ -2091,7 +2580,8 @@ function populateCustomModels(product){
 
 function selectCustomModel(model){
 
-  customState.model = model;
+  customState.model =
+    model;
 
   updatePhonePreview();
 
@@ -2114,6 +2604,7 @@ function getCaseName(type){
 
   };
 
+
   return names[type] || "Kılıf";
 
 }
@@ -2123,6 +2614,7 @@ function renderCaseOptions(product){
 
   const box =
     document.getElementById("caseOptions");
+
 
   box.innerHTML = "";
 
@@ -2142,43 +2634,62 @@ function renderCaseOptions(product){
   ];
 
 
-  options.forEach(option => {
+  options.forEach(
+    ([type,name,price]) => {
 
-    const [type,name,price] = option;
+      const button =
+        document.createElement("button");
 
-    const button =
-      document.createElement("button");
 
-    button.className = "option";
+      button.type =
+        "button";
 
-    if(type === customState.caseType){
 
-      button.classList.add("selected");
+      button.className =
+        "option";
+
+
+      if(
+        type ===
+        customState.caseType
+      ){
+
+        button.classList.add(
+          "selected"
+        );
+
+      }
+
+
+      button.textContent =
+        `${name} • ${price} TL`;
+
+
+      button.onclick = () => {
+
+        customState.caseType =
+          type;
+
+        customState.caseName =
+          name;
+
+        customState.price =
+          price;
+
+
+        renderCaseOptions(product);
+
+        renderColorOptions();
+
+        updatePhonePreview();
+
+      };
+
+
+      box.appendChild(button);
 
     }
-
-    button.textContent =
-      `${name} • ${price} TL`;
-
-    button.onclick = () => {
-
-      customState.caseType = type;
-
-      customState.caseName = name;
-
-      customState.price = price;
-
-      renderCaseOptions(product);
-
-      renderColorOptions();
-
-      updatePhonePreview();
-
-    };
-
-    box.appendChild(button);
-
-  });
+  );
 
 }
 
@@ -2188,25 +2699,34 @@ function renderColorOptions(){
   const group =
     document.getElementById("colorGroup");
 
+
   const box =
     document.getElementById("colorOptions");
 
-  if(customState.caseType !== "single"){
 
-    group.style.display = "none";
+  if(
+    customState.caseType !==
+    "single"
+  ){
+
+    group.style.display =
+      "none";
 
     return;
 
   }
 
-  group.style.display = "block";
+
+  group.style.display =
+    "block";
+
 
   box.innerHTML = "";
 
 
   const colors = [
 
-    ["Siyah","#111"],
+    ["Siyah","#111111"],
 
     ["Beyaz","#f4f4f4"],
 
@@ -2225,36 +2745,57 @@ function renderColorOptions(){
   ];
 
 
-  colors.forEach(([name,color]) => {
+  colors.forEach(
+    ([name,color]) => {
 
-    const button =
-      document.createElement("button");
+      const button =
+        document.createElement("button");
 
-    button.className = "color-option";
 
-    button.title = name;
+      button.type =
+        "button";
 
-    button.style.background = color;
 
-    if(customState.color === name){
+      button.className =
+        "color-option";
 
-      button.classList.add("selected");
+
+      button.title =
+        name;
+
+
+      button.style.background =
+        color;
+
+
+      if(
+        customState.color ===
+        name
+      ){
+
+        button.classList.add(
+          "selected"
+        );
+
+      }
+
+
+      button.onclick = () => {
+
+        customState.color =
+          name;
+
+        renderColorOptions();
+
+        updatePhonePreview();
+
+      };
+
+
+      box.appendChild(button);
 
     }
-
-    button.onclick = () => {
-
-      customState.color = name;
-
-      renderColorOptions();
-
-      updatePhonePreview();
-
-    };
-
-    box.appendChild(button);
-
-  });
+  );
 
 }
 
@@ -2265,13 +2806,17 @@ function getCameraType(model){
 
     model.includes("11") ||
     model.includes("12") ||
-    model.includes("13") && !model.includes("Pro")
+    (
+      model.includes("13") &&
+      !model.includes("Pro")
+    )
 
   ){
 
     return "dual";
 
   }
+
 
   if(
 
@@ -2284,6 +2829,7 @@ function getCameraType(model){
 
   }
 
+
   return "triple";
 
 }
@@ -2291,32 +2837,40 @@ function getCameraType(model){
 
 function updatePhonePreview(){
 
-  const phone =
-    document.getElementById("customPhone");
-
   const camera =
-    document.getElementById("customCamera");
+    document.getElementById(
+      "customCamera"
+    );
+
 
   const layer =
-    document.getElementById("caseLayer");
+    document.getElementById(
+      "caseLayer"
+    );
 
 
   camera.className =
     "camera-area " +
-    getCameraType(customState.model);
+    getCameraType(
+      customState.model
+    );
 
 
   layer.className =
-    "case-layer " +
-    "case-" +
+    "case-layer case-" +
     customState.caseType;
 
 
-  if(customState.caseType === "single"){
+  if(
+    customState.caseType ===
+    "single"
+  ){
 
     layer.style.setProperty(
       "--case-color",
-      getColorHex(customState.color)
+      getColorHex(
+        customState.color
+      )
     );
 
   }else{
@@ -2328,23 +2882,46 @@ function updatePhonePreview(){
   }
 
 
-  document.getElementById("customSummary").innerHTML = `
+  document.getElementById(
+    "customSummary"
+  ).innerHTML = `
 
-    ${customState.model}
+    ${escapeHTML(
+      customState.model
+    )}
 
     <br>
 
-    <span style="color:#9fb0c8;font-size:14px;">
-      ${customState.caseName}
+    <span
+      style="
+        color:#9fb0c8;
+        font-size:14px;
+      "
+    >
+
+      ${escapeHTML(
+        customState.caseName
+      )}
+
       ${
         customState.caseType === "single"
-        ? " • " + customState.color
-        : ""
+        ?
+        " • " +
+        escapeHTML(customState.color)
+        :
+        ""
       }
+
     </span>
 
     <strong>
-      ${customState.price.toLocaleString("tr-TR")} TL
+
+      ${
+        customState.price
+          .toLocaleString("tr-TR")
+      }
+      TL
+
     </strong>
 
   `;
@@ -2357,17 +2934,25 @@ function getColorHex(name){
   const colors = {
 
     Siyah:"#111111",
+
     Beyaz:"#f4f4f4",
+
     Kırmızı:"#d71920",
+
     Mavi:"#1479ff",
+
     Yeşil:"#23a455",
+
     Mor:"#8b5cf6",
+
     Pembe:"#ec4899",
+
     Sarı:"#facc15"
 
   };
 
-  return colors[name] || "#111";
+
+  return colors[name] || "#111111";
 
 }
 
@@ -2376,21 +2961,30 @@ function addCustomizedToCart(){
 
   cart.push({
 
-    id:"custom-" + Date.now(),
+    id:
+      "custom-" +
+      Date.now(),
 
     title:
       `${customState.caseName} - ${customState.model}`,
 
-    price:customState.price,
+    price:
+      customState.price,
 
     custom:true,
 
+    model:
+      customState.model,
+
     color:
       customState.caseType === "single"
-      ? customState.color
-      : null
+      ?
+      customState.color
+      :
+      null
 
   });
+
 
   updateCart();
 
@@ -2401,16 +2995,20 @@ function addCustomizedToCart(){
 }
 
 
-/* =========================
+/* =========================================================
    CART
-========================= */
+========================================================= */
 
 function addToCart(productId){
 
   const product =
-    products.find(p => p.id === productId);
+    products.find(
+      product => product.id === productId
+    );
+
 
   if(!product) return;
+
 
   cart.push({
 
@@ -2422,6 +3020,7 @@ function addToCart(productId){
 
   });
 
+
   updateCart();
 
   openCart();
@@ -2431,11 +3030,17 @@ function addToCart(productId){
 
 function updateCart(){
 
-  document.getElementById("cartCount").textContent =
+  document.getElementById(
+    "cartCount"
+  ).textContent =
     cart.length;
 
+
   const list =
-    document.getElementById("cartList");
+    document.getElementById(
+      "cartList"
+    );
+
 
   list.innerHTML = "";
 
@@ -2446,68 +3051,120 @@ function updateCart(){
   if(!cart.length){
 
     list.innerHTML = `
-      <div style="
-        padding:30px;
-        text-align:center;
-        color:#9fb0c8;
-      ">
+
+      <div
+        style="
+          padding:30px;
+          text-align:center;
+          color:#9fb0c8;
+        "
+      >
         Sepetiniz şu anda boş.
       </div>
+
     `;
 
   }
 
 
-  cart.forEach((item,index) => {
+  cart.forEach(
+    (item,index) => {
 
-    total += item.price;
+      total +=
+        item.price;
 
-    const div =
-      document.createElement("div");
 
-    div.className = "cart-item";
+      const div =
+        document.createElement("div");
 
-    div.innerHTML = `
 
-      <div>
+      div.className =
+        "cart-item";
 
-        <strong>${item.title}</strong>
 
-        ${
-          item.color
-          ?
-          `<div style="color:#9fb0c8;font-size:12px;">
-            Renk: ${item.color}
-          </div>`
-          :
-          ""
-        }
+      div.innerHTML = `
 
-      </div>
+        <div>
 
-      <div style="display:flex;align-items:center;gap:8px;">
+          <strong>
+            ${escapeHTML(item.title)}
+          </strong>
 
-        <strong>
-          ${item.price.toLocaleString("tr-TR")} TL
-        </strong>
 
-        <button
-          class="remove"
-          onclick="removeFromCart(${index})"
+          ${
+            item.model
+            ?
+            `
+            <div
+              style="
+                color:#9fb0c8;
+                font-size:12px;
+              "
+            >
+              Model:
+              ${escapeHTML(item.model)}
+            </div>
+            `
+            :
+            ""
+          }
+
+
+          ${
+            item.color
+            ?
+            `
+            <div
+              style="
+                color:#9fb0c8;
+                font-size:12px;
+              "
+            >
+              Renk:
+              ${escapeHTML(item.color)}
+            </div>
+            `
+            :
+            ""
+          }
+
+        </div>
+
+
+        <div
+          style="
+            display:flex;
+            align-items:center;
+            gap:8px;
+          "
         >
-          ×
-        </button>
 
-      </div>
-
-    `;
-
-    list.appendChild(div);
-
-  });
+          <strong>
+            ${item.price.toLocaleString("tr-TR")} TL
+          </strong>
 
 
-  document.getElementById("cartTotal").textContent =
+          <button
+            class="remove"
+            onclick="removeFromCart(${index})"
+          >
+            ×
+          </button>
+
+        </div>
+
+      `;
+
+
+      list.appendChild(div);
+
+    }
+  );
+
+
+  document.getElementById(
+    "cartTotal"
+  ).textContent =
     `Toplam: ${total.toLocaleString("tr-TR")} TL`;
 
 }
@@ -2528,6 +3185,10 @@ function openCart(){
     .getElementById("cartModal")
     .classList.add("active");
 
+  document.body.classList.add(
+    "no-scroll"
+  );
+
 }
 
 
@@ -2537,28 +3198,41 @@ function closeCart(){
     .getElementById("cartModal")
     .classList.remove("active");
 
+  document.body.classList.remove(
+    "no-scroll"
+  );
+
 }
 
 
-/* =========================
+/* =========================================================
    PURCHASE
-========================= */
+========================================================= */
 
 function openPurchase(){
 
   if(!cart.length){
 
-    alert("Sepetiniz boş.");
+    alert(
+      "Sepetiniz boş."
+    );
 
     return;
 
   }
 
+
   closeCart();
+
 
   document
     .getElementById("purchaseModal")
     .classList.add("active");
+
+
+  document.body.classList.add(
+    "no-scroll"
+  );
 
 }
 
@@ -2569,27 +3243,52 @@ function closePurchase(){
     .getElementById("purchaseModal")
     .classList.remove("active");
 
+  document.body.classList.remove(
+    "no-scroll"
+  );
+
 }
 
 
 function sendOrderWhatsApp(){
 
   const name =
-    document.getElementById("customerName").value.trim();
+    document
+      .getElementById("customerName")
+      .value
+      .trim();
+
 
   const phone =
-    document.getElementById("customerPhone").value.trim();
+    document
+      .getElementById("customerPhone")
+      .value
+      .trim();
+
 
   const address =
-    document.getElementById("customerAddress").value.trim();
+    document
+      .getElementById("customerAddress")
+      .value
+      .trim();
+
 
   const note =
-    document.getElementById("customerNote").value.trim();
+    document
+      .getElementById("customerNote")
+      .value
+      .trim();
 
 
-  if(!name || !phone || !address){
+  if(
+    !name ||
+    !phone ||
+    !address
+  ){
 
-    alert("Lütfen ad, telefon ve adres bilgilerini doldurun.");
+    alert(
+      "Lütfen ad, telefon ve adres bilgilerini doldurun."
+    );
 
     return;
 
@@ -2597,47 +3296,66 @@ function sendOrderWhatsApp(){
 
 
   let message =
-    "Merhaba TeknoBiz, web sitesinden sipariş vermek istiyorum.%0A%0A";
+    "Merhaba TeknoBiz, web sitesinden sipariş vermek istiyorum.\n\n";
+
 
   message +=
-    `Ad Soyad: ${name}%0A`;
+    `Ad Soyad: ${name}\n`;
+
 
   message +=
-    `Telefon: ${phone}%0A`;
+    `Telefon: ${phone}\n`;
+
 
   message +=
-    `Adres: ${address}%0A%0A`;
+    `Adres: ${address}\n\n`;
+
 
   message +=
-    "Ürünler:%0A";
+    "Ürünler:\n";
 
 
-  cart.forEach((item,index) => {
-
-    message +=
-      `${index+1}. ${item.title} - ${item.price} TL`;
-
-    if(item.color){
+  cart.forEach(
+    (item,index) => {
 
       message +=
-        ` - Renk: ${item.color}`;
+        `${index + 1}. ${item.title} - ${item.price.toLocaleString("tr-TR")} TL`;
+
+
+      if(item.model){
+
+        message +=
+          ` - Model: ${item.model}`;
+
+      }
+
+
+      if(item.color){
+
+        message +=
+          ` - Renk: ${item.color}`;
+
+      }
+
+
+      message +=
+        "\n";
 
     }
-
-    message += "%0A";
-
-  });
+  );
 
 
   const total =
     cart.reduce(
-      (sum,item) => sum + item.price,
+      (sum,item) =>
+        sum + item.price,
       0
     );
 
 
   message +=
-    `%0AToplam: ${total} TL%0A`;
+    `\nToplam: ${total.toLocaleString("tr-TR")} TL\n`;
+
 
   message +=
     `Not: ${note || "Yok"}`;
@@ -2645,18 +3363,16 @@ function sendOrderWhatsApp(){
 
   window.open(
     "https://wa.me/905059999009?text=" +
-    encodeURIComponent(
-      decodeURIComponent(message)
-    ),
+    encodeURIComponent(message),
     "_blank"
   );
 
 }
 
 
-/* =========================
+/* =========================================================
    CHAT
-========================= */
+========================================================= */
 
 function toggleChat(){
 
@@ -2671,33 +3387,45 @@ function sendChat(event){
 
   event.preventDefault();
 
+
   const input =
-    document.getElementById("chatInput");
+    document.getElementById(
+      "chatInput"
+    );
+
 
   const body =
-    document.getElementById("chatBody");
+    document.getElementById(
+      "chatBody"
+    );
+
 
   const text =
     input.value.trim();
+
 
   if(!text) return;
 
 
   body.innerHTML += `
+
     <div class="msg user">
       ${escapeHTML(text)}
     </div>
+
   `;
 
 
   const lower =
     text.toLowerCase();
 
+
   let answer;
 
 
   if(
     lower.includes("kılıf") ||
+    lower.includes("kilif") ||
     lower.includes("telefon")
   ){
 
@@ -2706,9 +3434,12 @@ function sendChat(event){
 
   }
 
+
   else if(
     lower.includes("şarj") ||
-    lower.includes("adaptör")
+    lower.includes("sarj") ||
+    lower.includes("adaptör") ||
+    lower.includes("adapter")
   ){
 
     answer =
@@ -2716,15 +3447,18 @@ function sendChat(event){
 
   }
 
+
   else if(
     lower.includes("fiyat") ||
-    lower.includes("kaç")
+    lower.includes("kaç") ||
+    lower.includes("kac")
   ){
 
     answer =
       "Ürün fiyatlarını ürün kartlarında görebilirsiniz. Güncel bilgi için 0505 999 90 09 numarasından bize ulaşabilirsiniz.";
 
   }
+
 
   else if(
     lower.includes("adres") ||
@@ -2736,15 +3470,29 @@ function sendChat(event){
 
   }
 
+
   else if(
     lower.includes("saat") ||
-    lower.includes("kaçta")
+    lower.includes("kaçta") ||
+    lower.includes("kacta")
   ){
 
     answer =
       "Pazartesi-Cumartesi 09:00-21:00 arasındayız. Pazar günleri kapalıyız.";
 
   }
+
+
+  else if(
+    lower.includes("whatsapp") ||
+    lower.includes("telefon")
+  ){
+
+    answer =
+      "Bize 0505 999 90 09 numarasından ulaşabilirsiniz.";
+
+  }
+
 
   else{
 
@@ -2757,10 +3505,13 @@ function sendChat(event){
   setTimeout(() => {
 
     body.innerHTML += `
+
       <div class="msg bot">
         ${escapeHTML(answer)}
       </div>
+
     `;
+
 
     body.scrollTop =
       body.scrollHeight;
@@ -2773,70 +3524,78 @@ function sendChat(event){
 }
 
 
+/* =========================================================
+   HTML GÜVENLİĞİ
+========================================================= */
+
 function escapeHTML(text){
 
   const div =
     document.createElement("div");
 
-  div.textContent = text;
+
+  div.textContent =
+    String(text);
+
 
   return div.innerHTML;
 
 }
 
 
-/* =========================
-   IMAGE ERROR
-========================= */
+/* =========================================================
+   GÖRSEL HATASI
+   SAHTE ÜRÜN GÖRSELİ OLUŞTURMUYOR
+========================================================= */
 
 function imageError(img){
 
   img.onerror = null;
 
-  img.src =
-    "data:image/svg+xml;charset=UTF-8," +
-    encodeURIComponent(`
+  img.style.display =
+    "none";
 
-      <svg xmlns="http://www.w3.org/2000/svg"
-           width="700"
-           height="500"
-           viewBox="0 0 700 500">
 
-        <rect width="700"
-              height="500"
-              fill="#f5f7fa"/>
+  const wrapper =
+    img.parentElement;
 
-        <text
-          x="350"
-          y="245"
-          text-anchor="middle"
-          font-family="Arial"
-          font-size="44"
-          font-weight="bold"
-          fill="#071426">
-          TeknoBiz
-        </text>
 
-        <text
-          x="350"
-          y="285"
-          text-anchor="middle"
-          font-family="Arial"
-          font-size="18"
-          fill="#1479ff">
-          Ürün Görseli
-        </text>
+  wrapper.style.background =
+    "#f6f8fb";
 
-      </svg>
 
-    `);
+  const message =
+    document.createElement("div");
+
+
+  message.style.cssText = `
+    text-align:center;
+    color:#071426;
+    font-weight:800;
+    padding:20px;
+  `;
+
+
+  message.innerHTML = `
+    <div style="font-size:30px;">
+      📷
+    </div>
+    <div>
+      Görsel yüklenemedi
+    </div>
+  `;
+
+
+  wrapper.appendChild(
+    message
+  );
 
 }
 
 
-/* =========================
-   MODAL KAPATMALAR
-========================= */
+/* =========================================================
+   CUSTOMIZER KAPAT
+========================================================= */
 
 function closeCustomizer(){
 
@@ -2844,8 +3603,17 @@ function closeCustomizer(){
     .getElementById("customModal")
     .classList.remove("active");
 
+
+  document.body.classList.remove(
+    "no-scroll"
+  );
+
 }
 
+
+/* =========================================================
+   ESC
+========================================================= */
 
 document.addEventListener(
   "keydown",
@@ -2865,29 +3633,66 @@ document.addEventListener(
 );
 
 
-/* =========================
+/* =========================================================
+   MODAL DIŞINA TIKLAMA
+========================================================= */
+
+document.querySelectorAll(".modal")
+.forEach(modal => {
+
+  modal.addEventListener(
+    "click",
+    event => {
+
+      if(
+        event.target === modal
+      ){
+
+        modal.classList.remove(
+          "active"
+        );
+
+        document.body.classList.remove(
+          "no-scroll"
+        );
+
+      }
+
+    }
+  );
+
+});
+
+
+/* =========================================================
    WELCOME
-========================= */
+========================================================= */
 
 function enterSite(){
 
   const welcome =
-    document.getElementById("welcome");
+    document.getElementById(
+      "welcome"
+    );
 
-  welcome.style.opacity = "0";
+
+  welcome.style.opacity =
+    "0";
+
 
   setTimeout(() => {
 
-    welcome.style.display = "none";
+    welcome.style.display =
+      "none";
 
   },500);
 
 }
 
 
-/* =========================
+/* =========================================================
    BAŞLAT
-========================= */
+========================================================= */
 
 populateFilters();
 
