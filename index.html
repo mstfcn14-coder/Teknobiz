@@ -56,9 +56,9 @@ a{
     text-decoration:none;
 }
 
-/* =========================
+/* =====================================================
    WELCOME
-========================= */
+===================================================== */
 
 #welcome{
     position:fixed;
@@ -110,9 +110,9 @@ a{
     font-weight:800;
 }
 
-/* =========================
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 header{
     position:sticky;
@@ -171,9 +171,9 @@ header{
     font-weight:800;
 }
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero{
     max-width:1250px;
@@ -231,9 +231,9 @@ header{
     border:1px solid var(--border);
 }
 
-/* =========================
+/* =====================================================
    CAMPAIGN
-========================= */
+===================================================== */
 
 .campaign{
     max-width:1250px;
@@ -261,9 +261,9 @@ header{
     color:var(--muted);
 }
 
-/* =========================
+/* =====================================================
    PRODUCTS
-========================= */
+===================================================== */
 
 .products-section{
     max-width:1250px;
@@ -331,7 +331,7 @@ header{
 
 .product-image{
     height:245px;
-    background:#fff;
+    background:#f5f6f8;
     position:relative;
     overflow:hidden;
 }
@@ -409,30 +409,30 @@ header{
 }
 
 .customize-btn{
-    background:#16273d;
+    background:linear-gradient(135deg,#182e47,#102238);
     border:1px solid #315274;
     color:#fff;
-    margin-top:8px;
+    margin-top:4px;
 }
 
 .customize-btn:hover{
-    background:#1b3857;
+    background:#1c4165;
 }
 
-/* =========================
+/* =====================================================
    CUSTOMIZER
-========================= */
+===================================================== */
 
 .customizer-overlay{
     position:fixed;
     inset:0;
     z-index:3000;
-    background:#02070dcc;
-    backdrop-filter:blur(12px);
+    background:rgba(0,5,12,.84);
+    backdrop-filter:blur(14px);
     display:none;
     align-items:center;
     justify-content:center;
-    padding:20px;
+    padding:18px;
 }
 
 .customizer-overlay.active{
@@ -440,185 +440,323 @@ header{
 }
 
 .customizer-box{
-    width:min(1100px,100%);
-    max-height:92vh;
+    width:min(1120px,100%);
+    max-height:94vh;
     overflow:auto;
-    border-radius:25px;
+    border-radius:26px;
     background:
-        linear-gradient(145deg,#111f32,#08111d);
-    border:1px solid #2b405c;
-    box-shadow:0 30px 100px #000c;
+        linear-gradient(145deg,#101e31,#07111e);
+    border:1px solid #304760;
+    box-shadow:0 35px 120px #000e;
 }
 
 .customizer-header{
-    padding:20px 24px;
+    min-height:70px;
+    padding:18px 23px;
     display:flex;
     align-items:center;
     justify-content:space-between;
     border-bottom:1px solid #ffffff10;
+    position:sticky;
+    top:0;
+    z-index:20;
+    background:#0d1929ee;
+    backdrop-filter:blur(15px);
 }
 
 .customizer-header h2{
     font-size:22px;
 }
 
+.customizer-header p{
+    color:#8194aa;
+    font-size:12px;
+    margin-top:4px;
+}
+
 .close-customizer{
-    width:38px;
-    height:38px;
+    width:40px;
+    height:40px;
     border:1px solid #334862;
     background:#0b1625;
     color:#fff;
-    border-radius:10px;
-    font-size:20px;
+    border-radius:11px;
+    font-size:19px;
 }
 
 .customizer-grid{
     display:grid;
-    grid-template-columns:430px 1fr;
-    gap:25px;
-    padding:25px;
+    grid-template-columns:440px 1fr;
+    gap:24px;
+    padding:24px;
 }
 
-/* PHONE STAGE */
+/* =====================================================
+   PHONE STAGE
+===================================================== */
 
 .phone-stage{
-    min-height:570px;
-    border-radius:22px;
+    min-height:580px;
+    border-radius:24px;
     background:
-        radial-gradient(circle at 50% 35%,#203b5d,#0a1320 60%);
+        radial-gradient(circle at 50% 28%,#294d72 0,#13283f 27%,#08111e 72%);
     display:flex;
     align-items:center;
     justify-content:center;
     position:relative;
     overflow:hidden;
+    border:1px solid #29425d;
 }
 
 .phone-stage:before{
     content:"";
     position:absolute;
-    width:300px;
-    height:300px;
+    width:370px;
+    height:370px;
     border-radius:50%;
-    background:#168cff22;
-    filter:blur(30px);
+    background:#168cff19;
+    filter:blur(35px);
+}
+
+.stage-grid{
+    position:absolute;
+    inset:0;
+    opacity:.16;
+    background-image:
+        linear-gradient(#fff 1px,transparent 1px),
+        linear-gradient(90deg,#fff 1px,transparent 1px);
+    background-size:42px 42px;
+    mask-image:linear-gradient(to bottom,transparent,#000,transparent);
 }
 
 .phone-shadow{
     position:absolute;
-    width:220px;
-    height:25px;
-    background:#0008;
+    width:235px;
+    height:28px;
+    background:#000c;
     border-radius:50%;
-    bottom:60px;
-    filter:blur(12px);
+    bottom:66px;
+    filter:blur(13px);
 }
 
 .phone-preview{
     position:relative;
-    z-index:2;
-    width:230px;
-    height:470px;
-    border-radius:38px;
-    background:
-        linear-gradient(145deg,#303946,#080a0e);
-    border:5px solid #1b2027;
+    z-index:5;
+    width:232px;
+    height:475px;
+    border-radius:42px;
+    background:linear-gradient(145deg,#313943,#090b0f);
+    border:5px solid #191e24;
     box-shadow:
-        0 25px 55px #000c,
-        inset 0 0 0 1px #ffffff33;
-    transition:.35s;
+        0 28px 65px #000e,
+        0 0 0 1px #ffffff18,
+        inset 4px 4px 10px #ffffff0a;
+    transition:.4s;
+}
+
+.phone-preview:before{
+    content:"";
+    position:absolute;
+    left:-7px;
+    top:115px;
+    width:4px;
+    height:55px;
+    border-radius:4px 0 0 4px;
+    background:#303941;
+    box-shadow:
+        0 67px 0 #303941,
+        0 88px 0 #303941;
 }
 
 .phone-preview:after{
     content:"";
     position:absolute;
+    right:-7px;
+    top:145px;
+    width:4px;
+    height:85px;
+    border-radius:0 4px 4px 0;
+    background:#303941;
+}
+
+.phone-screen{
+    position:absolute;
     inset:8px;
-    border-radius:30px;
-    border:1px solid #ffffff12;
-    pointer-events:none;
+    border-radius:35px;
+    background:
+        radial-gradient(circle at 30% 20%,#ffffff12,transparent 28%),
+        linear-gradient(150deg,#17212d,#070b10 65%);
+    overflow:hidden;
+}
+
+.phone-screen-glow{
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    top:100px;
+    left:25px;
+    background:#168cff12;
+    filter:blur(25px);
 }
 
 .phone-label{
     position:absolute;
+    z-index:15;
     left:50%;
-    bottom:22px;
+    bottom:21px;
     transform:translateX(-50%);
-    color:#ffffff99;
-    font-size:11px;
-    letter-spacing:1px;
-    z-index:8;
+    color:#ffffffb5;
+    font-size:10px;
+    letter-spacing:1.5px;
+    white-space:nowrap;
 }
 
-/* CASE */
+/* =====================================================
+   CASE
+===================================================== */
 
 .case-layer{
     position:absolute;
-    inset:-5px;
-    border-radius:40px;
-    z-index:6;
+    inset:-6px;
+    border-radius:47px;
+    z-index:10;
     pointer-events:none;
-    transition:.3s;
+    transition:.45s;
 }
 
 .case-layer.transparent{
-    border:5px solid #dff6ff99;
-    background:linear-gradient(135deg,#ffffff15,#75d9ff08);
-    box-shadow:inset 0 0 20px #fff2;
+    border:4px solid rgba(210,244,255,.75);
+    background:
+        linear-gradient(135deg,
+        rgba(255,255,255,.13),
+        rgba(79,198,255,.04));
+    box-shadow:
+        inset 0 0 22px rgba(255,255,255,.16),
+        0 0 12px rgba(120,220,255,.16);
+}
+
+.case-layer.transparent:after{
+    content:"";
+    position:absolute;
+    width:102px;
+    height:102px;
+    border-radius:50%;
+    border:4px solid rgba(255,255,255,.65);
+    left:50%;
+    top:52%;
+    transform:translate(-50%,-50%);
+    opacity:.45;
 }
 
 .case-layer.guess{
-    border:7px solid #8b5d3b;
-    background:linear-gradient(145deg,#6f4126,#b6804c);
+    border:7px solid #6d4429;
+    background:
+        linear-gradient(145deg,#a8784d,#5c351f 48%,#9a6a43);
+    box-shadow:
+        inset 0 0 20px #0005,
+        0 0 15px #0008;
+}
+
+.case-layer.guess:after{
+    content:"GUESS";
+    position:absolute;
+    left:50%;
+    bottom:84px;
+    transform:translateX(-50%);
+    font-size:17px;
+    font-weight:900;
+    letter-spacing:3px;
+    color:#e9c58e;
+    text-shadow:0 2px 4px #0009;
 }
 
 .case-layer.single{
     border:7px solid var(--case-color,#111);
-    background:linear-gradient(145deg,
-        color-mix(in srgb,var(--case-color,#111),white 12%),
-        var(--case-color,#111));
+    background:
+        linear-gradient(145deg,
+        color-mix(in srgb,var(--case-color,#111),white 16%),
+        var(--case-color,#111) 60%,
+        color-mix(in srgb,var(--case-color,#111),black 18%));
+    box-shadow:
+        inset 0 0 20px #ffffff14,
+        0 8px 22px #0008;
 }
 
 .case-layer.rhinestone{
-    border:7px solid #161616;
+    border:7px solid #111;
     background:
-        radial-gradient(circle,#ffffff 0 2px,transparent 2.5px) 0 0/10px 10px,
-        linear-gradient(145deg,#111,#333);
+        radial-gradient(circle at 3px 3px,
+        #ffffff 0 1.6px,
+        #cfd5dc 1.8px 2.5px,
+        transparent 2.7px) 0 0/10px 10px,
+        linear-gradient(145deg,#15171a,#3a3d42);
     box-shadow:
-        0 0 10px #fff4,
-        inset 0 0 15px #fff2;
+        inset 0 0 22px #ffffff18,
+        0 0 20px #ffffff12;
+}
+
+.case-layer.rhinestone:after{
+    content:"✦  ✦  ✦";
+    position:absolute;
+    left:50%;
+    bottom:85px;
+    transform:translateX(-50%);
+    font-size:20px;
+    letter-spacing:7px;
+    color:#fff;
+    text-shadow:0 0 9px #fff;
 }
 
 .case-layer.carbon{
-    border:7px solid #15191e;
+    border:7px solid #12161b;
     background:
         repeating-linear-gradient(
             135deg,
-            #101419 0,
-            #101419 5px,
-            #242a31 5px,
-            #242a31 9px
+            #090c10 0,
+            #090c10 6px,
+            #252b31 6px,
+            #252b31 10px
         );
+    box-shadow:
+        inset 0 0 25px #000,
+        0 8px 20px #0009;
 }
 
-/* CAMERA */
+.case-layer.carbon:after{
+    content:"CARBON";
+    position:absolute;
+    left:50%;
+    bottom:87px;
+    transform:translateX(-50%);
+    color:#bfc7d0;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:3px;
+}
+
+/* =====================================================
+   CAMERA
+===================================================== */
 
 .camera{
     position:absolute;
     top:20px;
     left:20px;
-    width:94px;
+    width:96px;
     height:108px;
     border-radius:25px;
     background:
-        linear-gradient(145deg,#20252b,#0b0d10);
+        linear-gradient(145deg,#282e35,#0b0e12);
     box-shadow:
-        inset 0 0 0 1px #ffffff16,
-        0 5px 12px #0009;
-    padding:13px;
+        inset 0 0 0 1px #ffffff1c,
+        0 7px 15px #000b;
+    padding:14px;
     display:grid;
     grid-template-columns:repeat(2,1fr);
     gap:9px;
-    transition:.3s;
-    z-index:7;
+    z-index:14;
+    transition:.4s;
 }
 
 .lens{
@@ -626,25 +764,56 @@ header{
     height:29px;
     border-radius:50%;
     background:
-        radial-gradient(circle at 35% 30%,#91b4d8 0 8%,#20374e 9% 35%,#05070a 36% 65%,#273a50 66% 100%);
-    border:2px solid #454b52;
-    box-shadow:0 2px 5px #000;
+        radial-gradient(circle at 35% 28%,
+        #b6d7f0 0 7%,
+        #426b91 8% 20%,
+        #111b27 21% 47%,
+        #030508 48% 68%,
+        #3a5268 69% 100%);
+    border:2px solid #555e67;
+    box-shadow:
+        inset 0 0 4px #fff4,
+        0 3px 6px #000;
 }
 
 .camera.pro{
-    width:108px;
-    height:118px;
-    grid-template-columns:repeat(2,1fr);
+    width:111px;
+    height:119px;
 }
 
 .camera.pro .lens{
-    width:31px;
-    height:31px;
+    width:32px;
+    height:32px;
 }
 
-.camera.three .lens:last-child{
-    grid-column:1 / span 2;
-    justify-self:center;
+.camera.modern{
+    width:116px;
+    height:92px;
+    border-radius:29px;
+    grid-template-columns:repeat(3,1fr);
+    align-items:center;
+}
+
+.camera.modern .lens{
+    width:27px;
+    height:27px;
+}
+
+.camera.modern .lens:last-child{
+    grid-column:auto;
+}
+
+.camera.modern-pro{
+    width:122px;
+    height:100px;
+    border-radius:29px;
+    grid-template-columns:repeat(3,1fr);
+    align-items:center;
+}
+
+.camera.modern-pro .lens{
+    width:30px;
+    height:30px;
 }
 
 .camera.diagonal .lens:nth-child(1){
@@ -655,39 +824,64 @@ header{
     transform:translate(-4px,-4px);
 }
 
-.camera.modern{
-    background:linear-gradient(145deg,#252a30,#101317);
+.camera.three .lens:nth-child(3){
+    grid-column:1 / span 2;
+    justify-self:center;
 }
 
-/* CONTROLS */
+/* =====================================================
+   MODEL BADGE
+===================================================== */
+
+.model-badge{
+    position:absolute;
+    top:18px;
+    left:18px;
+    z-index:20;
+    padding:8px 11px;
+    border-radius:9px;
+    background:#07111dcc;
+    border:1px solid #ffffff18;
+    backdrop-filter:blur(10px);
+    font-size:11px;
+    color:#d8e8f7;
+}
+
+/* =====================================================
+   CONTROLS
+===================================================== */
 
 .customizer-controls{
     display:flex;
     flex-direction:column;
-    gap:18px;
+    gap:14px;
 }
 
 .control-block{
-    background:#0c1726;
-    border:1px solid #20344e;
-    border-radius:15px;
+    background:#0b1726;
+    border:1px solid #213850;
+    border-radius:16px;
     padding:16px;
 }
 
 .control-block h3{
     font-size:14px;
     margin-bottom:11px;
-    color:#dbe9f8;
+    color:#e2edf8;
 }
 
 .custom-select{
     width:100%;
-    padding:12px;
-    background:#111e2e;
+    padding:12px 13px;
+    background:#111f30;
     color:#fff;
-    border:1px solid #304661;
+    border:1px solid #304963;
     border-radius:10px;
     outline:none;
+}
+
+.custom-select:focus{
+    border-color:var(--blue);
 }
 
 .case-choices{
@@ -697,44 +891,78 @@ header{
 }
 
 .case-choice{
-    padding:12px;
-    border-radius:10px;
+    padding:13px;
+    border-radius:11px;
     background:#101d2d;
     border:1px solid #2a405b;
     color:#fff;
     text-align:left;
+    transition:.2s;
+}
+
+.case-choice:hover{
+    border-color:#4c6d91;
 }
 
 .case-choice.active{
     border-color:var(--blue);
     background:#12345a;
-    box-shadow:0 0 0 1px var(--blue);
+    box-shadow:
+        0 0 0 1px var(--blue),
+        0 6px 18px #168cff22;
+}
+
+.case-choice small{
+    display:block;
+    margin-top:4px;
+    color:#8295aa;
+    font-size:11px;
 }
 
 .color-choices{
     display:flex;
     flex-wrap:wrap;
-    gap:9px;
+    gap:10px;
+}
+
+.color-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:5px;
 }
 
 .color-choice{
-    width:36px;
-    height:36px;
+    width:39px;
+    height:39px;
     border-radius:50%;
-    border:2px solid #ffffff33;
+    border:2px solid #ffffff35;
     position:relative;
+    box-shadow:0 3px 8px #0005;
 }
 
 .color-choice.active{
     border-color:#fff;
-    box-shadow:0 0 0 3px #168cff66;
+    box-shadow:
+        0 0 0 3px #168cff66,
+        0 4px 12px #0007;
 }
 
+.color-wrap span{
+    font-size:9px;
+    color:#8fa1b6;
+}
+
+/* =====================================================
+   SUMMARY
+===================================================== */
+
 .custom-summary{
-    border-radius:15px;
-    background:linear-gradient(145deg,#10253e,#0a1523);
+    border-radius:16px;
+    background:
+        linear-gradient(145deg,#102840,#091522);
     border:1px solid #285075;
-    padding:18px;
+    padding:16px;
 }
 
 .summary-row{
@@ -742,7 +970,8 @@ header{
     justify-content:space-between;
     gap:15px;
     padding:7px 0;
-    color:#b7c6d9;
+    color:#9fb0c4;
+    font-size:13px;
 }
 
 .summary-row strong{
@@ -751,28 +980,50 @@ header{
 }
 
 .summary-total{
-    margin-top:10px;
+    margin-top:8px;
     padding-top:12px;
     border-top:1px solid #ffffff15;
-    font-size:22px;
+    font-size:21px;
     font-weight:900;
     color:#fff;
 }
 
 .custom-add{
     width:100%;
-    padding:14px;
+    padding:15px;
     border:0;
-    border-radius:11px;
+    border-radius:12px;
     background:linear-gradient(135deg,#168cff,#075eb5);
     color:#fff;
     font-weight:900;
     font-size:15px;
+    box-shadow:0 8px 22px #168cff25;
 }
 
-/* =========================
+.custom-add:hover{
+    filter:brightness(1.08);
+}
+
+/* =====================================================
+   CHARGER VISUAL BADGE
+===================================================== */
+
+.charger-badge{
+    position:absolute;
+    left:10px;
+    top:10px;
+    padding:6px 9px;
+    border-radius:7px;
+    background:#07101ddd;
+    color:#fff;
+    font-size:10px;
+    font-weight:800;
+    border:1px solid #ffffff20;
+}
+
+/* =====================================================
    CART
-========================= */
+===================================================== */
 
 .modal{
     position:fixed;
@@ -860,9 +1111,9 @@ header{
     font-weight:900;
 }
 
-/* =========================
+/* =====================================================
    FORMS
-========================= */
+===================================================== */
 
 .form-group{
     margin-bottom:12px;
@@ -891,9 +1142,9 @@ header{
     resize:vertical;
 }
 
-/* =========================
+/* =====================================================
    REVIEWS / CONTACT
-========================= */
+===================================================== */
 
 .info-section{
     max-width:1250px;
@@ -905,6 +1156,7 @@ header{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:16px;
+    margin-top:18px;
 }
 
 .info-card{
@@ -957,9 +1209,9 @@ header{
     margin-bottom:4px;
 }
 
-/* =========================
-   SOCIAL / FOOTER
-========================= */
+/* =====================================================
+   SOCIAL
+===================================================== */
 
 .socials{
     display:flex;
@@ -983,9 +1235,9 @@ footer{
     color:var(--muted);
 }
 
-/* =========================
+/* =====================================================
    WHATSAPP
-========================= */
+===================================================== */
 
 .whatsapp{
     position:fixed;
@@ -1000,13 +1252,13 @@ footer{
     justify-content:center;
     background:var(--green);
     color:#fff;
-    font-size:28px;
+    font-size:27px;
     box-shadow:0 8px 30px #25d36655;
 }
 
-/* =========================
+/* =====================================================
    CHAT
-========================= */
+===================================================== */
 
 .chat-button{
     position:fixed;
@@ -1109,9 +1361,9 @@ footer{
     color:#fff;
 }
 
-/* =========================
+/* =====================================================
    RESPONSIVE
-========================= */
+===================================================== */
 
 @media(max-width:1050px){
 
@@ -1120,7 +1372,7 @@ footer{
     }
 
     .customizer-grid{
-        grid-template-columns:350px 1fr;
+        grid-template-columns:380px 1fr;
     }
 }
 
@@ -1185,26 +1437,31 @@ footer{
     }
 
     .customizer-overlay{
-        padding:7px;
+        padding:6px;
     }
 
     .customizer-box{
-        max-height:96vh;
+        max-height:97vh;
         border-radius:18px;
     }
 
     .customizer-grid{
-        padding:13px;
-        gap:13px;
+        padding:12px;
+        gap:12px;
     }
 
     .phone-stage{
-        min-height:430px;
+        min-height:445px;
     }
 
     .phone-preview{
         width:190px;
         height:390px;
+        border-radius:35px;
+    }
+
+    .case-layer{
+        border-radius:40px;
     }
 
     .camera{
@@ -1226,20 +1483,36 @@ footer{
 
 <body>
 
-<!-- WELCOME -->
+<!-- =====================================================
+     WELCOME
+===================================================== -->
+
 <div id="welcome">
+
     <div class="welcome-box">
+
         <div class="welcome-logo">T</div>
+
         <h1>TeknoBiz</h1>
-        <p>Teknoloji & Aksesuar Dünyasına Hoş Geldiniz</p>
+
+        <p>
+            Teknoloji & Aksesuar Dünyasına Hoş Geldiniz
+        </p>
+
         <button class="enter-btn" onclick="enterSite()">
             Siteye Giriş Yap
         </button>
+
     </div>
+
 </div>
 
-<!-- HEADER -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header>
+
     <div class="nav">
 
         <a href="#" class="logo">
@@ -1247,11 +1520,13 @@ footer{
         </a>
 
         <div class="search-wrap">
+
             <input
                 id="searchInput"
                 type="search"
                 placeholder="Ürün ara... Örn: powerbank, kılıf, şarj"
             >
+
         </div>
 
         <button class="cart-btn" onclick="openCart()">
@@ -1259,9 +1534,13 @@ footer{
         </button>
 
     </div>
+
 </header>
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+===================================================== -->
+
 <section class="hero">
 
     <h1>
@@ -1275,18 +1554,29 @@ footer{
     </p>
 
     <div class="hero-buttons">
-        <button class="primary-btn" onclick="scrollToProducts()">
+
+        <button
+            class="primary-btn"
+            onclick="scrollToProducts()"
+        >
             Ürünleri İncele
         </button>
 
-        <button class="secondary-btn" onclick="openChat()">
+        <button
+            class="secondary-btn"
+            onclick="openChat()"
+        >
             💬 Canlı Destek
         </button>
+
     </div>
 
 </section>
 
-<!-- CAMPAIGN -->
+<!-- =====================================================
+     CAMPAIGN
+===================================================== -->
+
 <section class="campaign">
 
     <div class="campaign-card">
@@ -1311,43 +1601,91 @@ footer{
 
 </section>
 
-<!-- PRODUCTS -->
-<section class="products-section" id="productsSection">
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
+
+<section
+    class="products-section"
+    id="productsSection"
+>
 
     <div class="section-head">
+
         <div>
+
             <h2>Ürünlerimiz</h2>
-            <p>İhtiyacınıza uygun ürünü bulun.</p>
+
+            <p>
+                İhtiyacınıza uygun ürünü bulun.
+            </p>
+
         </div>
+
     </div>
 
     <div class="filters">
 
         <select id="categoryFilter">
-            <option value="">Tüm Kategoriler</option>
-            <option value="Kılıf">Kılıf</option>
-            <option value="Cam">Cam</option>
-            <option value="Aksesuar">Aksesuar</option>
-            <option value="Dekorasyon">Dekorasyon</option>
-            <option value="Ses">Ses</option>
-            <option value="Şarj">Şarj</option>
+
+            <option value="">
+                Tüm Kategoriler
+            </option>
+
+            <option value="Kılıf">
+                Kılıf
+            </option>
+
+            <option value="Cam">
+                Cam
+            </option>
+
+            <option value="Aksesuar">
+                Aksesuar
+            </option>
+
+            <option value="Dekorasyon">
+                Dekorasyon
+            </option>
+
+            <option value="Ses">
+                Ses
+            </option>
+
+            <option value="Şarj">
+                Şarj
+            </option>
+
         </select>
 
         <select id="modelFilter">
-            <option value="">Tüm Modeller</option>
+
+            <option value="">
+                Tüm Modeller
+            </option>
+
         </select>
 
-        <button class="reset-btn" onclick="resetFilters()">
+        <button
+            class="reset-btn"
+            onclick="resetFilters()"
+        >
             Filtreleri Temizle
         </button>
 
     </div>
 
-    <div class="products-grid" id="products"></div>
+    <div
+        class="products-grid"
+        id="products"
+    ></div>
 
 </section>
 
-<!-- REVIEWS -->
+<!-- =====================================================
+     REVIEWS
+===================================================== -->
+
 <section class="info-section">
 
     <h2>Müşterilerimiz Ne Diyor?</h2>
@@ -1355,35 +1693,59 @@ footer{
     <div class="info-grid">
 
         <div class="info-card">
+
             <strong>Mehmet</strong>
-            <div class="stars">★★★★★</div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
             <p>
-                Ürünler güzel, iletişim hızlı. Kılıfın modelini seçebilmek
-                gerçekten kullanışlı olmuş.
+                Ürünler güzel, iletişim hızlı.
+                Kılıfın modelini seçebilmek gerçekten
+                kullanışlı olmuş.
             </p>
+
         </div>
 
         <div class="info-card">
+
             <strong>Ahmet</strong>
-            <div class="stars">★★★★★</div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
             <p>
-                Şarj ürününü aldım, mağazadan teslim aldım. Gayet memnun kaldım.
+                Şarj ürününü aldım, mağazadan teslim aldım.
+                Gayet memnun kaldım.
             </p>
+
         </div>
 
         <div class="info-card">
+
             <strong>Emre</strong>
-            <div class="stars">★★★★★</div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
             <p>
-                Telefonuma uygun kılıfı direkt model seçerek buldum.
+                Telefonuma uygun kılıfı direkt model
+                seçerek buldum.
             </p>
+
         </div>
 
     </div>
 
 </section>
 
-<!-- CONTACT -->
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
 <section class="contact">
 
     <div class="contact-box">
@@ -1398,24 +1760,36 @@ footer{
         <div class="contact-list">
 
             <div class="contact-item">
+
                 <small>📞 Telefon</small>
+
                 0505 999 90 09
+
             </div>
 
             <div class="contact-item">
+
                 <small>📍 Adres</small>
+
                 Süleyman Demirel Bulvarı No:15,
                 Bucak / Burdur
+
             </div>
 
             <div class="contact-item">
+
                 <small>🕘 Çalışma Saatleri</small>
+
                 09:00 - 21:00
+
             </div>
 
             <div class="contact-item">
+
                 <small>📅 Pazar</small>
+
                 Kapalı
+
             </div>
 
         </div>
@@ -1424,13 +1798,23 @@ footer{
 
 </section>
 
+<!-- =====================================================
+     SOCIAL
+===================================================== -->
+
 <div class="socials">
 
-    <a href="https://instagram.com/TeknoBiz7" target="_blank">
+    <a
+        href="https://instagram.com/TeknoBiz7"
+        target="_blank"
+    >
         📷 Instagram
     </a>
 
-    <a href="https://facebook.com/bucakteknobiz15" target="_blank">
+    <a
+        href="https://facebook.com/bucakteknobiz15"
+        target="_blank"
+    >
         f Facebook
     </a>
 
@@ -1438,7 +1822,10 @@ footer{
         ✉️ Gmail
     </a>
 
-    <a href="https://wa.me/905059999009" target="_blank">
+    <a
+        href="https://wa.me/905059999009"
+        target="_blank"
+    >
         💬 WhatsApp
     </a>
 
@@ -1448,7 +1835,10 @@ footer{
     © 2026 TeknoBiz • Since 2016
 </footer>
 
-<!-- WHATSAPP -->
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
+
 <a
     class="whatsapp"
     href="https://wa.me/905059999009"
@@ -1458,24 +1848,48 @@ footer{
     ☎
 </a>
 
-<!-- CHAT BUTTON -->
-<button class="chat-button" onclick="openChat()">💬</button>
+<!-- =====================================================
+     CHAT BUTTON
+===================================================== -->
 
-<!-- CHAT -->
-<div class="chat-box" id="chatBox">
+<button
+    class="chat-button"
+    onclick="openChat()"
+>
+    💬
+</button>
+
+<!-- =====================================================
+     CHAT
+===================================================== -->
+
+<div
+    class="chat-box"
+    id="chatBox"
+>
 
     <div class="chat-head">
 
-        <div class="chat-avatar">T</div>
+        <div class="chat-avatar">
+            T
+        </div>
 
         <div>
+
             <strong>Mustafa Bey</strong><br>
-            <small>● Çevrimiçi</small>
+
+            <small>
+                ● Çevrimiçi
+            </small>
+
         </div>
 
     </div>
 
-    <div class="chat-messages" id="chatMessages">
+    <div
+        class="chat-messages"
+        id="chatMessages"
+    >
 
         <div class="message bot-message">
             Merhaba 👋 TeknoBiz'e hoş geldiniz.
@@ -1492,22 +1906,35 @@ footer{
             onkeydown="if(event.key==='Enter') sendMessage()"
         >
 
-        <button onclick="sendMessage()">➤</button>
+        <button onclick="sendMessage()">
+            ➤
+        </button>
 
     </div>
 
 </div>
 
-<!-- CART MODAL -->
-<div class="modal" id="cartModal">
+<!-- =====================================================
+     CART MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="cartModal"
+>
 
     <div class="modal-box">
 
         <div class="modal-head">
 
-            <h2>Sepetim</h2>
+            <h2>
+                Sepetim
+            </h2>
 
-            <button class="modal-close" onclick="closeCart()">
+            <button
+                class="modal-close"
+                onclick="closeCart()"
+            >
                 ✕
             </button>
 
@@ -1516,11 +1943,21 @@ footer{
         <div id="cartItems"></div>
 
         <div class="cart-total">
-            <span>Toplam</span>
-            <span id="cartTotal">0 TL</span>
+
+            <span>
+                Toplam
+            </span>
+
+            <span id="cartTotal">
+                0 TL
+            </span>
+
         </div>
 
-        <button class="checkout-btn" onclick="openPurchase()">
+        <button
+            class="checkout-btn"
+            onclick="openPurchase()"
+        >
             WhatsApp'tan Sipariş Ver
         </button>
 
@@ -1528,42 +1965,88 @@ footer{
 
 </div>
 
-<!-- PURCHASE MODAL -->
-<div class="modal" id="purchaseModal">
+<!-- =====================================================
+     PURCHASE MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="purchaseModal"
+>
 
     <div class="modal-box">
 
         <div class="modal-head">
 
-            <h2>Sipariş Bilgileri</h2>
+            <h2>
+                Sipariş Bilgileri
+            </h2>
 
-            <button class="modal-close" onclick="closePurchase()">
+            <button
+                class="modal-close"
+                onclick="closePurchase()"
+            >
                 ✕
             </button>
 
         </div>
 
         <div class="form-group">
-            <label>Ad Soyad</label>
-            <input id="customerName" placeholder="Adınız Soyadınız">
+
+            <label>
+                Ad Soyad
+            </label>
+
+            <input
+                id="customerName"
+                placeholder="Adınız Soyadınız"
+            >
+
         </div>
 
         <div class="form-group">
-            <label>Telefon</label>
-            <input id="customerPhone" placeholder="05xx xxx xx xx">
+
+            <label>
+                Telefon
+            </label>
+
+            <input
+                id="customerPhone"
+                placeholder="05xx xxx xx xx"
+            >
+
         </div>
 
         <div class="form-group">
-            <label>Adres</label>
-            <textarea id="customerAddress" placeholder="Teslimat adresiniz"></textarea>
+
+            <label>
+                Adres
+            </label>
+
+            <textarea
+                id="customerAddress"
+                placeholder="Teslimat adresiniz"
+            ></textarea>
+
         </div>
 
         <div class="form-group">
-            <label>Not</label>
-            <textarea id="customerNote" placeholder="Varsa sipariş notunuz"></textarea>
+
+            <label>
+                Not
+            </label>
+
+            <textarea
+                id="customerNote"
+                placeholder="Varsa sipariş notunuz"
+            ></textarea>
+
         </div>
 
-        <button class="checkout-btn" onclick="sendOrderWhatsApp()">
+        <button
+            class="checkout-btn"
+            onclick="sendOrderWhatsApp()"
+        >
             WhatsApp'tan Siparişi Gönder
         </button>
 
@@ -1571,14 +2054,30 @@ footer{
 
 </div>
 
-<!-- CUSTOMIZER -->
-<div class="customizer-overlay" id="customizerModal">
+<!-- =====================================================
+     CUSTOMIZER
+===================================================== -->
+
+<div
+    class="customizer-overlay"
+    id="customizerModal"
+>
 
     <div class="customizer-box">
 
         <div class="customizer-header">
 
-            <h2>📱 Telefonunu Özelleştir</h2>
+            <div>
+
+                <h2>
+                    📱 Telefonunu Özelleştir
+                </h2>
+
+                <p>
+                    Modelini seç, kılıfını belirle ve telefonda gör.
+                </p>
+
+            </div>
 
             <button
                 class="close-customizer"
@@ -1592,11 +2091,30 @@ footer{
         <div class="customizer-grid">
 
             <!-- PHONE -->
+
             <div class="phone-stage">
+
+                <div class="stage-grid"></div>
+
+                <div
+                    class="model-badge"
+                    id="modelBadge"
+                >
+                    iPhone 17 Pro
+                </div>
 
                 <div class="phone-shadow"></div>
 
-                <div class="phone-preview" id="phonePreview">
+                <div
+                    class="phone-preview"
+                    id="phonePreview"
+                >
+
+                    <div class="phone-screen">
+
+                        <div class="phone-screen-glow"></div>
+
+                    </div>
 
                     <div
                         class="case-layer transparent"
@@ -1608,7 +2126,10 @@ footer{
                         id="phoneCamera"
                     ></div>
 
-                    <div class="phone-label" id="phoneLabel">
+                    <div
+                        class="phone-label"
+                        id="phoneLabel"
+                    >
                         iPhone 17 Pro
                     </div>
 
@@ -1617,11 +2138,14 @@ footer{
             </div>
 
             <!-- CONTROLS -->
+
             <div class="customizer-controls">
 
                 <div class="control-block">
 
-                    <h3>📱 Telefon Modeli</h3>
+                    <h3>
+                        📱 Telefon Modeli
+                    </h3>
 
                     <select
                         class="custom-select"
@@ -1633,7 +2157,9 @@ footer{
 
                 <div class="control-block">
 
-                    <h3>🛡️ Kılıf Modeli</h3>
+                    <h3>
+                        🛡️ Kılıf Modeli
+                    </h3>
 
                     <div
                         class="case-choices"
@@ -1647,7 +2173,9 @@ footer{
                     id="colorBlock"
                 >
 
-                    <h3>🎨 Kılıf Rengi</h3>
+                    <h3>
+                        🎨 Kılıf Rengi
+                    </h3>
 
                     <div
                         class="color-choices"
@@ -1659,31 +2187,51 @@ footer{
                 <div class="custom-summary">
 
                     <div class="summary-row">
-                        <span>Telefon</span>
+
+                        <span>
+                            Telefon
+                        </span>
+
                         <strong id="summaryModel">
                             iPhone 17 Pro
                         </strong>
+
                     </div>
 
                     <div class="summary-row">
-                        <span>Kılıf</span>
+
+                        <span>
+                            Kılıf
+                        </span>
+
                         <strong id="summaryCase">
                             Şeffaf MagSafe
                         </strong>
+
                     </div>
 
                     <div class="summary-row">
-                        <span>Renk</span>
+
+                        <span>
+                            Renk
+                        </span>
+
                         <strong id="summaryColor">
                             Şeffaf
                         </strong>
+
                     </div>
 
                     <div class="summary-row summary-total">
-                        <span>Fiyat</span>
+
+                        <span>
+                            Fiyat
+                        </span>
+
                         <strong id="summaryPrice">
                             750 TL
                         </strong>
+
                     </div>
 
                 </div>
@@ -1706,70 +2254,746 @@ footer{
 <script>
 
 /* =====================================================
-   DATA
+   MODEL DATA
 ===================================================== */
 
 const iphoneModels = [
+
     "iPhone 11",
     "iPhone 11 Pro",
     "iPhone 11 Pro Max",
+
     "iPhone 12",
     "iPhone 12 mini",
     "iPhone 12 Pro",
     "iPhone 12 Pro Max",
+
     "iPhone 13",
     "iPhone 13 mini",
     "iPhone 13 Pro",
     "iPhone 13 Pro Max",
+
     "iPhone 14",
     "iPhone 14 Plus",
     "iPhone 14 Pro",
     "iPhone 14 Pro Max",
+
     "iPhone 15",
     "iPhone 15 Plus",
     "iPhone 15 Pro",
     "iPhone 15 Pro Max",
+
     "iPhone 16",
     "iPhone 16 Plus",
     "iPhone 16e",
     "iPhone 16 Pro",
     "iPhone 16 Pro Max",
+
     "iPhone 17",
     "iPhone 17e",
     "iPhone Air",
     "iPhone 17 Pro",
     "iPhone 17 Pro Max",
+
     "iPhone 18",
     "iPhone 18 Pro",
     "iPhone 18 Pro Max"
+
 ];
 
-const lightningModels = iphoneModels.filter(m =>
-    /^iPhone (11|12|13|14)( |$)/.test(m)
+const lightningModels = iphoneModels.filter(
+    m => /^iPhone (11|12|13|14)( |$)/.test(m)
 );
 
 const androidModels = [
+
     "Samsung Galaxy S24",
     "Samsung Galaxy S24+",
     "Samsung Galaxy S24 Ultra",
+
     "Samsung Galaxy S25",
     "Samsung Galaxy S25+",
     "Samsung Galaxy S25 Ultra",
+
     "Samsung Galaxy A15",
     "Samsung Galaxy A16",
     "Samsung Galaxy A17",
+
     "Xiaomi Redmi Note 13",
     "Xiaomi Redmi Note 14",
+
     "Redmi 14",
     "Redmi 15",
     "Redmi 15 Pro",
+
     "Huawei",
     "Oppo",
     "Realme",
     "Vivo",
     "Tecno",
     "Honor"
+
 ];
+
+/* =====================================================
+   CHARGER RENDER IMAGES
+===================================================== */
+
+function chargerImage(type){
+
+    const common = `
+    <defs>
+
+        <linearGradient
+            id="whiteBody"
+            x1="0"
+            y1="0"
+            x2="1"
+            y2="1"
+        >
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset=".45" stop-color="#f4f5f7"/>
+            <stop offset="1" stop-color="#cdd2d8"/>
+        </linearGradient>
+
+        <linearGradient
+            id="darkBody"
+            x1="0"
+            y1="0"
+            x2="1"
+            y2="1"
+        >
+            <stop offset="0" stop-color="#30353c"/>
+            <stop offset=".5" stop-color="#101318"/>
+            <stop offset="1" stop-color="#050609"/>
+        </linearGradient>
+
+        <linearGradient
+            id="metal"
+            x1="0"
+            y1="0"
+            x2="1"
+            y2="1"
+        >
+            <stop offset="0" stop-color="#f8fbff"/>
+            <stop offset=".5" stop-color="#b8c1ca"/>
+            <stop offset="1" stop-color="#6d7781"/>
+        </linearGradient>
+
+        <filter
+            id="shadow"
+            x="-40%"
+            y="-40%"
+            width="180%"
+            height="180%"
+        >
+            <feDropShadow
+                dx="0"
+                dy="18"
+                stdDeviation="15"
+                flood-color="#000"
+                flood-opacity=".28"
+            />
+        </filter>
+
+        <filter
+            id="soft"
+            x="-30%"
+            y="-30%"
+            width="160%"
+            height="160%"
+        >
+            <feGaussianBlur stdDeviation="12"/>
+        </filter>
+
+    </defs>
+
+    <rect
+        width="800"
+        height="600"
+        fill="#f5f6f8"
+    />
+
+    <ellipse
+        cx="400"
+        cy="510"
+        rx="210"
+        ry="28"
+        fill="#000"
+        opacity=".13"
+        filter="url(#soft)"
+    />
+    `;
+
+    let body = "";
+
+    if(type === "cable"){
+
+        body = `
+
+        <g filter="url(#shadow)">
+
+            <path
+                d="M170 405
+                   C250 470 310 485 400 455
+                   C505 420 540 315 625 265"
+                fill="none"
+                stroke="#17191d"
+                stroke-width="25"
+                stroke-linecap="round"
+            />
+
+            <path
+                d="M170 405
+                   C250 470 310 485 400 455
+                   C505 420 540 315 625 265"
+                fill="none"
+                stroke="#34383e"
+                stroke-width="13"
+                stroke-linecap="round"
+                stroke-dasharray="3 8"
+            />
+
+            <rect
+                x="125"
+                y="375"
+                width="75"
+                height="50"
+                rx="13"
+                fill="url(#metal)"
+            />
+
+            <rect
+                x="188"
+                y="386"
+                width="25"
+                height="28"
+                rx="6"
+                fill="#22272c"
+            />
+
+            <rect
+                x="600"
+                y="238"
+                width="80"
+                height="53"
+                rx="13"
+                fill="url(#whiteBody)"
+            />
+
+            <rect
+                x="671"
+                y="248"
+                width="18"
+                height="33"
+                rx="4"
+                fill="url(#metal)"
+            />
+
+            <path
+                d="M150 387 L178 387"
+                stroke="#fff"
+                stroke-width="5"
+                opacity=".75"
+            />
+
+        </g>
+
+        <text
+            x="400"
+            y="90"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="27"
+            font-weight="800"
+            fill="#17212c"
+        >
+            LIGHTNING KABLO
+        </text>
+
+        <text
+            x="400"
+            y="120"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="15"
+            fill="#667383"
+        >
+            Şarj • Data • Dayanıklı Tasarım
+        </text>
+        `;
+
+    }
+
+    else if(type === "head"){
+
+        body = `
+
+        <g filter="url(#shadow)">
+
+            <rect
+                x="250"
+                y="115"
+                width="300"
+                height="320"
+                rx="55"
+                fill="url(#whiteBody)"
+            />
+
+            <path
+                d="M300 145
+                   C360 120 440 120 500 145"
+                fill="none"
+                stroke="#fff"
+                stroke-width="12"
+                opacity=".75"
+            />
+
+            <rect
+                x="330"
+                y="310"
+                width="140"
+                height="48"
+                rx="15"
+                fill="#11161b"
+            />
+
+            <rect
+                x="365"
+                y="324"
+                width="70"
+                height="20"
+                rx="7"
+                fill="#05070a"
+            />
+
+            <circle
+                cx="400"
+                cy="260"
+                r="12"
+                fill="#168cff"
+                opacity=".9"
+            />
+
+            <rect
+                x="300"
+                y="435"
+                width="200"
+                height="20"
+                rx="10"
+                fill="#bcc4cc"
+                opacity=".7"
+            />
+
+        </g>
+
+        <text
+            x="400"
+            y="88"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="27"
+            font-weight="800"
+            fill="#17212c"
+        >
+            USB-C HIZLI ŞARJ
+        </text>
+
+        <text
+            x="400"
+            y="520"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="15"
+            fill="#667383"
+        >
+            Kompakt • Modern • USB-C
+        </text>
+        `;
+
+    }
+
+    else if(type === "set"){
+
+        body = `
+
+        <g filter="url(#shadow)">
+
+            <rect
+                x="170"
+                y="120"
+                width="210"
+                height="265"
+                rx="48"
+                fill="url(#whiteBody)"
+            />
+
+            <rect
+                x="225"
+                y="275"
+                width="100"
+                height="38"
+                rx="12"
+                fill="#11161b"
+            />
+
+            <circle
+                cx="275"
+                cy="220"
+                r="10"
+                fill="#168cff"
+            />
+
+            <path
+                d="M390 390
+                   C470 430 545 400 575 335
+                   C605 270 625 205 670 190"
+                fill="none"
+                stroke="#17191d"
+                stroke-width="22"
+                stroke-linecap="round"
+            />
+
+            <path
+                d="M390 390
+                   C470 430 545 400 575 335
+                   C605 270 625 205 670 190"
+                fill="none"
+                stroke="#3b3e43"
+                stroke-width="11"
+                stroke-linecap="round"
+                stroke-dasharray="3 7"
+            />
+
+            <rect
+                x="645"
+                y="166"
+                width="63"
+                height="48"
+                rx="11"
+                fill="url(#whiteBody)"
+            />
+
+            <rect
+                x="692"
+                y="175"
+                width="15"
+                height="30"
+                rx="3"
+                fill="url(#metal)"
+            />
+
+        </g>
+
+        <text
+            x="400"
+            y="80"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="27"
+            font-weight="800"
+            fill="#17212c"
+        >
+            ŞARJ SETİ
+        </text>
+
+        <text
+            x="400"
+            y="520"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="15"
+            fill="#667383"
+        >
+            Adaptör + Kablo
+        </text>
+        `;
+
+    }
+
+    else if(type === "typec"){
+
+        body = `
+
+        <g filter="url(#shadow)">
+
+            <path
+                d="M175 390
+                   C250 450 350 475 440 425
+                   C530 375 535 250 635 215"
+                fill="none"
+                stroke="#202328"
+                stroke-width="28"
+                stroke-linecap="round"
+            />
+
+            <path
+                d="M175 390
+                   C250 450 350 475 440 425
+                   C530 375 535 250 635 215"
+                fill="none"
+                stroke="#42464b"
+                stroke-width="14"
+                stroke-linecap="round"
+                stroke-dasharray="4 7"
+            />
+
+            <rect
+                x="125"
+                y="362"
+                width="85"
+                height="57"
+                rx="15"
+                fill="url(#darkBody)"
+            />
+
+            <rect
+                x="196"
+                y="377"
+                width="24"
+                height="28"
+                rx="5"
+                fill="url(#metal)"
+            />
+
+            <rect
+                x="600"
+                y="185"
+                width="90"
+                height="60"
+                rx="14"
+                fill="url(#darkBody)"
+            />
+
+            <rect
+                x="681"
+                y="199"
+                width="17"
+                height="31"
+                rx="4"
+                fill="url(#metal)"
+            />
+
+        </g>
+
+        <text
+            x="400"
+            y="90"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="27"
+            font-weight="800"
+            fill="#17212c"
+        >
+            TYPE-C KABLO
+        </text>
+
+        <text
+            x="400"
+            y="520"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="15"
+            fill="#667383"
+        >
+            Android • USB-C • Data
+        </text>
+        `;
+
+    }
+
+    else if(type === "androidHead"){
+
+        body = `
+
+        <g filter="url(#shadow)">
+
+            <rect
+                x="245"
+                y="110"
+                width="310"
+                height="330"
+                rx="55"
+                fill="url(#darkBody)"
+            />
+
+            <path
+                d="M300 142
+                   C365 115 435 115 500 142"
+                fill="none"
+                stroke="#ffffff"
+                stroke-width="8"
+                opacity=".13"
+            />
+
+            <rect
+                x="325"
+                y="305"
+                width="150"
+                height="55"
+                rx="15"
+                fill="#05070a"
+                stroke="#555b63"
+                stroke-width="2"
+            />
+
+            <rect
+                x="365"
+                y="320"
+                width="70"
+                height="24"
+                rx="8"
+                fill="#010203"
+            />
+
+            <circle
+                cx="400"
+                cy="245"
+                r="11"
+                fill="#25d366"
+            />
+
+        </g>
+
+        <text
+            x="400"
+            y="82"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="27"
+            font-weight="800"
+            fill="#17212c"
+        >
+            ANDROID HIZLI ŞARJ
+        </text>
+
+        <text
+            x="400"
+            y="520"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="15"
+            fill="#667383"
+        >
+            USB-C • Hızlı Şarj
+        </text>
+        `;
+
+    }
+
+    else{
+
+        body = `
+
+        <g filter="url(#shadow)">
+
+            <rect
+                x="165"
+                y="120"
+                width="225"
+                height="270"
+                rx="48"
+                fill="url(#darkBody)"
+            />
+
+            <rect
+                x="225"
+                y="285"
+                width="105"
+                height="40"
+                rx="12"
+                fill="#05070a"
+            />
+
+            <circle
+                cx="277"
+                cy="225"
+                r="10"
+                fill="#25d366"
+            />
+
+            <path
+                d="M390 390
+                   C470 440 555 395 585 320
+                   C610 260 620 200 670 185"
+                fill="none"
+                stroke="#202328"
+                stroke-width="23"
+                stroke-linecap="round"
+            />
+
+            <path
+                d="M390 390
+                   C470 440 555 395 585 320
+                   C610 260 620 200 670 185"
+                fill="none"
+                stroke="#464b51"
+                stroke-width="11"
+                stroke-linecap="round"
+                stroke-dasharray="4 7"
+            />
+
+            <rect
+                x="638"
+                y="160"
+                width="72"
+                height="52"
+                rx="12"
+                fill="url(#darkBody)"
+            />
+
+            <rect
+                x="698"
+                y="173"
+                width="16"
+                height="27"
+                rx="4"
+                fill="url(#metal)"
+            />
+
+        </g>
+
+        <text
+            x="400"
+            y="82"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="27"
+            font-weight="800"
+            fill="#17212c"
+        >
+            ANDROID ŞARJ SETİ
+        </text>
+
+        <text
+            x="400"
+            y="520"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="15"
+            fill="#667383"
+        >
+            Type-C Adaptör + Kablo
+        </text>
+        `;
+
+    }
+
+    const svg = `
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="800"
+        height="600"
+        viewBox="0 0 800 600"
+    >
+        ${common}
+        ${body}
+    </svg>
+    `;
+
+    return "data:image/svg+xml;charset=UTF-8," +
+        encodeURIComponent(svg);
+}
 
 /* =====================================================
    PRODUCTS
@@ -1778,181 +3002,176 @@ const androidModels = [
 const products = [
 
 {
-id:1,
-category:"Kılıf",
-title:"Şeffaf MagSafe Uyumlu iPhone Kılıfı",
-price:750,
-description:"MagSafe uyumlu şeffaf telefon kılıfı.",
-image:"https://casefit.ca/cdn/shop/files/clear-magsafe-case-iphone-14-939068.jpg?v=1727610760",
-models:iphoneModels,
-caseType:"transparent"
+    id:1,
+    category:"Kılıf",
+    title:"Şeffaf MagSafe Uyumlu iPhone Kılıfı",
+    price:750,
+    description:"MagSafe uyumlu şeffaf telefon kılıfı.",
+    image:"https://casefit.ca/cdn/shop/files/clear-magsafe-case-iphone-14-939068.jpg?v=1727610760",
+    models:iphoneModels,
+    caseType:"transparent"
 },
 
 {
-id:2,
-category:"Kılıf",
-title:"Guess Telefon Kılıfı",
-price:750,
-description:"Şık Guess tasarımlı telefon kılıfı.",
-image:"https://guessmobile.com.tr/cdn/shop/files/apple-iphone-16-kilif-guess-lisansli-magsafe-sarj-ozellikli-pu-4g-desenli-metal-plaka-klasik-logolu-kapak-kahverengi-002_compact.jpg?v=1738921425",
-models:iphoneModels,
-caseType:"guess"
+    id:2,
+    category:"Kılıf",
+    title:"Guess Telefon Kılıfı",
+    price:750,
+    description:"Şık Guess tasarımlı telefon kılıfı.",
+    image:"https://guessmobile.com.tr/cdn/shop/files/apple-iphone-16-kilif-guess-lisansli-magsafe-sarj-ozellikli-pu-4g-desenli-metal-plaka-klasik-logolu-kapak-kahverengi-002_compact.jpg?v=1738921425",
+    models:iphoneModels,
+    caseType:"guess"
 },
 
 {
-id:3,
-category:"Kılıf",
-title:"Tek Renk iPhone Kılıfı",
-price:650,
-description:"Model ve rengini seçebileceğiniz tek renk kılıf.",
-image:"https://static-01.daraz.lk/p/b197f61b49568b1376a2e4bc35685e38.jpg",
-models:iphoneModels,
-colors:[
-"Siyah",
-"Beyaz",
-"Kırmızı",
-"Mavi",
-"Yeşil",
-"Mor",
-"Pembe",
-"Sarı"
-],
-caseType:"single"
+    id:3,
+    category:"Kılıf",
+    title:"Tek Renk iPhone Kılıfı",
+    price:650,
+    description:"Model ve rengini seçebileceğiniz tek renk kılıf.",
+    image:"https://static-01.daraz.lk/p/b197f61b49568b1376a2e4bc35685e38.jpg",
+    models:iphoneModels,
+    colors:[
+        "Siyah",
+        "Beyaz",
+        "Kırmızı",
+        "Mavi",
+        "Yeşil",
+        "Mor",
+        "Pembe",
+        "Sarı"
+    ],
+    caseType:"single"
 },
 
 {
-id:4,
-category:"Kılıf",
-title:"Taşlı iPhone Kılıfı",
-price:650,
-description:"Taş detaylı şık iPhone kılıfı.",
-image:"https://maisonrogue.com/cdn/shop/files/BRIN2017PM-Rhinestone-Black-iPhone-17-Pro-Max-Case-01.jpg?v=1774645879",
-models:iphoneModels,
-caseType:"rhinestone"
+    id:4,
+    category:"Kılıf",
+    title:"Taşlı iPhone Kılıfı",
+    price:650,
+    description:"Taş detaylı şık iPhone kılıfı.",
+    image:"https://maisonrogue.com/cdn/shop/files/BRIN2017PM-Rhinestone-Black-iPhone-17-Pro-Max-Case-01.jpg?v=1774645879",
+    models:iphoneModels,
+    caseType:"rhinestone"
 },
 
 {
-id:5,
-category:"Cam",
-title:"Anti-Statik Kırılmaz Cam",
-price:1000,
-description:"Telefon ekranı için anti-statik kırılmaz cam.",
-image:"https://cdn11.bigcommerce.com/s-jwqtot7a1x/images/stencil/1280x1280/products/420/1526/Single3__94002.1636030361.jpg?c=2",
-models:iphoneModels
+    id:5,
+    category:"Cam",
+    title:"Anti-Statik Kırılmaz Cam",
+    price:1000,
+    description:"Telefon ekranı için anti-statik kırılmaz cam.",
+    image:"https://cdn11.bigcommerce.com/s-jwqtot7a1x/images/stencil/1280x1280/products/420/1526/Single3__94002.1636030361.jpg?c=2",
+    models:iphoneModels
 },
 
 {
-id:6,
-category:"Aksesuar",
-title:"MagSafe Uyumlu Cüzdan",
-price:500,
-description:"Telefon arkasına manyetik olarak takılabilen MagSafe cüzdan.",
-image:"https://telesalon.pl/hpeciai/679798f589b771ea7a2b7e48413393ff/pol_pl_Portfel-Apple-Leather-Wallet-iPhone-MagSafe-morski-Baltic-Blue-12828_1.jpg"
+    id:6,
+    category:"Aksesuar",
+    title:"MagSafe Uyumlu Cüzdan",
+    price:500,
+    description:"Telefon arkasına manyetik olarak takılabilen MagSafe cüzdan.",
+    image:"https://telesalon.pl/hpeciai/679798f589b771ea7a2b7e48413393ff/pol_pl_Portfel-Apple-Leather-Wallet-iPhone-MagSafe-morski-Baltic-Blue-12828_1.jpg"
 },
 
 {
-id:7,
-category:"Kılıf",
-title:"Karbon Kılıf",
-price:1000,
-description:"Karbon görünümlü dayanıklı telefon kılıfı.",
-image:"https://www.carboncraze.co.uk/cdn/shop/files/IMG_8221.jpg?crop=center&height=1200&v=1695905471&width=1200",
-models:iphoneModels,
-caseType:"carbon"
+    id:7,
+    category:"Kılıf",
+    title:"Karbon Kılıf",
+    price:1000,
+    description:"Karbon görünümlü dayanıklı telefon kılıfı.",
+    image:"https://www.carboncraze.co.uk/cdn/shop/files/IMG_8221.jpg?crop=center&height=1200&v=1695905471&width=1200",
+    models:iphoneModels,
+    caseType:"carbon"
 },
 
 {
-id:8,
-category:"Dekorasyon",
-title:"Işıklı Makyaj Aynası",
-price:400,
-description:"LED ışıklı dekoratif makyaj aynası.",
-image:"https://images.unsplash.com/photo-1616627561839-074385245ff6?auto=format&fit=crop&w=900&q=80"
+    id:8,
+    category:"Dekorasyon",
+    title:"Işıklı Makyaj Aynası",
+    price:400,
+    description:"LED ışıklı dekoratif makyaj aynası.",
+    image:"https://images.unsplash.com/photo-1616627561839-074385245ff6?auto=format&fit=crop&w=900&q=80"
 },
 
 {
-id:9,
-category:"Dekorasyon",
-title:"Aromatik Difüzör",
-price:1750,
-description:"Ortam için dekoratif aromatik difüzör.",
-image:"https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=80"
+    id:9,
+    category:"Dekorasyon",
+    title:"Aromatik Difüzör",
+    price:1750,
+    description:"Ortam için dekoratif aromatik difüzör.",
+    image:"https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=80"
 },
 
 {
-id:10,
-category:"Ses",
-title:"Gramofon Görünümlü Ses Bombası",
-price:3750,
-description:"Retro gramofon tasarımlı Bluetooth ses bombası.",
-image:"https://www.boxupgifting.com/cdn/shop/files/BluetoothspeakerBlue-1_800x.jpg?v=1739513324"
+    id:10,
+    category:"Ses",
+    title:"Gramofon Görünümlü Ses Bombası",
+    price:3750,
+    description:"Retro gramofon tasarımlı Bluetooth ses bombası.",
+    image:"https://www.boxupgifting.com/cdn/shop/files/BluetoothspeakerBlue-1_800x.jpg?v=1739513324"
 },
 
-/*
-=====================================================
-ŞARJ ÜRÜNLERİ
-=====================================================
-
-Burada artık SVG yok.
-Gerçek ürün fotoğrafları kullanılıyor.
-*/
+/* =====================================================
+   ŞARJ
+===================================================== */
 
 {
-id:11,
-category:"Şarj",
-title:"iPhone Lightning Şarj Kablosu",
-price:750,
-description:"Lightning uçlu iPhone şarj ve data kablosu.",
-image:"https://m.media-amazon.com/images/I/61c5Hq6z5pL._AC_SL1500_.jpg",
-models:lightningModels
+    id:11,
+    category:"Şarj",
+    title:"iPhone Lightning Şarj Kablosu",
+    price:750,
+    description:"Lightning uçlu iPhone şarj ve data kablosu.",
+    image:chargerImage("cable"),
+    models:lightningModels
 },
 
 {
-id:12,
-category:"Şarj",
-title:"USB-C Hızlı Şarj Başlığı",
-price:600,
-description:"USB-C çıkışlı hızlı şarj adaptörü.",
-image:"https://m.media-amazon.com/images/I/51h5xHfY4aL._AC_SL1500_.jpg"
+    id:12,
+    category:"Şarj",
+    title:"USB-C Hızlı Şarj Başlığı",
+    price:600,
+    description:"USB-C çıkışlı hızlı şarj adaptörü.",
+    image:chargerImage("head")
 },
 
 {
-id:13,
-category:"Şarj",
-title:"iPhone Şarj Seti",
-price:1000,
-description:"Şarj başlığı ve Lightning kablodan oluşan set.",
-image:"https://m.media-amazon.com/images/I/61V9XG2VYVL._AC_SL1500_.jpg",
-models:lightningModels
+    id:13,
+    category:"Şarj",
+    title:"iPhone Şarj Seti",
+    price:1000,
+    description:"Şarj başlığı ve Lightning kablodan oluşan set.",
+    image:chargerImage("set"),
+    models:lightningModels
 },
 
 {
-id:14,
-category:"Şarj",
-title:"USB-C Type-C Şarj Kablosu",
-price:750,
-description:"USB-C Android şarj ve data kablosu.",
-image:"https://m.media-amazon.com/images/I/61sX8n8m1UL._AC_SL1500_.jpg",
-models:androidModels
+    id:14,
+    category:"Şarj",
+    title:"USB-C Type-C Şarj Kablosu",
+    price:750,
+    description:"USB-C Android şarj ve data kablosu.",
+    image:chargerImage("typec"),
+    models:androidModels
 },
 
 {
-id:15,
-category:"Şarj",
-title:"Android Hızlı Şarj Başlığı",
-price:600,
-description:"USB-C çıkışlı hızlı şarj adaptörü.",
-image:"https://m.media-amazon.com/images/I/61T6m7x0vBL._AC_SL1500_.jpg"
+    id:15,
+    category:"Şarj",
+    title:"Android Hızlı Şarj Başlığı",
+    price:600,
+    description:"USB-C çıkışlı Android hızlı şarj adaptörü.",
+    image:chargerImage("androidHead")
 },
 
 {
-id:16,
-category:"Şarj",
-title:"Android Type-C Şarj Seti",
-price:1000,
-description:"Type-C kablo ve şarj başlığından oluşan set.",
-image:"https://m.media-amazon.com/images/I/61jQwVx5xRL._AC_SL1500_.jpg",
-models:androidModels
+    id:16,
+    category:"Şarj",
+    title:"Android Type-C Şarj Seti",
+    price:1000,
+    description:"Type-C kablo ve şarj başlığından oluşan set.",
+    image:chargerImage("androidSet"),
+    models:androidModels
 }
 
 ];
@@ -1966,13 +3185,19 @@ const fallbackImage =
 encodeURIComponent(`
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
 <rect width="100%" height="100%" fill="#f5f5f5"/>
-<text x="50%" y="48%" text-anchor="middle"
-font-size="44" font-family="Arial"
-font-weight="bold" fill="#111">
+<text x="50%" y="48%"
+text-anchor="middle"
+font-size="44"
+font-family="Arial"
+font-weight="bold"
+fill="#111">
 TeknoBiz
 </text>
-<text x="50%" y="58%" text-anchor="middle"
-font-size="24" font-family="Arial" fill="#555">
+<text x="50%" y="58%"
+text-anchor="middle"
+font-size="24"
+font-family="Arial"
+fill="#555">
 Ürün Görseli
 </text>
 </svg>
@@ -1983,20 +3208,33 @@ font-size="24" font-family="Arial" fill="#555">
 ===================================================== */
 
 function formatPrice(price){
-    return new Intl.NumberFormat("tr-TR").format(price) + " TL";
+
+    return new Intl.NumberFormat(
+        "tr-TR"
+    ).format(price) + " TL";
+
 }
 
 function escapeHTML(value){
+
     return String(value ?? "")
         .replace(/&/g,"&amp;")
         .replace(/</g,"&lt;")
         .replace(/>/g,"&gt;")
         .replace(/"/g,"&quot;")
         .replace(/'/g,"&#039;");
+
+}
+
+function imageError(img){
+
+    img.onerror = null;
+    img.src = fallbackImage;
+
 }
 
 /* =====================================================
-   PRODUCTS RENDER
+   PRODUCT ELEMENTS
 ===================================================== */
 
 const productsContainer =
@@ -2011,10 +3249,9 @@ const modelFilter =
 const searchInput =
     document.getElementById("searchInput");
 
-function imageError(img){
-    img.onerror = null;
-    img.src = fallbackImage;
-}
+/* =====================================================
+   MODEL FILTER
+===================================================== */
 
 function populateModelFilter(){
 
@@ -2023,42 +3260,67 @@ function populateModelFilter(){
     products.forEach(product => {
 
         if(product.models){
-            product.models.forEach(model =>
-                models.add(model)
+
+            product.models.forEach(
+                model => models.add(model)
             );
+
         }
 
     });
 
     modelFilter.innerHTML =
         `<option value="">Tüm Modeller</option>` +
+
         [...models]
             .sort((a,b)=>a.localeCompare(b,"tr"))
             .map(model =>
+
                 `<option value="${escapeHTML(model)}">
                     ${escapeHTML(model)}
                 </option>`
+
             )
             .join("");
+
 }
+
+/* =====================================================
+   RENDER PRODUCTS
+===================================================== */
 
 function renderProducts(list){
 
     if(!list.length){
 
         productsContainer.innerHTML = `
+
             <div style="
                 grid-column:1/-1;
                 padding:50px;
                 text-align:center;
                 color:#9baac0;
             ">
-                <div style="font-size:45px">🔎</div>
-                <h3 style="margin:12px 0;color:#fff">
+
+                <div style="font-size:45px">
+                    🔎
+                </div>
+
+                <h3
+                    style="
+                        margin:12px 0;
+                        color:#fff;
+                    "
+                >
                     Ürün bulunamadı
                 </h3>
-                <p>Farklı bir ürün veya model deneyin.</p>
+
+                <p>
+                    Farklı bir ürün veya model deneyin.
+                </p>
+
             </div>
+
         `;
 
         return;
@@ -2068,53 +3330,80 @@ function renderProducts(list){
         list.map(product => {
 
             const options = product.models
+
                 ? `
+
                     <select
                         class="product-model"
                         data-id="${product.id}"
                     >
+
                         <option value="">
                             Model Seçiniz
                         </option>
 
                         ${product.models.map(model =>
+
                             `<option value="${escapeHTML(model)}">
                                 ${escapeHTML(model)}
                             </option>`
+
                         ).join("")}
 
                     </select>
+
                 `
+
                 : "";
 
             const colors = product.colors
+
                 ? `
+
                     <select
                         class="product-color"
                         data-id="${product.id}"
                     >
+
                         <option value="">
                             Renk Seçiniz
                         </option>
 
                         ${product.colors.map(color =>
+
                             `<option value="${escapeHTML(color)}">
                                 ${escapeHTML(color)}
                             </option>`
+
                         ).join("")}
 
                     </select>
+
                 `
+
                 : "";
 
             const customizable =
                 product.category === "Kılıf";
+
+            const charger =
+                product.category === "Şarj";
 
             return `
 
                 <article class="product-card">
 
                     <div class="product-image">
+
+                        ${
+                            charger
+                            ?
+                            `<div class="charger-badge">
+                                🔌 ŞARJ
+                            </div>`
+                            :
+                            ""
+                        }
 
                         <img
                             src="${product.image}"
@@ -2175,9 +3464,11 @@ function renderProducts(list){
                     </div>
 
                 </article>
+
             `;
 
         }).join("");
+
 }
 
 /* =====================================================
@@ -2206,8 +3497,10 @@ function applyFilters(){
 
             const modelOK =
                 !model ||
-                (product.models &&
-                 product.models.includes(model));
+                (
+                    product.models &&
+                    product.models.includes(model)
+                );
 
             const searchOK =
                 !search ||
@@ -2221,13 +3514,16 @@ function applyFilters(){
                 .toLocaleLowerCase("tr-TR")
                 .includes(search);
 
-            return categoryOK &&
-                   modelOK &&
-                   searchOK;
+            return (
+                categoryOK &&
+                modelOK &&
+                searchOK
+            );
 
         });
 
     renderProducts(filtered);
+
 }
 
 categoryFilter.addEventListener(
@@ -2252,6 +3548,7 @@ function resetFilters(){
     searchInput.value = "";
 
     renderProducts(products);
+
 }
 
 function scrollToProducts(){
@@ -2261,6 +3558,7 @@ function scrollToProducts(){
         .scrollIntoView({
             behavior:"smooth"
         });
+
 }
 
 /* =====================================================
@@ -2272,7 +3570,9 @@ let cart = [];
 function addToCart(id){
 
     const product =
-        products.find(p => p.id === id);
+        products.find(
+            p => p.id === id
+        );
 
     if(!product) return;
 
@@ -2294,40 +3594,61 @@ function addToCart(id){
 
     if(product.models && !model){
 
-        alert("Lütfen telefon modelini seçin.");
+        alert(
+            "Lütfen telefon modelini seçin."
+        );
+
         return;
     }
 
     if(product.colors && !color){
 
-        alert("Lütfen renk seçin.");
+        alert(
+            "Lütfen renk seçin."
+        );
+
         return;
     }
 
     cart.push({
+
         id:product.id,
+
         title:product.title,
+
         price:product.price,
-        model,
-        color
+
+        model:model,
+
+        color:color,
+
+        caseName:""
+
     });
 
     updateCart();
 
-    alert("Ürün sepete eklendi 🛒");
+    alert(
+        "Ürün sepete eklendi 🛒"
+    );
+
 }
 
 function updateCart(){
 
-    document.getElementById("cartNumber")
-        .textContent = cart.length;
+    document.getElementById(
+        "cartNumber"
+    ).textContent = cart.length;
 
     const items =
-        document.getElementById("cartItems");
+        document.getElementById(
+            "cartItems"
+        );
 
     if(!cart.length){
 
         items.innerHTML = `
+
             <div style="
                 text-align:center;
                 padding:35px;
@@ -2335,10 +3656,12 @@ function updateCart(){
             ">
                 Sepetiniz boş.
             </div>
+
         `;
 
-        document.getElementById("cartTotal")
-            .textContent = "0 TL";
+        document.getElementById(
+            "cartTotal"
+        ).textContent = "0 TL";
 
         return;
     }
@@ -2367,14 +3690,29 @@ function updateCart(){
 
                     ${
                         item.model
-                        ? `📱 Model: ${escapeHTML(item.model)}<br>`
-                        : ""
+                        ?
+                        `📱 Model:
+                        ${escapeHTML(item.model)}<br>`
+                        :
+                        ""
+                    }
+
+                    ${
+                        item.caseName
+                        ?
+                        `🛡️ Kılıf:
+                        ${escapeHTML(item.caseName)}<br>`
+                        :
+                        ""
                     }
 
                     ${
                         item.color
-                        ? `🎨 Renk: ${escapeHTML(item.color)}<br>`
-                        : ""
+                        ?
+                        `🎨 Renk:
+                        ${escapeHTML(item.color)}<br>`
+                        :
+                        ""
                     }
 
                     💰 ${formatPrice(item.price)}
@@ -2387,12 +3725,16 @@ function updateCart(){
 
     const total =
         cart.reduce(
-            (sum,item)=>sum + item.price,
+            (sum,item) =>
+                sum + item.price,
             0
         );
 
-    document.getElementById("cartTotal")
-        .textContent = formatPrice(total);
+    document.getElementById(
+        "cartTotal"
+    ).textContent =
+        formatPrice(total);
+
 }
 
 function removeFromCart(index){
@@ -2400,6 +3742,7 @@ function removeFromCart(index){
     cart.splice(index,1);
 
     updateCart();
+
 }
 
 function openCart(){
@@ -2407,6 +3750,7 @@ function openCart(){
     document
         .getElementById("cartModal")
         .classList.add("active");
+
 }
 
 function closeCart(){
@@ -2414,6 +3758,7 @@ function closeCart(){
     document
         .getElementById("cartModal")
         .classList.remove("active");
+
 }
 
 /* =====================================================
@@ -2424,7 +3769,10 @@ function openPurchase(){
 
     if(!cart.length){
 
-        alert("Sepetiniz boş.");
+        alert(
+            "Sepetiniz boş."
+        );
+
         return;
     }
 
@@ -2433,6 +3781,7 @@ function openPurchase(){
     document
         .getElementById("purchaseModal")
         .classList.add("active");
+
 }
 
 function closePurchase(){
@@ -2440,103 +3789,148 @@ function closePurchase(){
     document
         .getElementById("purchaseModal")
         .classList.remove("active");
+
 }
 
 function sendOrderWhatsApp(){
 
     const name =
-        document.getElementById("customerName").value.trim();
+        document
+            .getElementById("customerName")
+            .value
+            .trim();
 
     const phone =
-        document.getElementById("customerPhone").value.trim();
+        document
+            .getElementById("customerPhone")
+            .value
+            .trim();
 
     const address =
-        document.getElementById("customerAddress").value.trim();
+        document
+            .getElementById("customerAddress")
+            .value
+            .trim();
 
     const note =
-        document.getElementById("customerNote").value.trim();
+        document
+            .getElementById("customerNote")
+            .value
+            .trim();
 
     if(!name || !phone || !address){
 
-        alert("Lütfen ad, telefon ve adres bilgilerini doldurun.");
+        alert(
+            "Lütfen ad, telefon ve adres bilgilerini doldurun."
+        );
+
         return;
     }
 
-    let message =
-        "Merhaba TeknoBiz, sipariş vermek istiyorum.%0A%0A";
+    let lines = [];
 
-    message +=
-        "👤 Ad Soyad: " +
-        encodeURIComponent(name) +
-        "%0A";
+    lines.push(
+        "Merhaba TeknoBiz, sipariş vermek istiyorum."
+    );
 
-    message +=
-        "📞 Telefon: " +
-        encodeURIComponent(phone) +
-        "%0A";
+    lines.push("");
 
-    message +=
-        "📍 Adres: " +
-        encodeURIComponent(address) +
-        "%0A%0A";
+    lines.push(
+        "👤 Ad Soyad: " + name
+    );
 
-    message +=
-        "🛒 SİPARİŞLER:%0A";
+    lines.push(
+        "📞 Telefon: " + phone
+    );
+
+    lines.push(
+        "📍 Adres: " + address
+    );
+
+    lines.push("");
+
+    lines.push(
+        "🛒 SİPARİŞLER:"
+    );
 
     cart.forEach((item,index)=>{
 
-        message +=
-            `${index+1}. ` +
-            encodeURIComponent(item.title) +
-            "%0A";
+        lines.push(
+            `${index+1}. ${item.title}`
+        );
 
         if(item.model){
 
-            message +=
-                "📱 Model: " +
-                encodeURIComponent(item.model) +
-                "%0A";
+            lines.push(
+                "📱 Model: " + item.model
+            );
+
+        }
+
+        if(item.caseName){
+
+            lines.push(
+                "🛡️ Kılıf: " + item.caseName
+            );
+
         }
 
         if(item.color){
 
-            message +=
-                "🎨 Renk: " +
-                encodeURIComponent(item.color) +
-                "%0A";
+            lines.push(
+                "🎨 Renk: " + item.color
+            );
+
         }
 
-        message +=
+        lines.push(
             "💰 Fiyat: " +
-            encodeURIComponent(formatPrice(item.price)) +
-            "%0A%0A";
+            formatPrice(item.price)
+        );
+
+        lines.push("");
 
     });
 
     if(note){
 
-        message +=
-            "📝 Not: " +
-            encodeURIComponent(note);
+        lines.push(
+            "📝 Not: " + note
+        );
+
     }
 
+    const message =
+        encodeURIComponent(
+            lines.join("\n")
+        );
+
     window.open(
-        "https://wa.me/905059999009?text=" + message,
+        "https://wa.me/905059999009?text=" +
+        message,
         "_blank"
     );
+
 }
 
 /* =====================================================
-   CUSTOMIZER STATE
+   CUSTOMIZER
 ===================================================== */
 
 let customState = {
+
     productId:null,
+
     model:"iPhone 17 Pro",
+
     caseType:"transparent",
+
     caseName:"Şeffaf MagSafe",
+
     color:"Şeffaf",
+
     price:750
+
 };
 
 const caseOptions = [
@@ -2544,262 +3938,368 @@ const caseOptions = [
     {
         type:"transparent",
         name:"Şeffaf MagSafe",
-        color:"Şeffaf"
+        price:750,
+        color:"Şeffaf",
+        desc:"Şeffaf + MagSafe halka"
     },
 
     {
         type:"guess",
         name:"Guess",
-        color:"Kahverengi"
+        price:750,
+        color:"Kahverengi",
+        desc:"Premium görünüm"
     },
 
     {
         type:"single",
         name:"Tek Renk",
-        color:"Siyah"
+        price:650,
+        color:"Siyah",
+        desc:"Rengini sen seç"
     },
 
     {
         type:"rhinestone",
         name:"Taşlı",
-        color:"Siyah"
+        price:650,
+        color:"Siyah",
+        desc:"Parlak taş detay"
     },
 
     {
         type:"carbon",
         name:"Karbon",
-        color:"Siyah"
+        price:1000,
+        color:"Siyah",
+        desc:"Karbon dokulu"
     }
 
 ];
 
+/* =====================================================
+   OPEN CUSTOMIZER
+===================================================== */
+
 function openCustomizer(productId){
 
     const product =
-        products.find(p=>p.id===productId);
+        products.find(
+            p => p.id === productId
+        );
 
     if(!product) return;
 
     customState.productId =
         product.id;
 
-    customState.price =
-        product.price;
-
-    let defaultModel =
+    customState.model =
+        product.models?.includes(
+            "iPhone 17 Pro"
+        )
+        ?
+        "iPhone 17 Pro"
+        :
+        product.models?.[0] ||
         "iPhone 17 Pro";
 
-    if(
-        !product.models.includes(defaultModel)
-    ){
-        defaultModel =
-            product.models[0];
-    }
-
-    customState.model =
-        defaultModel;
-
     customState.caseType =
-        product.caseType || "transparent";
+        product.caseType ||
+        "transparent";
 
     const currentCase =
         caseOptions.find(
-            c=>c.type===customState.caseType
-        ) || caseOptions[0];
+            c => c.type === customState.caseType
+        ) ||
+        caseOptions[0];
 
     customState.caseName =
         currentCase.name;
 
-    if(product.colors){
+    customState.price =
+        currentCase.price;
 
-        customState.color =
-            product.colors[0];
+    customState.color =
+        product.colors?.[0] ||
+        currentCase.color;
 
-    }else{
-
-        customState.color =
-            currentCase.color;
-    }
-
-    renderCustomizer(product);
+    renderCustomizer();
 
     document
         .getElementById("customizerModal")
         .classList.add("active");
+
 }
+
+/* =====================================================
+   CLOSE
+===================================================== */
 
 function closeCustomizer(){
 
     document
         .getElementById("customizerModal")
         .classList.remove("active");
+
 }
 
-function renderCustomizer(product){
+/* =====================================================
+   RENDER CUSTOMIZER
+===================================================== */
+
+function renderCustomizer(){
 
     const select =
-        document.getElementById("customModel");
+        document.getElementById(
+            "customModel"
+        );
 
     select.innerHTML =
-        product.models.map(model =>
-            `
-            <option
+        iphoneModels.map(model =>
+
+            `<option
                 value="${escapeHTML(model)}"
-                ${model===customState.model ? "selected":""}
+                ${
+                    model === customState.model
+                    ?
+                    "selected"
+                    :
+                    ""
+                }
             >
                 ${escapeHTML(model)}
-            </option>
-            `
+            </option>`
+
         ).join("");
 
-    renderCaseChoices(product);
+    renderCaseChoices();
 
-    renderColorChoices(product);
+    renderColorChoices();
 
     updatePhonePreview();
 
     updateCustomizerSummary();
+
 }
 
-function renderCaseChoices(product){
+/* =====================================================
+   CASE CHOICES
+===================================================== */
+
+function renderCaseChoices(){
 
     const container =
-        document.getElementById("caseChoices");
+        document.getElementById(
+            "caseChoices"
+        );
 
     container.innerHTML =
         caseOptions.map(option => `
 
             <button
+                type="button"
                 class="case-choice ${
-                    option.type===customState.caseType
-                    ? "active"
-                    : ""
+                    option.type ===
+                    customState.caseType
+                    ?
+                    "active"
+                    :
+                    ""
                 }"
-                onclick="selectCase('${option.type}')"
+                onclick="
+                    selectCase('${option.type}')
+                "
             >
+
                 ${getCaseIcon(option.type)}
                 ${option.name}
+
+                <small>
+                    ${option.desc}
+                    • ${formatPrice(option.price)}
+                </small>
+
             </button>
 
         `).join("");
+
 }
 
 function getCaseIcon(type){
 
     const icons = {
+
         transparent:"◯",
+
         guess:"G",
+
         single:"●",
+
         rhinestone:"✦",
+
         carbon:"◆"
+
     };
 
     return icons[type] || "●";
+
 }
+
+/* =====================================================
+   SELECT CASE
+===================================================== */
 
 function selectCase(type){
 
     const option =
         caseOptions.find(
-            c=>c.type===type
+            c => c.type === type
         );
 
     if(!option) return;
 
     customState.caseType =
-        type;
+        option.type;
 
     customState.caseName =
         option.name;
 
-    if(type==="single"){
+    customState.price =
+        option.price;
 
-        customState.color =
-            document
-                .querySelector(".color-choice.active")
-                ?.dataset.color ||
-            "Siyah";
+    if(type === "single"){
+
+        if(
+            ![
+                "Siyah",
+                "Beyaz",
+                "Kırmızı",
+                "Mavi",
+                "Yeşil",
+                "Mor",
+                "Pembe",
+                "Sarı"
+            ].includes(customState.color)
+        ){
+
+            customState.color =
+                "Siyah";
+
+        }
 
     }else{
 
         customState.color =
             option.color;
+
     }
 
-    const product =
-        products.find(
-            p=>p.id===customState.productId
-        );
+    renderCaseChoices();
 
-    renderCaseChoices(product);
-
-    renderColorChoices(product);
+    renderColorChoices();
 
     updatePhonePreview();
 
     updateCustomizerSummary();
+
 }
 
-function renderColorChoices(product){
+/* =====================================================
+   COLORS
+===================================================== */
+
+const colorMap = {
+
+    "Siyah":"#101214",
+
+    "Beyaz":"#f1f2f4",
+
+    "Kırmızı":"#d51f2a",
+
+    "Mavi":"#176fd1",
+
+    "Yeşil":"#18894d",
+
+    "Mor":"#7c3fa4",
+
+    "Pembe":"#df88a6",
+
+    "Sarı":"#dfbd00"
+
+};
+
+const allColors = [
+
+    "Siyah",
+    "Beyaz",
+    "Kırmızı",
+    "Mavi",
+    "Yeşil",
+    "Mor",
+    "Pembe",
+    "Sarı"
+
+];
+
+function renderColorChoices(){
 
     const block =
-        document.getElementById("colorBlock");
+        document.getElementById(
+            "colorBlock"
+        );
 
     const container =
-        document.getElementById("colorChoices");
-
-    const colors =
-        product.colors ||
-        [
-            "Siyah",
-            "Beyaz",
-            "Kırmızı",
-            "Mavi",
-            "Yeşil",
-            "Mor",
-            "Pembe",
-            "Sarı"
-        ];
+        document.getElementById(
+            "colorChoices"
+        );
 
     if(
         customState.caseType !== "single"
     ){
 
-        block.style.display = "none";
+        block.style.display =
+            "none";
+
         return;
+
     }
 
-    block.style.display = "block";
-
-    const colorMap = {
-        "Siyah":"#111",
-        "Beyaz":"#f5f5f5",
-        "Kırmızı":"#d71920",
-        "Mavi":"#126bc4",
-        "Yeşil":"#18894b",
-        "Mor":"#7a35a8",
-        "Pembe":"#e78aaa",
-        "Sarı":"#e8c600"
-    };
+    block.style.display =
+        "block";
 
     container.innerHTML =
-        colors.map(color => `
+        allColors.map(color => `
 
-            <button
-                class="color-choice ${
-                    color===customState.color
-                    ? "active"
-                    : ""
-                }"
-                data-color="${escapeHTML(color)}"
-                title="${escapeHTML(color)}"
-                style="
-                    background:${colorMap[color] || "#333"};
-                "
-                onclick="selectColor('${escapeHTML(color)}')"
-            ></button>
+            <div class="color-wrap">
+
+                <button
+                    type="button"
+                    class="color-choice ${
+                        color ===
+                        customState.color
+                        ?
+                        "active"
+                        :
+                        ""
+                    }"
+                    title="${escapeHTML(color)}"
+                    style="
+                        background:
+                        ${colorMap[color]};
+                    "
+                    onclick="
+                        selectColor('${color}')
+                    "
+                ></button>
+
+                <span>
+                    ${color}
+                </span>
+
+            </div>
 
         `).join("");
+
 }
 
 function selectColor(color){
@@ -2807,71 +4307,96 @@ function selectColor(color){
     customState.color =
         color;
 
-    const product =
-        products.find(
-            p=>p.id===customState.productId
-        );
-
-    renderColorChoices(product);
+    renderColorChoices();
 
     updatePhonePreview();
 
     updateCustomizerSummary();
+
 }
+
+/* =====================================================
+   MODEL
+===================================================== */
 
 function customModelChanged(){
 
     customState.model =
-        document.getElementById("customModel").value;
+        document
+            .getElementById(
+                "customModel"
+            )
+            .value;
 
     updatePhonePreview();
 
     updateCustomizerSummary();
+
 }
 
 /* =====================================================
-   PHONE CAMERA
+   PHONE GENERATION
 ===================================================== */
 
 function getPhoneGeneration(model){
 
-    if(model.includes("11")) return "11";
+    if(model.includes("11"))
+        return "11";
 
-    if(model.includes("12")) return "12";
+    if(model.includes("12"))
+        return "12";
 
-    if(model.includes("13")) return "13";
+    if(model.includes("13"))
+        return "13";
 
-    if(model.includes("14")) return "14";
+    if(model.includes("14"))
+        return "14";
 
-    if(model.includes("15")) return "15";
+    if(model.includes("15"))
+        return "15";
 
-    if(model.includes("16")) return "16";
+    if(model.includes("16"))
+        return "16";
 
-    if(model.includes("17")) return "17";
+    if(model.includes("17"))
+        return "17";
 
-    if(model.includes("18")) return "18";
+    if(model.includes("18"))
+        return "18";
 
     return "modern";
+
 }
 
 function isPro(model){
 
     return /Pro/.test(model);
+
 }
+
+/* =====================================================
+   CAMERA
+===================================================== */
 
 function buildCamera(model){
 
     const camera =
-        document.getElementById("phoneCamera");
+        document.getElementById(
+            "phoneCamera"
+        );
 
     camera.innerHTML = "";
 
-    camera.className = "camera";
+    camera.className =
+        "camera";
 
     const generation =
         getPhoneGeneration(model);
 
-    if(isPro(model)){
+    const pro =
+        isPro(model);
+
+    if(pro){
 
         camera.classList.add("pro");
         camera.classList.add("three");
@@ -2879,48 +4404,112 @@ function buildCamera(model){
     }else{
 
         camera.classList.add("diagonal");
+
     }
 
     if(
-        generation==="17" ||
-        generation==="18"
+        generation === "17" ||
+        generation === "18"
     ){
 
-        camera.classList.add("modern");
+        camera.classList.add(
+            pro
+            ?
+            "modern-pro"
+            :
+            "modern"
+        );
+
     }
 
     const count =
-        isPro(model) ? 3 : 2;
+        pro ? 3 : 2;
 
-    for(let i=0;i<count;i++){
+    for(
+        let i=0;
+        i<count;
+        i++
+    ){
 
         const lens =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
-        lens.className = "lens";
+        lens.className =
+            "lens";
 
-        camera.appendChild(lens);
+        camera.appendChild(
+            lens
+        );
+
     }
+
 }
+
+/* =====================================================
+   PHONE COLORS
+===================================================== */
+
+const phoneColors = {
+
+    "11":"#202328",
+
+    "12":"#2a3440",
+
+    "13":"#34383d",
+
+    "14":"#252a30",
+
+    "15":"#1b2025",
+
+    "16":"#2c3136",
+
+    "17":"#20262c",
+
+    "18":"#181d23"
+
+};
+
+/* =====================================================
+   PHONE PREVIEW
+===================================================== */
 
 function updatePhonePreview(){
 
     const phone =
-        document.getElementById("phonePreview");
+        document.getElementById(
+            "phonePreview"
+        );
 
     const label =
-        document.getElementById("phoneLabel");
+        document.getElementById(
+            "phoneLabel"
+        );
+
+    const badge =
+        document.getElementById(
+            "modelBadge"
+        );
 
     const caseLayer =
-        document.getElementById("caseLayer");
+        document.getElementById(
+            "caseLayer"
+        );
 
     const model =
         customState.model;
+
+    const generation =
+        getPhoneGeneration(model);
 
     phone.dataset.model =
         model;
 
     label.textContent =
+        model;
+
+    badge.textContent =
         model;
 
     buildCamera(model);
@@ -2930,25 +4519,15 @@ function updatePhonePreview(){
         customState.caseType;
 
     if(
-        customState.caseType === "single"
+        customState.caseType ===
+        "single"
     ){
-
-        const colors = {
-
-            "Siyah":"#111111",
-            "Beyaz":"#eeeeee",
-            "Kırmızı":"#c91d2a",
-            "Mavi":"#176dcc",
-            "Yeşil":"#19874a",
-            "Mor":"#7438a5",
-            "Pembe":"#db829e",
-            "Sarı":"#d7b900"
-
-        };
 
         caseLayer.style.setProperty(
             "--case-color",
-            colors[customState.color] || "#111"
+            colorMap[
+                customState.color
+            ] || "#111"
         );
 
     }else{
@@ -2956,67 +4535,62 @@ function updatePhonePreview(){
         caseLayer.style.removeProperty(
             "--case-color"
         );
+
     }
-
-    /* MODEL RENKLERİ */
-
-    const phoneColors = {
-
-        "11":"#111315",
-        "12":"#27303b",
-        "13":"#30343a",
-        "14":"#22272d",
-        "15":"#171a1e",
-        "16":"#292d31",
-        "17":"#20252a",
-        "18":"#171b20"
-
-    };
 
     phone.style.background =
         `linear-gradient(
             145deg,
             ${
-                phoneColors[
-                    getPhoneGeneration(model)
-                ] || "#252b32"
+                phoneColors[generation] ||
+                "#252b32"
             },
             #080a0d
         )`;
+
 }
 
 /* =====================================================
-   CUSTOM SUMMARY
+   SUMMARY
 ===================================================== */
 
 function updateCustomizerSummary(){
 
-    document.getElementById("summaryModel")
-        .textContent =
+    document.getElementById(
+        "summaryModel"
+    ).textContent =
         customState.model;
 
-    document.getElementById("summaryCase")
-        .textContent =
+    document.getElementById(
+        "summaryCase"
+    ).textContent =
         customState.caseName;
 
-    document.getElementById("summaryColor")
-        .textContent =
+    document.getElementById(
+        "summaryColor"
+    ).textContent =
         customState.color;
 
-    document.getElementById("summaryPrice")
-        .textContent =
-        formatPrice(customState.price);
+    document.getElementById(
+        "summaryPrice"
+    ).textContent =
+        formatPrice(
+            customState.price
+        );
+
 }
 
 /* =====================================================
-   CUSTOM PRODUCT CART
+   CUSTOMIZED PRODUCT
 ===================================================== */
 
 function addCustomizedProduct(){
 
     const product =
         products.find(
-            p=>p.id===customState.productId
+            p =>
+            p.id ===
+            customState.productId
         );
 
     if(!product) return;
@@ -3026,8 +4600,7 @@ function addCustomizedProduct(){
         id:product.id,
 
         title:
-            product.title +
-            " - Özelleştirilmiş",
+            "Telefon Özelleştirme",
 
         price:
             customState.price,
@@ -3038,7 +4611,7 @@ function addCustomizedProduct(){
         color:
             customState.color,
 
-        case:
+        caseName:
             customState.caseName
 
     });
@@ -3048,8 +4621,12 @@ function addCustomizedProduct(){
     closeCustomizer();
 
     alert(
-        `${customState.model} + ${customState.caseName} sepete eklendi 🛒`
+        customState.model +
+        " • " +
+        customState.caseName +
+        " sepete eklendi 🛒"
     );
+
 }
 
 /* =====================================================
@@ -3061,12 +4638,15 @@ function openChat(){
     document
         .getElementById("chatBox")
         .classList.toggle("active");
+
 }
 
 function sendMessage(){
 
     const input =
-        document.getElementById("chatInput");
+        document.getElementById(
+            "chatInput"
+        );
 
     const text =
         input.value.trim();
@@ -3082,24 +4662,29 @@ function sendMessage(){
 
     setTimeout(()=>{
 
-        const answer =
-            getBotAnswer(text);
-
         addChatMessage(
-            answer,
+            getBotAnswer(text),
             "bot-message"
         );
 
     },400);
+
 }
 
-function addChatMessage(text,type){
+function addChatMessage(
+    text,
+    type
+){
 
     const box =
-        document.getElementById("chatMessages");
+        document.getElementById(
+            "chatMessages"
+        );
 
     const div =
-        document.createElement("div");
+        document.createElement(
+            "div"
+        );
 
     div.className =
         "message " + type;
@@ -3107,16 +4692,21 @@ function addChatMessage(text,type){
     div.textContent =
         text;
 
-    box.appendChild(div);
+    box.appendChild(
+        div
+    );
 
     box.scrollTop =
         box.scrollHeight;
+
 }
 
 function getBotAnswer(text){
 
     const t =
-        text.toLocaleLowerCase("tr-TR");
+        text.toLocaleLowerCase(
+            "tr-TR"
+        );
 
     if(
         t.includes("telefon") ||
@@ -3170,11 +4760,12 @@ function getBotAnswer(text){
         t.includes("case")
     ){
 
-        return "Kılıf ürünlerinde telefon modelinizi seçebilir, uygun ürünlerde 'Telefonu Özelleştir' bölümünden kılıfınızı görsel olarak özelleştirebilirsiniz. 📱";
+        return "Kılıf ürünlerinde telefon modelinizi seçebilir, 'Telefonu Özelleştir' bölümünden farklı kılıfları telefonda görebilirsiniz. 📱";
 
     }
 
     return "Size yardımcı olabilirim. Ürün, kılıf, şarj, adres veya çalışma saatlerimizi sorabilirsiniz. 😊";
+
 }
 
 /* =====================================================
@@ -3184,17 +4775,24 @@ function getBotAnswer(text){
 function enterSite(){
 
     const welcome =
-        document.getElementById("welcome");
+        document.getElementById(
+            "welcome"
+        );
 
-    welcome.style.opacity = "0";
+    welcome.style.opacity =
+        "0";
 
     setTimeout(()=>{
-        welcome.style.display = "none";
+
+        welcome.style.display =
+            "none";
+
     },500);
+
 }
 
 /* =====================================================
-   OUTSIDE CLICK
+   OUTSIDE CHAT
 ===================================================== */
 
 document.addEventListener(
@@ -3202,53 +4800,80 @@ document.addEventListener(
     function(e){
 
         const chat =
-            document.getElementById("chatBox");
+            document.getElementById(
+                "chatBox"
+            );
 
         const chatButton =
-            document.querySelector(".chat-button");
+            document.querySelector(
+                ".chat-button"
+            );
 
         if(
-            chat.classList.contains("active") &&
+            chat.classList.contains(
+                "active"
+            ) &&
             !chat.contains(e.target) &&
             !chatButton.contains(e.target)
         ){
 
-            chat.classList.remove("active");
+            chat.classList.remove(
+                "active"
+            );
+
         }
 
     }
 );
 
 /* =====================================================
-   MODAL OUTSIDE
+   MODALS
 ===================================================== */
 
-document.getElementById("cartModal")
-.addEventListener("click",function(e){
+document
+    .getElementById("cartModal")
+    .addEventListener(
+        "click",
+        function(e){
 
-    if(e.target === this){
-        closeCart();
-    }
+            if(e.target === this){
 
-});
+                closeCart();
 
-document.getElementById("purchaseModal")
-.addEventListener("click",function(e){
+            }
 
-    if(e.target === this){
-        closePurchase();
-    }
+        }
+    );
 
-});
+document
+    .getElementById("purchaseModal")
+    .addEventListener(
+        "click",
+        function(e){
 
-document.getElementById("customizerModal")
-.addEventListener("click",function(e){
+            if(e.target === this){
 
-    if(e.target === this){
-        closeCustomizer();
-    }
+                closePurchase();
 
-});
+            }
+
+        }
+    );
+
+document
+    .getElementById("customizerModal")
+    .addEventListener(
+        "click",
+        function(e){
+
+            if(e.target === this){
+
+                closeCustomizer();
+
+            }
+
+        }
+    );
 
 /* =====================================================
    ESC
