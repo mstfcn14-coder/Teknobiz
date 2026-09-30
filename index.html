@@ -6,162 +6,224 @@
 
 <title>TeknoBiz | Teknoloji & Aksesuar</title>
 
-<meta name="description" content="TeknoBiz teknoloji, telefon kılıfları, kırılmaz cam, şarj ürünleri ve aksesuarlar.">
+<meta
+name="description"
+content="TeknoBiz telefon kılıfları, kırılmaz cam, şarj ürünleri, aksesuarlar ve teknoloji ürünleri."
+>
 
 <style>
+
+/* =========================================================
+   TEMEL
+========================================================= */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-body{
-    background:#070b14;
-    color:#fff;
 }
 
 html{
     scroll-behavior:smooth;
 }
 
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#070b13;
+    color:#fff;
+    min-height:100vh;
+}
+
 button,
 input,
 select,
 textarea{
-    font-family:inherit;
+    font:inherit;
 }
 
-/* WELCOME */
+button{
+    cursor:pointer;
+}
+
+a{
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+}
+
+/* =========================================================
+   RENKLER
+========================================================= */
+
+:root{
+    --blue:#168cff;
+    --blue-dark:#0868c7;
+    --navy:#0b1422;
+    --navy2:#101b2c;
+    --border:#24354e;
+    --text:#fff;
+    --muted:#91a0b5;
+    --green:#25d366;
+}
+
+/* =========================================================
+   HOŞ GELDİNİZ
+========================================================= */
 
 #welcome{
     position:fixed;
     inset:0;
-    background:linear-gradient(135deg,#02040a,#07172d,#05070d);
+    z-index:99999;
     display:flex;
     align-items:center;
     justify-content:center;
-    z-index:99999;
-    transition:.6s;
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(22,140,255,.22),
+            transparent 35%
+        ),
+        #03060c;
+    transition:opacity .5s ease;
 }
 
 .welcome-box{
     text-align:center;
-    padding:35px;
+    padding:30px;
 }
 
 .welcome-logo{
-    width:85px;
-    height:85px;
-    border-radius:22px;
-    background:linear-gradient(135deg,#168cff,#004ca8);
+    width:90px;
+    height:90px;
+    margin:0 auto 20px;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:45px;
+    border-radius:24px;
+    background:linear-gradient(
+        135deg,
+        #168cff,
+        #064c9d
+    );
+    font-size:48px;
     font-weight:900;
-    margin:0 auto 20px;
-    box-shadow:0 0 40px rgba(0,120,255,.4);
+    box-shadow:
+        0 0 50px rgba(22,140,255,.35);
 }
 
 .welcome-box h1{
-    font-size:38px;
-    margin-bottom:10px;
+    font-size:42px;
+    margin-bottom:8px;
 }
 
 .welcome-box p{
-    color:#b9c7da;
+    color:var(--muted);
     margin-bottom:25px;
 }
 
 .enter-btn{
     border:none;
-    background:#168cff;
-    color:white;
+    background:var(--blue);
+    color:#fff;
     padding:14px 30px;
     border-radius:12px;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
+    font-weight:700;
+    transition:.2s;
 }
 
-/* HEADER */
+.enter-btn:hover{
+    background:var(--blue-dark);
+    transform:translateY(-2px);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 header{
     position:sticky;
     top:0;
     z-index:5000;
-    background:rgba(4,8,16,.94);
+    background:rgba(5,9,17,.95);
     backdrop-filter:blur(15px);
-    border-bottom:1px solid #172337;
+    border-bottom:1px solid #17253a;
 }
 
 .nav{
     max-width:1250px;
     margin:auto;
-    min-height:75px;
+    min-height:76px;
     padding:12px 20px;
     display:flex;
     align-items:center;
-    gap:20px;
+    gap:18px;
 }
 
 .logo{
-    font-size:25px;
+    font-size:26px;
     font-weight:900;
-    color:white;
     white-space:nowrap;
 }
 
 .logo span{
-    color:#168cff;
+    color:var(--blue);
 }
 
-.search-area{
+.search-box{
     flex:1;
-    position:relative;
 }
 
-.search-area input{
+.search-box input{
     width:100%;
-    background:#101827;
-    border:1px solid #25344c;
-    color:#fff;
-    padding:13px 18px;
+    padding:13px 17px;
     border-radius:12px;
+    border:1px solid var(--border);
     outline:none;
+    background:#101827;
+    color:#fff;
 }
 
-.search-area input:focus{
-    border-color:#168cff;
+.search-box input:focus{
+    border-color:var(--blue);
 }
 
 .cart-button{
-    border:1px solid #25344c;
+    border:1px solid var(--border);
     background:#101827;
-    color:white;
+    color:#fff;
     padding:12px 16px;
     border-radius:12px;
-    cursor:pointer;
     white-space:nowrap;
 }
 
-.cart-count{
-    background:#168cff;
-    padding:2px 7px;
+.cart-number{
+    background:var(--blue);
+    padding:3px 7px;
     border-radius:20px;
     margin-left:4px;
 }
 
-/* HERO */
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero{
-    min-height:430px;
+    min-height:440px;
     display:flex;
     align-items:center;
     background:
-        radial-gradient(circle at 80% 40%,rgba(0,115,255,.22),transparent 30%),
-        linear-gradient(135deg,#050913,#09152a);
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(22,140,255,.22),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #050912,
+            #0a1629
+        );
 }
 
 .hero-inner{
@@ -172,77 +234,83 @@ header{
 }
 
 .hero h1{
+    max-width:780px;
     font-size:52px;
-    max-width:750px;
     line-height:1.05;
-    margin-bottom:18px;
+    margin-bottom:20px;
 }
 
 .hero h1 span{
-    color:#168cff;
+    color:var(--blue);
 }
 
 .hero p{
-    color:#b9c7da;
-    max-width:650px;
+    max-width:680px;
+    color:#b4c0d0;
     font-size:18px;
     line-height:1.7;
 }
 
 .hero-buttons{
     display:flex;
-    gap:12px;
-    margin-top:25px;
     flex-wrap:wrap;
+    gap:12px;
+    margin-top:28px;
 }
 
 .hero-btn{
     border:none;
+    background:var(--blue);
+    color:#fff;
     padding:14px 22px;
     border-radius:12px;
-    cursor:pointer;
-    font-weight:bold;
-    background:#168cff;
-    color:white;
+    font-weight:700;
 }
 
 .hero-btn.secondary{
-    background:#111b2b;
-    border:1px solid #2b3c57;
+    background:#101b2b;
+    border:1px solid var(--border);
 }
 
-/* CAMPAIGN */
+/* =========================================================
+   KAMPANYA
+========================================================= */
 
 .campaign{
     overflow:hidden;
-    background:#0c1524;
-    border-top:1px solid #172337;
-    border-bottom:1px solid #172337;
-    padding:12px 0;
+    border-top:1px solid #17253a;
+    border-bottom:1px solid #17253a;
+    background:#0b1422;
+    padding:13px 0;
 }
 
 .campaign-track{
-    display:flex;
     width:max-content;
-    animation:marquee 22s linear infinite;
+    display:flex;
+    animation:campaignMove 24s linear infinite;
 }
 
 .campaign-item{
     margin-right:70px;
-    color:#fff;
-    font-weight:bold;
+    font-weight:700;
 }
 
 .campaign-item span{
-    color:#168cff;
+    color:var(--blue);
 }
 
-@keyframes marquee{
-    from{transform:translateX(0)}
-    to{transform:translateX(-50%)}
+@keyframes campaignMove{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
 }
 
-/* SECTION */
+/* =========================================================
+   SECTION
+========================================================= */
 
 .section{
     max-width:1250px;
@@ -261,38 +329,40 @@ header{
 }
 
 .section-title p{
-    color:#91a0b5;
+    color:var(--muted);
 }
 
-/* FILTER */
+/* =========================================================
+   FİLTRE
+========================================================= */
 
 .filters{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
+    grid-template-columns:1fr 1fr auto;
+    gap:12px;
     margin-bottom:30px;
 }
 
-.filters select{
+.filters select,
+.reset-filter{
     width:100%;
-    background:#101827;
-    color:white;
-    border:1px solid #263650;
-    padding:14px;
+    min-height:47px;
+    padding:12px;
     border-radius:10px;
+    border:1px solid var(--border);
+    background:#101827;
+    color:#fff;
     outline:none;
 }
 
-.reset-btn{
-    background:#111b2b;
-    border:1px solid #263650;
-    color:white;
-    padding:12px;
-    border-radius:10px;
-    cursor:pointer;
+.reset-filter{
+    width:auto;
+    padding:12px 18px;
 }
 
-/* PRODUCTS */
+/* =========================================================
+   ÜRÜNLER
+========================================================= */
 
 .products{
     display:grid;
@@ -300,24 +370,24 @@ header{
     gap:18px;
 }
 
-.product{
-    background:#0d1523;
-    border:1px solid #1b2a40;
-    border-radius:17px;
+.product-card{
     overflow:hidden;
+    border-radius:17px;
+    background:#0d1522;
+    border:1px solid #1b2a40;
     transition:.25s;
 }
 
-.product:hover{
+.product-card:hover{
     transform:translateY(-5px);
-    border-color:#168cff;
-    box-shadow:0 12px 35px rgba(0,0,0,.25);
+    border-color:var(--blue);
+    box-shadow:0 12px 35px rgba(0,0,0,.3);
 }
 
 .product-image{
-    height:245px;
-    background:#fff;
     position:relative;
+    height:250px;
+    background:#fff;
     overflow:hidden;
 }
 
@@ -325,43 +395,38 @@ header{
     width:100%;
     height:100%;
     object-fit:contain;
-    transition:.3s;
+    display:block;
+    transition:.25s;
 }
 
-.product-content{
+.product-body{
     padding:17px;
 }
 
-.product-category{
-    color:#168cff;
+.category-label{
+    color:var(--blue);
     font-size:12px;
-    font-weight:bold;
+    font-weight:700;
     text-transform:uppercase;
 }
 
-.product h3{
-    margin:7px 0;
+.product-body h3{
     font-size:17px;
-    line-height:1.3;
+    line-height:1.35;
+    margin:7px 0;
 }
 
 .product-description{
-    color:#8796ab;
+    min-height:40px;
+    color:#8d9bb0;
     font-size:13px;
     line-height:1.5;
-    min-height:40px;
 }
 
-.price{
-    color:#fff;
-    font-size:21px;
-    font-weight:900;
+.product-price{
     margin:14px 0;
-}
-
-.price span{
-    color:#168cff;
-    font-size:14px;
+    font-size:22px;
+    font-weight:900;
 }
 
 .product-options{
@@ -373,29 +438,38 @@ header{
 
 .product-options select{
     width:100%;
-    background:#111c2c;
-    color:white;
-    border:1px solid #2a3c57;
     padding:9px;
     border-radius:8px;
+    border:1px solid #2b3d57;
+    background:#111c2b;
+    color:#fff;
+    outline:none;
 }
 
 .add-cart{
     width:100%;
-    border:none;
     padding:12px;
+    border:none;
     border-radius:10px;
-    background:#168cff;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
+    background:var(--blue);
+    color:#fff;
+    font-weight:700;
 }
 
 .add-cart:hover{
-    background:#0875df;
+    background:var(--blue-dark);
 }
 
-/* REVIEWS */
+.no-results{
+    grid-column:1/-1;
+    text-align:center;
+    padding:50px 20px;
+    color:var(--muted);
+}
+
+/* =========================================================
+   REVIEWS
+========================================================= */
 
 .reviews{
     display:grid;
@@ -404,7 +478,7 @@ header{
 }
 
 .review{
-    background:#0d1523;
+    background:#0d1522;
     border:1px solid #1b2a40;
     padding:22px;
     border-radius:15px;
@@ -412,11 +486,12 @@ header{
 
 .stars{
     color:#ffd21f;
+    letter-spacing:2px;
     margin-bottom:10px;
 }
 
 .review p{
-    color:#b6c1d1;
+    color:#b3bfd0;
     line-height:1.6;
 }
 
@@ -425,11 +500,13 @@ header{
     margin-top:14px;
 }
 
-/* CONTACT */
+/* =========================================================
+   İLETİŞİM
+========================================================= */
 
-.contact{
-    background:#09111e;
-    border-top:1px solid #172337;
+.contact-section{
+    background:#09111d;
+    border-top:1px solid #17253a;
 }
 
 .contact-grid{
@@ -439,23 +516,71 @@ header{
 }
 
 .contact-box{
-    background:#0d1726;
-    border:1px solid #1c2b40;
-    border-radius:15px;
     padding:25px;
+    border-radius:15px;
+    background:#0d1725;
+    border:1px solid #1c2c43;
 }
 
 .contact-box h3{
+    color:var(--blue);
     margin-bottom:10px;
-    color:#168cff;
 }
 
 .contact-box p{
-    color:#aab6c8;
+    color:#aab7c8;
     line-height:1.7;
 }
 
-/* FOOTER */
+/* =========================================================
+   SOSYAL MEDYA
+========================================================= */
+
+.socials{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:13px;
+    margin:20px 0;
+}
+
+.social{
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:14px;
+    background:#101827;
+    border:1px solid #293950;
+    text-decoration:none;
+    transition:.25s;
+}
+
+.social:hover{
+    transform:translateY(-4px);
+    border-color:var(--blue);
+    box-shadow:0 8px 25px rgba(22,140,255,.2);
+}
+
+.social svg{
+    width:25px;
+    height:25px;
+    fill:none;
+    stroke:#fff;
+    stroke-width:1.8;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.facebook svg{
+    fill:#fff;
+    stroke:none;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
     padding:30px 20px;
@@ -464,53 +589,46 @@ footer{
     border-top:1px solid #182438;
 }
 
-.socials{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    margin:15px 0;
-}
+/* =========================================================
+   WHATSAPP
+========================================================= */
 
-.socials a{
-    text-decoration:none;
-    color:white;
-    background:#101a2a;
-    border:1px solid #27364d;
-    padding:10px 14px;
-    border-radius:10px;
-}
-
-/* WHATSAPP */
-
-.whatsapp{
+.whatsapp-float{
     position:fixed;
     right:20px;
     bottom:20px;
     width:58px;
     height:58px;
-    border-radius:50%;
-    background:#25d366;
     display:flex;
     align-items:center;
     justify-content:center;
-    color:white;
-    font-size:28px;
+    border-radius:50%;
+    background:var(--green);
+    color:#fff;
     text-decoration:none;
     z-index:4000;
-    box-shadow:0 5px 25px rgba(0,0,0,.35);
+    box-shadow:0 6px 25px rgba(0,0,0,.35);
 }
 
-/* MODALS */
+.whatsapp-float svg{
+    width:29px;
+    height:29px;
+    fill:#fff;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
 
 .modal{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.75);
     z-index:10000;
     display:none;
     align-items:center;
     justify-content:center;
     padding:20px;
+    background:rgba(0,0,0,.78);
 }
 
 .modal.active{
@@ -518,31 +636,86 @@ footer{
 }
 
 .modal-box{
+    position:relative;
     width:100%;
     max-width:650px;
     max-height:90vh;
     overflow:auto;
-    background:#0c1523;
-    border:1px solid #263750;
-    border-radius:18px;
     padding:25px;
-    position:relative;
+    border-radius:18px;
+    background:#0c1523;
+    border:1px solid #293a54;
 }
 
-.close{
+.modal-close{
     position:absolute;
-    top:12px;
+    top:10px;
     right:15px;
-    background:none;
     border:none;
+    background:none;
     color:#fff;
-    font-size:28px;
-    cursor:pointer;
+    font-size:30px;
 }
 
 .modal-box h2{
     margin-bottom:20px;
 }
+
+/* =========================================================
+   SEPET
+========================================================= */
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    padding:15px 0;
+    border-bottom:1px solid #223149;
+}
+
+.cart-info{
+    flex:1;
+}
+
+.cart-info strong{
+    display:block;
+    margin-bottom:5px;
+}
+
+.cart-info small{
+    color:#8998ad;
+    line-height:1.6;
+}
+
+.remove-cart{
+    align-self:center;
+    border:1px solid #35455d;
+    border-radius:8px;
+    padding:8px 10px;
+    background:#182333;
+    color:#ff8585;
+}
+
+.cart-total{
+    text-align:right;
+    font-size:22px;
+    font-weight:900;
+    margin:20px 0;
+}
+
+.order-button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:var(--green);
+    color:#fff;
+    font-weight:700;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
 
 .form-group{
     margin-bottom:14px;
@@ -551,17 +724,17 @@ footer{
 .form-group label{
     display:block;
     margin-bottom:6px;
-    color:#b6c3d6;
+    color:#b5c1d1;
 }
 
 .form-group input,
 .form-group textarea{
     width:100%;
-    background:#111b2a;
-    color:#fff;
-    border:1px solid #293b55;
     padding:12px;
     border-radius:9px;
+    border:1px solid #293b55;
+    background:#111b2a;
+    color:#fff;
     outline:none;
 }
 
@@ -570,57 +743,9 @@ footer{
     resize:vertical;
 }
 
-.order-btn{
-    width:100%;
-    padding:14px;
-    border:none;
-    border-radius:10px;
-    background:#25d366;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-/* CART */
-
-.cart-item{
-    display:flex;
-    justify-content:space-between;
-    gap:15px;
-    padding:15px 0;
-    border-bottom:1px solid #213047;
-}
-
-.cart-item-info{
-    flex:1;
-}
-
-.cart-item-info strong{
-    display:block;
-    margin-bottom:5px;
-}
-
-.cart-item-info small{
-    color:#8d9bb0;
-}
-
-.remove-btn{
-    background:#1b2637;
-    color:#ff7777;
-    border:1px solid #35435a;
-    padding:7px 10px;
-    border-radius:7px;
-    cursor:pointer;
-}
-
-.cart-total{
-    font-size:22px;
-    font-weight:bold;
-    margin:20px 0;
-    text-align:right;
-}
-
-/* CHAT */
+/* =========================================================
+   CANLI DESTEK
+========================================================= */
 
 .chat-button{
     position:fixed;
@@ -628,12 +753,11 @@ footer{
     bottom:90px;
     width:58px;
     height:58px;
-    border-radius:50%;
     border:none;
-    background:#168cff;
-    color:white;
+    border-radius:50%;
+    background:var(--blue);
+    color:#fff;
     font-size:25px;
-    cursor:pointer;
     z-index:4000;
 }
 
@@ -642,14 +766,14 @@ footer{
     right:20px;
     bottom:160px;
     width:350px;
-    max-width:calc(100vw - 40px);
-    background:#0b1422;
-    border:1px solid #263750;
-    border-radius:18px;
+    max-width:calc(100vw - 30px);
     overflow:hidden;
-    z-index:9000;
     display:none;
-    box-shadow:0 15px 50px rgba(0,0,0,.4);
+    border-radius:18px;
+    background:#0b1422;
+    border:1px solid #293b55;
+    box-shadow:0 15px 50px rgba(0,0,0,.45);
+    z-index:9000;
 }
 
 .chat-box.active{
@@ -657,26 +781,25 @@ footer{
 }
 
 .chat-header{
-    padding:16px;
-    background:#101e32;
     display:flex;
     justify-content:space-between;
+    padding:16px;
+    background:#101e32;
 }
 
 .chat-header strong{
-    color:#168cff;
+    color:var(--blue);
 }
 
 .chat-close{
     border:none;
     background:none;
-    color:white;
-    cursor:pointer;
+    color:#fff;
 }
 
 .chat-messages{
     height:300px;
-    overflow:auto;
+    overflow-y:auto;
     padding:15px;
 }
 
@@ -694,54 +817,46 @@ footer{
 }
 
 .user-message{
-    background:#168cff;
     margin-left:auto;
+    background:var(--blue);
 }
 
 .chat-input{
     display:flex;
-    border-top:1px solid #263750;
+    border-top:1px solid #293b55;
 }
 
 .chat-input input{
     flex:1;
-    background:#0b1422;
-    border:none;
-    color:#fff;
+    min-width:0;
     padding:13px;
+    border:none;
     outline:none;
+    background:#0b1422;
+    color:#fff;
 }
 
 .chat-input button{
     border:none;
-    background:#168cff;
+    background:var(--blue);
     color:#fff;
     padding:0 17px;
-    cursor:pointer;
 }
 
-/* NO RESULT */
+/* =========================================================
+   MOBİL
+========================================================= */
 
-.no-result{
-    grid-column:1/-1;
-    text-align:center;
-    padding:40px;
-    color:#8998ac;
-}
+@media(max-width:1050px){
 
-/* RESPONSIVE */
-
-@media(max-width:1000px){
     .products{
         grid-template-columns:repeat(3,1fr);
     }
 
-    .hero h1{
-        font-size:42px;
-    }
 }
 
-@media(max-width:750px){
+@media(max-width:800px){
+
     .nav{
         flex-wrap:wrap;
     }
@@ -750,10 +865,14 @@ footer{
         width:100%;
     }
 
-    .search-area{
-        order:3;
+    .search-box{
         width:100%;
         flex-basis:100%;
+        order:3;
+    }
+
+    .hero h1{
+        font-size:42px;
     }
 
     .products{
@@ -769,16 +888,30 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .hero{
-        min-height:380px;
+    .reset-filter{
+        width:100%;
+    }
+
+}
+
+@media(max-width:520px){
+
+    .nav{
+        padding:12px;
+    }
+
+    .hero-inner{
+        padding:55px 20px;
     }
 
     .hero h1{
-        font-size:36px;
+        font-size:35px;
     }
-}
 
-@media(max-width:500px){
+    .hero p{
+        font-size:16px;
+    }
+
     .products{
         grid-template-columns:1fr;
     }
@@ -788,68 +921,105 @@ footer{
     }
 
     .welcome-box h1{
-        font-size:30px;
+        font-size:32px;
     }
 
     .chat-box{
         right:10px;
-        bottom:150px;
+        bottom:155px;
         max-width:calc(100vw - 20px);
-    }
-
-    .whatsapp{
-        right:15px;
     }
 
     .chat-button{
         right:15px;
     }
+
+    .whatsapp-float{
+        right:15px;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- WELCOME -->
+<!-- =====================================================
+     HOŞ GELDİNİZ
+===================================================== -->
 
 <div id="welcome">
+
     <div class="welcome-box">
-        <div class="welcome-logo">T</div>
+
+        <div class="welcome-logo">
+            T
+        </div>
+
         <h1>TeknoBiz</h1>
-        <p>Teknoloji & Aksesuar Dünyasına Hoş Geldiniz</p>
-        <button class="enter-btn" onclick="enterSite()">Siteye Giriş Yap</button>
+
+        <p>
+            Teknoloji & Aksesuar Dünyasına Hoş Geldiniz
+        </p>
+
+        <button
+            class="enter-btn"
+            onclick="enterSite()"
+        >
+            Siteye Giriş Yap
+        </button>
+
     </div>
+
 </div>
 
-<!-- HEADER -->
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
+
     <div class="nav">
 
         <div class="logo">
             Tekno<span>Biz</span>
         </div>
 
-        <div class="search-area">
+        <div class="search-box">
+
             <input
-                type="text"
                 id="searchInput"
-                placeholder="Ürün ara... Örn: şarj, kılıf, difüzör"
-                oninput="searchProducts()"
+                type="search"
+                autocomplete="off"
+                placeholder="Ürün ara... örn: iPhone 15, şarj, kılıf"
             >
+
         </div>
 
-        <button class="cart-button" onclick="openCart()">
+        <button
+            class="cart-button"
+            onclick="openCart()"
+        >
             🛒 Sepet
-            <span class="cart-count" id="cartCount">0</span>
+            <span
+                id="cartNumber"
+                class="cart-number"
+            >0</span>
         </button>
 
     </div>
+
 </header>
 
-<!-- HERO -->
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
+
     <div class="hero-inner">
 
         <h1>
@@ -858,34 +1028,48 @@ footer{
         </h1>
 
         <p>
-            Telefon kılıfları, kırılmaz camlar, şarj ürünleri,
-            dekoratif ürünler ve daha fazlası TeknoBiz'de.
+            Telefon kılıfları, kırılmaz camlar,
+            şarj ürünleri, aksesuarlar ve daha fazlası
+            TeknoBiz'de.
         </p>
 
         <div class="hero-buttons">
-            <button class="hero-btn" onclick="document.getElementById('productsSection').scrollIntoView()">
+
+            <button
+                class="hero-btn"
+                onclick="scrollToProducts()"
+            >
                 Ürünleri İncele
             </button>
 
-            <button class="hero-btn secondary" onclick="openChat()">
+            <button
+                class="hero-btn secondary"
+                onclick="openChat()"
+            >
                 💬 Canlı Destek
             </button>
+
         </div>
 
     </div>
+
 </section>
 
-<!-- CAMPAIGN -->
+
+<!-- =====================================================
+     KAMPANYA
+===================================================== -->
 
 <div class="campaign">
+
     <div class="campaign-track">
 
         <div class="campaign-item">
-            🔥 <span>TeknoBiz Kampanya</span> Özel Fiyatlar
+            🔥 <span>TeknoBiz Kampanya</span>
         </div>
 
         <div class="campaign-item">
-            📱 Telefon Kılıfları
+            📱 iPhone Kılıfları
         </div>
 
         <div class="campaign-item">
@@ -897,11 +1081,11 @@ footer{
         </div>
 
         <div class="campaign-item">
-            🔥 <span>TeknoBiz Kampanya</span> Özel Fiyatlar
+            🔥 <span>TeknoBiz Kampanya</span>
         </div>
 
         <div class="campaign-item">
-            📱 Telefon Kılıfları
+            📱 iPhone Kılıfları
         </div>
 
         <div class="campaign-item">
@@ -913,20 +1097,33 @@ footer{
         </div>
 
     </div>
+
 </div>
 
-<!-- PRODUCTS -->
 
-<section class="section" id="productsSection">
+<!-- =====================================================
+     ÜRÜNLER
+===================================================== -->
+
+<section
+    class="section"
+    id="productsSection"
+>
 
     <div class="section-title">
+
         <h2>Ürünlerimiz</h2>
-        <p>Aradığın ürünü seç, modelini belirle ve sepete ekle.</p>
+
+        <p>
+            Modelini seç, ürününü sepete ekle.
+        </p>
+
     </div>
+
 
     <div class="filters">
 
-        <select id="categoryFilter" onchange="filterProducts()">
+        <select id="categoryFilter">
             <option value="">Tüm Kategoriler</option>
             <option value="Kılıf">Kılıf</option>
             <option value="Cam">Kırılmaz Cam</option>
@@ -936,104 +1133,293 @@ footer{
             <option value="Şarj">Şarj</option>
         </select>
 
-        <select id="modelFilter" onchange="filterProducts()">
-            <option value="">Tüm Modeller</option>
+
+        <select id="modelFilter">
+
+            <option value="">
+                Tüm Modeller
+            </option>
+
         </select>
 
-        <button class="reset-btn" onclick="resetFilters()">
+
+        <button
+            class="reset-filter"
+            onclick="resetFilters()"
+        >
             Filtreleri Temizle
         </button>
 
     </div>
 
-    <div class="products" id="products"></div>
+
+    <div
+        class="products"
+        id="products"
+    ></div>
 
 </section>
 
-<!-- REVIEWS -->
+
+<!-- =====================================================
+     YORUMLAR
+===================================================== -->
 
 <section class="section">
 
     <div class="section-title">
+
         <h2>Müşteri Yorumları</h2>
-        <p>TeknoBiz müşterilerinden gelen yorumlar.</p>
+
+        <p>
+            TeknoBiz müşterilerinden.
+        </p>
+
     </div>
+
 
     <div class="reviews">
 
         <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>Ürünler gayet kaliteli, iletişim de çok iyi. Tekrar alışveriş yaparım.</p>
-            <strong>Ahmet</strong>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                Ürünler kaliteli, iletişim çok iyi.
+                Tekrar alışveriş yaparım.
+            </p>
+
+            <strong>
+                Ahmet
+            </strong>
+
         </div>
 
-        <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>Kılıf ve kırılmaz cam aldım. Ürünlerden memnun kaldım.</p>
-            <strong>Mehmet</strong>
-        </div>
 
         <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>Şarj ürünleri ve aksesuar çeşitleri güzel. Tavsiye ederim.</p>
-            <strong>Emre</strong>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                Kılıf ve kırılmaz cam aldım.
+                Gayet memnun kaldım.
+            </p>
+
+            <strong>
+                Mehmet
+            </strong>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                Şarj ürünleri ve aksesuar çeşitleri
+                güzel.
+            </p>
+
+            <strong>
+                Emre
+            </strong>
+
         </div>
 
     </div>
 
 </section>
 
-<!-- CONTACT -->
 
-<section class="contact">
+<!-- =====================================================
+     İLETİŞİM
+===================================================== -->
+
+<section class="contact-section">
+
     <div class="section">
 
         <div class="section-title">
+
             <h2>İletişim</h2>
-            <p>TeknoBiz'e ulaşmak için</p>
+
+            <p>
+                TeknoBiz'e ulaşın.
+            </p>
+
         </div>
+
 
         <div class="contact-grid">
 
             <div class="contact-box">
+
                 <h3>📍 Adres</h3>
+
                 <p>
                     Süleyman Demirel Bulvarı No:15<br>
                     Bucak / Burdur
                 </p>
+
             </div>
 
+
             <div class="contact-box">
+
                 <h3>📞 Telefon</h3>
+
                 <p>
                     0505 999 9009<br>
                     09:00 - 21:00
                 </p>
+
             </div>
 
+
             <div class="contact-box">
+
                 <h3>✉️ E-posta</h3>
+
                 <p>
                     teknobiz15@gmail.com<br>
                     Pazar günleri kapalıdır.
                 </p>
+
             </div>
 
         </div>
 
     </div>
+
 </section>
 
-<!-- FOOTER -->
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
     <div class="socials">
-        <a href="https://instagram.com/TeknoBiz7" target="_blank">Instagram</a>
-        <a href="https://facebook.com/bucakteknobiz15" target="_blank">Facebook</a>
-        <a href="mailto:teknobiz15@gmail.com">Gmail</a>
-        <a href="tel:05059999009">Telefon</a>
+
+        <!-- INSTAGRAM -->
+
+        <a
+            class="social"
+            href="https://instagram.com/TeknoBiz7"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+        >
+
+            <svg viewBox="0 0 24 24">
+
+                <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="5"
+                ></rect>
+
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="4"
+                ></circle>
+
+                <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1"
+                ></circle>
+
+            </svg>
+
+        </a>
+
+
+        <!-- FACEBOOK -->
+
+        <a
+            class="social"
+            href="https://facebook.com/bucakteknobiz15"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook"
+        >
+
+            <svg viewBox="0 0 24 24">
+
+                <path
+                    d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1z"
+                ></path>
+
+            </svg>
+
+        </a>
+
+
+        <!-- GMAIL -->
+
+        <a
+            class="social"
+            href="mailto:teknobiz15@gmail.com"
+            aria-label="Gmail"
+        >
+
+            <svg viewBox="0 0 24 24">
+
+                <rect
+                    x="3"
+                    y="5"
+                    width="18"
+                    height="14"
+                    rx="2"
+                ></rect>
+
+                <path
+                    d="M4 7l8 6 8-6"
+                ></path>
+
+            </svg>
+
+        </a>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            class="social"
+            href="https://wa.me/905059999009"
+            target="_blank"
+            rel="noopener"
+            aria-label="WhatsApp"
+        >
+
+            <svg viewBox="0 0 24 24">
+
+                <path
+                    d="M20 4.5A9.9 9.9 0 0 0 12.1 1C6.6 1 2.1 5.5 2.1 11c0 1.8.5 3.5 1.4 5L2 22l6.2-1.6c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10 0-2.7-1.1-5.2-3-7.1z"
+                ></path>
+
+                <path
+                    d="M8.5 7.5c.3-.3.7-.3 1-.1l1.1 1.7c.2.3.2.6 0 .8l-.6.6c.7 1.2 1.6 2.1 2.8 2.8l.6-.6c.2-.2.6-.2.8 0l1.7 1.1c.3.2.3.7.1 1-.4.6-1.1 1-1.8 1-1.4 0-3.6-1.2-5.2-2.8S6.2 9.9 6.2 8.5c0-.8.4-1.5 1-2z"
+                ></path>
+
+            </svg>
+
+        </a>
+
     </div>
+
 
     <p>
         © 2026 TeknoBiz | Since 2016
@@ -1045,70 +1431,142 @@ footer{
 
 </footer>
 
-<!-- WHATSAPP -->
+
+<!-- =====================================================
+     WHATSAPP FLOAT
+===================================================== -->
 
 <a
-    class="whatsapp"
+    class="whatsapp-float"
     href="https://wa.me/905059999009"
     target="_blank"
-    title="WhatsApp"
+    rel="noopener"
+    aria-label="WhatsApp"
 >
-    ☎
+
+    <svg viewBox="0 0 24 24">
+
+        <path d="M20 4.5A9.9 9.9 0 0 0 12.1 1C6.6 1 2.1 5.5 2.1 11c0 1.8.5 3.5 1.4 5L2 22l6.2-1.6c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10 0-2.7-1.1-5.2-3-7.1z"/>
+
+        <path
+            d="M8.5 7.5c.3-.3.7-.3 1-.1l1.1 1.7c.2.3.2.6 0 .8l-.6.6c.7 1.2 1.6 2.1 2.8 2.8l.6-.6c.2-.2.6-.2.8 0l1.7 1.1c.3.2.3.7.1 1-.4.6-1.1 1-1.8 1-1.4 0-3.6-1.2-5.2-2.8S6.2 9.9 6.2 8.5c0-.8.4-1.5 1-2z"
+            fill="#25d366"
+        />
+
+    </svg>
+
 </a>
 
-<!-- CHAT BUTTON -->
 
-<button class="chat-button" onclick="openChat()">
+<!-- =====================================================
+     CANLI DESTEK BUTONU
+===================================================== -->
+
+<button
+    class="chat-button"
+    onclick="openChat()"
+    aria-label="Canlı destek"
+>
     💬
 </button>
 
-<!-- CHAT -->
 
-<div class="chat-box" id="chatBox">
+<!-- =====================================================
+     CANLI DESTEK
+===================================================== -->
+
+<div
+    class="chat-box"
+    id="chatBox"
+>
 
     <div class="chat-header">
-        <strong>Mustafa Bey</strong>
-        <button class="chat-close" onclick="closeChat()">✕</button>
+
+        <strong>
+            Mustafa Bey
+        </strong>
+
+        <button
+            class="chat-close"
+            onclick="closeChat()"
+        >
+            ✕
+        </button>
+
     </div>
 
-    <div class="chat-messages" id="chatMessages">
+
+    <div
+        class="chat-messages"
+        id="chatMessages"
+    >
 
         <div class="message bot-message">
+
             Merhaba 👋 TeknoBiz'e hoş geldiniz.
             Size nasıl yardımcı olabilirim?
+
         </div>
 
     </div>
 
+
     <div class="chat-input">
+
         <input
             id="chatInput"
             type="text"
             placeholder="Mesajınızı yazın..."
-            onkeydown="if(event.key==='Enter') sendMessage()"
         >
-        <button onclick="sendMessage()">➤</button>
+
+        <button
+            onclick="sendMessage()"
+        >
+            ➤
+        </button>
+
     </div>
 
 </div>
 
-<!-- CART MODAL -->
 
-<div class="modal" id="cartModal">
+<!-- =====================================================
+     SEPET MODALI
+===================================================== -->
+
+<div
+    class="modal"
+    id="cartModal"
+>
 
     <div class="modal-box">
 
-        <button class="close" onclick="closeCart()">×</button>
+        <button
+            class="modal-close"
+            onclick="closeCart()"
+        >
+            ×
+        </button>
 
-        <h2>🛒 Sepetim</h2>
+        <h2>
+            🛒 Sepetim
+        </h2>
 
         <div id="cartItems"></div>
 
         <div class="cart-total">
-            Toplam: <span id="cartTotal">0 TL</span>
+
+            Toplam:
+            <span id="cartTotal">
+                0 TL
+            </span>
+
         </div>
 
-        <button class="order-btn" onclick="openPurchase()">
+        <button
+            class="order-button"
+            onclick="openPurchase()"
+        >
             WhatsApp'tan Sipariş Ver
         </button>
 
@@ -1116,37 +1574,92 @@ footer{
 
 </div>
 
-<!-- PURCHASE MODAL -->
 
-<div class="modal" id="purchaseModal">
+<!-- =====================================================
+     SİPARİŞ MODALI
+===================================================== -->
+
+<div
+    class="modal"
+    id="purchaseModal"
+>
 
     <div class="modal-box">
 
-        <button class="close" onclick="closePurchase()">×</button>
+        <button
+            class="modal-close"
+            onclick="closePurchase()"
+        >
+            ×
+        </button>
 
-        <h2>📦 Sipariş Bilgileri</h2>
+        <h2>
+            📦 Sipariş Bilgileri
+        </h2>
 
-        <div class="form-group">
-            <label>Ad Soyad</label>
-            <input id="customerName" placeholder="Adınız Soyadınız">
-        </div>
-
-        <div class="form-group">
-            <label>Telefon</label>
-            <input id="customerPhone" placeholder="05xx xxx xx xx">
-        </div>
 
         <div class="form-group">
-            <label>Adres</label>
-            <textarea id="customerAddress" placeholder="Teslimat adresiniz"></textarea>
+
+            <label>
+                Ad Soyad
+            </label>
+
+            <input
+                id="customerName"
+                type="text"
+                placeholder="Adınız Soyadınız"
+            >
+
         </div>
+
 
         <div class="form-group">
-            <label>Sipariş Notu</label>
-            <textarea id="customerNote" placeholder="Varsa sipariş notunuz"></textarea>
+
+            <label>
+                Telefon
+            </label>
+
+            <input
+                id="customerPhone"
+                type="tel"
+                placeholder="05xx xxx xx xx"
+            >
+
         </div>
 
-        <button class="order-btn" onclick="sendOrder()">
+
+        <div class="form-group">
+
+            <label>
+                Adres
+            </label>
+
+            <textarea
+                id="customerAddress"
+                placeholder="Teslimat adresiniz"
+            ></textarea>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Sipariş Notu
+            </label>
+
+            <textarea
+                id="customerNote"
+                placeholder="Varsa sipariş notunuz"
+            ></textarea>
+
+        </div>
+
+
+        <button
+            class="order-button"
+            onclick="sendOrder()"
+        >
             WhatsApp'tan Siparişi Gönder
         </button>
 
@@ -1154,791 +1667,1236 @@ footer{
 
 </div>
 
+
 <script>
 
-/* PRODUCTS */
+/* =========================================================
+   ÜRÜN FOTOĞRAFLARI
+========================================================= */
 
-const products = [
+/*
+   Harici görsel açılmazsa placeholder yerine
+   güvenli SVG görsel kullanıyoruz.
+*/
 
-{
-id:1,
-category:"Kılıf",
-title:"Şeffaf MagSafe Uyumlu iPhone Kılıfı",
-price:750,
-description:"MagSafe uyumlu şeffaf telefon kılıfı.",
-image:"https://casefit.ca/cdn/shop/files/clear-magsafe-case-iphone-14-939068.jpg?v=1727610760",
-models:[
-"iPhone X",
-"iPhone XS",
-"iPhone 11",
-"iPhone 11 Pro",
-"iPhone 11 Pro Max",
-"iPhone 12",
-"iPhone 12 mini",
-"iPhone 13",
-"iPhone 13 mini",
-"iPhone 14",
-"iPhone 14 Pro",
-"iPhone 15",
-"iPhone 15 Pro",
-"iPhone 16",
-"iPhone 16 Pro",
-"iPhone 17",
-"iPhone 17 Pro",
-"iPhone 17 Pro Max",
-"iPhone 18",
-"Samsung S24",
-"Samsung S25"
-]
-},
+const fallbackImage =
+"data:image/svg+xml;charset=UTF-8," +
+encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
+    <rect width="100%" height="100%" fill="#f5f5f5"/>
+    <text
+        x="50%"
+        y="48%"
+        text-anchor="middle"
+        font-size="44"
+        font-family="Arial"
+        font-weight="bold"
+        fill="#111"
+    >
+        TeknoBiz
+    </text>
+    <text
+        x="50%"
+        y="58%"
+        text-anchor="middle"
+        font-size="24"
+        font-family="Arial"
+        fill="#555"
+    >
+        Ürün Görseli
+    </text>
+</svg>
+`);
 
-{
-id:2,
-category:"Kılıf",
-title:"Guess Telefon Kılıfı",
-price:750,
-description:"Şık Guess tasarımlı telefon kılıfı.",
-image:"https://guessmobile.com.tr/cdn/shop/files/apple-iphone-16-kilif-guess-lisansli-magsafe-sarj-ozellikli-pu-4g-desenli-metal-plaka-klasik-logolu-kapak-kahverengi-002_compact.jpg?v=1738921425",
-models:[
-"iPhone 11",
-"iPhone 12",
-"iPhone 13",
-"iPhone 14",
-"iPhone 15",
-"iPhone 16",
-"iPhone 17"
-]
-},
 
-{
-id:3,
-category:"Kılıf",
-title:"Tek Renk iPhone Kılıfı",
-price:650,
-description:"Model ve rengini seçebileceğiniz tek renk kılıf.",
-image:"https://static-01.daraz.lk/p/b197f61b49568b1376a2e4bc35685e38.jpg",
-models:[
-"iPhone 11",
-"iPhone 12",
-"iPhone 12 mini",
-"iPhone 13",
-"iPhone 13 mini",
-"iPhone 14",
-"iPhone 15",
-"iPhone 16",
-"iPhone 17",
-"iPhone 17 Pro",
-"iPhone 17 Pro Max",
-"iPhone 18"
-],
-colors:[
-"Siyah",
-"Beyaz",
-"Kırmızı",
-"Mavi",
-"Yeşil",
-"Mor",
-"Pembe",
-"Sarı"
-]
-},
+/* =========================================================
+   TÜM IPHONE MODELLERİ
+========================================================= */
 
-{
-id:4,
-category:"Kılıf",
-title:"Taşlı iPhone Kılıfı",
-price:650,
-description:"Taş detaylı dikkat çekici iPhone kılıfı.",
-image:"https://maisonrogue.com/cdn/shop/files/BRIN2017PM-Rhinestone-Black-iPhone-17-Pro-Max-Case-01.jpg?v=1774645879",
-models:[
-"iPhone 11",
-"iPhone 12",
-"iPhone 13",
-"iPhone 14",
-"iPhone 15",
-"iPhone 16",
-"iPhone 17",
-"iPhone 17 Pro Max"
-]
-},
+const iphoneModels = [
 
-{
-id:5,
-category:"Cam",
-title:"Anti-Statik Kırılmaz Cam",
-price:1000,
-description:"Telefon ekranı için anti-statik kırılmaz cam.",
-image:"https://cdn11.bigcommerce.com/s-jwqtot7a1x/images/stencil/1280x1280/products/420/1526/Single3__94002.1636030361.jpg?c=2",
-models:[
-"iPhone X",
-"iPhone 11",
-"iPhone 12",
-"iPhone 13",
-"iPhone 14",
-"iPhone 15",
-"iPhone 16",
-"iPhone 17",
-"iPhone 18"
-]
-},
+    "iPhone 11",
+    "iPhone 11 Pro",
+    "iPhone 11 Pro Max",
 
-{
-id:6,
-category:"Aksesuar",
-title:"MagSafe Uyumlu Cüzdan",
-price:500,
-description:"Telefon arkasına manyetik olarak takılabilen MagSafe cüzdan.",
-image:"https://telesalon.pl/hpeciai/679798f589b771ea7a2b7e48413393ff/pol_pl_Portfel-Apple-Leather-Wallet-iPhone-MagSafe-morski-Baltic-Blue-12828_1.jpg"
-},
+    "iPhone 12",
+    "iPhone 12 mini",
+    "iPhone 12 Pro",
+    "iPhone 12 Pro Max",
 
-{
-id:7,
-category:"Kılıf",
-title:"Karbon Kılıf",
-price:1000,
-description:"Karbon görünümlü dayanıklı telefon kılıfı.",
-image:"https://www.carboncraze.co.uk/cdn/shop/files/IMG_8221.jpg?crop=center&height=1200&v=1695905471&width=1200",
-models:[
-"iPhone 14",
-"iPhone 14 Pro",
-"iPhone 15",
-"iPhone 15 Pro",
-"iPhone 16",
-"iPhone 16 Pro",
-"iPhone 17",
-"iPhone 17 Pro",
-"iPhone 17 Pro Max"
-]
-},
+    "iPhone 13",
+    "iPhone 13 mini",
+    "iPhone 13 Pro",
+    "iPhone 13 Pro Max",
 
-{
-id:8,
-category:"Dekorasyon",
-title:"Işıklı Makyaj Aynası",
-price:400,
-description:"LED ışıklı dekoratif makyaj aynası.",
-image:"https://static.pex.jp.vmimg.jp/item/crossy/K605-09614-1.jpg"
-},
+    "iPhone 14",
+    "iPhone 14 Plus",
+    "iPhone 14 Pro",
+    "iPhone 14 Pro Max",
 
-{
-id:9,
-category:"Dekorasyon",
-title:"Aromatik Difüzör",
-price:1750,
-description:"Ortam için dekoratif aromatik difüzör.",
-image:"https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=80"
-},
+    "iPhone 15",
+    "iPhone 15 Plus",
+    "iPhone 15 Pro",
+    "iPhone 15 Pro Max",
 
-{
-id:10,
-category:"Ses",
-title:"Gramofon Görünümlü Ses Bombası",
-price:3750,
-description:"Retro gramofon tasarımlı Bluetooth ses bombası.",
-image:"https://www.boxupgifting.com/cdn/shop/files/BluetoothspeakerBlue-1_800x.jpg?v=1739513324"
-},
+    "iPhone 16",
+    "iPhone 16 Plus",
+    "iPhone 16e",
+    "iPhone 16 Pro",
+    "iPhone 16 Pro Max",
 
-/* ŞARJ ÜRÜNLERİ */
+    "iPhone 17",
+    "iPhone 17e",
+    "iPhone Air",
+    "iPhone 17 Pro",
+    "iPhone 17 Pro Max",
 
-{
-id:11,
-category:"Şarj",
-title:"iPhone İnce Uç Şarj Kablosu",
-price:750,
-description:"Lightning ince uçlu iPhone şarj ve data kablosu.",
-image:"https://m.media-amazon.com/images/I/61e4D8rYkJL._AC_SL1500_.jpg",
-models:[
-"iPhone 5",
-"iPhone 6",
-"iPhone 7",
-"iPhone 8",
-"iPhone X",
-"iPhone XR",
-"iPhone XS",
-"iPhone 11",
-"iPhone 12",
-"iPhone 13",
-"iPhone 14"
-]
-},
-
-{
-id:12,
-category:"Şarj",
-title:"iPhone Şarj Başlığı",
-price:600,
-description:"USB-C çıkışlı hızlı şarj adaptörü.",
-image:"https://m.media-amazon.com/images/I/61vtLhO6ZDL._AC_SL1500_.jpg"
-},
-
-{
-id:13,
-category:"Şarj",
-title:"iPhone Tam Şarj Seti",
-price:1000,
-description:"Şarj başlığı ve Lightning kablodan oluşan tam set.",
-image:"https://m.media-amazon.com/images/I/71QY3R3Qm-L._AC_SL1500_.jpg",
-models:[
-"iPhone 8",
-"iPhone X",
-"iPhone XR",
-"iPhone XS",
-"iPhone 11",
-"iPhone 12",
-"iPhone 13",
-"iPhone 14"
-]
-},
-
-{
-id:14,
-category:"Şarj",
-title:"Android Type-C Şarj Kablosu",
-price:750,
-description:"USB-C Android şarj ve data kablosu.",
-image:"https://m.media-amazon.com/images/I/61xzuF7JQXL._AC_SL1500_.jpg",
-models:[
-"Samsung",
-"Xiaomi",
-"Redmi",
-"Huawei",
-"Oppo",
-"Realme",
-"Vivo",
-"Tecno",
-"Honor"
-]
-},
-
-{
-id:15,
-category:"Şarj",
-title:"Android Şarj Başlığı",
-price:600,
-description:"USB-C çıkışlı Android hızlı şarj adaptörü.",
-image:"https://m.media-amazon.com/images/I/61vtLhO6ZDL._AC_SL1500_.jpg"
-},
-
-{
-id:16,
-category:"Şarj",
-title:"Android Tam Şarj Seti",
-price:1000,
-description:"Android Type-C kablo ve şarj başlığından oluşan tam set.",
-image:"https://m.media-amazon.com/images/I/71QY3R3Qm-L._AC_SL1500_.jpg",
-models:[
-"Samsung",
-"Xiaomi",
-"Redmi",
-"Huawei",
-"Oppo",
-"Realme",
-"Vivo",
-"Tecno",
-"Honor"
-]
-}
+    "iPhone 18",
+    "iPhone 18 Pro",
+    "iPhone 18 Pro Max"
 
 ];
 
-let cart=[];
 
-/* FORMAT PRICE */
+/* =========================================================
+   IPHONE LIGHTNING MODELLERİ
+========================================================= */
 
-function formatPrice(price){
-    return price.toLocaleString("tr-TR")+" TL";
+const lightningModels = [
+
+    "iPhone 11",
+    "iPhone 11 Pro",
+    "iPhone 11 Pro Max",
+
+    "iPhone 12",
+    "iPhone 12 mini",
+    "iPhone 12 Pro",
+    "iPhone 12 Pro Max",
+
+    "iPhone 13",
+    "iPhone 13 mini",
+    "iPhone 13 Pro",
+    "iPhone 13 Pro Max",
+
+    "iPhone 14",
+    "iPhone 14 Plus",
+    "iPhone 14 Pro",
+    "iPhone 14 Pro Max"
+
+];
+
+
+/* =========================================================
+   ANDROID
+========================================================= */
+
+const androidModels = [
+
+    "Samsung",
+    "Samsung Galaxy",
+    "Xiaomi",
+    "Redmi",
+    "Huawei",
+    "Oppo",
+    "Realme",
+    "Vivo",
+    "Tecno",
+    "Honor"
+
+];
+
+
+/* =========================================================
+   ÜRÜNLER
+========================================================= */
+
+const products = [
+
+    {
+        id:1,
+        category:"Kılıf",
+        title:"Şeffaf MagSafe Uyumlu iPhone Kılıfı",
+        price:750,
+        description:"MagSafe uyumlu şeffaf telefon kılıfı.",
+        image:"https://casefit.ca/cdn/shop/files/clear-magsafe-case-iphone-14-939068.jpg?v=1727610760",
+        models:iphoneModels
+    },
+
+    {
+        id:2,
+        category:"Kılıf",
+        title:"Guess Telefon Kılıfı",
+        price:750,
+        description:"Şık Guess tasarımlı telefon kılıfı.",
+        image:"https://guessmobile.com.tr/cdn/shop/files/apple-iphone-16-kilif-guess-lisansli-magsafe-sarj-ozellikli-pu-4g-desenli-metal-plaka-klasik-logolu-kapak-kahverengi-002_compact.jpg?v=1738921425",
+        models:iphoneModels
+    },
+
+    {
+        id:3,
+        category:"Kılıf",
+        title:"Tek Renk iPhone Kılıfı",
+        price:650,
+        description:"Model ve rengini seçebileceğiniz tek renk kılıf.",
+        image:"https://static-01.daraz.lk/p/b197f61b49568b1376a2e4bc35685e38.jpg",
+        models:iphoneModels,
+        colors:[
+            "Siyah",
+            "Beyaz",
+            "Kırmızı",
+            "Mavi",
+            "Yeşil",
+            "Mor",
+            "Pembe",
+            "Sarı"
+        ]
+    },
+
+    {
+        id:4,
+        category:"Kılıf",
+        title:"Taşlı iPhone Kılıfı",
+        price:650,
+        description:"Taş detaylı şık iPhone kılıfı.",
+        image:"https://maisonrogue.com/cdn/shop/files/BRIN2017PM-Rhinestone-Black-iPhone-17-Pro-Max-Case-01.jpg?v=1774645879",
+        models:iphoneModels
+    },
+
+    {
+        id:5,
+        category:"Cam",
+        title:"Anti-Statik Kırılmaz Cam",
+        price:1000,
+        description:"Telefon ekranı için anti-statik kırılmaz cam.",
+        image:"https://cdn11.bigcommerce.com/s-jwqtot7a1x/images/stencil/1280x1280/products/420/1526/Single3__94002.1636030361.jpg?c=2",
+        models:iphoneModels
+    },
+
+    {
+        id:6,
+        category:"Aksesuar",
+        title:"MagSafe Uyumlu Cüzdan",
+        price:500,
+        description:"Telefon arkasına manyetik olarak takılabilen MagSafe cüzdan.",
+        image:"https://telesalon.pl/hpeciai/679798f589b771ea7a2b7e48413393ff/pol_pl_Portfel-Apple-Leather-Wallet-iPhone-MagSafe-morski-Baltic-Blue-12828_1.jpg"
+    },
+
+    {
+        id:7,
+        category:"Kılıf",
+        title:"Karbon Kılıf",
+        price:1000,
+        description:"Karbon görünümlü dayanıklı telefon kılıfı.",
+        image:"https://www.carboncraze.co.uk/cdn/shop/files/IMG_8221.jpg?crop=center&height=1200&v=1695905471&width=1200",
+        models:iphoneModels
+    },
+
+    {
+        id:8,
+        category:"Dekorasyon",
+        title:"Işıklı Makyaj Aynası",
+        price:400,
+        description:"LED ışıklı dekoratif makyaj aynası.",
+        image:"https://images.unsplash.com/photo-1616627561839-074385245ff6?auto=format&fit=crop&w=900&q=80"
+    },
+
+    {
+        id:9,
+        category:"Dekorasyon",
+        title:"Aromatik Difüzör",
+        price:1750,
+        description:"Ortam için dekoratif aromatik difüzör.",
+        image:"https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=80"
+    },
+
+    {
+        id:10,
+        category:"Ses",
+        title:"Gramofon Görünümlü Ses Bombası",
+        price:3750,
+        description:"Retro gramofon tasarımlı Bluetooth ses bombası.",
+        image:"https://www.boxupgifting.com/cdn/shop/files/BluetoothspeakerBlue-1_800x.jpg?v=1739513324"
+    },
+
+    /* =====================================================
+       ŞARJ
+    ===================================================== */
+
+    {
+        id:11,
+        category:"Şarj",
+        title:"iPhone İnce Uç Şarj Kablosu",
+        price:750,
+        description:"Lightning ince uçlu iPhone şarj ve data kablosu.",
+        image:"https://m.media-amazon.com/images/I/61e4D8rYkJL._AC_SL1500_.jpg",
+        models:lightningModels
+    },
+
+    {
+        id:12,
+        category:"Şarj",
+        title:"iPhone Şarj Başlığı",
+        price:600,
+        description:"USB-C çıkışlı hızlı şarj adaptörü.",
+        image:"https://m.media-amazon.com/images/I/61vtLhO6ZDL._AC_SL1500_.jpg"
+    },
+
+    {
+        id:13,
+        category:"Şarj",
+        title:"iPhone Tam Şarj Seti",
+        price:1000,
+        description:"Şarj başlığı ve Lightning kablodan oluşan tam set.",
+        image:"https://m.media-amazon.com/images/I/71QY3R3Qm-L._AC_SL1500_.jpg",
+        models:lightningModels
+    },
+
+    {
+        id:14,
+        category:"Şarj",
+        title:"Android Type-C Şarj Kablosu",
+        price:750,
+        description:"USB-C Android şarj ve data kablosu.",
+        image:"https://m.media-amazon.com/images/I/61xzuF7JQXL._AC_SL1500_.jpg",
+        models:androidModels
+    },
+
+    {
+        id:15,
+        category:"Şarj",
+        title:"Android Şarj Başlığı",
+        price:600,
+        description:"USB-C çıkışlı Android hızlı şarj adaptörü.",
+        image:"https://m.media-amazon.com/images/I/61vtLhO6ZDL._AC_SL1500_.jpg"
+    },
+
+    {
+        id:16,
+        category:"Şarj",
+        title:"Android Tam Şarj Seti",
+        price:1000,
+        description:"Android Type-C kablo ve şarj başlığından oluşan tam set.",
+        image:"https://m.media-amazon.com/images/I/71QY3R3Qm-L._AC_SL1500_.jpg",
+        models:androidModels
+    }
+
+];
+
+
+/* =========================================================
+   SEPET
+========================================================= */
+
+let cart = [];
+
+
+/* =========================================================
+   ELEMENTLER
+========================================================= */
+
+const productsContainer =
+    document.getElementById("products");
+
+const categoryFilter =
+    document.getElementById("categoryFilter");
+
+const modelFilter =
+    document.getElementById("modelFilter");
+
+const searchInput =
+    document.getElementById("searchInput");
+
+
+/* =========================================================
+   PARA
+========================================================= */
+
+function formatPrice(value){
+
+    return Number(value).toLocaleString("tr-TR") + " TL";
+
 }
 
-/* PRODUCTS */
 
-function renderProducts(list=products){
+/* =========================================================
+   GÖRSEL HATASINI YAKALA
+========================================================= */
 
-    const container=document.getElementById("products");
+function imageError(img){
 
-    container.innerHTML="";
+    if(img.dataset.failed === "1"){
+        return;
+    }
 
-    if(list.length===0){
+    img.dataset.failed = "1";
 
-        container.innerHTML=`
-            <div class="no-result">
-                <h3>Ürün bulunamadı.</h3>
-                <p>Başka bir ürün adı veya model deneyin.</p>
+    img.src = fallbackImage;
+
+}
+
+
+/* =========================================================
+   MODEL FİLTRESİNİ DOLDUR
+========================================================= */
+
+function populateModelFilter(){
+
+    const modelSet = new Set();
+
+    products.forEach(product=>{
+
+        if(Array.isArray(product.models)){
+
+            product.models.forEach(model=>{
+                modelSet.add(model);
+            });
+
+        }
+
+    });
+
+    const sorted =
+        [...modelSet].sort((a,b)=>
+            a.localeCompare(b,"tr")
+        );
+
+    sorted.forEach(model=>{
+
+        const option =
+            document.createElement("option");
+
+        option.value = model;
+        option.textContent = model;
+
+        modelFilter.appendChild(option);
+
+    });
+
+}
+
+
+/* =========================================================
+   ÜRÜNLERİ GÖSTER
+========================================================= */
+
+function renderProducts(list){
+
+    productsContainer.innerHTML = "";
+
+    if(!list.length){
+
+        productsContainer.innerHTML = `
+
+            <div class="no-results">
+
+                <h3>
+                    Ürün bulunamadı.
+                </h3>
+
+                <p style="margin-top:8px;">
+                    Başka bir ürün adı veya model deneyin.
+                </p>
+
             </div>
+
         `;
 
         return;
     }
 
+
     list.forEach(product=>{
 
-        let options="";
+        const card =
+            document.createElement("article");
 
-        if(product.models){
+        card.className = "product-card";
 
-            options+=`
-                <select id="model-${product.id}">
-                    <option value="">Model Seçiniz</option>
+
+        let optionsHTML = "";
+
+
+        /* MODEL */
+
+        if(Array.isArray(product.models)){
+
+            optionsHTML += `
+
+                <select
+                    class="model-select"
+                    data-id="${product.id}"
+                >
+
+                    <option value="">
+                        Model Seçiniz
+                    </option>
+
                     ${product.models.map(model=>`
-                        <option value="${model}">${model}</option>
+
+                        <option value="${escapeHTML(model)}">
+                            ${escapeHTML(model)}
+                        </option>
+
                     `).join("")}
+
                 </select>
+
             `;
+
         }
 
-        if(product.colors){
 
-            options+=`
-                <select id="color-${product.id}"
-                    onchange="changeColor(${product.id},this.value)">
-                    <option value="">Renk Seçiniz</option>
+        /* RENK */
+
+        if(Array.isArray(product.colors)){
+
+            optionsHTML += `
+
+                <select
+                    class="color-select"
+                    data-id="${product.id}"
+                >
+
+                    <option value="">
+                        Renk Seçiniz
+                    </option>
+
                     ${product.colors.map(color=>`
-                        <option value="${color}">${color}</option>
+
+                        <option value="${escapeHTML(color)}">
+                            ${escapeHTML(color)}
+                        </option>
+
                     `).join("")}
+
                 </select>
+
             `;
+
         }
 
-        container.innerHTML+=`
 
-            <div class="product">
+        card.innerHTML = `
 
-                <div class="product-image">
+            <div class="product-image">
 
-                    <img
-                        id="img-${product.id}"
-                        src="${product.image}"
-                        alt="${product.title}"
-                        onerror="this.src='https://via.placeholder.com/700x500/ffffff/111111?text=TeknoBiz+Ürün'"
-                    >
-
-                </div>
-
-                <div class="product-content">
-
-                    <div class="product-category">
-                        ${product.category}
-                    </div>
-
-                    <h3>${product.title}</h3>
-
-                    <div class="product-description">
-                        ${product.description}
-                    </div>
-
-                    <div class="price">
-                        ${formatPrice(product.price)}
-                    </div>
-
-                    <div class="product-options">
-                        ${options}
-                    </div>
-
-                    <button
-                        class="add-cart"
-                        onclick="addToCart(${product.id})"
-                    >
-                        🛒 Sepete Ekle
-                    </button>
-
-                </div>
+                <img
+                    src="${product.image}"
+                    alt="${escapeHTML(product.title)}"
+                    loading="lazy"
+                    onerror="imageError(this)"
+                >
 
             </div>
+
+
+            <div class="product-body">
+
+                <div class="category-label">
+                    ${escapeHTML(product.category)}
+                </div>
+
+                <h3>
+                    ${escapeHTML(product.title)}
+                </h3>
+
+                <div class="product-description">
+                    ${escapeHTML(product.description)}
+                </div>
+
+                <div class="product-price">
+                    ${formatPrice(product.price)}
+                </div>
+
+                <div class="product-options">
+                    ${optionsHTML}
+                </div>
+
+                <button
+                    class="add-cart"
+                    data-product-id="${product.id}"
+                >
+                    🛒 Sepete Ekle
+                </button>
+
+            </div>
+
         `;
+
+
+        productsContainer.appendChild(card);
+
     });
+
 }
 
-/* COLOR */
 
-function changeColor(id,color){
+/* =========================================================
+   HTML GÜVENLİĞİ
+========================================================= */
 
-    const img=document.getElementById("img-"+id);
+function escapeHTML(value){
 
-    if(!img) return;
+    return String(value)
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
 
-    img.style.filter="none";
-
-    if(color==="Siyah"){
-        img.style.filter="brightness(.25)";
-    }
-
-    if(color==="Beyaz"){
-        img.style.filter="brightness(1.5) grayscale(.2)";
-    }
-
-    if(color==="Kırmızı"){
-        img.style.filter="sepia(1) saturate(6) hue-rotate(320deg)";
-    }
-
-    if(color==="Mavi"){
-        img.style.filter="sepia(1) saturate(4) hue-rotate(170deg)";
-    }
-
-    if(color==="Yeşil"){
-        img.style.filter="sepia(1) saturate(4) hue-rotate(70deg)";
-    }
-
-    if(color==="Mor"){
-        img.style.filter="sepia(1) saturate(4) hue-rotate(240deg)";
-    }
-
-    if(color==="Pembe"){
-        img.style.filter="sepia(1) saturate(5) hue-rotate(285deg)";
-    }
-
-    if(color==="Sarı"){
-        img.style.filter="sepia(1) saturate(5) hue-rotate(350deg)";
-    }
 }
 
-/* CART */
+
+/* =========================================================
+   SEPETE EKLEME
+========================================================= */
+
+productsContainer.addEventListener(
+    "click",
+    function(event){
+
+        const button =
+            event.target.closest(".add-cart");
+
+        if(!button){
+            return;
+        }
+
+        const id =
+            Number(button.dataset.productId);
+
+        addToCart(id);
+
+    }
+);
+
+
+/* =========================================================
+   ÜRÜN EKLE
+========================================================= */
 
 function addToCart(id){
 
-    const product=products.find(p=>p.id===id);
+    const product =
+        products.find(item=>item.id===id);
 
-    if(!product) return;
+    if(!product){
+        return;
+    }
 
-    let model="";
+
+    const card =
+        document.querySelector(
+            `.add-cart[data-product-id="${id}"]`
+        )?.closest(".product-card");
+
+
+    let model = "";
+    let color = "";
+
 
     if(product.models){
 
-        const select=document.getElementById("model-"+id);
+        const select =
+            card?.querySelector(".model-select");
 
         if(!select || !select.value){
 
             alert("Lütfen model seçiniz.");
             return;
+
         }
 
-        model=select.value;
+        model = select.value;
+
     }
 
-    let color="";
 
     if(product.colors){
 
-        const select=document.getElementById("color-"+id);
+        const select =
+            card?.querySelector(".color-select");
 
         if(!select || !select.value){
 
             alert("Lütfen renk seçiniz.");
             return;
+
         }
 
-        color=select.value;
+        color = select.value;
+
     }
 
+
     cart.push({
+
         id:product.id,
         title:product.title,
         price:product.price,
         model:model,
         color:color
+
     });
+
 
     updateCart();
 
     alert("Ürün sepete eklendi. ✅");
+
 }
 
-/* UPDATE CART */
+
+/* =========================================================
+   SEPETİ GÜNCELLE
+========================================================= */
 
 function updateCart(){
 
-    document.getElementById("cartCount").textContent=cart.length;
+    const count =
+        document.getElementById("cartNumber");
 
-    const container=document.getElementById("cartItems");
+    const items =
+        document.getElementById("cartItems");
+
+    const totalElement =
+        document.getElementById("cartTotal");
+
+
+    count.textContent = cart.length;
+
 
     if(!cart.length){
 
-        container.innerHTML=`
+        items.innerHTML = `
+
             <p style="color:#8998ac;">
                 Sepetiniz şu anda boş.
             </p>
+
         `;
 
-        document.getElementById("cartTotal").textContent="0 TL";
+        totalElement.textContent = "0 TL";
 
         return;
+
     }
 
-    let total=0;
 
-    container.innerHTML="";
+    let total = 0;
+
+    items.innerHTML = "";
+
 
     cart.forEach((item,index)=>{
 
-        total+=item.price;
+        total += Number(item.price);
 
-        container.innerHTML+=`
 
-            <div class="cart-item">
+        const row =
+            document.createElement("div");
 
-                <div class="cart-item-info">
+        row.className = "cart-item";
 
-                    <strong>${item.title}</strong>
 
-                    <small>
-                        ${item.model ? "Model: "+item.model+"<br>" : ""}
-                        ${item.color ? "Renk: "+item.color+"<br>" : ""}
-                        ${formatPrice(item.price)}
-                    </small>
+        row.innerHTML = `
 
-                </div>
+            <div class="cart-info">
 
-                <button
-                    class="remove-btn"
-                    onclick="removeCart(${index})"
-                >
-                    Sil
-                </button>
+                <strong>
+                    ${escapeHTML(item.title)}
+                </strong>
+
+                <small>
+
+                    ${
+                        item.model
+                        ? "Model: " +
+                          escapeHTML(item.model) +
+                          "<br>"
+                        : ""
+                    }
+
+                    ${
+                        item.color
+                        ? "Renk: " +
+                          escapeHTML(item.color) +
+                          "<br>"
+                        : ""
+                    }
+
+                    ${formatPrice(item.price)}
+
+                </small>
 
             </div>
+
+
+            <button
+                class="remove-cart"
+                data-index="${index}"
+            >
+                Sil
+            </button>
+
         `;
+
+
+        items.appendChild(row);
+
     });
 
-    document.getElementById("cartTotal").textContent=formatPrice(total);
+
+    totalElement.textContent =
+        formatPrice(total);
+
 }
 
-/* REMOVE */
 
-function removeCart(index){
+/* =========================================================
+   SEPETTEN SİL
+========================================================= */
 
-    cart.splice(index,1);
+document
+.getElementById("cartItems")
+.addEventListener(
+    "click",
+    function(event){
 
-    updateCart();
-}
+        const button =
+            event.target.closest(".remove-cart");
 
-/* CART MODAL */
+        if(!button){
+            return;
+        }
+
+        const index =
+            Number(button.dataset.index);
+
+        cart.splice(index,1);
+
+        updateCart();
+
+    }
+);
+
+
+/* =========================================================
+   SEPET MODAL
+========================================================= */
 
 function openCart(){
 
     updateCart();
 
-    document.getElementById("cartModal").classList.add("active");
+    document
+        .getElementById("cartModal")
+        .classList.add("active");
+
 }
 
 function closeCart(){
 
-    document.getElementById("cartModal").classList.remove("active");
+    document
+        .getElementById("cartModal")
+        .classList.remove("active");
+
 }
 
-/* PURCHASE */
+
+/* =========================================================
+   SİPARİŞ MODAL
+========================================================= */
 
 function openPurchase(){
 
-    if(cart.length===0){
+    if(!cart.length){
 
         alert("Sepetiniz boş.");
+
         return;
+
     }
+
 
     closeCart();
 
-    document.getElementById("purchaseModal").classList.add("active");
+    document
+        .getElementById("purchaseModal")
+        .classList.add("active");
+
 }
 
 function closePurchase(){
 
-    document.getElementById("purchaseModal").classList.remove("active");
+    document
+        .getElementById("purchaseModal")
+        .classList.remove("active");
+
 }
 
-/* ORDER */
+
+/* =========================================================
+   WHATSAPP SİPARİŞ
+========================================================= */
 
 function sendOrder(){
 
-    const name=document.getElementById("customerName").value.trim();
-    const phone=document.getElementById("customerPhone").value.trim();
-    const address=document.getElementById("customerAddress").value.trim();
-    const note=document.getElementById("customerNote").value.trim();
+    const name =
+        document
+        .getElementById("customerName")
+        .value.trim();
+
+    const phone =
+        document
+        .getElementById("customerPhone")
+        .value.trim();
+
+    const address =
+        document
+        .getElementById("customerAddress")
+        .value.trim();
+
+    const note =
+        document
+        .getElementById("customerNote")
+        .value.trim();
+
 
     if(!name || !phone || !address){
 
-        alert("Lütfen ad, telefon ve adres bilgilerini doldurun.");
+        alert(
+            "Lütfen ad, telefon ve adres bilgilerini doldurun."
+        );
+
         return;
+
     }
 
-    let total=0;
 
-    let orderText="";
+    let total = 0;
 
-    orderText+="*TEKNOBİZ SİPARİŞ*%0A%0A";
+    let message =
+        "TEKNOBİZ SİPARİŞ\n\n";
+
 
     cart.forEach((item,index)=>{
 
-        total+=item.price;
+        total += Number(item.price);
 
-        orderText+=
-        (index+1)+". "+
-        item.title+
-        "%0A";
+
+        message +=
+            (index + 1) +
+            ". " +
+            item.title +
+            "\n";
+
 
         if(item.model){
-            orderText+="Model: "+item.model+"%0A";
+
+            message +=
+                "Model: " +
+                item.model +
+                "\n";
+
         }
+
 
         if(item.color){
-            orderText+="Renk: "+item.color+"%0A";
+
+            message +=
+                "Renk: " +
+                item.color +
+                "\n";
+
         }
 
-        orderText+="Fiyat: "+formatPrice(item.price)+"%0A%0A";
+
+        message +=
+            "Fiyat: " +
+            formatPrice(item.price) +
+            "\n\n";
+
     });
 
-    orderText+="*Toplam: "+formatPrice(total)+"*%0A%0A";
 
-    orderText+="*Müşteri Bilgileri*%0A";
-    orderText+="Ad Soyad: "+encodeURIComponent(name)+"%0A";
-    orderText+="Telefon: "+encodeURIComponent(phone)+"%0A";
-    orderText+="Adres: "+encodeURIComponent(address)+"%0A";
+    message +=
+        "TOPLAM: " +
+        formatPrice(total) +
+        "\n\n";
+
+
+    message +=
+        "MÜŞTERİ BİLGİLERİ\n";
+
+
+    message +=
+        "Ad Soyad: " +
+        name +
+        "\n";
+
+
+    message +=
+        "Telefon: " +
+        phone +
+        "\n";
+
+
+    message +=
+        "Adres: " +
+        address +
+        "\n";
+
 
     if(note){
-        orderText+="Not: "+encodeURIComponent(note)+"%0A";
+
+        message +=
+            "Not: " +
+            note +
+            "\n";
+
     }
 
-    const url=
-    "https://wa.me/905059999009?text="+orderText;
 
-    window.open(url,"_blank");
+    const whatsappURL =
+        "https://wa.me/905059999009?text=" +
+        encodeURIComponent(message);
+
+
+    window.open(
+        whatsappURL,
+        "_blank",
+        "noopener"
+    );
+
 }
 
-/* SEARCH */
+
+/* =========================================================
+   ARAMA
+========================================================= */
 
 function searchProducts(){
 
-    const search=
-    document.getElementById("searchInput")
-    .value
-    .toLowerCase()
-    .trim();
+    const query =
+        searchInput.value
+        .toLocaleLowerCase("tr-TR")
+        .trim();
 
-    if(!search){
 
-        renderProducts();
+    if(!query){
+
+        applyFilters();
+
         return;
+
     }
 
-    const result=products.filter(product=>{
 
-        const text=[
-            product.title,
-            product.description,
-            product.category,
-            ...(product.models||[]),
-            ...(product.colors||[])
-        ].join(" ").toLowerCase();
+    const results =
+        products.filter(product=>{
 
-        return text.includes(search);
-    });
+            const searchable = [
 
-    renderProducts(result);
+                product.title,
+                product.description,
+                product.category,
+                ...(product.models || []),
+                ...(product.colors || [])
 
-    document.getElementById("productsSection").scrollIntoView({
-        behavior:"smooth"
-    });
+            ]
+            .join(" ")
+            .toLocaleLowerCase("tr-TR");
+
+
+            return searchable.includes(query);
+
+        });
+
+
+    renderProducts(results);
+
 }
 
-/* FILTER */
 
-function filterProducts(){
+/* =========================================================
+   FİLTRE
+========================================================= */
 
-    const category=
-    document.getElementById("categoryFilter").value;
+function applyFilters(){
 
-    const model=
-    document.getElementById("modelFilter").value;
+    const category =
+        categoryFilter.value;
 
-    const result=products.filter(product=>{
+    const model =
+        modelFilter.value;
 
-        const categoryOK=
-        !category ||
-        product.category===category;
+    const query =
+        searchInput.value
+        .toLocaleLowerCase("tr-TR")
+        .trim();
 
-        const modelOK=
-        !model ||
-        (product.models||[]).includes(model);
 
-        return categoryOK && modelOK;
-    });
+    let result =
+        products.filter(product=>{
 
-    renderProducts(result);
-}
+            const categoryOK =
+                !category ||
+                product.category === category;
 
-/* MODEL FILTER */
 
-function populateModelFilter(){
+            const modelOK =
+                !model ||
+                (
+                    Array.isArray(product.models) &&
+                    product.models.includes(model)
+                );
 
-    const select=
-    document.getElementById("modelFilter");
 
-    const models=new Set();
+            return categoryOK && modelOK;
 
-    products.forEach(product=>{
+        });
 
-        if(product.models){
 
-            product.models.forEach(model=>{
-                models.add(model);
+    if(query){
+
+        result =
+            result.filter(product=>{
+
+                const searchable = [
+
+                    product.title,
+                    product.description,
+                    product.category,
+                    ...(product.models || []),
+                    ...(product.colors || [])
+
+                ]
+                .join(" ")
+                .toLocaleLowerCase("tr-TR");
+
+
+                return searchable.includes(query);
+
             });
-        }
-    });
 
-    [...models]
-    .sort()
-    .forEach(model=>{
+    }
 
-        select.innerHTML+=`
-            <option value="${model}">
-                ${model}
-            </option>
-        `;
-    });
+
+    renderProducts(result);
+
 }
 
-/* RESET */
+
+categoryFilter.addEventListener(
+    "change",
+    applyFilters
+);
+
+modelFilter.addEventListener(
+    "change",
+    applyFilters
+);
+
+searchInput.addEventListener(
+    "input",
+    searchProducts
+);
+
+
+/* =========================================================
+   FİLTRELERİ SIFIRLA
+========================================================= */
 
 function resetFilters(){
 
-    document.getElementById("categoryFilter").value="";
-    document.getElementById("modelFilter").value="";
-    document.getElementById("searchInput").value="";
+    categoryFilter.value = "";
 
-    renderProducts();
+    modelFilter.value = "";
+
+    searchInput.value = "";
+
+    renderProducts(products);
+
 }
 
-/* CHAT */
+
+/* =========================================================
+   SAYFAYA GİT
+========================================================= */
+
+function scrollToProducts(){
+
+    document
+        .getElementById("productsSection")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+/* =========================================================
+   CANLI DESTEK
+========================================================= */
 
 function openChat(){
 
-    document.getElementById("chatBox").classList.add("active");
+    document
+        .getElementById("chatBox")
+        .classList.add("active");
+
 }
 
 function closeChat(){
 
-    document.getElementById("chatBox").classList.remove("active");
+    document
+        .getElementById("chatBox")
+        .classList.remove("active");
+
 }
+
 
 function sendMessage(){
 
-    const input=document.getElementById("chatInput");
-    const message=input.value.trim();
+    const input =
+        document.getElementById("chatInput");
 
-    if(!message) return;
+    const message =
+        input.value.trim();
 
-    const messages=
-    document.getElementById("chatMessages");
 
-    messages.innerHTML+=`
-        <div class="message user-message">
-            ${message}
-        </div>
-    `;
+    if(!message){
+        return;
+    }
 
-    input.value="";
 
-    let reply=
-    "Size yardımcı olmak için buradayım. 📱 Ürün, fiyat veya sipariş hakkında soru sorabilirsiniz.";
+    const messages =
+        document.getElementById("chatMessages");
 
-    const lower=message.toLowerCase();
+
+    const userMessage =
+        document.createElement("div");
+
+    userMessage.className =
+        "message user-message";
+
+    userMessage.textContent =
+        message;
+
+    messages.appendChild(userMessage);
+
+
+    input.value = "";
+
+
+    const lower =
+        message.toLocaleLowerCase("tr-TR");
+
+
+    let reply =
+        "Size yardımcı olmak için buradayım. Ürün, fiyat, adres veya sipariş hakkında soru sorabilirsiniz.";
+
 
     if(
         lower.includes("telefon") ||
@@ -1946,78 +2904,179 @@ function sendMessage(){
         lower.includes("iletişim")
     ){
 
-        reply=
-        "TeknoBiz telefon numarası: 0505 999 9009 📞";
+        reply =
+            "TeknoBiz telefon numarası: 0505 999 9009 📞";
+
     }
+
 
     else if(
         lower.includes("adres") ||
         lower.includes("nerede")
     ){
 
-        reply=
-        "Adresimiz: Süleyman Demirel Bulvarı No:15, Bucak / Burdur 📍";
+        reply =
+            "Adresimiz: Süleyman Demirel Bulvarı No:15, Bucak / Burdur 📍";
+
     }
+
 
     else if(lower.includes("saat")){
 
-        reply=
-        "Çalışma saatlerimiz 09:00 - 21:00 arasındadır. Pazar günleri kapalıyız.";
+        reply =
+            "Çalışma saatlerimiz 09:00 - 21:00 arasındadır. Pazar günleri kapalıyız.";
+
     }
 
-    else if(lower.includes("kargo")){
-
-        reply=
-        "Kargo ve teslimat bilgisi için 0505 999 9009 numarasından TeknoBiz'e ulaşabilirsiniz.";
-    }
 
     else if(lower.includes("şarj")){
 
-        reply=
-        "Şarj kablosu, şarj başlığı ve tam şarj setlerimiz bulunmaktadır. Ürünler bölümünden inceleyebilirsiniz. ⚡";
+        reply =
+            "iPhone ve Android için şarj kablosu, başlık ve tam set ürünlerimiz bulunmaktadır. ⚡";
+
     }
+
 
     else if(lower.includes("kılıf")){
 
-        reply=
-        "iPhone modelleri için farklı kılıf seçeneklerimiz bulunmaktadır. Model seçerek sepete ekleyebilirsiniz. 📱";
+        reply =
+            "iPhone 11'den başlayarak farklı iPhone serileri için kılıflarımız bulunmaktadır. Model seçerek ürünü sepete ekleyebilirsiniz. 📱";
+
     }
+
+
+    else if(
+        lower.includes("kargo") ||
+        lower.includes("teslimat")
+    ){
+
+        reply =
+            "Teslimat ve kargo bilgisi için 0505 999 9009 numarasından bize ulaşabilirsiniz.";
+
+    }
+
 
     setTimeout(()=>{
 
-        messages.innerHTML+=`
-            <div class="message bot-message">
-                ${reply}
-            </div>
-        `;
+        const botMessage =
+            document.createElement("div");
 
-        messages.scrollTop=messages.scrollHeight;
+        botMessage.className =
+            "message bot-message";
 
-    },500);
+        botMessage.textContent =
+            reply;
 
-    messages.scrollTop=messages.scrollHeight;
+        messages.appendChild(botMessage);
+
+        messages.scrollTop =
+            messages.scrollHeight;
+
+    },450);
+
+
+    messages.scrollTop =
+        messages.scrollHeight;
+
 }
 
-/* WELCOME */
+
+document
+.getElementById("chatInput")
+.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Enter"){
+
+            event.preventDefault();
+
+            sendMessage();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   HOŞ GELDİNİZ
+========================================================= */
 
 function enterSite(){
 
-    const welcome=
-    document.getElementById("welcome");
+    const welcome =
+        document.getElementById("welcome");
 
-    welcome.style.opacity="0";
+
+    welcome.style.opacity = "0";
+
 
     setTimeout(()=>{
 
-        welcome.style.display="none";
+        welcome.style.display = "none";
 
-    },600);
+    },500);
+
 }
 
-/* START */
+
+/* =========================================================
+   MODAL DIŞINA TIKLAMA
+========================================================= */
+
+document
+.querySelectorAll(".modal")
+.forEach(modal=>{
+
+    modal.addEventListener(
+        "click",
+        function(event){
+
+            if(event.target === modal){
+
+                modal.classList.remove("active");
+
+            }
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   ESC
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            document
+                .querySelectorAll(".modal.active")
+                .forEach(modal=>{
+                    modal.classList.remove("active");
+                });
+
+            closeChat();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   BAŞLAT
+========================================================= */
 
 populateModelFilter();
-renderProducts();
+
+renderProducts(products);
+
 updateCart();
 
 </script>
