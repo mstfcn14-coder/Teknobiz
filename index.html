@@ -1,57 +1,128 @@
-    {
-        id:11,
-        category:"Şarj",
-        title:"iPhone İnce Uç Şarj Kablosu",
-        price:750,
-        description:"Lightning ince uçlu iPhone şarj ve data kablosu.",
-        image:"https://m.media-amazon.com/images/I/61e4D8rYkJL._AC_SL1500_.jpg",
-        models:lightningModels
-    },
+/* =========================================================
+   ŞARJ ÜRÜNLERİ GÖRSELLERİ
+   Harici siteye bağlı değildir.
+========================================================= */
 
-    {
-        id:12,
-        category:"Şarj",
-        title:"iPhone Şarj Başlığı",
-        price:600,
-        description:"USB-C çıkışlı hızlı şarj adaptörü.",
-        image:"https://m.media-amazon.com/images/I/61vtLhO6ZDL._AC_SL1500_.jpg"
-    },
+function chargerImage(type){
 
-    {
-        id:13,
-        category:"Şarj",
-        title:"iPhone Tam Şarj Seti",
-        price:1000,
-        description:"Şarj başlığı ve Lightning kablodan oluşan tam set.",
-        image:"https://m.media-amazon.com/images/I/71QY3R3Qm-L._AC_SL1500_.jpg",
-        models:lightningModels
-    },
+    const designs = {
 
-    {
-        id:14,
-        category:"Şarj",
-        title:"Android Type-C Şarj Kablosu",
-        price:750,
-        description:"USB-C Android şarj ve data kablosu.",
-        image:"https://m.media-amazon.com/images/I/61xzuF7JQXL._AC_SL1500_.jpg",
-        models:androidModels
-    },
+        lightningCable: `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+            <rect width="800" height="600" fill="#f5f7fa"/>
+            <path d="M250 160 C250 260 250 340 360 400 C430 438 500 410 500 330"
+                  fill="none" stroke="#111" stroke-width="34" stroke-linecap="round"/>
+            <rect x="220" y="130" width="70" height="110" rx="12" fill="#d9d9d9"/>
+            <rect x="238" y="105" width="34" height="35" rx="5" fill="#c7c7c7"/>
+            <rect x="480" y="300" width="42" height="85" rx="8" fill="#c9c9c9"/>
+            <rect x="490" y="285" width="22" height="22" rx="3" fill="#aaa"/>
+            <text x="400" y="525" text-anchor="middle"
+                  font-family="Arial" font-size="34" font-weight="bold" fill="#111">
+                Lightning Şarj Kablosu
+            </text>
+            <text x="400" y="560" text-anchor="middle"
+                  font-family="Arial" font-size="20" fill="#168cff">
+                TeknoBiz
+            </text>
+        </svg>`,
 
-    {
-        id:15,
-        category:"Şarj",
-        title:"Android Şarj Başlığı",
-        price:600,
-        description:"USB-C çıkışlı Android hızlı şarj adaptörü.",
-        image:"https://m.media-amazon.com/images/I/61vtLhO6ZDL._AC_SL1500_.jpg"
-    },
+        chargerHead: `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+            <rect width="800" height="600" fill="#f5f7fa"/>
+            <rect x="285" y="120" width="230" height="300" rx="35"
+                  fill="#fff" stroke="#d6d9df" stroke-width="8"/>
+            <rect x="350" y="405" width="35" height="85" rx="7" fill="#c5c8ce"/>
+            <rect x="415" y="405" width="35" height="85" rx="7" fill="#c5c8ce"/>
+            <rect x="340" y="185" width="120" height="90" rx="18" fill="#111827"/>
+            <rect x="365" y="207" width="70" height="45" rx="8" fill="#168cff"/>
+            <text x="400" y="525" text-anchor="middle"
+                  font-family="Arial" font-size="34" font-weight="bold" fill="#111">
+                Hızlı Şarj Başlığı
+            </text>
+            <text x="400" y="560" text-anchor="middle"
+                  font-family="Arial" font-size="20" fill="#168cff">
+                TeknoBiz
+            </text>
+        </svg>`,
 
-    {
-        id:16,
-        category:"Şarj",
-        title:"Android Tam Şarj Seti",
-        price:1000,
-        description:"Android Type-C kablo ve şarj başlığından oluşan tam set.",
-        image:"https://m.media-amazon.com/images/I/71QY3R3Qm-L._AC_SL1500_.jpg",
-        models:androidModels
-    }
+        lightningSet: `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+            <rect width="800" height="600" fill="#f5f7fa"/>
+            <rect x="285" y="100" width="190" height="250" rx="30"
+                  fill="#fff" stroke="#d6d9df" stroke-width="7"/>
+            <rect x="335" y="350" width="30" height="70" rx="6" fill="#bbb"/>
+            <rect x="395" y="350" width="30" height="70" rx="6" fill="#bbb"/>
+            <path d="M475 230 C560 260 580 330 530 385 C495 420 440 405 430 370"
+                  fill="none" stroke="#111" stroke-width="24" stroke-linecap="round"/>
+            <rect x="520" y="350" width="42" height="70" rx="8" fill="#c5c5c5"/>
+            <text x="400" y="485" text-anchor="middle"
+                  font-family="Arial" font-size="34" font-weight="bold" fill="#111">
+                iPhone Şarj Seti
+            </text>
+            <text x="400" y="535" text-anchor="middle"
+                  font-family="Arial" font-size="20" fill="#168cff">
+                Başlık + Lightning Kablo
+            </text>
+        </svg>`,
+
+        typeC: `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+            <rect width="800" height="600" fill="#f5f7fa"/>
+            <path d="M250 155 C250 275 270 345 390 390 C480 425 545 375 520 290"
+                  fill="none" stroke="#111" stroke-width="34" stroke-linecap="round"/>
+            <rect x="215" y="120" width="82" height="115" rx="13" fill="#d0d0d0"/>
+            <rect x="237" y="103" width="38" height="28" rx="5" fill="#aaa"/>
+            <rect x="500" y="260" width="48" height="90" rx="9" fill="#c7c7c7"/>
+            <rect x="512" y="245" width="24" height="20" rx="4" fill="#999"/>
+            <text x="400" y="505" text-anchor="middle"
+                  font-family="Arial" font-size="34" font-weight="bold" fill="#111">
+                Type-C Şarj Kablosu
+            </text>
+            <text x="400" y="550" text-anchor="middle"
+                  font-family="Arial" font-size="20" fill="#168cff">
+                Android • USB-C
+            </text>
+        </svg>`,
+
+        androidHead: `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+            <rect width="800" height="600" fill="#f5f7fa"/>
+            <rect x="270" y="105" width="260" height="320" rx="38"
+                  fill="#fff" stroke="#d0d4da" stroke-width="9"/>
+            <rect x="335" y="175" width="130" height="105" rx="20" fill="#111827"/>
+            <rect x="365" y="205" width="70" height="48" rx="8" fill="#168cff"/>
+            <rect x="335" y="425" width="40" height="85" rx="7" fill="#bfc3c9"/>
+            <rect x="425" y="425" width="40" height="85" rx="7" fill="#bfc3c9"/>
+            <circle cx="400" cy="335" r="13" fill="#168cff"/>
+            <text x="400" y="555" text-anchor="middle"
+                  font-family="Arial" font-size="34" font-weight="bold" fill="#111">
+                Android Şarj Başlığı
+            </text>
+        </svg>`,
+
+        androidSet: `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+            <rect width="800" height="600" fill="#f5f7fa"/>
+            <rect x="230" y="100" width="180" height="250" rx="30"
+                  fill="#fff" stroke="#d0d4da" stroke-width="8"/>
+            <rect x="285" y="350" width="30" height="75" rx="6" fill="#bbb"/>
+            <rect x="345" y="350" width="30" height="75" rx="6" fill="#bbb"/>
+            <path d="M420 235 C520 230 575 300 535 375 C510 420 450 415 430 380"
+                  fill="none" stroke="#111" stroke-width="25" stroke-linecap="round"/>
+            <rect x="510" y="350" width="55" height="75" rx="9" fill="#c7c7c7"/>
+            <text x="400" y="485" text-anchor="middle"
+                  font-family="Arial" font-size="34" font-weight="bold" fill="#111">
+                Android Şarj Seti
+            </text>
+            <text x="400" y="535" text-anchor="middle"
+                  font-family="Arial" font-size="20" fill="#168cff">
+                Başlık + Type-C Kablo
+            </text>
+        </svg>`
+    };
+
+    return "data:image/svg+xml;charset=UTF-8," +
+        encodeURIComponent(
+            designs[type] || designs.chargerHead
+        );
+}
