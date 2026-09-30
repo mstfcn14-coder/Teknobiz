@@ -18,11 +18,11 @@ content="TeknoBiz teknoloji ürünleri, telefon kılıfları, şarj ürünleri v
 
 :root{
     --blue:#168cff;
-    --blue2:#0b6fd1;
+    --blue2:#075eb5;
     --navy:#07101d;
     --navy2:#0d1726;
     --card:#101c2c;
-    --border:#243650;
+    --border:#263b55;
     --white:#fff;
     --muted:#9baac0;
     --green:#25d366;
@@ -35,8 +35,8 @@ html{
 body{
     font-family:Arial,Helvetica,sans-serif;
     background:
-        radial-gradient(circle at top right,#102746 0,#07101d 35%,#050b13 100%);
-    color:var(--white);
+        radial-gradient(circle at 85% 0%,#102d4d 0,#07101d 32%,#050b13 100%);
+    color:#fff;
     min-height:100vh;
 }
 
@@ -68,7 +68,7 @@ a{
     align-items:center;
     justify-content:center;
     background:
-        radial-gradient(circle at 50% 20%,#123866,#050b13 60%);
+        radial-gradient(circle at 50% 15%,#164477,#050b13 65%);
     transition:.5s;
 }
 
@@ -78,22 +78,22 @@ a{
 }
 
 .welcome-logo{
-    width:85px;
-    height:85px;
+    width:88px;
+    height:88px;
     margin:auto;
-    border-radius:24px;
+    border-radius:25px;
     display:flex;
     align-items:center;
     justify-content:center;
     background:linear-gradient(145deg,#168cff,#0755a5);
-    font-size:45px;
+    font-size:46px;
     font-weight:900;
     box-shadow:0 20px 70px #168cff55;
 }
 
 .welcome-box h1{
     margin-top:25px;
-    font-size:32px;
+    font-size:34px;
 }
 
 .welcome-box p{
@@ -119,7 +119,7 @@ header{
     top:0;
     z-index:500;
     background:#07101de8;
-    backdrop-filter:blur(16px);
+    backdrop-filter:blur(18px);
     border-bottom:1px solid #ffffff0d;
 }
 
@@ -145,7 +145,6 @@ header{
 
 .search-wrap{
     flex:1;
-    position:relative;
 }
 
 .search-wrap input{
@@ -160,6 +159,7 @@ header{
 
 .search-wrap input:focus{
     border-color:var(--blue);
+    box-shadow:0 0 0 3px #168cff12;
 }
 
 .cart-btn{
@@ -182,7 +182,7 @@ header{
     border:1px solid #ffffff0b;
     border-radius:25px;
     background:
-        linear-gradient(110deg,#0d1d32e8,#08111ee8),
+        linear-gradient(110deg,#0d1d32ee,#08111ee8),
         radial-gradient(circle at right,#168cff55,transparent 45%);
     overflow:hidden;
 }
@@ -275,7 +275,6 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:end;
-    gap:15px;
     margin-bottom:20px;
 }
 
@@ -303,10 +302,6 @@ header{
     color:#fff;
     border:1px solid var(--border);
     outline:none;
-}
-
-.reset-btn{
-    cursor:pointer;
 }
 
 .products-grid{
@@ -346,6 +341,20 @@ header{
 
 .product-card:hover .product-image img{
     transform:scale(1.04);
+}
+
+.charger-badge{
+    position:absolute;
+    left:10px;
+    top:10px;
+    z-index:4;
+    padding:6px 9px;
+    border-radius:7px;
+    background:#07101ddd;
+    color:#fff;
+    font-size:10px;
+    font-weight:800;
+    border:1px solid #ffffff20;
 }
 
 .product-body{
@@ -412,7 +421,6 @@ header{
     background:linear-gradient(135deg,#182e47,#102238);
     border:1px solid #315274;
     color:#fff;
-    margin-top:4px;
 }
 
 .customize-btn:hover{
@@ -420,19 +428,19 @@ header{
 }
 
 /* =====================================================
-   CUSTOMIZER
+   CUSTOMIZER OVERLAY
 ===================================================== */
 
 .customizer-overlay{
     position:fixed;
     inset:0;
     z-index:3000;
-    background:rgba(0,5,12,.84);
-    backdrop-filter:blur(14px);
+    background:rgba(0,5,12,.88);
+    backdrop-filter:blur(18px);
     display:none;
     align-items:center;
     justify-content:center;
-    padding:18px;
+    padding:15px;
 }
 
 .customizer-overlay.active{
@@ -440,18 +448,20 @@ header{
 }
 
 .customizer-box{
-    width:min(1120px,100%);
-    max-height:94vh;
+    width:min(1180px,100%);
+    max-height:96vh;
     overflow:auto;
-    border-radius:26px;
+    border-radius:28px;
     background:
-        linear-gradient(145deg,#101e31,#07111e);
-    border:1px solid #304760;
-    box-shadow:0 35px 120px #000e;
+        linear-gradient(145deg,#101e31,#060d17);
+    border:1px solid #38516d;
+    box-shadow:
+        0 35px 120px #000e,
+        0 0 70px #168cff10;
 }
 
 .customizer-header{
-    min-height:70px;
+    min-height:74px;
     padding:18px 23px;
     display:flex;
     align-items:center;
@@ -459,9 +469,9 @@ header{
     border-bottom:1px solid #ffffff10;
     position:sticky;
     top:0;
-    z-index:20;
+    z-index:30;
     background:#0d1929ee;
-    backdrop-filter:blur(15px);
+    backdrop-filter:blur(18px);
 }
 
 .customizer-header h2{
@@ -475,8 +485,8 @@ header{
 }
 
 .close-customizer{
-    width:40px;
-    height:40px;
+    width:42px;
+    height:42px;
     border:1px solid #334862;
     background:#0b1625;
     color:#fff;
@@ -486,365 +496,493 @@ header{
 
 .customizer-grid{
     display:grid;
-    grid-template-columns:440px 1fr;
-    gap:24px;
-    padding:24px;
+    grid-template-columns:490px 1fr;
+    gap:25px;
+    padding:25px;
 }
 
 /* =====================================================
-   PHONE STAGE
+   PREMIUM PHONE STAGE
 ===================================================== */
 
 .phone-stage{
-    min-height:580px;
-    border-radius:24px;
+    min-height:620px;
+    border-radius:26px;
     background:
-        radial-gradient(circle at 50% 28%,#294d72 0,#13283f 27%,#08111e 72%);
+        radial-gradient(
+            circle at 50% 35%,
+            #335b83 0,
+            #19334f 25%,
+            #0a1624 67%,
+            #060c14 100%
+        );
     display:flex;
     align-items:center;
     justify-content:center;
     position:relative;
     overflow:hidden;
-    border:1px solid #29425d;
+    border:1px solid #31506e;
+    box-shadow:
+        inset 0 0 70px #0008;
 }
 
 .phone-stage:before{
     content:"";
     position:absolute;
-    width:370px;
-    height:370px;
+    width:420px;
+    height:420px;
     border-radius:50%;
-    background:#168cff19;
-    filter:blur(35px);
+    background:#168cff18;
+    filter:blur(45px);
 }
 
 .stage-grid{
     position:absolute;
     inset:0;
-    opacity:.16;
+    opacity:.12;
     background-image:
         linear-gradient(#fff 1px,transparent 1px),
         linear-gradient(90deg,#fff 1px,transparent 1px);
     background-size:42px 42px;
-    mask-image:linear-gradient(to bottom,transparent,#000,transparent);
+    mask-image:linear-gradient(to bottom,transparent,#000 35%,#000 65%,transparent);
 }
 
 .phone-shadow{
     position:absolute;
-    width:235px;
-    height:28px;
-    background:#000c;
+    width:260px;
+    height:38px;
+    background:#000d;
     border-radius:50%;
-    bottom:66px;
-    filter:blur(13px);
+    bottom:65px;
+    filter:blur(18px);
 }
+
+.model-badge{
+    position:absolute;
+    top:18px;
+    left:18px;
+    z-index:50;
+    padding:8px 12px;
+    border-radius:10px;
+    background:#07111dcc;
+    border:1px solid #ffffff20;
+    backdrop-filter:blur(12px);
+    font-size:11px;
+    color:#d8e8f7;
+}
+
+/* REALISTIC PHONE BODY */
 
 .phone-preview{
     position:relative;
     z-index:5;
-    width:232px;
-    height:475px;
-    border-radius:42px;
-    background:linear-gradient(145deg,#313943,#090b0f);
-    border:5px solid #191e24;
-    box-shadow:
-        0 28px 65px #000e,
-        0 0 0 1px #ffffff18,
-        inset 4px 4px 10px #ffffff0a;
-    transition:.4s;
-}
-
-.phone-preview:before{
-    content:"";
-    position:absolute;
-    left:-7px;
-    top:115px;
-    width:4px;
-    height:55px;
-    border-radius:4px 0 0 4px;
-    background:#303941;
-    box-shadow:
-        0 67px 0 #303941,
-        0 88px 0 #303941;
-}
-
-.phone-preview:after{
-    content:"";
-    position:absolute;
-    right:-7px;
-    top:145px;
-    width:4px;
-    height:85px;
-    border-radius:0 4px 4px 0;
-    background:#303941;
-}
-
-.phone-screen{
-    position:absolute;
-    inset:8px;
-    border-radius:35px;
+    width:252px;
+    height:510px;
+    border-radius:45px;
     background:
-        radial-gradient(circle at 30% 20%,#ffffff12,transparent 28%),
-        linear-gradient(150deg,#17212d,#070b10 65%);
-    overflow:hidden;
+        linear-gradient(
+            145deg,
+            #59636d 0%,
+            #252c33 17%,
+            #090c10 58%,
+            #353d45 100%
+        );
+    border:5px solid #0d1115;
+    box-shadow:
+        0 35px 70px #000e,
+        0 0 0 1px #ffffff1c,
+        inset 3px 2px 8px #ffffff22,
+        inset -5px -8px 15px #0009;
+    transition:.45s;
 }
 
-.phone-screen-glow{
+/* metal edge highlights */
+
+.phone-preview .phone-frame-light{
     position:absolute;
-    width:180px;
-    height:180px;
+    inset:2px;
+    border-radius:40px;
+    border:1px solid #ffffff25;
+    pointer-events:none;
+    z-index:40;
+}
+
+/* SIDE BUTTONS */
+
+.phone-side-left{
+    position:absolute;
+    left:-8px;
+    top:115px;
+    width:5px;
+    height:47px;
+    border-radius:4px 0 0 4px;
+    background:linear-gradient(#69747d,#20262c);
+    box-shadow:
+        0 60px 0 #30383f,
+        0 83px 0 #30383f;
+    z-index:60;
+}
+
+.phone-side-right{
+    position:absolute;
+    right:-8px;
+    top:145px;
+    width:5px;
+    height:91px;
+    border-radius:0 4px 4px 0;
+    background:linear-gradient(#707981,#22282e);
+    z-index:60;
+}
+
+/* BACK PANEL */
+
+.phone-back{
+    position:absolute;
+    inset:5px;
+    border-radius:40px;
+    overflow:hidden;
+    background:
+        radial-gradient(
+            circle at 72% 18%,
+            #ffffff10,
+            transparent 20%
+        ),
+        linear-gradient(145deg,#30383f,#0c1014 70%,#20272d);
+    box-shadow:
+        inset 0 0 0 1px #ffffff16,
+        inset 8px 0 18px #ffffff08,
+        inset -8px 0 18px #0009;
+}
+
+/* glossy reflection */
+
+.phone-back:before{
+    content:"";
+    position:absolute;
+    width:70px;
+    height:460px;
+    top:-30px;
+    left:45px;
+    transform:rotate(12deg);
+    background:linear-gradient(
+        to right,
+        transparent,
+        #ffffff07,
+        transparent
+    );
+    filter:blur(7px);
+}
+
+/* camera island */
+
+.camera{
+    position:absolute;
+    top:19px;
+    left:19px;
+    width:103px;
+    height:113px;
+    border-radius:28px;
+    background:
+        linear-gradient(145deg,#3b4147,#11151a 60%,#050608);
+    box-shadow:
+        inset 0 0 0 1px #ffffff18,
+        inset 3px 3px 8px #ffffff0a,
+        0 9px 18px #000c;
+    padding:14px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:9px;
+    z-index:20;
+    transition:.35s;
+}
+
+.lens{
+    width:32px;
+    height:32px;
     border-radius:50%;
-    top:100px;
-    left:25px;
-    background:#168cff12;
-    filter:blur(25px);
+    background:
+        radial-gradient(
+            circle at 32% 25%,
+            #e6f7ff 0 5%,
+            #6090b8 7% 16%,
+            #172c42 17% 38%,
+            #020407 40% 67%,
+            #52687b 68% 100%
+        );
+    border:2px solid #555f68;
+    box-shadow:
+        inset 0 0 5px #fff5,
+        0 3px 7px #000;
+}
+
+.lens:after{
+    content:"";
+    position:absolute;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#ffffff75;
+    margin:5px;
+    filter:blur(1px);
+}
+
+/* camera variations */
+
+.camera.diagonal .lens:nth-child(1){
+    transform:translate(5px,5px);
+}
+
+.camera.diagonal .lens:nth-child(2){
+    transform:translate(-5px,-5px);
+}
+
+.camera.pro{
+    width:116px;
+    height:125px;
+    border-radius:30px;
+}
+
+.camera.pro .lens{
+    width:34px;
+    height:34px;
+}
+
+.camera.pro .lens:nth-child(3){
+    grid-column:1 / span 2;
+    justify-self:center;
+}
+
+.camera.modern{
+    width:122px;
+    height:99px;
+    border-radius:30px;
+    grid-template-columns:repeat(3,1fr);
+    align-items:center;
+    gap:7px;
+}
+
+.camera.modern .lens{
+    width:28px;
+    height:28px;
+}
+
+.camera.modern-pro{
+    width:128px;
+    height:108px;
+    border-radius:30px;
+    grid-template-columns:repeat(3,1fr);
+    align-items:center;
+    gap:8px;
+}
+
+.camera.modern-pro .lens{
+    width:31px;
+    height:31px;
+}
+
+.camera.modern-pro .lens:nth-child(3){
+    grid-column:auto;
+}
+
+/* little flash/sensor */
+
+.camera:after{
+    content:"";
+    position:absolute;
+    right:13px;
+    bottom:13px;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:
+        radial-gradient(circle,#fffbd5,#d4bb69 50%,#6d5d30);
+    box-shadow:0 0 7px #fff4;
+}
+
+/* phone logo */
+
+.phone-logo{
+    position:absolute;
+    left:50%;
+    top:57%;
+    transform:translate(-50%,-50%);
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#ffffff45;
+    font-size:21px;
+    font-weight:900;
+    border:1px solid #ffffff10;
 }
 
 .phone-label{
     position:absolute;
-    z-index:15;
+    z-index:45;
     left:50%;
-    bottom:21px;
+    bottom:22px;
     transform:translateX(-50%);
-    color:#ffffffb5;
-    font-size:10px;
-    letter-spacing:1.5px;
+    color:#ffffff78;
+    font-size:9px;
+    letter-spacing:2px;
     white-space:nowrap;
 }
 
 /* =====================================================
-   CASE
+   CASE LAYER
 ===================================================== */
 
 .case-layer{
     position:absolute;
-    inset:-6px;
-    border-radius:47px;
-    z-index:10;
+    inset:-7px;
+    border-radius:52px;
+    z-index:35;
     pointer-events:none;
     transition:.45s;
 }
 
+/* transparent */
+
 .case-layer.transparent{
-    border:4px solid rgba(210,244,255,.75);
+    border:5px solid rgba(219,246,255,.78);
     background:
-        linear-gradient(135deg,
-        rgba(255,255,255,.13),
-        rgba(79,198,255,.04));
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.13),
+            rgba(79,198,255,.035) 50%,
+            rgba(255,255,255,.08)
+        );
     box-shadow:
-        inset 0 0 22px rgba(255,255,255,.16),
-        0 0 12px rgba(120,220,255,.16);
+        inset 0 0 25px rgba(255,255,255,.16),
+        inset 0 0 4px #fff,
+        0 0 15px rgba(120,220,255,.20);
 }
 
 .case-layer.transparent:after{
     content:"";
     position:absolute;
-    width:102px;
-    height:102px;
+    width:105px;
+    height:105px;
     border-radius:50%;
-    border:4px solid rgba(255,255,255,.65);
+    border:4px solid rgba(255,255,255,.64);
     left:50%;
-    top:52%;
+    top:55%;
     transform:translate(-50%,-50%);
-    opacity:.45;
+    opacity:.42;
+    box-shadow:
+        inset 0 0 8px #fff5,
+        0 0 8px #fff2;
 }
 
+/* Guess */
+
 .case-layer.guess{
-    border:7px solid #6d4429;
+    border:8px solid #684127;
     background:
-        linear-gradient(145deg,#a8784d,#5c351f 48%,#9a6a43);
+        linear-gradient(
+            145deg,
+            #b88758,
+            #63391f 45%,
+            #98663e 72%,
+            #4c2918
+        );
     box-shadow:
-        inset 0 0 20px #0005,
-        0 0 15px #0008;
+        inset 0 0 22px #0006,
+        inset 0 0 4px #ffd9a5,
+        0 0 15px #0009;
 }
 
 .case-layer.guess:after{
     content:"GUESS";
     position:absolute;
     left:50%;
-    bottom:84px;
+    bottom:90px;
     transform:translateX(-50%);
     font-size:17px;
     font-weight:900;
     letter-spacing:3px;
-    color:#e9c58e;
-    text-shadow:0 2px 4px #0009;
+    color:#efd19b;
+    text-shadow:0 2px 5px #000b;
 }
+
+/* single color */
 
 .case-layer.single{
-    border:7px solid var(--case-color,#111);
+    border:8px solid var(--case-color,#111);
     background:
-        linear-gradient(145deg,
-        color-mix(in srgb,var(--case-color,#111),white 16%),
-        var(--case-color,#111) 60%,
-        color-mix(in srgb,var(--case-color,#111),black 18%));
+        linear-gradient(
+            145deg,
+            color-mix(in srgb,var(--case-color,#111),white 20%),
+            var(--case-color,#111) 52%,
+            color-mix(in srgb,var(--case-color,#111),black 20%)
+        );
     box-shadow:
-        inset 0 0 20px #ffffff14,
-        0 8px 22px #0008;
+        inset 0 0 25px #ffffff16,
+        inset 0 0 5px #fff3,
+        0 10px 25px #000b;
 }
 
+/* rhinestone */
+
 .case-layer.rhinestone{
-    border:7px solid #111;
+    border:8px solid #0e1013;
     background:
-        radial-gradient(circle at 3px 3px,
-        #ffffff 0 1.6px,
-        #cfd5dc 1.8px 2.5px,
-        transparent 2.7px) 0 0/10px 10px,
-        linear-gradient(145deg,#15171a,#3a3d42);
+        radial-gradient(
+            circle at 3px 3px,
+            #fff 0 1.4px,
+            #cbd1d7 1.7px 2.4px,
+            transparent 2.7px
+        ) 0 0/9px 9px,
+        linear-gradient(145deg,#101216,#3d4146);
     box-shadow:
-        inset 0 0 22px #ffffff18,
-        0 0 20px #ffffff12;
+        inset 0 0 28px #ffffff1a,
+        0 0 20px #ffffff15;
 }
 
 .case-layer.rhinestone:after{
-    content:"✦  ✦  ✦";
+    content:"✦   ✦   ✦";
     position:absolute;
     left:50%;
-    bottom:85px;
+    bottom:91px;
     transform:translateX(-50%);
-    font-size:20px;
-    letter-spacing:7px;
+    font-size:19px;
+    letter-spacing:6px;
     color:#fff;
-    text-shadow:0 0 9px #fff;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 13px #fff;
 }
 
+/* carbon */
+
 .case-layer.carbon{
-    border:7px solid #12161b;
+    border:8px solid #101419;
     background:
         repeating-linear-gradient(
             135deg,
             #090c10 0,
-            #090c10 6px,
-            #252b31 6px,
-            #252b31 10px
+            #090c10 7px,
+            #252c32 7px,
+            #252c32 11px
         );
     box-shadow:
-        inset 0 0 25px #000,
-        0 8px 20px #0009;
+        inset 0 0 30px #000,
+        inset 0 0 4px #ffffff12,
+        0 10px 25px #000c;
 }
 
 .case-layer.carbon:after{
     content:"CARBON";
     position:absolute;
     left:50%;
-    bottom:87px;
+    bottom:92px;
     transform:translateX(-50%);
-    color:#bfc7d0;
+    color:#c6ced6;
     font-size:10px;
     font-weight:900;
     letter-spacing:3px;
-}
-
-/* =====================================================
-   CAMERA
-===================================================== */
-
-.camera{
-    position:absolute;
-    top:20px;
-    left:20px;
-    width:96px;
-    height:108px;
-    border-radius:25px;
-    background:
-        linear-gradient(145deg,#282e35,#0b0e12);
-    box-shadow:
-        inset 0 0 0 1px #ffffff1c,
-        0 7px 15px #000b;
-    padding:14px;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:9px;
-    z-index:14;
-    transition:.4s;
-}
-
-.lens{
-    width:29px;
-    height:29px;
-    border-radius:50%;
-    background:
-        radial-gradient(circle at 35% 28%,
-        #b6d7f0 0 7%,
-        #426b91 8% 20%,
-        #111b27 21% 47%,
-        #030508 48% 68%,
-        #3a5268 69% 100%);
-    border:2px solid #555e67;
-    box-shadow:
-        inset 0 0 4px #fff4,
-        0 3px 6px #000;
-}
-
-.camera.pro{
-    width:111px;
-    height:119px;
-}
-
-.camera.pro .lens{
-    width:32px;
-    height:32px;
-}
-
-.camera.modern{
-    width:116px;
-    height:92px;
-    border-radius:29px;
-    grid-template-columns:repeat(3,1fr);
-    align-items:center;
-}
-
-.camera.modern .lens{
-    width:27px;
-    height:27px;
-}
-
-.camera.modern .lens:last-child{
-    grid-column:auto;
-}
-
-.camera.modern-pro{
-    width:122px;
-    height:100px;
-    border-radius:29px;
-    grid-template-columns:repeat(3,1fr);
-    align-items:center;
-}
-
-.camera.modern-pro .lens{
-    width:30px;
-    height:30px;
-}
-
-.camera.diagonal .lens:nth-child(1){
-    transform:translate(4px,4px);
-}
-
-.camera.diagonal .lens:nth-child(2){
-    transform:translate(-4px,-4px);
-}
-
-.camera.three .lens:nth-child(3){
-    grid-column:1 / span 2;
-    justify-self:center;
-}
-
-/* =====================================================
-   MODEL BADGE
-===================================================== */
-
-.model-badge{
-    position:absolute;
-    top:18px;
-    left:18px;
-    z-index:20;
-    padding:8px 11px;
-    border-radius:9px;
-    background:#07111dcc;
-    border:1px solid #ffffff18;
-    backdrop-filter:blur(10px);
-    font-size:11px;
-    color:#d8e8f7;
 }
 
 /* =====================================================
@@ -867,7 +1005,6 @@ header{
 .control-block h3{
     font-size:14px;
     margin-bottom:11px;
-    color:#e2edf8;
 }
 
 .custom-select{
@@ -878,10 +1015,6 @@ header{
     border:1px solid #304963;
     border-radius:10px;
     outline:none;
-}
-
-.custom-select:focus{
-    border-color:var(--blue);
 }
 
 .case-choices{
@@ -902,6 +1035,7 @@ header{
 
 .case-choice:hover{
     border-color:#4c6d91;
+    transform:translateY(-1px);
 }
 
 .case-choice.active{
@@ -914,7 +1048,7 @@ header{
 
 .case-choice small{
     display:block;
-    margin-top:4px;
+    margin-top:5px;
     color:#8295aa;
     font-size:11px;
 }
@@ -952,10 +1086,6 @@ header{
     font-size:9px;
     color:#8fa1b6;
 }
-
-/* =====================================================
-   SUMMARY
-===================================================== */
 
 .custom-summary{
     border-radius:16px;
@@ -1000,29 +1130,8 @@ header{
     box-shadow:0 8px 22px #168cff25;
 }
 
-.custom-add:hover{
-    filter:brightness(1.08);
-}
-
 /* =====================================================
-   CHARGER VISUAL BADGE
-===================================================== */
-
-.charger-badge{
-    position:absolute;
-    left:10px;
-    top:10px;
-    padding:6px 9px;
-    border-radius:7px;
-    background:#07101ddd;
-    color:#fff;
-    font-size:10px;
-    font-weight:800;
-    border:1px solid #ffffff20;
-}
-
-/* =====================================================
-   CART
+   MODALS
 ===================================================== */
 
 .modal{
@@ -1143,7 +1252,7 @@ header{
 }
 
 /* =====================================================
-   REVIEWS / CONTACT
+   REVIEWS
 ===================================================== */
 
 .info-section{
@@ -1175,6 +1284,10 @@ header{
     color:var(--muted);
     line-height:1.6;
 }
+
+/* =====================================================
+   CONTACT
+===================================================== */
 
 .contact{
     max-width:1250px;
@@ -1209,10 +1322,6 @@ header{
     margin-bottom:4px;
 }
 
-/* =====================================================
-   SOCIAL
-===================================================== */
-
 .socials{
     display:flex;
     justify-content:center;
@@ -1236,7 +1345,7 @@ footer{
 }
 
 /* =====================================================
-   WHATSAPP
+   FLOATING BUTTONS
 ===================================================== */
 
 .whatsapp{
@@ -1256,10 +1365,6 @@ footer{
     box-shadow:0 8px 30px #25d36655;
 }
 
-/* =====================================================
-   CHAT
-===================================================== */
-
 .chat-button{
     position:fixed;
     right:20px;
@@ -1273,6 +1378,10 @@ footer{
     color:#fff;
     font-size:23px;
 }
+
+/* =====================================================
+   CHAT
+===================================================== */
 
 .chat-box{
     position:fixed;
@@ -1365,18 +1474,18 @@ footer{
    RESPONSIVE
 ===================================================== */
 
-@media(max-width:1050px){
+@media(max-width:1100px){
 
     .products-grid{
         grid-template-columns:repeat(3,1fr);
     }
 
     .customizer-grid{
-        grid-template-columns:380px 1fr;
+        grid-template-columns:420px 1fr;
     }
 }
 
-@media(max-width:800px){
+@media(max-width:850px){
 
     .nav{
         flex-wrap:wrap;
@@ -1413,7 +1522,7 @@ footer{
     }
 
     .phone-stage{
-        min-height:500px;
+        min-height:540px;
     }
 }
 
@@ -1437,11 +1546,11 @@ footer{
     }
 
     .customizer-overlay{
-        padding:6px;
+        padding:5px;
     }
 
     .customizer-box{
-        max-height:97vh;
+        max-height:98vh;
         border-radius:18px;
     }
 
@@ -1451,21 +1560,25 @@ footer{
     }
 
     .phone-stage{
-        min-height:445px;
+        min-height:470px;
     }
 
     .phone-preview{
-        width:190px;
-        height:390px;
-        border-radius:35px;
+        width:205px;
+        height:415px;
+        border-radius:38px;
+    }
+
+    .phone-back{
+        border-radius:34px;
     }
 
     .case-layer{
-        border-radius:40px;
+        border-radius:44px;
     }
 
     .camera{
-        transform:scale(.82);
+        transform:scale(.78);
         transform-origin:top left;
     }
 
@@ -1495,9 +1608,7 @@ footer{
 
         <h1>TeknoBiz</h1>
 
-        <p>
-            Teknoloji & Aksesuar Dünyasına Hoş Geldiniz
-        </p>
+        <p>Teknoloji & Aksesuar Dünyasına Hoş Geldiniz</p>
 
         <button class="enter-btn" onclick="enterSite()">
             Siteye Giriş Yap
@@ -1524,7 +1635,7 @@ footer{
             <input
                 id="searchInput"
                 type="search"
-                placeholder="Ürün ara... Örn: powerbank, kılıf, şarj"
+                placeholder="Ürün ara... Örn: powerbank, iPhone 17 Pro, şarj"
             >
 
         </div>
@@ -1555,17 +1666,11 @@ footer{
 
     <div class="hero-buttons">
 
-        <button
-            class="primary-btn"
-            onclick="scrollToProducts()"
-        >
+        <button class="primary-btn" onclick="scrollToProducts()">
             Ürünleri İncele
         </button>
 
-        <button
-            class="secondary-btn"
-            onclick="openChat()"
-        >
+        <button class="secondary-btn" onclick="openChat()">
             💬 Canlı Destek
         </button>
 
@@ -1605,10 +1710,7 @@ footer{
      PRODUCTS
 ===================================================== -->
 
-<section
-    class="products-section"
-    id="productsSection"
->
+<section class="products-section" id="productsSection">
 
     <div class="section-head">
 
@@ -1616,9 +1718,7 @@ footer{
 
             <h2>Ürünlerimiz</h2>
 
-            <p>
-                İhtiyacınıza uygun ürünü bulun.
-            </p>
+            <p>İhtiyacınıza uygun ürünü bulun.</p>
 
         </div>
 
@@ -1628,57 +1728,30 @@ footer{
 
         <select id="categoryFilter">
 
-            <option value="">
-                Tüm Kategoriler
-            </option>
+            <option value="">Tüm Kategoriler</option>
 
-            <option value="Kılıf">
-                Kılıf
-            </option>
-
-            <option value="Cam">
-                Cam
-            </option>
-
-            <option value="Aksesuar">
-                Aksesuar
-            </option>
-
-            <option value="Dekorasyon">
-                Dekorasyon
-            </option>
-
-            <option value="Ses">
-                Ses
-            </option>
-
-            <option value="Şarj">
-                Şarj
-            </option>
+            <option value="Kılıf">Kılıf</option>
+            <option value="Cam">Cam</option>
+            <option value="Aksesuar">Aksesuar</option>
+            <option value="Dekorasyon">Dekorasyon</option>
+            <option value="Ses">Ses</option>
+            <option value="Şarj">Şarj</option>
 
         </select>
 
         <select id="modelFilter">
 
-            <option value="">
-                Tüm Modeller
-            </option>
+            <option value="">Tüm Modeller</option>
 
         </select>
 
-        <button
-            class="reset-btn"
-            onclick="resetFilters()"
-        >
+        <button class="reset-btn" onclick="resetFilters()">
             Filtreleri Temizle
         </button>
 
     </div>
 
-    <div
-        class="products-grid"
-        id="products"
-    ></div>
+    <div class="products-grid" id="products"></div>
 
 </section>
 
@@ -1693,49 +1766,29 @@ footer{
     <div class="info-grid">
 
         <div class="info-card">
-
             <strong>Mehmet</strong>
-
-            <div class="stars">
-                ★★★★★
-            </div>
-
+            <div class="stars">★★★★★</div>
             <p>
                 Ürünler güzel, iletişim hızlı.
-                Kılıfın modelini seçebilmek gerçekten
-                kullanışlı olmuş.
+                Kılıfın modelini seçebilmek gerçekten kullanışlı olmuş.
             </p>
-
         </div>
 
         <div class="info-card">
-
             <strong>Ahmet</strong>
-
-            <div class="stars">
-                ★★★★★
-            </div>
-
+            <div class="stars">★★★★★</div>
             <p>
                 Şarj ürününü aldım, mağazadan teslim aldım.
                 Gayet memnun kaldım.
             </p>
-
         </div>
 
         <div class="info-card">
-
             <strong>Emre</strong>
-
-            <div class="stars">
-                ★★★★★
-            </div>
-
+            <div class="stars">★★★★★</div>
             <p>
-                Telefonuma uygun kılıfı direkt model
-                seçerek buldum.
+                Telefonuma uygun kılıfı direkt model seçerek buldum.
             </p>
-
         </div>
 
     </div>
@@ -1760,36 +1813,24 @@ footer{
         <div class="contact-list">
 
             <div class="contact-item">
-
                 <small>📞 Telefon</small>
-
                 0505 999 90 09
-
             </div>
 
             <div class="contact-item">
-
                 <small>📍 Adres</small>
-
                 Süleyman Demirel Bulvarı No:15,
                 Bucak / Burdur
-
             </div>
 
             <div class="contact-item">
-
                 <small>🕘 Çalışma Saatleri</small>
-
                 09:00 - 21:00
-
             </div>
 
             <div class="contact-item">
-
                 <small>📅 Pazar</small>
-
                 Kapalı
-
             </div>
 
         </div>
@@ -1804,17 +1845,11 @@ footer{
 
 <div class="socials">
 
-    <a
-        href="https://instagram.com/TeknoBiz7"
-        target="_blank"
-    >
+    <a href="https://instagram.com/TeknoBiz7" target="_blank">
         📷 Instagram
     </a>
 
-    <a
-        href="https://facebook.com/bucakteknobiz15"
-        target="_blank"
-    >
+    <a href="https://facebook.com/bucakteknobiz15" target="_blank">
         f Facebook
     </a>
 
@@ -1822,10 +1857,7 @@ footer{
         ✉️ Gmail
     </a>
 
-    <a
-        href="https://wa.me/905059999009"
-        target="_blank"
-    >
+    <a href="https://wa.me/905059999009" target="_blank">
         💬 WhatsApp
     </a>
 
@@ -1849,47 +1881,28 @@ footer{
 </a>
 
 <!-- =====================================================
-     CHAT BUTTON
-===================================================== -->
-
-<button
-    class="chat-button"
-    onclick="openChat()"
->
-    💬
-</button>
-
-<!-- =====================================================
      CHAT
 ===================================================== -->
 
-<div
-    class="chat-box"
-    id="chatBox"
->
+<button class="chat-button" onclick="openChat()">💬</button>
+
+<div class="chat-box" id="chatBox">
 
     <div class="chat-head">
 
-        <div class="chat-avatar">
-            T
-        </div>
+        <div class="chat-avatar">T</div>
 
         <div>
 
             <strong>Mustafa Bey</strong><br>
 
-            <small>
-                ● Çevrimiçi
-            </small>
+            <small>● Çevrimiçi</small>
 
         </div>
 
     </div>
 
-    <div
-        class="chat-messages"
-        id="chatMessages"
-    >
+    <div class="chat-messages" id="chatMessages">
 
         <div class="message bot-message">
             Merhaba 👋 TeknoBiz'e hoş geldiniz.
@@ -1906,35 +1919,25 @@ footer{
             onkeydown="if(event.key==='Enter') sendMessage()"
         >
 
-        <button onclick="sendMessage()">
-            ➤
-        </button>
+        <button onclick="sendMessage()">➤</button>
 
     </div>
 
 </div>
 
 <!-- =====================================================
-     CART MODAL
+     CART
 ===================================================== -->
 
-<div
-    class="modal"
-    id="cartModal"
->
+<div class="modal" id="cartModal">
 
     <div class="modal-box">
 
         <div class="modal-head">
 
-            <h2>
-                Sepetim
-            </h2>
+            <h2>Sepetim</h2>
 
-            <button
-                class="modal-close"
-                onclick="closeCart()"
-            >
+            <button class="modal-close" onclick="closeCart()">
                 ✕
             </button>
 
@@ -1944,20 +1947,13 @@ footer{
 
         <div class="cart-total">
 
-            <span>
-                Toplam
-            </span>
+            <span>Toplam</span>
 
-            <span id="cartTotal">
-                0 TL
-            </span>
+            <span id="cartTotal">0 TL</span>
 
         </div>
 
-        <button
-            class="checkout-btn"
-            onclick="openPurchase()"
-        >
+        <button class="checkout-btn" onclick="openPurchase()">
             WhatsApp'tan Sipariş Ver
         </button>
 
@@ -1966,26 +1962,18 @@ footer{
 </div>
 
 <!-- =====================================================
-     PURCHASE MODAL
+     PURCHASE
 ===================================================== -->
 
-<div
-    class="modal"
-    id="purchaseModal"
->
+<div class="modal" id="purchaseModal">
 
     <div class="modal-box">
 
         <div class="modal-head">
 
-            <h2>
-                Sipariş Bilgileri
-            </h2>
+            <h2>Sipariş Bilgileri</h2>
 
-            <button
-                class="modal-close"
-                onclick="closePurchase()"
-            >
+            <button class="modal-close" onclick="closePurchase()">
                 ✕
             </button>
 
@@ -1993,35 +1981,23 @@ footer{
 
         <div class="form-group">
 
-            <label>
-                Ad Soyad
-            </label>
+            <label>Ad Soyad</label>
 
-            <input
-                id="customerName"
-                placeholder="Adınız Soyadınız"
-            >
+            <input id="customerName" placeholder="Adınız Soyadınız">
 
         </div>
 
         <div class="form-group">
 
-            <label>
-                Telefon
-            </label>
+            <label>Telefon</label>
 
-            <input
-                id="customerPhone"
-                placeholder="05xx xxx xx xx"
-            >
+            <input id="customerPhone" placeholder="05xx xxx xx xx">
 
         </div>
 
         <div class="form-group">
 
-            <label>
-                Adres
-            </label>
+            <label>Adres</label>
 
             <textarea
                 id="customerAddress"
@@ -2032,9 +2008,7 @@ footer{
 
         <div class="form-group">
 
-            <label>
-                Not
-            </label>
+            <label>Not</label>
 
             <textarea
                 id="customerNote"
@@ -2043,10 +2017,7 @@ footer{
 
         </div>
 
-        <button
-            class="checkout-btn"
-            onclick="sendOrderWhatsApp()"
-        >
+        <button class="checkout-btn" onclick="sendOrderWhatsApp()">
             WhatsApp'tan Siparişi Gönder
         </button>
 
@@ -2058,10 +2029,7 @@ footer{
      CUSTOMIZER
 ===================================================== -->
 
-<div
-    class="customizer-overlay"
-    id="customizerModal"
->
+<div class="customizer-overlay" id="customizerModal">
 
     <div class="customizer-box">
 
@@ -2069,12 +2037,10 @@ footer{
 
             <div>
 
-                <h2>
-                    📱 Telefonunu Özelleştir
-                </h2>
+                <h2>📱 Telefonunu Özelleştir</h2>
 
                 <p>
-                    Modelini seç, kılıfını belirle ve telefonda gör.
+                    Modelini ve kılıfını seç. Telefonun görünümü anında değişsin.
                 </p>
 
             </div>
@@ -2090,48 +2056,39 @@ footer{
 
         <div class="customizer-grid">
 
-            <!-- PHONE -->
+            <!-- PHONE PREVIEW -->
 
             <div class="phone-stage">
 
                 <div class="stage-grid"></div>
 
-                <div
-                    class="model-badge"
-                    id="modelBadge"
-                >
+                <div class="model-badge" id="modelBadge">
                     iPhone 17 Pro
                 </div>
 
                 <div class="phone-shadow"></div>
 
-                <div
-                    class="phone-preview"
-                    id="phonePreview"
-                >
+                <div class="phone-preview" id="phonePreview">
 
-                    <div class="phone-screen">
+                    <div class="phone-back">
 
-                        <div class="phone-screen-glow"></div>
+                        <div class="camera" id="phoneCamera"></div>
+
+                        <div class="phone-logo">T</div>
+
+                        <div class="phone-label" id="phoneLabel">
+                            iPhone 17 Pro
+                        </div>
 
                     </div>
 
-                    <div
-                        class="case-layer transparent"
-                        id="caseLayer"
-                    ></div>
+                    <div class="case-layer transparent" id="caseLayer"></div>
 
-                    <div
-                        class="camera"
-                        id="phoneCamera"
-                    ></div>
+                    <div class="phone-side-left"></div>
 
-                    <div
-                        class="phone-label"
-                        id="phoneLabel"
-                    >
-                        iPhone 17 Pro
-                    </div>
+                    <div class="phone-side-right"></div>
+
+                    <div class="phone-frame-light"></div>
 
                 </div>
 
@@ -2143,9 +2100,7 @@ footer{
 
                 <div class="control-block">
 
-                    <h3>
-                        📱 Telefon Modeli
-                    </h3>
+                    <h3>📱 Telefon Modeli</h3>
 
                     <select
                         class="custom-select"
@@ -2157,81 +2112,40 @@ footer{
 
                 <div class="control-block">
 
-                    <h3>
-                        🛡️ Kılıf Modeli
-                    </h3>
+                    <h3>🛡️ Kılıf Modeli</h3>
 
-                    <div
-                        class="case-choices"
-                        id="caseChoices"
-                    ></div>
+                    <div id="caseChoices" class="case-choices"></div>
 
                 </div>
 
-                <div
-                    class="control-block"
-                    id="colorBlock"
-                >
+                <div class="control-block" id="colorBlock">
 
-                    <h3>
-                        🎨 Kılıf Rengi
-                    </h3>
+                    <h3>🎨 Kılıf Rengi</h3>
 
-                    <div
-                        class="color-choices"
-                        id="colorChoices"
-                    ></div>
+                    <div id="colorChoices" class="color-choices"></div>
 
                 </div>
 
                 <div class="custom-summary">
 
                     <div class="summary-row">
-
-                        <span>
-                            Telefon
-                        </span>
-
-                        <strong id="summaryModel">
-                            iPhone 17 Pro
-                        </strong>
-
+                        <span>Telefon</span>
+                        <strong id="summaryModel">iPhone 17 Pro</strong>
                     </div>
 
                     <div class="summary-row">
-
-                        <span>
-                            Kılıf
-                        </span>
-
-                        <strong id="summaryCase">
-                            Şeffaf MagSafe
-                        </strong>
-
+                        <span>Kılıf</span>
+                        <strong id="summaryCase">Şeffaf MagSafe</strong>
                     </div>
 
                     <div class="summary-row">
-
-                        <span>
-                            Renk
-                        </span>
-
-                        <strong id="summaryColor">
-                            Şeffaf
-                        </strong>
-
+                        <span>Renk</span>
+                        <strong id="summaryColor">Şeffaf</strong>
                     </div>
 
                     <div class="summary-row summary-total">
-
-                        <span>
-                            Fiyat
-                        </span>
-
-                        <strong id="summaryPrice">
-                            750 TL
-                        </strong>
-
+                        <span>Fiyat</span>
+                        <strong id="summaryPrice">750 TL</strong>
                     </div>
 
                 </div>
@@ -2336,663 +2250,961 @@ const androidModels = [
 ];
 
 /* =====================================================
-   CHARGER RENDER IMAGES
+   PREMIUM CHARGER SVG RENDERER
 ===================================================== */
 
 function chargerImage(type){
 
-    const common = `
-    <defs>
+    const uid =
+        "c" +
+        Math.random()
+            .toString(36)
+            .slice(2,8);
 
-        <linearGradient
-            id="whiteBody"
-            x1="0"
-            y1="0"
-            x2="1"
-            y2="1"
-        >
-            <stop offset="0" stop-color="#ffffff"/>
-            <stop offset=".45" stop-color="#f4f5f7"/>
-            <stop offset="1" stop-color="#cdd2d8"/>
-        </linearGradient>
+    const svg = `
 
-        <linearGradient
-            id="darkBody"
-            x1="0"
-            y1="0"
-            x2="1"
-            y2="1"
-        >
-            <stop offset="0" stop-color="#30353c"/>
-            <stop offset=".5" stop-color="#101318"/>
-            <stop offset="1" stop-color="#050609"/>
-        </linearGradient>
+<svg
+xmlns="http://www.w3.org/2000/svg"
+width="900"
+height="650"
+viewBox="0 0 900 650"
+>
 
-        <linearGradient
-            id="metal"
-            x1="0"
-            y1="0"
-            x2="1"
-            y2="1"
-        >
-            <stop offset="0" stop-color="#f8fbff"/>
-            <stop offset=".5" stop-color="#b8c1ca"/>
-            <stop offset="1" stop-color="#6d7781"/>
-        </linearGradient>
+<defs>
 
-        <filter
-            id="shadow"
-            x="-40%"
-            y="-40%"
-            width="180%"
-            height="180%"
-        >
-            <feDropShadow
-                dx="0"
-                dy="18"
-                stdDeviation="15"
-                flood-color="#000"
-                flood-opacity=".28"
-            />
-        </filter>
+    <linearGradient id="${uid}bg"
+        x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/>
+        <stop offset="1" stop-color="#e9edf1"/>
+    </linearGradient>
 
-        <filter
-            id="soft"
-            x="-30%"
-            y="-30%"
-            width="160%"
-            height="160%"
-        >
-            <feGaussianBlur stdDeviation="12"/>
-        </filter>
+    <linearGradient id="${uid}white"
+        x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#ffffff"/>
+        <stop offset=".42" stop-color="#f4f6f8"/>
+        <stop offset=".78" stop-color="#d8dde2"/>
+        <stop offset="1" stop-color="#b7bec6"/>
+    </linearGradient>
 
-    </defs>
+    <linearGradient id="${uid}edge"
+        x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#ffffff"/>
+        <stop offset=".5" stop-color="#c4cad0"/>
+        <stop offset="1" stop-color="#7e8790"/>
+    </linearGradient>
 
-    <rect
-        width="800"
-        height="600"
-        fill="#f5f6f8"
-    />
+    <linearGradient id="${uid}dark"
+        x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#40474e"/>
+        <stop offset=".3" stop-color="#20252a"/>
+        <stop offset=".72" stop-color="#0b0e11"/>
+        <stop offset="1" stop-color="#020304"/>
+    </linearGradient>
 
-    <ellipse
-        cx="400"
-        cy="510"
-        rx="210"
-        ry="28"
-        fill="#000"
-        opacity=".13"
-        filter="url(#soft)"
-    />
-    `;
+    <linearGradient id="${uid}metal"
+        x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#777f87"/>
+        <stop offset=".25" stop-color="#f8fbff"/>
+        <stop offset=".5" stop-color="#aeb7c0"/>
+        <stop offset=".75" stop-color="#ffffff"/>
+        <stop offset="1" stop-color="#69727b"/>
+    </linearGradient>
 
-    let body = "";
+    <radialGradient id="${uid}shine">
+        <stop offset="0" stop-color="#ffffff" stop-opacity=".8"/>
+        <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="${uid}shadow"
+        x="-50%" y="-50%" width="200%" height="200%">
+
+        <feDropShadow
+            dx="0"
+            dy="20"
+            stdDeviation="16"
+            flood-color="#000"
+            flood-opacity=".27"
+        />
+
+    </filter>
+
+    <filter id="${uid}blur">
+
+        <feGaussianBlur stdDeviation="16"/>
+
+    </filter>
+
+</defs>
+
+<!-- STUDIO BACKGROUND -->
+
+<rect
+    width="900"
+    height="650"
+    fill="url(#${uid}bg)"
+/>
+
+<ellipse
+    cx="450"
+    cy="550"
+    rx="290"
+    ry="42"
+    fill="#000"
+    opacity=".12"
+    filter="url(#${uid}blur)"
+/>
+
+<ellipse
+    cx="450"
+    cy="535"
+    rx="210"
+    ry="20"
+    fill="#000"
+    opacity=".13"
+/>
+
+${chargerArtwork(type,uid)}
+
+</svg>
+`;
+
+    return "data:image/svg+xml;charset=UTF-8," +
+        encodeURIComponent(svg);
+}
+
+
+/* =====================================================
+   CHARGER ARTWORK
+===================================================== */
+
+function chargerArtwork(type,uid){
 
     if(type === "cable"){
 
-        body = `
+        return `
 
-        <g filter="url(#shadow)">
+        <g filter="url(#${uid}shadow)">
 
+            <!-- braided cable shadow -->
             <path
-                d="M170 405
-                   C250 470 310 485 400 455
-                   C505 420 540 315 625 265"
+                d="M145 438
+                   C235 515
+                   340 535
+                   448 485
+                   C545 440
+                   548 330
+                   650 267"
                 fill="none"
-                stroke="#17191d"
+                stroke="#090b0e"
+                stroke-width="34"
+                stroke-linecap="round"
+                opacity=".28"
+            />
+
+            <!-- cable -->
+            <path
+                d="M145 425
+                   C235 502
+                   335 518
+                   443 473
+                   C540 432
+                   548 321
+                   647 255"
+                fill="none"
+                stroke="#cfd4d9"
                 stroke-width="25"
                 stroke-linecap="round"
             />
 
+            <!-- braided texture -->
             <path
-                d="M170 405
-                   C250 470 310 485 400 455
-                   C505 420 540 315 625 265"
+                d="M145 425
+                   C235 502
+                   335 518
+                   443 473
+                   C540 432
+                   548 321
+                   647 255"
                 fill="none"
-                stroke="#34383e"
+                stroke="#8f979e"
                 stroke-width="13"
                 stroke-linecap="round"
                 stroke-dasharray="3 8"
             />
 
-            <rect
-                x="125"
-                y="375"
-                width="75"
-                height="50"
-                rx="13"
-                fill="url(#metal)"
-            />
-
-            <rect
-                x="188"
-                y="386"
-                width="25"
-                height="28"
-                rx="6"
-                fill="#22272c"
-            />
-
-            <rect
-                x="600"
-                y="238"
-                width="80"
-                height="53"
-                rx="13"
-                fill="url(#whiteBody)"
-            />
-
-            <rect
-                x="671"
-                y="248"
-                width="18"
-                height="33"
-                rx="4"
-                fill="url(#metal)"
-            />
-
+            <!-- white highlight -->
             <path
-                d="M150 387 L178 387"
-                stroke="#fff"
-                stroke-width="5"
-                opacity=".75"
-            />
-
-        </g>
-
-        <text
-            x="400"
-            y="90"
-            text-anchor="middle"
-            font-family="Arial"
-            font-size="27"
-            font-weight="800"
-            fill="#17212c"
-        >
-            LIGHTNING KABLO
-        </text>
-
-        <text
-            x="400"
-            y="120"
-            text-anchor="middle"
-            font-family="Arial"
-            font-size="15"
-            fill="#667383"
-        >
-            Şarj • Data • Dayanıklı Tasarım
-        </text>
-        `;
-
-    }
-
-    else if(type === "head"){
-
-        body = `
-
-        <g filter="url(#shadow)">
-
-            <rect
-                x="250"
-                y="115"
-                width="300"
-                height="320"
-                rx="55"
-                fill="url(#whiteBody)"
-            />
-
-            <path
-                d="M300 145
-                   C360 120 440 120 500 145"
+                d="M153 417
+                   C242 482
+                   335 495
+                   438 455"
                 fill="none"
                 stroke="#fff"
-                stroke-width="12"
+                stroke-width="4"
+                stroke-linecap="round"
                 opacity=".75"
             />
 
+            <!-- USB connector -->
             <rect
-                x="330"
-                y="310"
-                width="140"
-                height="48"
-                rx="15"
-                fill="#11161b"
+                x="88"
+                y="394"
+                width="95"
+                height="63"
+                rx="17"
+                fill="url(#${uid}white)"
             />
 
             <rect
-                x="365"
-                y="324"
-                width="70"
-                height="20"
+                x="168"
+                y="409"
+                width="32"
+                height="33"
                 rx="7"
-                fill="#05070a"
+                fill="#252b31"
             />
 
-            <circle
-                cx="400"
-                cy="260"
-                r="12"
-                fill="#168cff"
+            <rect
+                x="176"
+                y="416"
+                width="16"
+                height="19"
+                rx="4"
+                fill="#050608"
+            />
+
+            <path
+                d="M106 407 L145 407"
+                stroke="#fff"
+                stroke-width="6"
+                stroke-linecap="round"
                 opacity=".9"
             />
 
+            <!-- Lightning connector -->
             <rect
-                x="300"
-                y="435"
-                width="200"
-                height="20"
-                rx="10"
-                fill="#bcc4cc"
-                opacity=".7"
+                x="626"
+                y="225"
+                width="103"
+                height="67"
+                rx="17"
+                fill="url(#${uid}white)"
+            />
+
+            <rect
+                x="713"
+                y="236"
+                width="28"
+                height="45"
+                rx="7"
+                fill="url(#${uid}metal)"
+            />
+
+            <rect
+                x="720"
+                y="242"
+                width="13"
+                height="33"
+                rx="4"
+                fill="#d8dde1"
+            />
+
+            <!-- contact lines -->
+            <path
+                d="M723 246 L723 272"
+                stroke="#727b84"
+                stroke-width="2"
+            />
+
+            <path
+                d="M728 246 L728 272"
+                stroke="#727b84"
+                stroke-width="2"
             />
 
         </g>
 
         <text
-            x="400"
-            y="88"
+            x="450"
+            y="80"
             text-anchor="middle"
             font-family="Arial"
-            font-size="27"
+            font-size="28"
             font-weight="800"
-            fill="#17212c"
+            fill="#18232f"
         >
-            USB-C HIZLI ŞARJ
+            LIGHTNING ŞARJ KABLOSU
         </text>
 
         <text
-            x="400"
-            y="520"
+            x="450"
+            y="112"
             text-anchor="middle"
             font-family="Arial"
             font-size="15"
-            fill="#667383"
+            fill="#657383"
         >
-            Kompakt • Modern • USB-C
+            Örgülü kablo • Lightning uç • USB bağlantı
         </text>
+
         `;
 
     }
 
-    else if(type === "set"){
 
-        body = `
+    if(type === "head"){
 
-        <g filter="url(#shadow)">
+        return `
 
+        <g filter="url(#${uid}shadow)">
+
+            <!-- adapter body -->
             <rect
-                x="170"
-                y="120"
-                width="210"
-                height="265"
-                rx="48"
-                fill="url(#whiteBody)"
+                x="290"
+                y="125"
+                width="320"
+                height="335"
+                rx="62"
+                fill="url(#${uid}white)"
+            />
+
+            <!-- side depth -->
+            <path
+                d="M610 175
+                   C628 195 628 390 610 420"
+                fill="none"
+                stroke="#9ca5ad"
+                stroke-width="8"
+                opacity=".6"
+            />
+
+            <!-- glossy reflection -->
+            <path
+                d="M335 160
+                   C390 135 455 135 500 155"
+                fill="none"
+                stroke="#fff"
+                stroke-width="13"
+                stroke-linecap="round"
+                opacity=".8"
+            />
+
+            <!-- USB-C port -->
+            <rect
+                x="365"
+                y="315"
+                width="170"
+                height="64"
+                rx="19"
+                fill="#161b20"
             />
 
             <rect
-                x="225"
-                y="275"
-                width="100"
-                height="38"
-                rx="12"
-                fill="#11161b"
+                x="403"
+                y="334"
+                width="94"
+                height="26"
+                rx="10"
+                fill="#020305"
+            />
+
+            <ellipse
+                cx="450"
+                cy="347"
+                rx="32"
+                ry="6"
+                fill="#6c757e"
+                opacity=".5"
+            />
+
+            <!-- status -->
+            <circle
+                cx="450"
+                cy="265"
+                r="12"
+                fill="#168cff"
             />
 
             <circle
-                cx="275"
-                cy="220"
+                cx="447"
+                cy="262"
+                r="4"
+                fill="#fff"
+                opacity=".8"
+            />
+
+            <!-- prongs -->
+            <rect
+                x="335"
+                y="454"
+                width="82"
+                height="21"
+                rx="9"
+                fill="url(#${uid}metal)"
+            />
+
+            <rect
+                x="483"
+                y="454"
+                width="82"
+                height="21"
+                rx="9"
+                fill="url(#${uid}metal)"
+            />
+
+            <text
+                x="450"
+                y="205"
+                text-anchor="middle"
+                font-family="Arial"
+                font-size="20"
+                font-weight="800"
+                fill="#6a747e"
+            >
+                FAST CHARGE
+            </text>
+
+            <text
+                x="450"
+                y="232"
+                text-anchor="middle"
+                font-family="Arial"
+                font-size="14"
+                fill="#9aa2aa"
+            >
+                USB-C
+            </text>
+
+        </g>
+
+        <text
+            x="450"
+            y="80"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="28"
+            font-weight="800"
+            fill="#18232f"
+        >
+            USB-C HIZLI ŞARJ BAŞLIĞI
+        </text>
+
+        <text
+            x="450"
+            y="550"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="15"
+            fill="#657383"
+        >
+            Kompakt gövde • USB-C çıkış • Hızlı şarj
+        </text>
+
+        `;
+
+    }
+
+
+    if(type === "set"){
+
+        return `
+
+        <g filter="url(#${uid}shadow)">
+
+            <!-- charger -->
+            <rect
+                x="150"
+                y="145"
+                width="255"
+                height="295"
+                rx="54"
+                fill="url(#${uid}white)"
+            />
+
+            <path
+                d="M190 180
+                   C240 155 300 155 350 176"
+                fill="none"
+                stroke="#fff"
+                stroke-width="10"
+                stroke-linecap="round"
+                opacity=".85"
+            />
+
+            <rect
+                x="218"
+                y="303"
+                width="120"
+                height="50"
+                rx="15"
+                fill="#151a1f"
+            />
+
+            <rect
+                x="247"
+                y="317"
+                width="62"
+                height="22"
+                rx="8"
+                fill="#020305"
+            />
+
+            <circle
+                cx="278"
+                cy="250"
                 r="10"
                 fill="#168cff"
             />
 
+            <rect
+                x="180"
+                y="440"
+                width="75"
+                height="18"
+                rx="8"
+                fill="url(#${uid}metal)"
+            />
+
+            <rect
+                x="300"
+                y="440"
+                width="75"
+                height="18"
+                rx="8"
+                fill="url(#${uid}metal)"
+            />
+
+            <!-- cable -->
             <path
-                d="M390 390
-                   C470 430 545 400 575 335
-                   C605 270 625 205 670 190"
+                d="M390 420
+                   C470 485 560 485 615 420
+                   C673 352 637 270 720 220"
                 fill="none"
-                stroke="#17191d"
-                stroke-width="22"
+                stroke="#111417"
+                stroke-width="31"
                 stroke-linecap="round"
             />
 
             <path
-                d="M390 390
-                   C470 430 545 400 575 335
-                   C605 270 625 205 670 190"
+                d="M390 420
+                   C470 485 560 485 615 420
+                   C673 352 637 270 720 220"
                 fill="none"
-                stroke="#3b3e43"
-                stroke-width="11"
+                stroke="#3d4247"
+                stroke-width="14"
                 stroke-linecap="round"
-                stroke-dasharray="3 7"
+                stroke-dasharray="3 8"
             />
 
             <rect
-                x="645"
-                y="166"
-                width="63"
-                height="48"
-                rx="11"
-                fill="url(#whiteBody)"
+                x="696"
+                y="184"
+                width="94"
+                height="67"
+                rx="16"
+                fill="url(#${uid}white)"
             />
 
             <rect
-                x="692"
-                y="175"
-                width="15"
-                height="30"
-                rx="3"
-                fill="url(#metal)"
+                x="777"
+                y="196"
+                width="28"
+                height="44"
+                rx="7"
+                fill="url(#${uid}metal)"
             />
 
         </g>
 
         <text
-            x="400"
+            x="450"
+            y="82"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="29"
+            font-weight="800"
+            fill="#18232f"
+        >
+            iPHONE ŞARJ SETİ
+        </text>
+
+        <text
+            x="450"
+            y="555"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="16"
+            fill="#657383"
+        >
+            Adaptör + Lightning kablo
+        </text>
+
+        `;
+
+    }
+
+
+    if(type === "typec"){
+
+        return `
+
+        <g filter="url(#${uid}shadow)">
+
+            <path
+                d="M135 425
+                   C230 505 345 525 455 470
+                   C555 420 557 300 670 235"
+                fill="none"
+                stroke="#111417"
+                stroke-width="34"
+                stroke-linecap="round"
+            />
+
+            <path
+                d="M135 425
+                   C230 505 345 525 455 470
+                   C555 420 557 300 670 235"
+                fill="none"
+                stroke="#464b50"
+                stroke-width="15"
+                stroke-linecap="round"
+                stroke-dasharray="4 8"
+            />
+
+            <path
+                d="M145 414
+                   C235 486 340 502 447 453"
+                fill="none"
+                stroke="#fff"
+                stroke-width="4"
+                opacity=".55"
+            />
+
+            <!-- USB-C connector left -->
+            <rect
+                x="78"
+                y="392"
+                width="102"
+                height="67"
+                rx="17"
+                fill="url(#${uid}dark)"
+            />
+
+            <rect
+                x="164"
+                y="408"
+                width="31"
+                height="35"
+                rx="8"
+                fill="url(#${uid}metal)"
+            />
+
+            <rect
+                x="172"
+                y="416"
+                width="15"
+                height="19"
+                rx="5"
+                fill="#15191d"
+            />
+
+            <!-- USB-C connector right -->
+            <rect
+                x="640"
+                y="202"
+                width="106"
+                height="69"
+                rx="17"
+                fill="url(#${uid}dark)"
+            />
+
+            <rect
+                x="730"
+                y="217"
+                width="31"
+                height="39"
+                rx="8"
+                fill="url(#${uid}metal)"
+            />
+
+            <rect
+                x="738"
+                y="225"
+                width="15"
+                height="22"
+                rx="5"
+                fill="#15191d"
+            />
+
+        </g>
+
+        <text
+            x="450"
             y="80"
             text-anchor="middle"
             font-family="Arial"
-            font-size="27"
+            font-size="29"
             font-weight="800"
-            fill="#17212c"
+            fill="#18232f"
         >
-            ŞARJ SETİ
+            USB-C TYPE-C KABLO
         </text>
 
         <text
-            x="400"
-            y="520"
+            x="450"
+            y="555"
             text-anchor="middle"
             font-family="Arial"
-            font-size="15"
-            fill="#667383"
+            font-size="16"
+            fill="#657383"
         >
-            Adaptör + Kablo
+            Type-C • Android • Veri aktarımı
         </text>
+
         `;
 
     }
 
-    else if(type === "typec"){
 
-        body = `
+    if(type === "androidHead"){
 
-        <g filter="url(#shadow)">
+        return `
+
+        <g filter="url(#${uid}shadow)">
+
+            <rect
+                x="285"
+                y="125"
+                width="330"
+                height="340"
+                rx="62"
+                fill="url(#${uid}dark)"
+            />
 
             <path
-                d="M175 390
-                   C250 450 350 475 440 425
-                   C530 375 535 250 635 215"
+                d="M330 160
+                   C390 132 470 132 525 157"
                 fill="none"
-                stroke="#202328"
-                stroke-width="28"
+                stroke="#fff"
+                stroke-width="9"
                 stroke-linecap="round"
-            />
-
-            <path
-                d="M175 390
-                   C250 450 350 475 440 425
-                   C530 375 535 250 635 215"
-                fill="none"
-                stroke="#42464b"
-                stroke-width="14"
-                stroke-linecap="round"
-                stroke-dasharray="4 7"
+                opacity=".16"
             />
 
             <rect
-                x="125"
-                y="362"
-                width="85"
-                height="57"
-                rx="15"
-                fill="url(#darkBody)"
-            />
-
-            <rect
-                x="196"
-                y="377"
-                width="24"
-                height="28"
-                rx="5"
-                fill="url(#metal)"
-            />
-
-            <rect
-                x="600"
-                y="185"
-                width="90"
-                height="60"
-                rx="14"
-                fill="url(#darkBody)"
-            />
-
-            <rect
-                x="681"
-                y="199"
-                width="17"
-                height="31"
-                rx="4"
-                fill="url(#metal)"
-            />
-
-        </g>
-
-        <text
-            x="400"
-            y="90"
-            text-anchor="middle"
-            font-family="Arial"
-            font-size="27"
-            font-weight="800"
-            fill="#17212c"
-        >
-            TYPE-C KABLO
-        </text>
-
-        <text
-            x="400"
-            y="520"
-            text-anchor="middle"
-            font-family="Arial"
-            font-size="15"
-            fill="#667383"
-        >
-            Android • USB-C • Data
-        </text>
-        `;
-
-    }
-
-    else if(type === "androidHead"){
-
-        body = `
-
-        <g filter="url(#shadow)">
-
-            <rect
-                x="245"
-                y="110"
-                width="310"
-                height="330"
-                rx="55"
-                fill="url(#darkBody)"
-            />
-
-            <path
-                d="M300 142
-                   C365 115 435 115 500 142"
-                fill="none"
-                stroke="#ffffff"
-                stroke-width="8"
-                opacity=".13"
-            />
-
-            <rect
-                x="325"
-                y="305"
-                width="150"
-                height="55"
-                rx="15"
+                x="350"
+                y="315"
+                width="200"
+                height="66"
+                rx="20"
                 fill="#05070a"
-                stroke="#555b63"
+                stroke="#555d65"
                 stroke-width="2"
             />
 
             <rect
-                x="365"
-                y="320"
-                width="70"
-                height="24"
-                rx="8"
+                x="398"
+                y="334"
+                width="104"
+                height="28"
+                rx="10"
                 fill="#010203"
             />
 
             <circle
-                cx="400"
-                cy="245"
-                r="11"
+                cx="450"
+                cy="260"
+                r="12"
                 fill="#25d366"
             />
+
+            <circle
+                cx="447"
+                cy="257"
+                r="4"
+                fill="#fff"
+                opacity=".75"
+            />
+
+            <text
+                x="450"
+                y="205"
+                text-anchor="middle"
+                font-family="Arial"
+                font-size="20"
+                font-weight="800"
+                fill="#bfc7cf"
+            >
+                FAST CHARGE
+            </text>
+
+            <text
+                x="450"
+                y="232"
+                text-anchor="middle"
+                font-family="Arial"
+                font-size="14"
+                fill="#6e7881"
+            >
+                TYPE-C
+            </text>
 
         </g>
 
         <text
-            x="400"
-            y="82"
+            x="450"
+            y="80"
             text-anchor="middle"
             font-family="Arial"
-            font-size="27"
+            font-size="28"
             font-weight="800"
-            fill="#17212c"
+            fill="#18232f"
         >
             ANDROID HIZLI ŞARJ
         </text>
 
         <text
-            x="400"
-            y="520"
+            x="450"
+            y="550"
             text-anchor="middle"
             font-family="Arial"
             font-size="15"
-            fill="#667383"
+            fill="#657383"
         >
-            USB-C • Hızlı Şarj
+            USB-C çıkış • Kompakt hızlı şarj adaptörü
         </text>
+
         `;
 
     }
 
-    else{
 
-        body = `
+    /* ANDROID SET */
 
-        <g filter="url(#shadow)">
+    return `
 
-            <rect
-                x="165"
-                y="120"
-                width="225"
-                height="270"
-                rx="48"
-                fill="url(#darkBody)"
-            />
+    <g filter="url(#${uid}shadow)">
 
-            <rect
-                x="225"
-                y="285"
-                width="105"
-                height="40"
-                rx="12"
-                fill="#05070a"
-            />
+        <!-- adapter -->
+        <rect
+            x="120"
+            y="145"
+            width="270"
+            height="300"
+            rx="55"
+            fill="url(#${uid}dark)"
+        />
 
-            <circle
-                cx="277"
-                cy="225"
-                r="10"
-                fill="#25d366"
-            />
+        <path
+            d="M160 180
+               C220 150 285 150 340 178"
+            fill="none"
+            stroke="#fff"
+            stroke-width="8"
+            opacity=".15"
+        />
 
-            <path
-                d="M390 390
-                   C470 440 555 395 585 320
-                   C610 260 620 200 670 185"
-                fill="none"
-                stroke="#202328"
-                stroke-width="23"
-                stroke-linecap="round"
-            />
+        <rect
+            x="190"
+            y="305"
+            width="130"
+            height="54"
+            rx="16"
+            fill="#030506"
+        />
 
-            <path
-                d="M390 390
-                   C470 440 555 395 585 320
-                   C610 260 620 200 670 185"
-                fill="none"
-                stroke="#464b51"
-                stroke-width="11"
-                stroke-linecap="round"
-                stroke-dasharray="4 7"
-            />
+        <rect
+            x="224"
+            y="320"
+            width="62"
+            height="22"
+            rx="8"
+            fill="#010203"
+        />
 
-            <rect
-                x="638"
-                y="160"
-                width="72"
-                height="52"
-                rx="12"
-                fill="url(#darkBody)"
-            />
+        <circle
+            cx="255"
+            cy="252"
+            r="10"
+            fill="#25d366"
+        />
 
-            <rect
-                x="698"
-                y="173"
-                width="16"
-                height="27"
-                rx="4"
-                fill="url(#metal)"
-            />
+        <!-- cable -->
+        <path
+            d="M390 430
+               C470 490 565 485 625 412
+               C685 338 655 270 740 215"
+            fill="none"
+            stroke="#111417"
+            stroke-width="32"
+            stroke-linecap="round"
+        />
 
-        </g>
+        <path
+            d="M390 430
+               C470 490 565 485 625 412
+               C685 338 655 270 740 215"
+            fill="none"
+            stroke="#464b50"
+            stroke-width="14"
+            stroke-linecap="round"
+            stroke-dasharray="4 8"
+        />
 
-        <text
-            x="400"
-            y="82"
-            text-anchor="middle"
-            font-family="Arial"
-            font-size="27"
-            font-weight="800"
-            fill="#17212c"
-        >
-            ANDROID ŞARJ SETİ
-        </text>
+        <rect
+            x="708"
+            y="181"
+            width="100"
+            height="70"
+            rx="17"
+            fill="url(#${uid}dark)"
+        />
 
-        <text
-            x="400"
-            y="520"
-            text-anchor="middle"
-            font-family="Arial"
-            font-size="15"
-            fill="#667383"
-        >
-            Type-C Adaptör + Kablo
-        </text>
-        `;
+        <rect
+            x="792"
+            y="195"
+            width="30"
+            height="41"
+            rx="8"
+            fill="url(#${uid}metal)"
+        />
 
-    }
+        <rect
+            x="800"
+            y="203"
+            width="14"
+            height="24"
+            rx="5"
+            fill="#11161a"
+        />
 
-    const svg = `
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="800"
-        height="600"
-        viewBox="0 0 800 600"
+    </g>
+
+    <text
+        x="450"
+        y="80"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="28"
+        font-weight="800"
+        fill="#18232f"
     >
-        ${common}
-        ${body}
-    </svg>
+        ANDROID TYPE-C ŞARJ SETİ
+    </text>
+
+    <text
+        x="450"
+        y="550"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="15"
+        fill="#657383"
+    >
+        Type-C adaptör + örgülü Type-C kablo
+    </text>
+
     `;
 
-    return "data:image/svg+xml;charset=UTF-8," +
-        encodeURIComponent(svg);
 }
 
 /* =====================================================
@@ -3112,16 +3324,14 @@ const products = [
     image:"https://www.boxupgifting.com/cdn/shop/files/BluetoothspeakerBlue-1_800x.jpg?v=1739513324"
 },
 
-/* =====================================================
-   ŞARJ
-===================================================== */
+/* ŞARJ ÜRÜNLERİ */
 
 {
     id:11,
     category:"Şarj",
     title:"iPhone Lightning Şarj Kablosu",
     price:750,
-    description:"Lightning uçlu iPhone şarj ve data kablosu.",
+    description:"Örgülü Lightning uçlu iPhone şarj ve data kablosu.",
     image:chargerImage("cable"),
     models:lightningModels
 },
@@ -3150,7 +3360,7 @@ const products = [
     category:"Şarj",
     title:"USB-C Type-C Şarj Kablosu",
     price:750,
-    description:"USB-C Android şarj ve data kablosu.",
+    description:"Örgülü USB-C Android şarj ve data kablosu.",
     image:chargerImage("typec"),
     models:androidModels
 },
@@ -3209,9 +3419,8 @@ fill="#555">
 
 function formatPrice(price){
 
-    return new Intl.NumberFormat(
-        "tr-TR"
-    ).format(price) + " TL";
+    return new Intl.NumberFormat("tr-TR")
+        .format(price) + " TL";
 
 }
 
@@ -3234,7 +3443,7 @@ function imageError(img){
 }
 
 /* =====================================================
-   PRODUCT ELEMENTS
+   ELEMENTS
 ===================================================== */
 
 const productsContainer =
@@ -3261,8 +3470,8 @@ function populateModelFilter(){
 
         if(product.models){
 
-            product.models.forEach(
-                model => models.add(model)
+            product.models.forEach(model =>
+                models.add(model)
             );
 
         }
@@ -3271,15 +3480,12 @@ function populateModelFilter(){
 
     modelFilter.innerHTML =
         `<option value="">Tüm Modeller</option>` +
-
         [...models]
             .sort((a,b)=>a.localeCompare(b,"tr"))
             .map(model =>
-
                 `<option value="${escapeHTML(model)}">
                     ${escapeHTML(model)}
                 </option>`
-
             )
             .join("");
 
@@ -3302,16 +3508,9 @@ function renderProducts(list){
                 color:#9baac0;
             ">
 
-                <div style="font-size:45px">
-                    🔎
-                </div>
+                <div style="font-size:45px">🔎</div>
 
-                <h3
-                    style="
-                        margin:12px 0;
-                        color:#fff;
-                    "
-                >
+                <h3 style="margin:12px 0;color:#fff;">
                     Ürün bulunamadı
                 </h3>
 
@@ -3330,58 +3529,49 @@ function renderProducts(list){
         list.map(product => {
 
             const options = product.models
-
-                ? `
-
-                    <select
-                        class="product-model"
-                        data-id="${product.id}"
-                    >
-
-                        <option value="">
-                            Model Seçiniz
-                        </option>
-
-                        ${product.models.map(model =>
-
-                            `<option value="${escapeHTML(model)}">
-                                ${escapeHTML(model)}
-                            </option>`
-
-                        ).join("")}
-
-                    </select>
-
+                ?
                 `
+                <select
+                    class="product-model"
+                    data-id="${product.id}"
+                >
+                    <option value="">
+                        Model Seçiniz
+                    </option>
 
-                : "";
+                    ${product.models.map(model =>
+                        `<option value="${escapeHTML(model)}">
+                            ${escapeHTML(model)}
+                        </option>`
+                    ).join("")}
+
+                </select>
+                `
+                :
+                "";
 
             const colors = product.colors
-
-                ? `
-
-                    <select
-                        class="product-color"
-                        data-id="${product.id}"
-                    >
-
-                        <option value="">
-                            Renk Seçiniz
-                        </option>
-
-                        ${product.colors.map(color =>
-
-                            `<option value="${escapeHTML(color)}">
-                                ${escapeHTML(color)}
-                            </option>`
-
-                        ).join("")}
-
-                    </select>
-
+                ?
                 `
+                <select
+                    class="product-color"
+                    data-id="${product.id}"
+                >
 
-                : "";
+                    <option value="">
+                        Renk Seçiniz
+                    </option>
+
+                    ${product.colors.map(color =>
+                        `<option value="${escapeHTML(color)}">
+                            ${escapeHTML(color)}
+                        </option>`
+                    ).join("")}
+
+                </select>
+                `
+                :
+                "";
 
             const customizable =
                 product.category === "Kılıf";
@@ -3391,79 +3581,79 @@ function renderProducts(list){
 
             return `
 
-                <article class="product-card">
+            <article class="product-card">
 
-                    <div class="product-image">
+                <div class="product-image">
+
+                    ${
+                        charger
+                        ?
+                        `<div class="charger-badge">
+                            🔌 ŞARJ
+                        </div>`
+                        :
+                        ""
+                    }
+
+                    <img
+                        src="${product.image}"
+                        alt="${escapeHTML(product.title)}"
+                        onerror="imageError(this)"
+                    >
+
+                </div>
+
+                <div class="product-body">
+
+                    <div class="product-category">
+                        ${escapeHTML(product.category)}
+                    </div>
+
+                    <h3 class="product-title">
+                        ${escapeHTML(product.title)}
+                    </h3>
+
+                    <p class="product-desc">
+                        ${escapeHTML(product.description)}
+                    </p>
+
+                    <div class="product-price">
+                        ${formatPrice(product.price)}
+                    </div>
+
+                    <div class="product-options">
+
+                        ${options}
+
+                        ${colors}
 
                         ${
-                            charger
+                            customizable
                             ?
-                            `<div class="charger-badge">
-                                🔌 ŞARJ
-                            </div>`
+                            `
+                            <button
+                                class="customize-btn"
+                                onclick="openCustomizer(${product.id})"
+                            >
+                                📱 Telefonu Özelleştir
+                            </button>
+                            `
                             :
                             ""
                         }
 
-                        <img
-                            src="${product.image}"
-                            alt="${escapeHTML(product.title)}"
-                            onerror="imageError(this)"
+                        <button
+                            class="add-cart"
+                            onclick="addToCart(${product.id})"
                         >
+                            🛒 Sepete Ekle
+                        </button>
 
                     </div>
 
-                    <div class="product-body">
+                </div>
 
-                        <div class="product-category">
-                            ${escapeHTML(product.category)}
-                        </div>
-
-                        <h3 class="product-title">
-                            ${escapeHTML(product.title)}
-                        </h3>
-
-                        <p class="product-desc">
-                            ${escapeHTML(product.description)}
-                        </p>
-
-                        <div class="product-price">
-                            ${formatPrice(product.price)}
-                        </div>
-
-                        <div class="product-options">
-
-                            ${options}
-
-                            ${colors}
-
-                            ${
-                                customizable
-                                ?
-                                `
-                                <button
-                                    class="customize-btn"
-                                    onclick="openCustomizer(${product.id})"
-                                >
-                                    📱 Telefonu Özelleştir
-                                </button>
-                                `
-                                :
-                                ""
-                            }
-
-                            <button
-                                class="add-cart"
-                                onclick="addToCart(${product.id})"
-                            >
-                                🛒 Sepete Ekle
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
+            </article>
 
             `;
 
@@ -3491,6 +3681,13 @@ function applyFilters(){
     const filtered =
         products.filter(product => {
 
+            const modelText =
+                product.models
+                ?
+                product.models.join(" ")
+                :
+                "";
+
             const categoryOK =
                 !category ||
                 product.category === category;
@@ -3509,16 +3706,16 @@ function applyFilters(){
                     " " +
                     product.description +
                     " " +
-                    product.category
+                    product.category +
+                    " " +
+                    modelText
                 )
                 .toLocaleLowerCase("tr-TR")
                 .includes(search);
 
-            return (
-                categoryOK &&
-                modelOK &&
-                searchOK
-            );
+            return categoryOK &&
+                   modelOK &&
+                   searchOK;
 
         });
 
@@ -3570,9 +3767,7 @@ let cart = [];
 function addToCart(id){
 
     const product =
-        products.find(
-            p => p.id === id
-        );
+        products.find(p => p.id === id);
 
     if(!product) return;
 
@@ -3594,20 +3789,16 @@ function addToCart(id){
 
     if(product.models && !model){
 
-        alert(
-            "Lütfen telefon modelini seçin."
-        );
-
+        alert("Lütfen telefon modelini seçin.");
         return;
+
     }
 
     if(product.colors && !color){
 
-        alert(
-            "Lütfen renk seçin."
-        );
-
+        alert("Lütfen renk seçin.");
         return;
+
     }
 
     cart.push({
@@ -3628,9 +3819,7 @@ function addToCart(id){
 
     updateCart();
 
-    alert(
-        "Ürün sepete eklendi 🛒"
-    );
+    alert("Ürün sepete eklendi 🛒");
 
 }
 
@@ -3641,9 +3830,7 @@ function updateCart(){
     ).textContent = cart.length;
 
     const items =
-        document.getElementById(
-            "cartItems"
-        );
+        document.getElementById("cartItems");
 
     if(!cart.length){
 
@@ -3664,6 +3851,7 @@ function updateCart(){
         ).textContent = "0 TL";
 
         return;
+
     }
 
     items.innerHTML =
@@ -3725,22 +3913,19 @@ function updateCart(){
 
     const total =
         cart.reduce(
-            (sum,item) =>
-                sum + item.price,
+            (sum,item) => sum + item.price,
             0
         );
 
     document.getElementById(
         "cartTotal"
-    ).textContent =
-        formatPrice(total);
+    ).textContent = formatPrice(total);
 
 }
 
 function removeFromCart(index){
 
     cart.splice(index,1);
-
     updateCart();
 
 }
@@ -3769,11 +3954,9 @@ function openPurchase(){
 
     if(!cart.length){
 
-        alert(
-            "Sepetiniz boş."
-        );
-
+        alert("Sepetiniz boş.");
         return;
+
     }
 
     closeCart();
@@ -3795,28 +3978,20 @@ function closePurchase(){
 function sendOrderWhatsApp(){
 
     const name =
-        document
-            .getElementById("customerName")
-            .value
-            .trim();
+        document.getElementById("customerName")
+        .value.trim();
 
     const phone =
-        document
-            .getElementById("customerPhone")
-            .value
-            .trim();
+        document.getElementById("customerPhone")
+        .value.trim();
 
     const address =
-        document
-            .getElementById("customerAddress")
-            .value
-            .trim();
+        document.getElementById("customerAddress")
+        .value.trim();
 
     const note =
-        document
-            .getElementById("customerNote")
-            .value
-            .trim();
+        document.getElementById("customerNote")
+        .value.trim();
 
     if(!name || !phone || !address){
 
@@ -3825,9 +4000,10 @@ function sendOrderWhatsApp(){
         );
 
         return;
+
     }
 
-    let lines = [];
+    const lines = [];
 
     lines.push(
         "Merhaba TeknoBiz, sipariş vermek istiyorum."
@@ -3835,23 +4011,12 @@ function sendOrderWhatsApp(){
 
     lines.push("");
 
-    lines.push(
-        "👤 Ad Soyad: " + name
-    );
-
-    lines.push(
-        "📞 Telefon: " + phone
-    );
-
-    lines.push(
-        "📍 Adres: " + address
-    );
+    lines.push("👤 Ad Soyad: " + name);
+    lines.push("📞 Telefon: " + phone);
+    lines.push("📍 Adres: " + address);
 
     lines.push("");
-
-    lines.push(
-        "🛒 SİPARİŞLER:"
-    );
+    lines.push("🛒 SİPARİŞLER:");
 
     cart.forEach((item,index)=>{
 
@@ -3859,62 +4024,38 @@ function sendOrderWhatsApp(){
             `${index+1}. ${item.title}`
         );
 
-        if(item.model){
+        if(item.model)
+            lines.push("📱 Model: " + item.model);
 
-            lines.push(
-                "📱 Model: " + item.model
-            );
+        if(item.caseName)
+            lines.push("🛡️ Kılıf: " + item.caseName);
 
-        }
-
-        if(item.caseName){
-
-            lines.push(
-                "🛡️ Kılıf: " + item.caseName
-            );
-
-        }
-
-        if(item.color){
-
-            lines.push(
-                "🎨 Renk: " + item.color
-            );
-
-        }
+        if(item.color)
+            lines.push("🎨 Renk: " + item.color);
 
         lines.push(
-            "💰 Fiyat: " +
-            formatPrice(item.price)
+            "💰 Fiyat: " + formatPrice(item.price)
         );
 
         lines.push("");
 
     });
 
-    if(note){
-
-        lines.push(
-            "📝 Not: " + note
-        );
-
-    }
+    if(note)
+        lines.push("📝 Not: " + note);
 
     const message =
-        encodeURIComponent(
-            lines.join("\n")
-        );
+        encodeURIComponent(lines.join("\n"));
 
     window.open(
-        "https://wa.me/905059999009?text=" +
-        message,
+        "https://wa.me/905059999009?text=" + message,
         "_blank"
     );
 
 }
 
 /* =====================================================
-   CUSTOMIZER
+   CUSTOMIZER STATE
 ===================================================== */
 
 let customState = {
@@ -3948,7 +4089,7 @@ const caseOptions = [
         name:"Guess",
         price:750,
         color:"Kahverengi",
-        desc:"Premium görünüm"
+        desc:"Premium kahverengi tasarım"
     },
 
     {
@@ -3963,7 +4104,7 @@ const caseOptions = [
         type:"rhinestone",
         name:"Taşlı",
         price:650,
-        color:"Siyah",
+        color:"Siyah / Gümüş",
         desc:"Parlak taş detay"
     },
 
@@ -3971,8 +4112,8 @@ const caseOptions = [
         type:"carbon",
         name:"Karbon",
         price:1000,
-        color:"Siyah",
-        desc:"Karbon dokulu"
+        color:"Siyah Karbon",
+        desc:"Karbon fiber dokusu"
     }
 
 ];
@@ -3984,9 +4125,7 @@ const caseOptions = [
 function openCustomizer(productId){
 
     const product =
-        products.find(
-            p => p.id === productId
-        );
+        products.find(p => p.id === productId);
 
     if(!product) return;
 
@@ -3994,9 +4133,7 @@ function openCustomizer(productId){
         product.id;
 
     customState.model =
-        product.models?.includes(
-            "iPhone 17 Pro"
-        )
+        product.models?.includes("iPhone 17 Pro")
         ?
         "iPhone 17 Pro"
         :
@@ -4032,7 +4169,7 @@ function openCustomizer(productId){
 }
 
 /* =====================================================
-   CLOSE
+   CLOSE CUSTOMIZER
 ===================================================== */
 
 function closeCustomizer(){
@@ -4050,9 +4187,7 @@ function closeCustomizer(){
 function renderCustomizer(){
 
     const select =
-        document.getElementById(
-            "customModel"
-        );
+        document.getElementById("customModel");
 
     select.innerHTML =
         iphoneModels.map(model =>
@@ -4089,9 +4224,7 @@ function renderCustomizer(){
 function renderCaseChoices(){
 
     const container =
-        document.getElementById(
-            "caseChoices"
-        );
+        document.getElementById("caseChoices");
 
     container.innerHTML =
         caseOptions.map(option => `
@@ -4099,16 +4232,11 @@ function renderCaseChoices(){
             <button
                 type="button"
                 class="case-choice ${
-                    option.type ===
-                    customState.caseType
-                    ?
-                    "active"
-                    :
-                    ""
+                    option.type === customState.caseType
+                    ? "active"
+                    : ""
                 }"
-                onclick="
-                    selectCase('${option.type}')
-                "
+                onclick="selectCase('${option.type}')"
             >
 
                 ${getCaseIcon(option.type)}
@@ -4164,26 +4292,16 @@ function selectCase(type){
     customState.caseName =
         option.name;
 
+    /* IMPORTANT: PRICE UPDATES */
+
     customState.price =
         option.price;
 
     if(type === "single"){
 
-        if(
-            ![
-                "Siyah",
-                "Beyaz",
-                "Kırmızı",
-                "Mavi",
-                "Yeşil",
-                "Mor",
-                "Pembe",
-                "Sarı"
-            ].includes(customState.color)
-        ){
+        if(!allColors.includes(customState.color)){
 
-            customState.color =
-                "Siyah";
+            customState.color = "Siyah";
 
         }
 
@@ -4244,28 +4362,20 @@ const allColors = [
 function renderColorChoices(){
 
     const block =
-        document.getElementById(
-            "colorBlock"
-        );
+        document.getElementById("colorBlock");
 
     const container =
-        document.getElementById(
-            "colorChoices"
-        );
+        document.getElementById("colorChoices");
 
-    if(
-        customState.caseType !== "single"
-    ){
+    if(customState.caseType !== "single"){
 
-        block.style.display =
-            "none";
+        block.style.display = "none";
 
         return;
 
     }
 
-    block.style.display =
-        "block";
+    block.style.display = "block";
 
     container.innerHTML =
         allColors.map(color => `
@@ -4275,26 +4385,16 @@ function renderColorChoices(){
                 <button
                     type="button"
                     class="color-choice ${
-                        color ===
-                        customState.color
-                        ?
-                        "active"
-                        :
-                        ""
+                        color === customState.color
+                        ? "active"
+                        : ""
                     }"
                     title="${escapeHTML(color)}"
-                    style="
-                        background:
-                        ${colorMap[color]};
-                    "
-                    onclick="
-                        selectColor('${color}')
-                    "
+                    style="background:${colorMap[color]}"
+                    onclick="selectColor('${color}')"
                 ></button>
 
-                <span>
-                    ${color}
-                </span>
+                <span>${color}</span>
 
             </div>
 
@@ -4316,16 +4416,14 @@ function selectColor(color){
 }
 
 /* =====================================================
-   MODEL
+   MODEL CHANGE
 ===================================================== */
 
 function customModelChanged(){
 
     customState.model =
         document
-            .getElementById(
-                "customModel"
-            )
+            .getElementById("customModel")
             .value;
 
     updatePhonePreview();
@@ -4340,29 +4438,14 @@ function customModelChanged(){
 
 function getPhoneGeneration(model){
 
-    if(model.includes("11"))
-        return "11";
-
-    if(model.includes("12"))
-        return "12";
-
-    if(model.includes("13"))
-        return "13";
-
-    if(model.includes("14"))
-        return "14";
-
-    if(model.includes("15"))
-        return "15";
-
-    if(model.includes("16"))
-        return "16";
-
-    if(model.includes("17"))
-        return "17";
-
-    if(model.includes("18"))
-        return "18";
+    if(model.includes("11")) return "11";
+    if(model.includes("12")) return "12";
+    if(model.includes("13")) return "13";
+    if(model.includes("14")) return "14";
+    if(model.includes("15")) return "15";
+    if(model.includes("16")) return "16";
+    if(model.includes("17")) return "17";
+    if(model.includes("18")) return "18";
 
     return "modern";
 
@@ -4381,14 +4464,11 @@ function isPro(model){
 function buildCamera(model){
 
     const camera =
-        document.getElementById(
-            "phoneCamera"
-        );
+        document.getElementById("phoneCamera");
 
     camera.innerHTML = "";
 
-    camera.className =
-        "camera";
+    camera.className = "camera";
 
     const generation =
         getPhoneGeneration(model);
@@ -4399,7 +4479,6 @@ function buildCamera(model){
     if(pro){
 
         camera.classList.add("pro");
-        camera.classList.add("three");
 
     }else{
 
@@ -4425,23 +4504,14 @@ function buildCamera(model){
     const count =
         pro ? 3 : 2;
 
-    for(
-        let i=0;
-        i<count;
-        i++
-    ){
+    for(let i=0;i<count;i++){
 
         const lens =
-            document.createElement(
-                "div"
-            );
+            document.createElement("div");
 
-        lens.className =
-            "lens";
+        lens.className = "lens";
 
-        camera.appendChild(
-            lens
-        );
+        camera.appendChild(lens);
 
     }
 
@@ -4453,21 +4523,14 @@ function buildCamera(model){
 
 const phoneColors = {
 
-    "11":"#202328",
-
-    "12":"#2a3440",
-
-    "13":"#34383d",
-
-    "14":"#252a30",
-
-    "15":"#1b2025",
-
-    "16":"#2c3136",
-
-    "17":"#20262c",
-
-    "18":"#181d23"
+    "11":"#24282d",
+    "12":"#2b3540",
+    "13":"#343b41",
+    "14":"#262c32",
+    "15":"#1d2328",
+    "16":"#30363b",
+    "17":"#20272d",
+    "18":"#181e24"
 
 };
 
@@ -4478,33 +4541,22 @@ const phoneColors = {
 function updatePhonePreview(){
 
     const phone =
-        document.getElementById(
-            "phonePreview"
-        );
+        document.getElementById("phonePreview");
 
     const label =
-        document.getElementById(
-            "phoneLabel"
-        );
+        document.getElementById("phoneLabel");
 
     const badge =
-        document.getElementById(
-            "modelBadge"
-        );
+        document.getElementById("modelBadge");
 
     const caseLayer =
-        document.getElementById(
-            "caseLayer"
-        );
+        document.getElementById("caseLayer");
 
     const model =
         customState.model;
 
     const generation =
         getPhoneGeneration(model);
-
-    phone.dataset.model =
-        model;
 
     label.textContent =
         model;
@@ -4518,16 +4570,11 @@ function updatePhonePreview(){
         "case-layer " +
         customState.caseType;
 
-    if(
-        customState.caseType ===
-        "single"
-    ){
+    if(customState.caseType === "single"){
 
         caseLayer.style.setProperty(
             "--case-color",
-            colorMap[
-                customState.color
-            ] || "#111"
+            colorMap[customState.color] || "#111"
         );
 
     }else{
@@ -4538,15 +4585,19 @@ function updatePhonePreview(){
 
     }
 
+    const color =
+        phoneColors[generation] ||
+        "#252b32";
+
     phone.style.background =
-        `linear-gradient(
+        `
+        linear-gradient(
             145deg,
-            ${
-                phoneColors[generation] ||
-                "#252b32"
-            },
-            #080a0d
-        )`;
+            ${color},
+            #080a0d 58%,
+            #252d34
+        )
+        `;
 
 }
 
@@ -4574,9 +4625,7 @@ function updateCustomizerSummary(){
     document.getElementById(
         "summaryPrice"
     ).textContent =
-        formatPrice(
-            customState.price
-        );
+        formatPrice(customState.price);
 
 }
 
@@ -4586,18 +4635,9 @@ function updateCustomizerSummary(){
 
 function addCustomizedProduct(){
 
-    const product =
-        products.find(
-            p =>
-            p.id ===
-            customState.productId
-        );
-
-    if(!product) return;
-
     cart.push({
 
-        id:product.id,
+        id:customState.productId,
 
         title:
             "Telefon Özelleştirme",
@@ -4644,9 +4684,7 @@ function openChat(){
 function sendMessage(){
 
     const input =
-        document.getElementById(
-            "chatInput"
-        );
+        document.getElementById("chatInput");
 
     const text =
         input.value.trim();
@@ -4671,20 +4709,13 @@ function sendMessage(){
 
 }
 
-function addChatMessage(
-    text,
-    type
-){
+function addChatMessage(text,type){
 
     const box =
-        document.getElementById(
-            "chatMessages"
-        );
+        document.getElementById("chatMessages");
 
     const div =
-        document.createElement(
-            "div"
-        );
+        document.createElement("div");
 
     div.className =
         "message " + type;
@@ -4692,9 +4723,7 @@ function addChatMessage(
     div.textContent =
         text;
 
-    box.appendChild(
-        div
-    );
+    box.appendChild(div);
 
     box.scrollTop =
         box.scrollHeight;
@@ -4704,9 +4733,7 @@ function addChatMessage(
 function getBotAnswer(text){
 
     const t =
-        text.toLocaleLowerCase(
-            "tr-TR"
-        );
+        text.toLocaleLowerCase("tr-TR");
 
     if(
         t.includes("telefon") ||
@@ -4760,7 +4787,7 @@ function getBotAnswer(text){
         t.includes("case")
     ){
 
-        return "Kılıf ürünlerinde telefon modelinizi seçebilir, 'Telefonu Özelleştir' bölümünden farklı kılıfları telefonda görebilirsiniz. 📱";
+        return "Kılıf ürünlerinde telefon modelinizi seçebilir, Telefonu Özelleştir bölümünden Şeffaf MagSafe, Guess, Tek Renk, Taşlı veya Karbon kılıf seçebilirsiniz. 📱";
 
     }
 
@@ -4775,17 +4802,13 @@ function getBotAnswer(text){
 function enterSite(){
 
     const welcome =
-        document.getElementById(
-            "welcome"
-        );
+        document.getElementById("welcome");
 
-    welcome.style.opacity =
-        "0";
+    welcome.style.opacity = "0";
 
     setTimeout(()=>{
 
-        welcome.style.display =
-            "none";
+        welcome.style.display = "none";
 
     },500);
 
@@ -4795,36 +4818,25 @@ function enterSite(){
    OUTSIDE CHAT
 ===================================================== */
 
-document.addEventListener(
-    "click",
-    function(e){
+document.addEventListener("click",function(e){
 
-        const chat =
-            document.getElementById(
-                "chatBox"
-            );
+    const chat =
+        document.getElementById("chatBox");
 
-        const chatButton =
-            document.querySelector(
-                ".chat-button"
-            );
+    const chatButton =
+        document.querySelector(".chat-button");
 
-        if(
-            chat.classList.contains(
-                "active"
-            ) &&
-            !chat.contains(e.target) &&
-            !chatButton.contains(e.target)
-        ){
+    if(
+        chat.classList.contains("active") &&
+        !chat.contains(e.target) &&
+        !chatButton.contains(e.target)
+    ){
 
-            chat.classList.remove(
-                "active"
-            );
-
-        }
+        chat.classList.remove("active");
 
     }
-);
+
+});
 
 /* =====================================================
    MODALS
@@ -4832,67 +4844,46 @@ document.addEventListener(
 
 document
     .getElementById("cartModal")
-    .addEventListener(
-        "click",
-        function(e){
+    .addEventListener("click",function(e){
 
-            if(e.target === this){
+        if(e.target === this)
+            closeCart();
 
-                closeCart();
-
-            }
-
-        }
-    );
+    });
 
 document
     .getElementById("purchaseModal")
-    .addEventListener(
-        "click",
-        function(e){
+    .addEventListener("click",function(e){
 
-            if(e.target === this){
+        if(e.target === this)
+            closePurchase();
 
-                closePurchase();
-
-            }
-
-        }
-    );
+    });
 
 document
     .getElementById("customizerModal")
-    .addEventListener(
-        "click",
-        function(e){
+    .addEventListener("click",function(e){
 
-            if(e.target === this){
+        if(e.target === this)
+            closeCustomizer();
 
-                closeCustomizer();
-
-            }
-
-        }
-    );
+    });
 
 /* =====================================================
    ESC
 ===================================================== */
 
-document.addEventListener(
-    "keydown",
-    function(e){
+document.addEventListener("keydown",function(e){
 
-        if(e.key === "Escape"){
+    if(e.key === "Escape"){
 
-            closeCart();
-            closePurchase();
-            closeCustomizer();
-
-        }
+        closeCart();
+        closePurchase();
+        closeCustomizer();
 
     }
-);
+
+});
 
 /* =====================================================
    INIT
