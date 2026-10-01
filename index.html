@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>TeknoBiz | Teknoloji & Aksesuar</title>
 
@@ -48,18 +48,18 @@ button{
 }
 
 a{
-    text-decoration:none;
     color:inherit;
+    text-decoration:none;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 
 header{
     position:sticky;
     top:0;
     z-index:1000;
 
-    background:rgba(5,8,15,.92);
+    background:rgba(5,8,15,.94);
     backdrop-filter:blur(20px);
     -webkit-backdrop-filter:blur(20px);
 
@@ -68,9 +68,9 @@ header{
 
 .nav{
     max-width:1250px;
-    margin:auto;
-
     min-height:74px;
+
+    margin:auto;
     padding:12px 20px;
 
     display:flex;
@@ -79,11 +79,12 @@ header{
 }
 
 .logo{
-    min-width:150px;
+    min-width:155px;
 
     font-size:28px;
     font-weight:800;
-    letter-spacing:-1.4px;
+
+    letter-spacing:-1.5px;
 }
 
 .logo span{
@@ -93,12 +94,12 @@ header{
 .logo small{
     display:block;
 
+    margin-top:-3px;
+
+    color:#7d899c;
+
     font-size:8px;
     letter-spacing:3px;
-
-    color:#7f8a9e;
-
-    margin-top:-2px;
 }
 
 .search{
@@ -111,21 +112,22 @@ header{
 
     padding:14px 45px 14px 17px;
 
+    border:1px solid #26354b;
     border-radius:15px;
-
-    border:1px solid #253249;
 
     outline:none;
 
     background:#101827;
-    color:#fff;
+    color:white;
 
     font-size:15px;
 }
 
 .search input:focus{
     border-color:#2997ff;
-    box-shadow:0 0 0 3px rgba(41,151,255,.12);
+
+    box-shadow:
+        0 0 0 3px rgba(41,151,255,.12);
 }
 
 .search-icon{
@@ -136,39 +138,39 @@ header{
 
     transform:translateY(-50%);
 
-    color:#8995a8;
+    color:#8996a8;
+
+    font-size:22px;
 }
 
 .cart{
     border:0;
 
-    background:#2997ff;
-    color:#fff;
-
     padding:13px 17px;
 
     border-radius:14px;
 
-    font-weight:700;
+    background:#2997ff;
+    color:#fff;
 
-    white-space:nowrap;
+    font-weight:700;
 }
 
 .cart span{
-    background:white;
-    color:#1682e9;
+    margin-left:5px;
 
     padding:2px 7px;
 
     border-radius:20px;
 
-    margin-left:4px;
+    background:white;
+    color:#1682e9;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
-    min-height:500px;
+    min-height:510px;
 
     display:flex;
     align-items:center;
@@ -179,13 +181,11 @@ header{
             rgba(41,151,255,.25),
             transparent 30%
         ),
-
         radial-gradient(
             circle at 20% 90%,
             rgba(0,70,180,.15),
             transparent 35%
         ),
-
         linear-gradient(
             135deg,
             #050810,
@@ -199,7 +199,7 @@ header{
     max-width:1250px;
 
     margin:auto;
-    padding:75px 20px;
+    padding:80px 20px;
 }
 
 .hero-badge{
@@ -207,22 +207,21 @@ header{
 
     padding:8px 14px;
 
+    border:1px solid rgba(41,151,255,.3);
     border-radius:30px;
-
-    color:#72bdff;
 
     background:rgba(41,151,255,.08);
 
-    border:1px solid rgba(41,151,255,.3);
+    color:#72bdff;
 
     font-size:13px;
     font-weight:700;
-
-    margin-bottom:20px;
 }
 
 .hero h1{
-    font-size:clamp(44px,7vw,78px);
+    margin-top:20px;
+
+    font-size:clamp(45px,7vw,78px);
 
     line-height:.98;
 
@@ -238,16 +237,17 @@ header{
 .hero p{
     max-width:650px;
 
+    margin-top:22px;
+
     color:#a5afbf;
 
     font-size:17px;
-
-    margin-top:22px;
 }
 
 .hero-buttons{
     display:flex;
     flex-wrap:wrap;
+
     gap:12px;
 
     margin-top:30px;
@@ -260,26 +260,26 @@ header{
 
     padding:14px 20px;
 
+    border:1px solid #29384e;
     border-radius:14px;
 
     font-weight:700;
-
-    border:1px solid #29384e;
 }
 
 .btn-blue{
-    background:#2997ff;
     border-color:#2997ff;
+    background:#2997ff;
 }
 
 .btn-dark{
     background:#101827;
 }
 
-/* ================= INFO ================= */
+/* INFO */
 
 .info{
     max-width:1250px;
+
     margin:auto;
 
     padding:25px 20px 50px;
@@ -293,18 +293,23 @@ header{
 }
 
 .info-card{
-    background:linear-gradient(145deg,#111a29,#0b111d);
+    padding:22px;
 
     border:1px solid #202d41;
-
     border-radius:20px;
 
-    padding:22px;
+    background:
+        linear-gradient(
+            145deg,
+            #111a29,
+            #0b111d
+        );
 }
 
 .info-icon{
-    font-size:28px;
     margin-bottom:8px;
+
+    font-size:28px;
 }
 
 .info-card h3{
@@ -312,15 +317,18 @@ header{
 }
 
 .info-card p{
-    color:#8996a9;
-    font-size:13px;
     margin-top:5px;
+
+    color:#8996a9;
+
+    font-size:13px;
 }
 
-/* ================= PRODUCTS ================= */
+/* PRODUCTS */
 
 .products{
     max-width:1250px;
+
     margin:auto;
 
     padding:35px 20px 80px;
@@ -332,41 +340,43 @@ header{
 
 .section-title h2{
     font-size:36px;
+
     letter-spacing:-1.5px;
 }
 
 .section-title p{
-    color:#8290a5;
     margin-top:4px;
+
+    color:#8290a5;
 }
 
 .filters{
     display:flex;
     flex-wrap:wrap;
+
     gap:9px;
 
     margin-bottom:24px;
 }
 
 .filter{
-    border:1px solid #29384e;
-
-    background:#0d1624;
-
-    color:#9ca8ba;
-
     padding:9px 15px;
 
+    border:1px solid #29384e;
     border-radius:30px;
+
+    background:#0d1624;
+    color:#9ca8ba;
 
     font-size:13px;
 }
 
 .filter.active,
 .filter:hover{
+    border-color:#2997ff;
+
     background:#2997ff;
     color:#fff;
-    border-color:#2997ff;
 }
 
 .grid{
@@ -380,11 +390,15 @@ header{
 .card{
     overflow:hidden;
 
+    border:1px solid #202d41;
     border-radius:21px;
 
-    background:linear-gradient(145deg,#111a29,#0b111c);
-
-    border:1px solid #202d41;
+    background:
+        linear-gradient(
+            145deg,
+            #111a29,
+            #0b111c
+        );
 
     transition:.25s;
 }
@@ -394,42 +408,44 @@ header{
 
     border-color:#2997ff;
 
-    box-shadow:0 18px 45px rgba(0,0,0,.3);
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.3);
 }
 
 .card-image{
-    height:260px;
+    position:relative;
 
-    background:#fff;
+    height:260px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    position:relative;
     overflow:hidden;
+
+    background:#fff;
 }
 
 .card-image img{
     width:100%;
     height:100%;
 
-    object-fit:contain;
-
     padding:8px;
+
+    object-fit:contain;
 
     transition:.3s;
 }
 
-.card:hover img{
+.card:hover .card-image img{
     transform:scale(1.04);
 }
 
 .badge{
     position:absolute;
 
-    left:12px;
     top:12px;
+    left:12px;
 
     z-index:2;
 
@@ -439,7 +455,7 @@ header{
 
     background:#2997ff;
 
-    color:#fff;
+    color:white;
 
     font-size:10px;
     font-weight:800;
@@ -462,19 +478,19 @@ header{
 }
 
 .card h3{
-    font-size:17px;
-
     margin:5px 0 7px;
+
+    font-size:17px;
 
     letter-spacing:-.3px;
 }
 
 .description{
+    min-height:38px;
+
     color:#8794a7;
 
     font-size:12px;
-
-    min-height:38px;
 }
 
 .card-bottom{
@@ -496,35 +512,33 @@ header{
 }
 
 .inspect{
-    border:0;
-
-    background:#2997ff;
-
-    color:#fff;
-
     padding:9px 12px;
 
+    border:0;
     border-radius:11px;
 
-    font-size:12px;
+    background:#2997ff;
+    color:white;
 
+    font-size:12px;
     font-weight:700;
 }
 
 .no-result{
     display:none;
 
+    padding:60px;
+
     text-align:center;
 
     color:#8491a4;
-
-    padding:60px;
 }
 
-/* ================= DASHBOARD ================= */
+/* DASHBOARD */
 
 .dashboard{
     max-width:1250px;
+
     margin:auto;
 
     padding:0 20px 70px;
@@ -539,22 +553,28 @@ header{
 }
 
 .dashboard-card{
-    background:linear-gradient(145deg,#101827,#0b111d);
+    padding:23px;
 
     border:1px solid #202d41;
-
     border-radius:22px;
 
-    padding:23px;
+    background:
+        linear-gradient(
+            145deg,
+            #101827,
+            #0b111d
+        );
 }
 
 .dashboard-card h3{
-    font-size:19px;
     margin-bottom:18px;
+
+    font-size:19px;
 }
 
 .currency{
     width:100%;
+
     border-collapse:collapse;
 }
 
@@ -568,20 +588,22 @@ header{
 
 .currency td:last-child{
     text-align:right;
+
     font-weight:800;
 }
 
 .note{
+    margin-top:10px;
+
     color:#68768b;
 
     font-size:10px;
-
-    margin-top:10px;
 }
 
 .weather{
     display:flex;
     align-items:center;
+
     gap:18px;
 }
 
@@ -600,6 +622,7 @@ header{
 
 .weather-details{
     display:grid;
+
     grid-template-columns:1fr 1fr;
 
     gap:10px;
@@ -608,13 +631,12 @@ header{
 }
 
 .weather-box{
-    background:#090f19;
+    padding:12px;
 
     border:1px solid #1e2a3b;
-
     border-radius:12px;
 
-    padding:12px;
+    background:#090f19;
 
     color:#8f9bad;
 
@@ -624,12 +646,12 @@ header{
 .weather-box strong{
     display:block;
 
-    color:#fff;
-
     margin-top:4px;
+
+    color:#fff;
 }
 
-/* ================= ABOUT ================= */
+/* ABOUT */
 
 .about{
     border-top:1px solid #182333;
@@ -640,6 +662,7 @@ header{
 
 .about-inner{
     max-width:1250px;
+
     margin:auto;
 
     padding:70px 20px;
@@ -652,11 +675,11 @@ header{
 }
 
 .about h2{
+    margin-bottom:12px;
+
     font-size:40px;
 
     letter-spacing:-1.5px;
-
-    margin-bottom:12px;
 }
 
 .about p{
@@ -666,24 +689,26 @@ header{
 }
 
 .about-list{
-    margin-top:20px;
-
     display:grid;
+
     gap:8px;
+
+    margin-top:20px;
 
     color:#bdc6d3;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
-    background:#050810;
-
     padding:45px 20px 25px;
+
+    background:#050810;
 }
 
 .footer{
     max-width:1250px;
+
     margin:auto;
 
     display:grid;
@@ -701,9 +726,9 @@ footer{
 .footer a{
     display:block;
 
-    color:#7f8c9f;
-
     margin:8px 0;
+
+    color:#7f8c9f;
 
     font-size:14px;
 }
@@ -714,6 +739,7 @@ footer{
 
 .copy{
     max-width:1250px;
+
     margin:30px auto 0;
 
     padding-top:20px;
@@ -725,7 +751,7 @@ footer{
     font-size:11px;
 }
 
-/* ================= WHATSAPP ================= */
+/* WHATSAPP */
 
 .whatsapp{
     position:fixed;
@@ -733,22 +759,23 @@ footer{
     right:20px;
     bottom:20px;
 
+    z-index:1000;
+
     width:60px;
     height:60px;
-
-    border-radius:50%;
-
-    background:#25d366;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
+    border-radius:50%;
+
+    background:#25d366;
+
     font-size:28px;
 
-    z-index:1000;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.35);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.35);
 }
 
 .support{
@@ -759,20 +786,18 @@ footer{
 
     z-index:999;
 
-    border:1px solid #2c3c53;
-
-    background:#101a29;
-
-    color:#fff;
-
     padding:10px 15px;
 
+    border:1px solid #2c3c53;
     border-radius:30px;
+
+    background:#101a29;
+    color:#fff;
 
     font-size:12px;
 }
 
-/* ================= MODAL ================= */
+/* MODAL */
 
 .modal{
     position:fixed;
@@ -782,7 +807,6 @@ footer{
     z-index:3000;
 
     display:none;
-
     align-items:center;
     justify-content:center;
 
@@ -798,6 +822,8 @@ footer{
 }
 
 .modal-box{
+    position:relative;
+
     width:100%;
     max-width:620px;
 
@@ -805,32 +831,27 @@ footer{
 
     overflow:auto;
 
-    background:#0d1523;
-
-    border:1px solid #28384f;
-
-    border-radius:24px;
-
     padding:24px;
 
-    position:relative;
+    border:1px solid #28384f;
+    border-radius:24px;
+
+    background:#0d1523;
 }
 
 .close{
     position:absolute;
 
-    right:15px;
     top:14px;
+    right:15px;
 
     width:36px;
     height:36px;
 
+    border:1px solid #304057;
     border-radius:50%;
 
-    border:1px solid #304057;
-
     background:#111b2b;
-
     color:#fff;
 
     font-size:20px;
@@ -852,25 +873,24 @@ footer{
 
     object-fit:contain;
 
-    background:#fff;
-
     border-radius:15px;
+
+    background:#fff;
 }
 
 .modal h2{
-    font-size:24px;
-
     margin-bottom:7px;
+
+    font-size:24px;
 }
 
 .modal-price{
+    margin-bottom:10px;
+
     color:#55adff;
 
     font-size:23px;
-
     font-weight:800;
-
-    margin-bottom:10px;
 }
 
 .field{
@@ -880,11 +900,11 @@ footer{
 .field label{
     display:block;
 
+    margin-bottom:6px;
+
     color:#9ba7b9;
 
     font-size:12px;
-
-    margin-bottom:6px;
 }
 
 .field input,
@@ -893,14 +913,12 @@ footer{
 
     padding:13px;
 
-    border-radius:11px;
-
-    border:1px solid #2a3a50;
-
     outline:none;
 
-    background:#080e18;
+    border:1px solid #2a3a50;
+    border-radius:11px;
 
+    background:#080e18;
     color:#fff;
 }
 
@@ -918,7 +936,6 @@ footer{
     padding:14px;
 
     border:0;
-
     border-radius:13px;
 
     font-weight:800;
@@ -934,25 +951,26 @@ footer{
     color:#fff;
 }
 
-/* ================= CART ================= */
+/* CART */
 
 .cart-list{
     display:grid;
+
     gap:10px;
 }
 
 .cart-item{
     display:flex;
     align-items:center;
+
     gap:12px;
 
     padding:10px;
 
-    background:#09101b;
-
     border:1px solid #202d40;
-
     border-radius:13px;
+
+    background:#09101b;
 }
 
 .cart-item img{
@@ -961,9 +979,9 @@ footer{
 
     object-fit:contain;
 
-    background:#fff;
-
     border-radius:9px;
+
+    background:#fff;
 }
 
 .cart-info{
@@ -981,25 +999,23 @@ footer{
 }
 
 .remove{
-    border:0;
-
-    background:#29161a;
-
-    color:#ff6977;
-
     padding:8px;
 
+    border:0;
     border-radius:8px;
+
+    background:#29161a;
+    color:#ff6977;
 }
 
 .total{
     display:flex;
     justify-content:space-between;
 
-    border-top:1px solid #273448;
-
     margin-top:18px;
     padding-top:17px;
+
+    border-top:1px solid #273448;
 
     font-size:20px;
     font-weight:800;
@@ -1013,116 +1029,113 @@ footer{
     padding:14px;
 
     border:0;
-
     border-radius:13px;
 
     background:#25d366;
-
     color:#fff;
 
     font-weight:800;
 }
 
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 
 @media(max-width:1000px){
 
-    .grid{
-        grid-template-columns:repeat(3,1fr);
-    }
+.grid{
+    grid-template-columns:repeat(3,1fr);
+}
 
 }
 
 @media(max-width:760px){
 
-    .nav{
-        flex-wrap:wrap;
-    }
+.nav{
+    flex-wrap:wrap;
+}
 
-    .logo{
-        font-size:24px;
-    }
+.logo{
+    font-size:24px;
+}
 
-    .search{
-        order:3;
-        flex-basis:100%;
-    }
+.search{
+    order:3;
 
-    .hero{
-        min-height:440px;
-    }
+    flex-basis:100%;
+}
 
-    .hero h1{
-        font-size:46px;
-    }
+.hero{
+    min-height:440px;
+}
 
-    .info-grid,
-    .dashboard-grid,
-    .about-inner,
-    .footer{
-        grid-template-columns:1fr;
-    }
+.hero h1{
+    font-size:46px;
+}
 
-    .grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:12px;
-    }
+.info-grid,
+.dashboard-grid,
+.about-inner,
+.footer{
+    grid-template-columns:1fr;
+}
 
-    .card-image{
-        height:190px;
-    }
+.grid{
+    grid-template-columns:repeat(2,1fr);
 
-    .card-content{
-        padding:13px;
-    }
+    gap:12px;
+}
 
-    .card h3{
-        font-size:15px;
-    }
+.card-image{
+    height:190px;
+}
 
-    .price{
-        font-size:17px;
-    }
+.card-content{
+    padding:13px;
+}
 
-    .inspect{
-        padding:8px 9px;
-        font-size:10px;
-    }
+.card h3{
+    font-size:15px;
+}
 
-    .modal-product{
-        grid-template-columns:1fr;
-    }
+.price{
+    font-size:17px;
+}
 
-    .modal-product img{
-        width:100%;
-        height:220px;
-    }
+.inspect{
+    padding:8px 9px;
+
+    font-size:10px;
+}
+
+.modal-product{
+    grid-template-columns:1fr;
+}
+
+.modal-product img{
+    width:100%;
+    height:220px;
+}
 
 }
 
 @media(max-width:430px){
 
-    .hero h1{
-        font-size:39px;
-    }
-
-    .grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .card-image{
-        height:165px;
-    }
-
-    .section-title h2{
-        font-size:29px;
-    }
-
+.hero h1{
+    font-size:39px;
 }
 
-/* =========================================================
-   KODUN İÇİNE GÖMÜLÜ İKİ ÖZEL ÜRÜN GÖRSELİ
-   ========================================================= */
+.grid{
+    grid-template-columns:1fr 1fr;
+}
+
+.card-image{
+    height:165px;
+}
+
+.section-title h2{
+    font-size:29px;
+}
+
+}
 
 </style>
 </head>
@@ -1134,8 +1147,13 @@ footer{
 <div class="nav">
 
 <a href="#" class="logo">
+
 Tekno<span>Biz</span>
-<small>TEKNOLOJİ & AKSESUAR</small>
+
+<small>
+TEKNOLOJİ & AKSESUAR
+</small>
+
 </a>
 
 <div class="search">
@@ -1146,13 +1164,20 @@ type="text"
 placeholder="Ürün ara... örn: kılıf, kablo, adaptör"
 >
 
-<div class="search-icon">⌕</div>
+<div class="search-icon">
+⌕
+</div>
 
 </div>
 
 <button class="cart" onclick="openCart()">
+
 🛒 Sepet
-<span id="cartCount">0</span>
+
+<span id="cartCount">
+0
+</span>
+
 </button>
 
 </div>
@@ -1169,13 +1194,19 @@ placeholder="Ürün ara... örn: kılıf, kablo, adaptör"
 </div>
 
 <h1>
+
 Teknolojiye<br>
+
 <span>Yakından Bak.</span>
+
 </h1>
 
 <p>
-Telefon kılıfları, şarj ürünleri ve teknoloji aksesuarları.
-Şık tasarım, kolay iletişim ve TeknoBiz güvencesi.
+
+Telefon kılıfları, şarj ürünleri ve teknoloji
+aksesuarları. Şık tasarım, kolay iletişim
+ve TeknoBiz güvencesi.
+
 </p>
 
 <div class="hero-buttons">
@@ -1205,7 +1236,9 @@ class="btn btn-dark"
 
 <div class="info-card">
 
-<div class="info-icon">📱</div>
+<div class="info-icon">
+📱
+</div>
 
 <h3>
 Telefon Aksesuarları
@@ -1220,7 +1253,9 @@ iPhone ve farklı modeller için kılıf ve aksesuarlar.
 
 <div class="info-card">
 
-<div class="info-icon">✨</div>
+<div class="info-icon">
+✨
+</div>
 
 <h3>
 Premium Ürünler
@@ -1235,7 +1270,9 @@ Premium Ürünler
 
 <div class="info-card">
 
-<div class="info-icon">💬</div>
+<div class="info-icon">
+💬
+</div>
 
 <h3>
 WhatsApp Destek
@@ -1295,7 +1332,9 @@ Tümü
 <div class="grid" id="productGrid"></div>
 
 <div class="no-result" id="noResult">
+
 🔎 Aradığın ürün bulunamadı.
+
 </div>
 
 </section>
@@ -1406,9 +1445,12 @@ TeknoBiz
 </h2>
 
 <p>
-2016'dan beri teknoloji ve telefon aksesuarları alanında
-hizmet veriyoruz. İşimizi temiz yapıyoruz ve müşterilerimize
-ihtiyaçlarına uygun ürünleri sunmayı amaçlıyoruz.
+
+2016'dan beri teknoloji ve telefon aksesuarları
+alanında hizmet veriyoruz. İşimizi temiz yapıyoruz
+ve müşterilerimize ihtiyaçlarına uygun ürünleri
+sunmayı amaçlıyoruz.
+
 </p>
 
 <div class="about-list">
@@ -1433,8 +1475,10 @@ ihtiyaçlarına uygun ürünleri sunmayı amaçlıyoruz.
 </h3>
 
 <p>
+
 Süleyman Demirel Bulvarı No:15<br>
 Bucak / Burdur
+
 </p>
 
 <p style="margin-top:15px">
@@ -1449,7 +1493,9 @@ href="tel:05059999009"
 class="btn btn-blue"
 style="width:100%;margin-top:18px"
 >
+
 📞 0505 999 90 09
+
 </a>
 
 </div>
@@ -1490,7 +1536,10 @@ Teknoloji & aksesuarın adresi.
 ✉️ teknobiz15@gmail.com
 </a>
 
-<a href="https://wa.me/905059999009" target="_blank">
+<a
+href="https://wa.me/905059999009"
+target="_blank"
+>
 💬 WhatsApp
 </a>
 
@@ -1523,16 +1572,15 @@ target="_blank"
 
 
 <div class="copy">
+
 © 2016 - 2026 TeknoBiz. Tüm hakları saklıdır.
+
 </div>
 
 </footer>
 
 
-<button
-class="support"
-onclick="openSupport()"
->
+<button class="support" onclick="openSupport()">
 💬 Destek
 </button>
 
@@ -1546,7 +1594,7 @@ target="_blank"
 </a>
 
 
-<!-- ================= ÜRÜN MODALI ================= -->
+<!-- ÜRÜN MODALI -->
 
 <div class="modal" id="productModal">
 
@@ -1558,26 +1606,32 @@ target="_blank"
 
 <div class="modal-product">
 
-<img id="modalImage" src="" alt="Ürün">
+<img
+id="modalImage"
+src=""
+alt="Ürün"
+>
 
 <div>
 
-<h2 id="modalTitle">
-</h2>
+<h2 id="modalTitle"></h2>
 
-<div class="modal-price" id="modalPrice">
-</div>
+<div
+class="modal-price"
+id="modalPrice"
+></div>
 
 <p style="color:#8794a7;font-size:13px">
+
 Model ve renk seçeneklerini belirleyerek
-ürünü sepete ekleyebilir veya WhatsApp üzerinden
-sipariş oluşturabilirsiniz.
+ürünü sepete ekleyebilir veya WhatsApp
+üzerinden sipariş oluşturabilirsiniz.
+
 </p>
 
 </div>
 
 </div>
-
 
 <div id="options"></div>
 
@@ -1633,13 +1687,16 @@ onclick="whatsappProduct()"
 </div>
 
 
-<!-- ================= SEPET ================= -->
+<!-- SEPET -->
 
 <div class="modal" id="cartModal">
 
 <div class="modal-box">
 
-<button class="close" onclick="closeModal('cartModal')">
+<button
+class="close"
+onclick="closeModal('cartModal')"
+>
 ×
 </button>
 
@@ -1651,8 +1708,7 @@ onclick="whatsappProduct()"
 class="cart-list"
 id="cartList"
 style="margin-top:18px"
->
-</div>
+></div>
 
 <div class="total">
 
@@ -1678,13 +1734,16 @@ onclick="whatsappCart()"
 </div>
 
 
-<!-- ================= DESTEK ================= -->
+<!-- DESTEK -->
 
 <div class="modal" id="supportModal">
 
 <div class="modal-box">
 
-<button class="close" onclick="closeModal('supportModal')">
+<button
+class="close"
+onclick="closeModal('supportModal')"
+>
 ×
 </button>
 
@@ -1693,19 +1752,26 @@ onclick="whatsappCart()"
 </h2>
 
 <p style="color:#929eaf;margin-top:8px">
-Merhaba 👋 Ürünler ve siparişler hakkında bilgi almak
-için bizimle iletişime geçebilirsiniz.
+
+Merhaba 👋 Ürünler ve siparişler hakkında
+bilgi almak için bizimle iletişime geçebilirsiniz.
+
 </p>
 
-<div class="info-card" style="margin-top:20px">
+<div
+class="info-card"
+style="margin-top:20px"
+>
 
 <h3>
 TeknoBiz Destek
 </h3>
 
 <p>
+
 Ürün modeli, renk, fiyat ve sipariş konusunda
 WhatsApp üzerinden yardımcı oluyoruz.
+
 </p>
 
 </div>
@@ -1726,439 +1792,9 @@ style="display:block;text-align:center"
 
 <script>
 
-/* =========================================================
-   KODUN İÇİNE GÖMÜLÜ GÖRSELLER
-   ========================================================= */
+/* ================= ÜRÜNLER ================= */
 
-/*
-   Bu iki görsel dış internet bağlantısına bağlı değildir.
-   Böylece Cloudflare / Netlify dış site görselini engellese
-   bile Tek Renk ve Taşlı Kılıf görünür.
-*/
-
-
-function solidCaseImage(){
-
-const svg = `
-
-<svg xmlns="http://www.w3.org/2000/svg"
-width="800"
-height="800"
-viewBox="0 0 800 800">
-
-<defs>
-
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-<stop offset="0" stop-color="#f8fafc"/>
-<stop offset="1" stop-color="#e8edf3"/>
-</linearGradient>
-
-<filter id="shadow">
-<feDropShadow
-dx="0"
-dy="18"
-stdDeviation="18"
-flood-opacity=".20"/>
-</filter>
-
-</defs>
-
-<rect
-width="800"
-height="800"
-fill="url(#bg)"
-rx="35"/>
-
-<text
-x="400"
-y="65"
-text-anchor="middle"
-font-family="-apple-system,BlinkMacSystemFont,Arial"
-font-size="30"
-font-weight="700"
-fill="#111827">
-TEK RENK
-</text>
-
-<!-- CASE 1 -->
-
-<g transform="translate(80 130) rotate(-10)" filter="url(#shadow)">
-
-<rect
-x="0"
-y="0"
-width="190"
-height="370"
-rx="38"
-fill="#151922"/>
-
-<rect
-x="15"
-y="15"
-width="160"
-height="340"
-rx="30"
-fill="#111827"/>
-
-<rect
-x="22"
-y="28"
-width="75"
-height="75"
-rx="18"
-fill="#111827"/>
-
-<circle cx="47" cy="53" r="15" fill="#333"/>
-<circle cx="76" cy="53" r="15" fill="#333"/>
-
-</g>
-
-
-<!-- CASE 2 -->
-
-<g transform="translate(305 105)" filter="url(#shadow)">
-
-<rect
-x="0"
-y="0"
-width="190"
-height="370"
-rx="38"
-fill="#536f99"/>
-
-<rect
-x="15"
-y="15"
-width="160"
-height="340"
-rx="30"
-fill="#627fa8"/>
-
-<rect
-x="22"
-y="28"
-width="75"
-height="75"
-rx="18"
-fill="#536f99"/>
-
-<circle cx="47" cy="53" r="15" fill="#758fb3"/>
-<circle cx="76" cy="53" r="15" fill="#758fb3"/>
-
-</g>
-
-
-<!-- CASE 3 -->
-
-<g transform="translate(530 145) rotate(9)" filter="url(#shadow)">
-
-<rect
-x="0"
-y="0"
-width="190"
-height="370"
-rx="38"
-fill="#e63946"/>
-
-<rect
-x="15"
-y="15"
-width="160"
-height="340"
-rx="30"
-fill="#ef4652"/>
-
-<rect
-x="22"
-y="28"
-width="75"
-height="75"
-rx="18"
-fill="#d83240"/>
-
-<circle cx="47" cy="53" r="15" fill="#fa6b74"/>
-<circle cx="76" cy="53" r="15" fill="#fa6b74"/>
-
-</g>
-
-
-<!-- LOWER CASES -->
-
-<g transform="translate(180 525)" filter="url(#shadow)">
-
-<rect
-width="170"
-height="210"
-rx="35"
-fill="#fff"/>
-
-<rect
-x="13"
-y="13"
-width="144"
-height="185"
-rx="27"
-fill="#f7f7f7"/>
-
-<rect
-x="20"
-y="25"
-width="60"
-height="60"
-rx="15"
-fill="#fff"/>
-
-</g>
-
-
-<g transform="translate(430 530)" filter="url(#shadow)">
-
-<rect
-width="170"
-height="210"
-rx="35"
-fill="#7353a6"/>
-
-<rect
-x="13"
-y="13"
-width="144"
-height="185"
-rx="27"
-fill="#8060b3"/>
-
-<rect
-x="20"
-y="25"
-width="60"
-height="60"
-rx="15"
-fill="#7353a6"/>
-
-</g>
-
-</svg>
-`;
-
-return "data:image/svg+xml;charset=UTF-8," +
-encodeURIComponent(svg);
-
-}
-
-
-function rhinestoneCaseImage(){
-
-const svg = `
-
-<svg xmlns="http://www.w3.org/2000/svg"
-width="800"
-height="800"
-viewBox="0 0 800 800">
-
-<defs>
-
-<linearGradient id="rbg" x1="0" y1="0" x2="1" y2="1">
-
-<stop offset="0" stop-color="#ffffff"/>
-<stop offset=".5" stop-color="#f1f5f9"/>
-<stop offset="1" stop-color="#dce4ed"/>
-
-</linearGradient>
-
-<linearGradient id="case" x1="0" y1="0" x2="1" y2="1">
-
-<stop offset="0" stop-color="#ffffff"/>
-<stop offset=".5" stop-color="#dce3ea"/>
-<stop offset="1" stop-color="#ffffff"/>
-
-</linearGradient>
-
-<filter id="shadow2">
-
-<feDropShadow
-dx="0"
-dy="20"
-stdDeviation="20"
-flood-opacity=".25"/>
-
-</filter>
-
-</defs>
-
-<rect
-width="800"
-height="800"
-rx="35"
-fill="url(#rbg)"/>
-
-
-<text
-x="400"
-y="65"
-text-anchor="middle"
-font-family="-apple-system,BlinkMacSystemFont,Arial"
-font-size="27"
-font-weight="700"
-fill="#171b22">
-PREMIUM CRYSTAL
-</text>
-
-
-<!-- PHONE -->
-
-<g
-transform="translate(205 100) rotate(-8)"
-filter="url(#shadow2)">
-
-<rect
-width="390"
-height="620"
-rx="55"
-fill="#f7f8fa"
-stroke="#c8d0d9"
-stroke-width="8"/>
-
-<rect
-x="17"
-y="17"
-width="356"
-height="586"
-rx="44"
-fill="#ffffff"/>
-
-
-<!-- CAMERA -->
-
-<rect
-x="35"
-y="40"
-width="125"
-height="145"
-rx="32"
-fill="#e9edf2"/>
-
-<circle
-cx="75"
-cy="80"
-r="27"
-fill="#111827"
-stroke="#dce2e8"
-stroke-width="8"/>
-
-<circle
-cx="120"
-cy="80"
-r="27"
-fill="#111827"
-stroke="#dce2e8"
-stroke-width="8"/>
-
-<circle
-cx="75"
-cy="130"
-r="27"
-fill="#111827"
-stroke="#dce2e8"
-stroke-width="8"/>
-
-
-<!-- APPLE -->
-
-<path
-d="M230 310
-c-25-22-62-4-62 31
-0 42 42 78 62 98
-20-20 62-56 62-98
-0-35-37-53-62-31z"
-fill="#d9dee4"/>
-
-
-<!-- RHINESTONES -->
-
-<g fill="#ffffff" stroke="#b7c0ca" stroke-width="2">
-
-<circle cx="27" cy="40" r="8"/>
-<circle cx="25" cy="75" r="8"/>
-<circle cx="24" cy="110" r="8"/>
-<circle cx="24" cy="145" r="8"/>
-<circle cx="24" cy="180" r="8"/>
-<circle cx="24" cy="215" r="8"/>
-<circle cx="24" cy="250" r="8"/>
-<circle cx="24" cy="285" r="8"/>
-<circle cx="24" cy="320" r="8"/>
-<circle cx="24" cy="355" r="8"/>
-<circle cx="24" cy="390" r="8"/>
-<circle cx="24" cy="425" r="8"/>
-<circle cx="24" cy="460" r="8"/>
-<circle cx="24" cy="495" r="8"/>
-<circle cx="24" cy="530" r="8"/>
-<circle cx="24" cy="565" r="8"/>
-
-<circle cx="365" cy="40" r="8"/>
-<circle cx="367" cy="75" r="8"/>
-<circle cx="368" cy="110" r="8"/>
-<circle cx="368" cy="145" r="8"/>
-<circle cx="368" cy="180" r="8"/>
-<circle cx="368" cy="215" r="8"/>
-<circle cx="368" cy="250" r="8"/>
-<circle cx="368" cy="285" r="8"/>
-<circle cx="368" cy="320" r="8"/>
-<circle cx="368" cy="355" r="8"/>
-<circle cx="368" cy="390" r="8"/>
-<circle cx="368" cy="425" r="8"/>
-<circle cx="368" cy="460" r="8"/>
-<circle cx="368" cy="495" r="8"/>
-<circle cx="368" cy="530" r="8"/>
-<circle cx="368" cy="565" r="8"/>
-
-</g>
-
-
-<!-- CAMERA RHINESTONES -->
-
-<g fill="#ffffff" stroke="#aeb7c1">
-
-<circle cx="40" cy="42" r="6"/>
-<circle cx="70" cy="42" r="6"/>
-<circle cx="100" cy="42" r="6"/>
-<circle cx="130" cy="42" r="6"/>
-
-<circle cx="40" cy="185" r="6"/>
-<circle cx="70" cy="185" r="6"/>
-<circle cx="100" cy="185" r="6"/>
-<circle cx="130" cy="185" r="6"/>
-
-</g>
-
-</g>
-
-
-<!-- SPARKLES -->
-
-<g fill="#ffffff">
-
-<path d="M115 260l7 20 20 7-20 7-7 20-7-20-20-7 20-7z"/>
-
-<path d="M665 280l7 20 20 7-20 7-7 20-7-20-20-7 20-7z"/>
-
-<path d="M650 560l5 14 14 5-14 5-5 14-5-14-14-5 14-5z"/>
-
-</g>
-
-</svg>
-`;
-
-return "data:image/svg+xml;charset=UTF-8," +
-encodeURIComponent(svg);
-
-}
-
-
-/* =========================================================
-   ÜRÜNLER
-   ========================================================= */
-
-const PRODUCTS = [
+const PRODUCTS=[
 
 {
 id:1,
@@ -2185,9 +1821,8 @@ id:3,
 name:"Tek Renk iPhone Kılıfı",
 price:650,
 category:"kilif",
-desc:"Sade, şık ve farklı renk seçenekli silikon kılıf.",
-image:null,
-special:"solid",
+desc:"Sade ve şık tek renk silikon iPhone kılıfı.",
+image:"https://phonehublb.com/cdn/shop/files/iPhone17SiliconeCase23Colors.jpg",
 models:true,
 colors:[
 "Lacivert",
@@ -2204,25 +1839,13 @@ id:4,
 name:"Taşlı iPhone Kılıfı",
 price:650,
 category:"kilif",
-desc:"Kristal taş detaylı premium iPhone kılıfı.",
-image:null,
-special:"rhinestone",
+desc:"Kristal taş detaylı şık iPhone kılıfı.",
+image:"https://www.boyner.com.tr/tiara-orange-crystal-heart-iphone-17-pro-tasli-telefon-kilifi-p-16035945",
 models:true
 },
 
 {
 id:5,
-name:"Kristal Kaplı Premium Taşlı Kılıf",
-price:1250,
-category:"kilif",
-desc:"Yoğun kristal detaylı premium tasarım.",
-image:null,
-special:"rhinestone",
-models:true
-},
-
-{
-id:6,
 name:"Karbon iPhone Kılıfı",
 price:1000,
 category:"kilif",
@@ -2232,7 +1855,7 @@ models:true
 },
 
 {
-id:7,
+id:6,
 name:"Anti Statik Kırılmaz Cam",
 price:1000,
 category:"koruma",
@@ -2242,7 +1865,7 @@ models:true
 },
 
 {
-id:8,
+id:7,
 name:"MagSafe Uyumlu Cüzdan",
 price:500,
 category:"aksesuar",
@@ -2251,7 +1874,7 @@ image:"https://telesalon.pl/hpeciai/ec9c80d567dd33b3a1ea1a6322747a51/pol_pl_Port
 },
 
 {
-id:9,
+id:8,
 name:"Işıklı Makyaj Aynası",
 price:750,
 category:"aksesuar",
@@ -2260,7 +1883,7 @@ image:"https://pursonicusa.com/cdn/shop/products/PURSONICTM16HIRES6_1024x1024.jp
 },
 
 {
-id:10,
+id:9,
 name:"Aromatik Difüzör",
 price:1750,
 category:"aksesuar",
@@ -2269,7 +1892,7 @@ image:"https://i.ebayimg.com/thumbs/images/g/kyoAAeSwNRdqooUT/s-l500.jpg"
 },
 
 {
-id:11,
+id:10,
 name:"Apple 20W USB-C Güç Adaptörü",
 price:1149,
 category:"sarj",
@@ -2278,7 +1901,7 @@ image:"https://i.ebayimg.com/images/g/yyUAAOSwF61mVQwr/s-l400.jpg"
 },
 
 {
-id:12,
+id:11,
 name:"USB-C - Lightning Kablosu 1 m",
 price:1149,
 category:"sarj",
@@ -2287,7 +1910,7 @@ image:"https://images.mobilefun.co.uk/graphics/productgalleries/86581/a.jpg"
 },
 
 {
-id:13,
+id:12,
 name:"USB-C - Lightning Kablosu 2 m",
 price:1599,
 category:"sarj",
@@ -2296,7 +1919,7 @@ image:"https://a.allegroimg.com/s512/119a31/76de576b4403b2dfcd34262a80cc/Kabel-A
 },
 
 {
-id:14,
+id:13,
 name:"USB-C - Lightning Adaptörü",
 price:1599,
 category:"sarj",
@@ -2307,9 +1930,7 @@ image:"https://cf.shopee.tw/file/tw-11134207-7r98w-lx20iecbl3xs3a"
 ];
 
 
-/* =========================================================
-   DURUM
-   ========================================================= */
+/* ================= DEĞİŞKENLER ================= */
 
 let filter="all";
 
@@ -2320,66 +1941,35 @@ let selectedProduct=null;
 let cart=[];
 
 
-/* =========================================================
-   GÖRSEL
-   ========================================================= */
-
-function getImage(product){
-
-if(product.special==="solid"){
-return solidCaseImage();
-}
-
-if(product.special==="rhinestone"){
-return rhinestoneCaseImage();
-}
-
-return product.image;
-
-}
-
-
-/* =========================================================
-   KATEGORİ
-   ========================================================= */
-
-function categoryName(c){
-
-if(c==="kilif") return "Telefon Kılıfı";
-
-if(c==="koruma") return "Telefon Koruma";
-
-if(c==="sarj") return "Şarj";
-
-if(c==="aksesuar") return "Aksesuar";
-
-return "Ürün";
-
-}
-
-
-/* =========================================================
-   ÜRÜNLERİ GÖSTER
-   ========================================================= */
+/* ================= ÜRÜNLERİ GÖSTER ================= */
 
 function renderProducts(){
 
-const grid=document.getElementById("productGrid");
+const grid=
+document.getElementById("productGrid");
 
-const noResult=document.getElementById("noResult");
+const noResult=
+document.getElementById("noResult");
 
 grid.innerHTML="";
 
-const filtered=PRODUCTS.filter(p=>{
+
+const filtered=PRODUCTS.filter(product=>{
 
 const categoryOK=
 filter==="all" ||
-p.category===filter;
+product.category===filter;
+
+const text=
+(
+product.name+
+" "+
+product.desc
+).toLowerCase();
 
 const searchOK=
 !search ||
-p.name.toLowerCase().includes(search) ||
-p.desc.toLowerCase().includes(search);
+text.includes(search);
 
 return categoryOK && searchOK;
 
@@ -2399,12 +1989,10 @@ noResult.style.display="none";
 
 filtered.forEach(product=>{
 
-const card=document.createElement("div");
+const card=
+document.createElement("div");
 
 card.className="card";
-
-
-const image=getImage(product);
 
 
 card.innerHTML=`
@@ -2416,13 +2004,12 @@ TEKNOBİZ
 </div>
 
 <img
-src="${image}"
+src="${product.image}"
 alt="${product.name}"
-onerror="this.onerror=null;this.src='${solidCaseImage()}'"
+onerror="imageError(this)"
 >
 
 </div>
-
 
 <div class="card-content">
 
@@ -2438,12 +2025,16 @@ ${product.name}
 ${product.desc}
 </div>
 
-
 <div class="card-bottom">
 
 <div class="price">
+
 ${product.price.toLocaleString("tr-TR")}
-<small>TL</small>
+
+<small>
+TL
+</small>
+
 </div>
 
 <button
@@ -2466,20 +2057,88 @@ grid.appendChild(card);
 }
 
 
-/* =========================================================
-   FİLTRE
-   ========================================================= */
+/* ================= GÖRSEL HATASI ================= */
 
-document.querySelectorAll(".filter").forEach(button=>{
+function imageError(img){
+
+img.style.objectFit="contain";
+
+img.src=
+"data:image/svg+xml;charset=UTF-8,"+
+encodeURIComponent(`
+
+<svg xmlns="http://www.w3.org/2000/svg"
+width="500"
+height="500">
+
+<rect width="500"
+height="500"
+fill="#f4f4f4"/>
+
+<text
+x="250"
+y="245"
+text-anchor="middle"
+font-family="Arial"
+font-size="25"
+fill="#777">
+TeknoBiz
+</text>
+
+<text
+x="250"
+y="280"
+text-anchor="middle"
+font-family="Arial"
+font-size="16"
+fill="#999">
+Ürün görseli
+</text>
+
+</svg>
+
+`);
+
+}
+
+
+/* ================= KATEGORİ ================= */
+
+function categoryName(category){
+
+if(category==="kilif")
+return "Telefon Kılıfı";
+
+if(category==="koruma")
+return "Telefon Koruma";
+
+if(category==="sarj")
+return "Şarj";
+
+if(category==="aksesuar")
+return "Aksesuar";
+
+return "Ürün";
+
+}
+
+
+/* ================= FİLTRE ================= */
+
+document.querySelectorAll(".filter")
+.forEach(button=>{
 
 button.addEventListener("click",()=>{
 
 document.querySelectorAll(".filter")
-.forEach(x=>x.classList.remove("active"));
+.forEach(x=>
+x.classList.remove("active")
+);
 
 button.classList.add("active");
 
-filter=button.dataset.filter;
+filter=
+button.dataset.filter;
 
 renderProducts();
 
@@ -2488,40 +2147,46 @@ renderProducts();
 });
 
 
-/* =========================================================
-   ARAMA
-   ========================================================= */
+/* ================= ARAMA ================= */
 
-document.getElementById("search")
+document
+.getElementById("search")
 .addEventListener("input",function(){
 
-search=this.value.toLowerCase().trim();
+search=
+this.value.toLowerCase().trim();
 
 renderProducts();
 
 });
 
 
-/* =========================================================
-   ÜRÜN MODALI
-   ========================================================= */
+/* ================= ÜRÜN AÇ ================= */
 
 function openProduct(id){
 
 selectedProduct=
-PRODUCTS.find(x=>x.id===id);
+PRODUCTS.find(product=>
+product.id===id
+);
 
-if(!selectedProduct)return;
+if(!selectedProduct)
+return;
 
 
-document.getElementById("modalImage").src=
-getImage(selectedProduct);
+document.getElementById("modalImage")
+.src=
+selectedProduct.image;
 
-document.getElementById("modalTitle").textContent=
+document.getElementById("modalTitle")
+.textContent=
 selectedProduct.name;
 
-document.getElementById("modalPrice").textContent=
-selectedProduct.price.toLocaleString("tr-TR")+" TL";
+document.getElementById("modalPrice")
+.textContent=
+selectedProduct.price
+.toLocaleString("tr-TR")
++" TL";
 
 
 let html="";
@@ -2614,9 +2279,9 @@ Renk
 Renk seçiniz
 </option>
 
-${selectedProduct.colors.map(c=>`
-<option>${c}</option>
-`).join("")}
+${selectedProduct.colors.map(color=>
+`<option>${color}</option>`
+).join("")}
 
 </select>
 
@@ -2627,7 +2292,8 @@ ${selectedProduct.colors.map(c=>`
 }
 
 
-document.getElementById("options").innerHTML=html;
+document.getElementById("options")
+.innerHTML=html;
 
 
 document.getElementById("productModal")
@@ -2636,13 +2302,12 @@ document.getElementById("productModal")
 }
 
 
-/* =========================================================
-   SEPETE EKLE
-   ========================================================= */
+/* ================= SEPETE EKLE ================= */
 
 function addSelectedToCart(){
 
-if(!selectedProduct)return;
+if(!selectedProduct)
+return;
 
 
 const modelElement=
@@ -2653,10 +2318,15 @@ document.getElementById("color");
 
 
 const model=
-modelElement ? modelElement.value : "";
+modelElement ?
+modelElement.value :
+"";
+
 
 const color=
-colorElement ? colorElement.value : "";
+colorElement ?
+colorElement.value :
+"";
 
 
 cart.push({
@@ -2679,14 +2349,13 @@ alert("Ürün sepete eklendi. 🛒");
 }
 
 
-/* =========================================================
-   SEPET
-   ========================================================= */
+/* ================= SEPET ================= */
 
 function updateCart(){
 
 document.getElementById("cartCount")
-.textContent=cart.length;
+.textContent=
+cart.length;
 
 }
 
@@ -2718,7 +2387,9 @@ text-align:center;
 padding:35px;
 color:#7f8c9f;
 ">
+
 Sepetiniz boş. 🛒
+
 </div>
 
 `;
@@ -2739,7 +2410,8 @@ cart.forEach((product,index)=>{
 total+=product.price;
 
 
-const item=document.createElement("div");
+const item=
+document.createElement("div");
 
 item.className="cart-item";
 
@@ -2747,7 +2419,7 @@ item.className="cart-item";
 item.innerHTML=`
 
 <img
-src="${getImage(product)}"
+src="${product.image}"
 alt="${product.name}"
 >
 
@@ -2758,10 +2430,18 @@ ${product.name}
 </strong>
 
 <small>
+
 ${product.model || ""}
-${product.color ? " • "+product.color : ""}
+
+${product.color ?
+" • "+product.color :
+""}
+
 <br>
-${product.price.toLocaleString("tr-TR")} TL
+
+${product.price.toLocaleString("tr-TR")}
+TL
+
 </small>
 
 </div>
@@ -2782,7 +2462,8 @@ list.appendChild(item);
 
 document.getElementById("cartTotal")
 .textContent=
-total.toLocaleString("tr-TR")+" TL";
+total.toLocaleString("tr-TR")
++" TL";
 
 }
 
@@ -2798,34 +2479,21 @@ renderCart();
 }
 
 
-/* =========================================================
-   WHATSAPP ÜRÜN
-   ========================================================= */
+/* ================= WHATSAPP ÜRÜN ================= */
 
 function whatsappProduct(){
 
-if(!selectedProduct)return;
+if(!selectedProduct)
+return;
 
 
 const name=
-document.getElementById("customerName").value.trim();
+document.getElementById("customerName")
+.value.trim();
 
 const phone=
-document.getElementById("customerPhone").value.trim();
-
-
-const modelElement=
-document.getElementById("model");
-
-const colorElement=
-document.getElementById("color");
-
-
-const model=
-modelElement ? modelElement.value : "";
-
-const color=
-colorElement ? colorElement.value : "";
+document.getElementById("customerPhone")
+.value.trim();
 
 
 if(!name){
@@ -2836,7 +2504,6 @@ return;
 
 }
 
-
 if(!phone){
 
 alert("Lütfen telefon numaranızı yazın.");
@@ -2846,12 +2513,33 @@ return;
 }
 
 
+const modelElement=
+document.getElementById("model");
+
+const colorElement=
+document.getElementById("color");
+
+
+const model=
+modelElement ?
+modelElement.value :
+"";
+
+
+const color=
+colorElement ?
+colorElement.value :
+"";
+
+
 let message=
 "Merhaba TeknoBiz, web sitesinden sipariş vermek istiyorum.\n\n";
 
 
 message+=
-"🛍️ Ürün: "+selectedProduct.name+"\n";
+"🛍️ Ürün: "+
+selectedProduct.name+
+"\n";
 
 message+=
 "💰 Fiyat: "+
@@ -2862,7 +2550,9 @@ selectedProduct.price.toLocaleString("tr-TR")+
 if(model){
 
 message+=
-"📱 Model: "+model+"\n";
+"📱 Model: "+
+model+
+"\n";
 
 }
 
@@ -2870,16 +2560,21 @@ message+=
 if(color){
 
 message+=
-"🎨 Renk: "+color+"\n";
+"🎨 Renk: "+
+color+
+"\n";
 
 }
 
 
 message+=
-"👤 Ad Soyad: "+name+"\n";
+"👤 Ad Soyad: "+
+name+
+"\n";
 
 message+=
-"📞 Telefon: "+phone;
+"📞 Telefon: "+
+phone;
 
 
 window.open(
@@ -2891,9 +2586,7 @@ encodeURIComponent(message),
 }
 
 
-/* =========================================================
-   WHATSAPP SEPET
-   ========================================================= */
+/* ================= WHATSAPP SEPET ================= */
 
 function whatsappCart(){
 
@@ -2912,31 +2605,41 @@ let message=
 "Merhaba TeknoBiz, web sitesinden sipariş vermek istiyorum.\n\n";
 
 
-cart.forEach((p,i)=>{
+cart.forEach((product,index)=>{
 
-total+=p.price;
+total+=product.price;
 
-
-message+=
-(i+1)+". "+p.name+"\n";
-
-if(p.model){
 
 message+=
-"Model: "+p.model+"\n";
+(index+1)+
+". "+
+product.name+
+"\n";
+
+
+if(product.model){
+
+message+=
+"Model: "+
+product.model+
+"\n";
 
 }
 
-if(p.color){
+
+if(product.color){
 
 message+=
-"Renk: "+p.color+"\n";
+"Renk: "+
+product.color+
+"\n";
 
 }
+
 
 message+=
 "Fiyat: "+
-p.price.toLocaleString("tr-TR")+
+product.price.toLocaleString("tr-TR")+
 " TL\n\n";
 
 });
@@ -2957,9 +2660,7 @@ encodeURIComponent(message),
 }
 
 
-/* =========================================================
-   MODALLAR
-   ========================================================= */
+/* ================= MODAL ================= */
 
 function closeModal(id){
 
@@ -2972,9 +2673,9 @@ document.getElementById(id)
 document.querySelectorAll(".modal")
 .forEach(modal=>{
 
-modal.addEventListener("click",function(e){
+modal.addEventListener("click",function(event){
 
-if(e.target===modal){
+if(event.target===modal){
 
 modal.classList.remove("show");
 
@@ -2985,9 +2686,7 @@ modal.classList.remove("show");
 });
 
 
-/* =========================================================
-   DESTEK
-   ========================================================= */
+/* ================= DESTEK ================= */
 
 function openSupport(){
 
@@ -2997,9 +2696,7 @@ document.getElementById("supportModal")
 }
 
 
-/* =========================================================
-   KUR
-   ========================================================= */
+/* ================= KUR ================= */
 
 async function loadCurrency(){
 
@@ -3014,96 +2711,109 @@ const data=
 await response.json();
 
 
-if(!data.rates){
-
-throw new Error();
-
-}
-
-
 document.getElementById("usd")
 .textContent=
 (1/data.rates.USD)
-.toFixed(2)+" TL";
+.toFixed(2)
++" TL";
 
 
 document.getElementById("eur")
 .textContent=
 (1/data.rates.EUR)
-.toFixed(2)+" TL";
+.toFixed(2)
++" TL";
 
 
 document.getElementById("gbp")
 .textContent=
 (1/data.rates.GBP)
-.toFixed(2)+" TL";
+.toFixed(2)
++" TL";
 
 
-}catch(e){
+}catch(error){
 
 document.getElementById("usd")
-.textContent="Veri alınamadı";
+.textContent=
+"Veri alınamadı";
 
 document.getElementById("eur")
-.textContent="Veri alınamadı";
+.textContent=
+"Veri alınamadı";
 
 document.getElementById("gbp")
-.textContent="Veri alınamadı";
+.textContent=
+"Veri alınamadı";
 
 }
 
 }
 
 
-/* =========================================================
-   HAVA DURUMU
-   BUCAK / BURDUR
-   ========================================================= */
+/* ================= HAVA DURUMU ================= */
 
 function weatherIcon(code){
 
-if(code===0)return"☀️";
+if(code===0)
+return "☀️";
 
-if(code===1||code===2)return"🌤️";
+if(code===1 || code===2)
+return "🌤️";
 
-if(code===3)return"☁️";
+if(code===3)
+return "☁️";
 
-if(code>=45&&code<=48)return"🌫️";
+if(code>=45 && code<=48)
+return "🌫️";
 
-if(code>=51&&code<=67)return"🌧️";
+if(code>=51 && code<=67)
+return "🌧️";
 
-if(code>=71&&code<=77)return"❄️";
+if(code>=71 && code<=77)
+return "❄️";
 
-if(code>=80&&code<=82)return"🌦️";
+if(code>=80 && code<=82)
+return "🌦️";
 
-if(code>=95)return"⛈️";
+if(code>=95)
+return "⛈️";
 
-return"🌤️";
+return "🌤️";
 
 }
 
 
 function weatherText(code){
 
-if(code===0)return"Açık";
+if(code===0)
+return "Açık";
 
-if(code===1)return"Çoğunlukla açık";
+if(code===1)
+return "Çoğunlukla açık";
 
-if(code===2)return"Parçalı bulutlu";
+if(code===2)
+return "Parçalı bulutlu";
 
-if(code===3)return"Kapalı";
+if(code===3)
+return "Kapalı";
 
-if(code>=45&&code<=48)return"Sisli";
+if(code>=45 && code<=48)
+return "Sisli";
 
-if(code>=51&&code<=67)return"Yağmurlu";
+if(code>=51 && code<=67)
+return "Yağmurlu";
 
-if(code>=71&&code<=77)return"Karlı";
+if(code>=71 && code<=77)
+return "Karlı";
 
-if(code>=80&&code<=82)return"Sağanak";
+if(code>=80 && code<=82)
+return "Sağanak";
 
-if(code>=95)return"Gök gürültülü";
+if(code>=95)
+return "Gök gürültülü";
 
-return"Değişken";
+return "Değişken";
 
 }
 
@@ -3128,40 +2838,48 @@ const url=
 const response=
 await fetch(url);
 
-
 const data=
 await response.json();
 
-
-const current=data.current;
+const current=
+data.current;
 
 
 document.getElementById("temperature")
 .textContent=
-Math.round(current.temperature_2m)+"°";
+Math.round(
+current.temperature_2m
+)+"°";
 
 
 document.getElementById("weatherIcon")
 .textContent=
-weatherIcon(current.weather_code);
+weatherIcon(
+current.weather_code
+);
 
 
 document.getElementById("weatherText")
 .textContent=
-weatherText(current.weather_code);
+weatherText(
+current.weather_code
+);
 
 
 document.getElementById("humidity")
 .textContent=
-current.relative_humidity_2m+"%";
+current.relative_humidity_2m
++"%";
 
 
 document.getElementById("wind")
 .textContent=
-Math.round(current.wind_speed_10m)+" km/s";
+Math.round(
+current.wind_speed_10m
+)+" km/s";
 
 
-}catch(e){
+}catch(error){
 
 document.getElementById("weatherText")
 .textContent=
@@ -3172,9 +2890,7 @@ document.getElementById("weatherText")
 }
 
 
-/* =========================================================
-   BAŞLAT
-   ========================================================= */
+/* ================= BAŞLAT ================= */
 
 renderProducts();
 
