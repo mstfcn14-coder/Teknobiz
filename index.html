@@ -1,2193 +1,887 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<title>TeknoBiz | Teknoloji & Aksesuar</title>
-
-<meta name="description"
-content="TeknoBiz Bucak teknoloji ve telefon aksesuarları">
-
-<style>
-*{
-box-sizing:border-box;
-margin:0;
-padding:0
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#050a11;
-color:#fff;
-}
-
-/* ================= HEADER ================= */
-
-header{
-position:sticky;
-top:0;
-z-index:999;
-background:#080d16;
-border-bottom:1px solid #1e3048;
-padding:15px;
-}
-
-.nav{
-max-width:1200px;
-margin:auto;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:15px;
-}
-
-.logo{
-font-size:28px;
-font-weight:900;
-color:#2997ff;
-}
-
-.logo span{
-color:white;
-}
-
-.search{
-flex:1;
-max-width:500px;
-}
-
-.search input{
-width:100%;
-padding:13px 17px;
-border-radius:12px;
-border:1px solid #29405d;
-background:#101a28;
-color:white;
-outline:none;
-}
-
-.search input:focus{
-border-color:#2997ff;
-box-shadow:0 0 0 3px #2997ff22;
-}
-
-/* ================= BUTTON ================= */
-
-button{
-border:0;
-border-radius:11px;
-padding:12px 15px;
-background:#2997ff;
-color:white;
-font-weight:800;
-cursor:pointer;
-transition:.2s;
-}
-
-button:hover{
-filter:brightness(1.12);
-transform:translateY(-1px);
-}
-
-.secondary{
-background:#172437;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-max-width:1200px;
-margin:25px auto;
-padding:55px 25px;
-border-radius:25px;
-background:
-linear-gradient(135deg,#08182b,#10151f);
-text-align:center;
-border:1px solid #213852;
-}
-
-.hero h1{
-font-size:44px;
-margin-bottom:12px;
-}
-
-.hero h1 span{
-color:#2997ff;
-}
-
-.hero p{
-color:#bac6d5;
-font-size:18px;
-margin-top:8px;
-}
-
-/* ================= CONTAINER ================= */
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:20px;
-}
-
-.section-title{
-font-size:28px;
-font-weight:900;
-margin:35px 0 18px;
-}
-
-/* ================= PRODUCTS ================= */
-
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:18px;
-}
-
-.product{
-background:#0c1420;
-border:1px solid #20344e;
-border-radius:18px;
-overflow:hidden;
-transition:.2s;
-position:relative;
-}
-
-.product:hover{
-transform:translateY(-4px);
-border-color:#2997ff;
-box-shadow:0 12px 35px #0005;
-}
-
-.product img{
-width:100%;
-height:210px;
-object-fit:cover;
-background:#111;
-display:block;
-}
-
-.product-info{
-padding:16px;
-}
-
-.product h3{
-margin-bottom:10px;
-}
-
-.price{
-font-size:21px;
-font-weight:900;
-color:#2997ff;
-margin:8px 0;
-}
-
-.product-actions{
-display:grid;
-grid-template-columns:1fr;
-gap:8px;
-margin-top:10px;
-}
-
-.product-actions button{
-width:100%;
-}
-
-/* ================= FEATURES ================= */
-
-.feature-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:17px;
-}
-
-.feature{
-background:linear-gradient(145deg,#101a29,#080f19);
-border:1px solid #253b57;
-border-radius:19px;
-padding:20px;
-transition:.2s;
-}
-
-.feature:hover{
-border-color:#2997ff;
-transform:translateY(-2px);
-}
-
-.feature h3{
-font-size:20px;
-margin-bottom:10px;
-}
-
-.feature p{
-color:#aebdce;
-line-height:1.5;
-margin-bottom:12px;
-}
-
-.input{
-width:100%;
-padding:12px;
-margin:6px 0;
-border-radius:10px;
-border:1px solid #30445e;
-background:#080f19;
-color:white;
-outline:none;
-}
-
-.input:focus{
-border-color:#2997ff;
-}
-
-textarea.input{
-resize:vertical;
-}
-
-select.input{
-color:white;
-}
-
-.result{
-margin-top:10px;
-padding:12px;
-background:#071a2e;
-border-radius:10px;
-line-height:1.6;
-border:1px solid #193957;
-}
-
-.countdown{
-font-size:29px;
-font-weight:900;
-text-align:center;
-color:#2997ff;
-margin:12px;
-padding:12px;
-background:#061322;
-border-radius:12px;
-}
-
-.reviews{
-margin-top:10px;
-}
-
-.review{
-padding:10px 0;
-border-bottom:1px solid #24364d;
-}
-
-.review:last-child{
-border-bottom:0;
-}
-
-.stars{
-color:#ffd43b;
-letter-spacing:2px;
-}
-
-/* ================= SPECIAL CARDS ================= */
-
-.special-card{
-margin-top:25px;
-padding:25px;
-border-radius:20px;
-border:1px solid #23476c;
-background:
-linear-gradient(135deg,#081a2f,#0d1420);
-}
-
-.special-card h2{
-margin-bottom:8px;
-}
-
-.special-card p{
-color:#b7c5d6;
-line-height:1.6;
-}
-
-.badge{
-display:inline-block;
-padding:6px 10px;
-border-radius:20px;
-background:#2997ff22;
-color:#2997ff;
-font-size:12px;
-font-weight:900;
-margin-bottom:10px;
-}
-
-.best-list{
-display:flex;
-flex-direction:column;
-gap:8px;
-}
-
-.best-item{
-padding:11px;
-border-radius:10px;
-background:#071a2e;
-border:1px solid #193957;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-margin-top:50px;
-padding:40px 20px;
-background:#070b12;
-border-top:1px solid #1d3048;
-text-align:center;
-}
-
-footer h2{
-color:#2997ff;
-}
-
-footer p{
-margin:8px;
-color:#aebbd0;
-}
-
-/* ================= WHATSAPP ================= */
-
-.whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-width:58px;
-height:58px;
-border-radius:50%;
-background:#25d366;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:27px;
-z-index:9999;
-box-shadow:0 8px 25px #0008;
-text-decoration:none;
-}
-
-/* ================= MODAL ================= */
-
-.modal{
-position:fixed;
-inset:0;
-background:#000b;
-display:none;
-align-items:center;
-justify-content:center;
-z-index:10000;
-padding:20px;
-}
-
-.modal-box{
-width:min(500px,100%);
-background:#0d1724;
-border:1px solid #2a4564;
-border-radius:20px;
-padding:25px;
-max-height:90vh;
-overflow:auto;
-box-shadow:0 20px 70px #000b;
-}
-
-.close{
-float:right;
-border-radius:50%;
-background:#253449;
-padding:7px 11px;
-}
-
-.modal-box h2{
-margin-bottom:18px;
-color:#fff;
-}
-
-.modal-box img{
-max-height:350px;
-object-fit:cover;
-}
-
-/* ================= EMPTY ================= */
-
-.empty{
-padding:30px;
-text-align:center;
-background:#0c1420;
-border:1px dashed #29405d;
-border-radius:15px;
-color:#9eb0c5;
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:600px){
-
-.hero{
-margin:15px;
-padding:40px 18px;
-}
-
-.hero h1{
-font-size:31px;
-}
-
-.nav{
-flex-wrap:wrap;
-}
-
-.search{
-order:3;
-width:100%;
-max-width:none;
-}
-
-.product img{
-height:190px;
-}
-
-.container{
-padding:15px;
-}
-
-.section-title{
-font-size:24px;
-}
-
-.feature-grid{
-grid-template-columns:1fr;
-}
-
-.whatsapp{
-right:15px;
-bottom:15px;
-}
-
-}
-
-/* ================= ANIMATION ================= */
-
-@keyframes pulseBlue{
-0%,100%{
-box-shadow:0 0 0 0 #2997ff22;
-}
-50%{
-box-shadow:0 0 0 8px #2997ff00;
-}
-}
-
-.countdown{
-animation:pulseBlue 2s infinite;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-
-<div class="nav">
-
-<div class="logo">
-T<span>eknoBiz</span>
-</div>
-
-<div class="search">
-
-<input
-id="search"
-placeholder="🔎 Ürün ara..."
-oninput="searchProducts()">
-
-</div>
-
-<button onclick="showFavorites()">
-❤️ <span id="favCount">0</span>
-</button>
-
-</div>
-
-</header>
-
-
-<section class="hero">
-
-<h1>
-Tekno<span>Biz</span>
-</h1>
-
-<p>
-2016'dan beri teknoloji ve aksesuar dünyasında.
-</p>
-
-<p>
-📍 Bucak / Burdur &nbsp; 📞 0505 999 9009
-</p>
-
-</section>
-
-
-<div class="container">
-
-<h2 class="section-title">
-🔥 Ürünlerimiz
-</h2>
-
-<div
-id="products"
-class="products">
-</div>
-
-
-<h2 class="section-title">
-🚀 TeknoBiz Özel Özellikler
-</h2>
-
-
-<div class="feature-grid">
-
-
-<!-- ================= FAVORİ ================= -->
-
-<div class="feature">
-
-<h3>❤️ Favoriler</h3>
-
-<p>
-Beğendiğin ürünleri favorilerine kaydet.
-</p>
-
-<button onclick="showFavorites()">
-Favorilerimi Göster
-</button>
-
-</div>
-
-
-<!-- ================= GÜNÜN ÜRÜNÜ ================= -->
-
-<div class="feature">
-
-<h3>🌟 Günün Ürünü</h3>
-
-<p id="dayProductText">
-Bugünün ürünü hazırlanıyor...
-</p>
-
-<button onclick="openDayProduct()">
-Günün Ürününü Aç
-</button>
-
-</div>
-
-
-<!-- ================= SÜRPRİZ ================= -->
-
-<div class="feature">
-
-<h3>🎁 Sürpriz Kampanya</h3>
-
-<p>
-Bugünün sürpriz kampanyasını yakala.
-</p>
-
-<button onclick="surprise()">
-Sürprizi Aç
-</button>
-
-</div>
-
-
-<!-- ================= YORUMLAR ================= -->
-
-<div class="feature">
-
-<h3>⭐ Müşteri Yorumları</h3>
-
-<div id="reviews"></div>
-
-<button onclick="reviewModal()">
-Yorum Yap
-</button>
-
-</div>
-
-
-<!-- ================= ÇOK SATAN ================= -->
-
-<div class="feature">
-
-<h3>🔥 Çok Satanlar</h3>
-
-<div id="best"></div>
-
-<button onclick="bestSellers()">
-Listeyi Aç
-</button>
-
-</div>
-
-
-<!-- ================= BİRLİKTE AL ================= -->
-
-<div class="feature">
-
-<h3>🛍️ Birlikte Al</h3>
-
-<p>
-Birbirine uygun ürünleri birlikte keşfet.
-</p>
-
-<button onclick="together()">
-Birlikte Al
-</button>
-
-</div>
-
-
-<!-- ================= İNDİRİM ================= -->
-
-<div class="feature">
-
-<h3>💸 İndirim Hesaplayıcı</h3>
-
-<input
-class="input"
-id="price"
-type="number"
-min="0"
-placeholder="Fiyat">
-
-<input
-class="input"
-id="discount"
-type="number"
-min="0"
-max="100"
-placeholder="İndirim %">
-
-<button onclick="calculateDiscount()">
-Hesapla
-</button>
-
-<div
-class="result"
-id="discountResult">
-Fiyat ve indirim oranını gir.
-</div>
-
-</div>
-
-
-<!-- ================= SAYAC ================= -->
-
-<div class="feature">
-
-<h3>⏳ Kampanya Sayacı</h3>
-
-<div
-class="countdown"
-id="countdown">
-24:00:00
-</div>
-
-<p>
-Kampanya bitmeden yakala!
-</p>
-
-</div>
-
-
-<!-- ================= KUPON ================= -->
-
-<div class="feature">
-
-<h3>🎟️ Kupon Sistemi</h3>
-
-<input
-class="input"
-id="coupon"
-placeholder="Kupon kodu">
-
-<button onclick="useCoupon()">
-Kuponu Kullan
-</button>
-
-<div
-class="result"
-id="couponResult">
-Kupon kodunu gir.
-</div>
-
-</div>
-
-
-<!-- ================= SİPARİŞ TAKİBİ ================= -->
-
-<div class="feature">
-
-<h3>📦 Sipariş Takibi</h3>
-
-<input
-class="input"
-id="order"
-placeholder="Sipariş numarası">
-
-<button onclick="trackOrder()">
-Siparişi Sorgula
-</button>
-
-<div
-class="result"
-id="orderResult">
-Sipariş numaranı gir.
-</div>
-
-</div>
-
-
-<!-- ================= WHATSAPP ================= -->
-
-<div class="feature">
-
-<h3>📲 WhatsApp Sipariş Takibi</h3>
-
-<p>
-Sipariş numaranı WhatsApp üzerinden sor.
-</p>
-
-<button onclick="whatsappOrder()">
-WhatsApp'tan Sor
-</button>
-
-</div>
-
-
-</div>
-
-
-<!-- ================= GÜNÜN ÜRÜNÜ BANNER ================= -->
-
-<div class="special-card">
-
-<div class="badge">
-🌟 TEKNOBİZ GÜNÜN ÜRÜNÜ
-</div>
-
-<h2 id="dayProductBanner">
-Hazırlanıyor...
-</h2>
-
-<p>
-Her gün farklı bir ürün öne çıkıyor. Günün fırsatını kaçırma!
-</p>
-
-<br>
-
-<button onclick="openDayProduct()">
-🌟 Günün Ürününe Bak
-</button>
-
-</div>
-
-
-<!-- ================= KAMPANYA BANNER ================= -->
-
-<div class="special-card">
-
-<div class="badge">
-🔥 BUGÜNÜN KAMPANYASI
-</div>
-
-<h2>
-TeknoBiz Kampanyası
-</h2>
-
-<p>
-Kampanya süresi dolmadan ürünlerini keşfet ve fırsatlardan yararlan.
-</p>
-
-<br>
-
-<div
-class="countdown"
-id="countdownBottom">
-24:00:00
-</div>
-
-</div>
-
-
-</div>
-
-
-<footer>
-
-<h2>TeknoBiz</h2>
-
-<p>
-📍 Süleyman Demirel Bulvarı No:15, Bucak / Burdur
-</p>
-
-<p>
-📞 0505 999 9009
-</p>
-
-<p>
-📧 teknobiz15@gmail.com
-</p>
-
-<p>
-📷 Instagram: @Teknobiz7
-</p>
-
-<p>
-© 2016 - 2026 TeknoBiz
-</p>
-
-</footer>
-
-
-<a
-class="whatsapp"
-href="https://wa.me/905059999009"
-target="_blank"
-rel="noopener">
-💬
-</a>
-
-
-<div
-class="modal"
-id="modal">
-
-<div class="modal-box">
-
-<button
-class="close"
-onclick="closeModal()">
-×
-</button>
-
-<h2 id="modalTitle">
 TeknoBiz
-</h2>
-
-<div id="modalContent"></div>
-
-</div>
-
-</div>
-
-
-<script>
-
-/* =====================================================
-   ÜRÜNLER
-   FOTOĞRAF LİNKLERİ KORUNDU
-===================================================== */
-
-const PRODUCTS=[
-
-{
-name:"Guess 4G",
-price:750,
-image:"https://images.unsplash.com/photo-1601593346740-925612772716?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"Şeffaf MagSafe",
-price:750,
-image:"https://images.unsplash.com/photo-1603313011105-320f26a45f65?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"Tek Renk iPhone Kılıf",
-price:650,
-image:"https://images.unsplash.com/photo-1601972602237-8c79241e68b1?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"Taşlı iPhone Kılıf",
-price:650,
-image:"https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"Karbon Kılıf",
-price:1000,
-image:"https://images.unsplash.com/photo-1585060544812-6b45742d762f?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"Anti Statik Kırılmaz Cam",
-price:1000,
-image:"https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"MagSafe Cüzdan",
-price:500,
-image:"https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"Işıklı Makyaj Aynası",
-price:750,
-image:"https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"Aromatik Difüzör",
-price:1750,
-image:"https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"Apple 20W Adaptör",
-price:1149,
-image:"https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"USB-C Lightning 1m",
-price:1149,
-image:"https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"USB-C Lightning 2m",
-price:1599,
-image:"https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=700&q=80"
-}
-
-];
-
-
-/* =====================================================
-   ÜRÜN GÖSTER
-===================================================== */
-
-function renderProducts(list=PRODUCTS){
-
-const box=document.getElementById("products");
-
-if(!box)return;
-
-box.innerHTML="";
-
-if(!list.length){
-
-box.innerHTML=`
-<div class="empty">
-🔎 Aradığınız ürün bulunamadı.
-</div>
-`;
-
-return;
-
-}
-
-list.forEach((p)=>{
-
-const originalIndex=
-PRODUCTS.findIndex(
-item=>item.name===p.name
-);
-
-const favorite=
-getFavorites().includes(p.name);
-
-box.innerHTML+=`
-
-<div class="product">
-
-<img
-src="${p.image}"
-alt="${escapeHTML(p.name)}"
-loading="lazy">
-
-<div class="product-info">
-
-<h3>
-${escapeHTML(p.name)}
-</h3>
-
-<div class="price">
-${p.price.toLocaleString("tr-TR")} TL
-</div>
-
-<div class="product-actions">
-
-<button
-onclick="toggleFavoriteByName('${escapeJS(p.name)}')">
-${favorite?"❤️ Favoriden Çıkar":"♡ Favoriye Ekle"}
-</button>
-
-<button
-class="secondary"
-onclick="addCart(${originalIndex})">
-🛒 Sepete Ekle
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-`;
-
-});
-
-}
-
-
-/* =====================================================
-   ARAMA
-===================================================== */
-
-function searchProducts(){
-
-const text=
-document.getElementById("search")
-.value
-.toLowerCase()
-.trim();
-
-const result=
-PRODUCTS.filter(p=>
-p.name.toLowerCase().includes(text)
-);
-
-renderProducts(result);
-
-}
-
-
-/* =====================================================
-   FAVORİLER
-===================================================== */
-
-function getFavorites(){
-
-try{
-
-return JSON.parse(
-localStorage.getItem("teknoFavorites")||"[]"
-);
-
-}catch(e){
-
-return [];
-
-}
-
-}
-
-
-function saveFavorites(data){
-
-localStorage.setItem(
-"teknoFavorites",
-JSON.stringify(data)
-);
-
-}
-
-
-function toggleFavorite(index){
-
-const product=PRODUCTS[index];
-
-if(!product)return;
-
-toggleFavoriteByName(product.name);
-
-}
-
-
-function toggleFavoriteByName(name){
-
-let fav=getFavorites();
-
-if(fav.includes(name)){
-
-fav=fav.filter(x=>x!==name);
-
-}else{
-
-fav.push(name);
-
-}
-
-saveFavorites(fav);
-
-updateFavCount();
-
-const search=
-document.getElementById("search");
-
-if(search && search.value.trim()){
-
-searchProducts();
-
-}else{
-
-renderProducts();
-
-}
-
-}
-
-
-function updateFavCount(){
-
-const counter=
-document.getElementById("favCount");
-
-if(counter){
-
-counter.innerText=
-getFavorites().length;
-
-}
-
-}
-
-
-function showFavorites(){
-
-const fav=getFavorites();
-
-if(!fav.length){
-
-openModal(
-"❤️ Favoriler",
-`
-<div class="empty">
-Henüz favori ürününüz yok.
-<br><br>
-Ürünlerdeki ❤️ butonuna basarak favori ekleyebilirsin.
-</div>
-`
-);
-
-return;
-
-}
-
-let html="";
-
-fav.forEach(name=>{
-
-const product=
-PRODUCTS.find(p=>p.name===name);
-
-if(product){
-
-html+=`
-
-<div class="result">
-
-<strong>
-❤️ ${escapeHTML(product.name)}
-</strong>
-
-<br>
-
-<span class="price">
-${product.price.toLocaleString("tr-TR")} TL
-</span>
-
-<br><br>
-
-<button
-onclick="addCart(${PRODUCTS.indexOf(product)});closeModal()">
-🛒 Sepete Ekle
-</button>
-
-</div>
-
-`;
-
-}
-
-});
-
-openModal(
-"❤️ Favorilerim",
-html
-);
-
-}
-
-
-/* =====================================================
-   GÜNÜN ÜRÜNÜ
-===================================================== */
-
-function getDayProduct(){
-
-return PRODUCTS[
-new Date().getDate()%
-PRODUCTS.length
-];
-
-}
-
-
-function openDayProduct(){
-
-const p=getDayProduct();
-
-document.getElementById(
-"dayProductText"
-).innerHTML=`
-
-<strong>
-${escapeHTML(p.name)}
-</strong>
-
-<br>
-
-<span class="price">
-${p.price.toLocaleString("tr-TR")} TL
-</span>
-
-`;
-
-const banner=
-document.getElementById("dayProductBanner");
-
-if(banner){
-
-banner.innerText=p.name;
-
-}
-
-openModal(
-"🌟 Günün Ürünü",
-`
-
-<img
-src="${p.image}"
-alt="${escapeHTML(p.name)}"
-style="width:100%;border-radius:15px;margin-bottom:15px">
-
-<h3>
-${escapeHTML(p.name)}
-</h3>
-
-<p class="price">
-${p.price.toLocaleString("tr-TR")} TL
-</p>
-
-<br>
-
-<button
-onclick="addCart(${PRODUCTS.indexOf(p)})">
-🛒 Sepete Ekle
-</button>
-
-`
-);
-
-
-/* =====================================================
-   GERİYE DÖNÜŞ UYUMLULUĞU
-===================================================== */
-
-window.dayProduct=openDayProduct;
-
-}
-
-
-/* =====================================================
-   SÜRPRİZ KAMPANYA
-===================================================== */
-
-function surprise(){
-
-const campaigns=[
-
-{
-title:"🎁 Bugüne özel %10 indirim!",
-text:"TEKNO10 kupon kodunu kullan."
-},
-
-{
-title:"🔥 100 TL fırsat!",
-text:"Seçili ürünlerde kampanya fırsatı."
-},
-
-{
-title:"⚡ TeknoBiz sürpriz kampanyası!",
-text:"Bugün TeknoBiz'de fırsat günü."
-},
-
-{
-title:"🎟️ TEKNO10",
-text:"Kupon koduyla %10 indirim fırsatı."
-
-}
-
-];
-
-const campaign=
-campaigns[
-Math.floor(
-Math.random()*campaigns.length
-)
-];
-
-openModal(
-"🎁 Sürpriz Kampanya",
-`
-
-<h2>
-${campaign.title}
-</h2>
-
-<br>
-
-<p>
-${campaign.text}
-</p>
-
-<br>
-
-<button
-onclick="useCouponFromSurprise()">
-🎟️ Kuponu Kullan
-</button>
-
-`
-);
-
-}
-
-
-function useCouponFromSurprise(){
-
-closeModal();
-
-const input=
-document.getElementById("coupon");
-
-if(input){
-
-input.value="TEKNO10";
-
-}
-
-document.getElementById(
-"couponResult"
-).innerText=
-"✅ TEKNO10 kuponu seçildi! %10 indirim.";
-
-document.getElementById(
-"coupon"
-).scrollIntoView({
-behavior:"smooth",
-block:"center"
-});
-
-}
-
-
-/* =====================================================
-   İNDİRİM HESAPLAYICI
-===================================================== */
-
-function calculateDiscount(){
-
-const price=
-parseFloat(
-document.getElementById("price").value
-);
-
-const discount=
-parseFloat(
-document.getElementById("discount").value
-);
-
-const resultBox=
-document.getElementById("discountResult");
-
-if(
-isNaN(price)||
-isNaN(discount)
-){
-
-resultBox.innerText=
-"⚠️ Fiyat ve indirim oranını gir.";
-
-return;
-
-}
-
-if(price<0){
-
-resultBox.innerText=
-"⚠️ Fiyat 0'dan küçük olamaz.";
-
-return;
-
-}
-
-if(discount<0||discount>100){
-
-resultBox.innerText=
-"⚠️ İndirim %0 ile %100 arasında olmalı.";
-
-return;
-
-}
-
-const saving=
-price*discount/100;
-
-const result=
-price-saving;
-
-resultBox.innerHTML=`
-
-Eski fiyat:
-<strong>
-${price.toLocaleString("tr-TR")} TL
-</strong>
-
-<br>
-
-İndirim:
-<strong>
-%${discount}
-</strong>
-
-<br><br>
-
-Yeni fiyat:
-
-<strong class="price">
-${result.toLocaleString("tr-TR")} TL
-</strong>
-
-<br>
-
-Kazancınız:
-<strong>
-${saving.toLocaleString("tr-TR")} TL
-</strong>
-
-`;
-
-}
-
-
-/* =====================================================
-   KUPON
-===================================================== */
-
-function useCoupon(){
-
-const code=
-document.getElementById("coupon")
-.value
-.trim()
-.toUpperCase();
-
-let message="";
-
-if(code==="TEKNO10"){
-
-message=
-"✅ Kupon geçerli! %10 indirim.";
-
-}
-
-else if(code==="TEKNO50"){
-
-message=
-"✅ Kupon geçerli! 50 TL indirim.";
-
-}
-
-else if(!code){
-
-message=
-"⚠️ Önce kupon kodunu gir.";
-
-}
-
-else{
-
-message=
-"❌ Geçersiz kupon kodu.";
-
-}
-
-document.getElementById(
-"couponResult"
-).innerText=message;
-
-}
-
-
-/* =====================================================
-   ESKİ İSİMLE ÇALIŞAN KUPON FONKSİYONU
-===================================================== */
-
-window.coupon=useCoupon;
-
-
-/* =====================================================
-   ÇOK SATANLAR
-===================================================== */
-
-function bestSellers(){
-
-const best=PRODUCTS.slice(0,5);
-
-let html=`
-
-<div class="best-list">
-
-`;
-
-best.forEach((p,i)=>{
-
-html+=`
-
-<div class="best-item">
-
-🔥 <strong>
-#${i+1}
-</strong>
-
-${escapeHTML(p.name)}
-
-<br>
-
-<span class="price">
-${p.price.toLocaleString("tr-TR")} TL
-</span>
-
-</div>
-
-`;
-
-});
-
-html+=`</div>`;
-
-document.getElementById("best")
-.innerHTML=html;
-
-}
-
-
-/* =====================================================
-   BİRLİKTE AL
-===================================================== */
-
-function together(){
-
-const first=PRODUCTS[1];
-
-const second=PRODUCTS[6];
-
-if(!first||!second)return;
-
-const total=
-first.price+
-second.price;
-
-openModal(
-"🛍️ Birlikte Al",
-`
-
-<img
-src="${first.image}"
-style="width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:10px">
-
-<div class="result">
-
-<strong>
-${escapeHTML(first.name)}
-</strong>
-
-<br>
-
-${first.price.toLocaleString("tr-TR")} TL
-
-</div>
-
-<div class="result">
-
-<strong>
-${escapeHTML(second.name)}
-</strong>
-
-<br>
-
-${second.price.toLocaleString("tr-TR")} TL
-
-</div>
-
-<br>
-
-<h3>
-Toplam:
-<span class="price">
-${total.toLocaleString("tr-TR")} TL
-</span>
-</h3>
-
-<br>
-
-<button
-onclick="addCart(${PRODUCTS.indexOf(first)});addCart(${PRODUCTS.indexOf(second)});closeModal()">
-🛒 İkisini Sepete Ekle
-</button>
-
-`
-);
-
-}
-
-
-/* =====================================================
-   SEPET
-===================================================== */
-
-function addCart(index){
-
-const product=PRODUCTS[index];
-
-if(!product)return;
-
-let cart=[];
-
-try{
-
-cart=JSON.parse(
-localStorage.getItem("teknoCart")||"[]"
-);
-
-}catch(e){
-
-cart=[];
-
-}
-
-cart.push(product);
-
-localStorage.setItem(
-"teknoCart",
-JSON.stringify(cart)
-);
-
-alert(
-product.name+
-" sepete eklendi."
-);
-
-}
-
-
-/* =====================================================
-   YORUMLAR
-===================================================== */
-
-function getReviews(){
-
-try{
-
-return JSON.parse(
-localStorage.getItem("teknoReviews")||"[]"
-);
-
-}catch(e){
-
-return [];
-
-}
-
-}
-
-
-function renderReviews(){
-
-const reviews=getReviews();
-
-const box=
-document.getElementById("reviews");
-
-if(!box)return;
-
-if(!reviews.length){
-
-box.innerHTML=`
-
-<div class="review">
-
-<div class="stars">
-★★★★★
-</div>
-
-Henüz yorum yok.
-
-</div>
-
-`;
-
-return;
-
-}
-
-box.innerHTML=
-reviews
-.slice(-3)
-.reverse()
-.map(r=>`
-
-<div class="review">
-
-<strong>
-${escapeHTML(r.name)}
-</strong>
-
-<div class="stars">
-
-${"★".repeat(r.stars)}
-${"☆".repeat(5-r.stars)}
-
-</div>
-
-<p>
-${escapeHTML(r.text)}
-</p>
-
-</div>
-
-`)
-.join("");
-
-}
-
-
-/* =====================================================
-   YORUM MODAL
-===================================================== */
-
-function reviewModal(){
-
-openModal(
-"⭐ Müşteri Yorumu",
-`
-
-<input
-class="input"
-id="reviewName"
-placeholder="Adınız">
-
-<select
-class="input"
-id="reviewStars">
-
-<option value="5">
-★★★★★
-</option>
-
-<option value="4">
-★★★★☆
-</option>
-
-<option value="3">
-★★★☆☆
-</option>
-
-<option value="2">
-★★☆☆☆
-</option>
-
-<option value="1">
-★☆☆☆☆
-</option>
-
-</select>
-
-<textarea
-class="input"
-id="reviewText"
-rows="5"
-placeholder="Yorumunuz"></textarea>
-
-<button
-onclick="saveReview()">
-⭐ Yorumu Gönder
-</button>
-
-`
-);
-
-}
-
-
-/* =====================================================
-   YORUM KAYDET
-===================================================== */
-
-function saveReview(){
-
-const name=
-document.getElementById("reviewName")
-.value.trim();
-
-const stars=
-parseInt(
-document.getElementById("reviewStars")
-.value
-);
-
-const text=
-document.getElementById("reviewText")
-.value.trim();
-
-if(!name||!text){
-
-alert(
-"Lütfen tüm alanları doldur."
-);
-
-return;
-
-}
-
-const reviews=getReviews();
-
-reviews.push({
-
-name:name,
-
-stars:stars,
-
-text:text
-
-});
-
-localStorage.setItem(
-"teknoReviews",
-JSON.stringify(reviews)
-);
-
-renderReviews();
-
-openModal(
-"⭐ Teşekkürler",
-`
-<p>
-Yorumunuz kaydedildi.
-</p>
-<br>
-<div class="stars">
-${"★".repeat(stars)}
-${"☆".repeat(5-stars)}
-</div>
-`
-);
-
-}
-
-
-/* =====================================================
-   SİPARİŞ TAKİBİ
-===================================================== */
-
-function trackOrder(){
-
-const order=
-document.getElementById("order")
-.value
-.trim()
-.toUpperCase();
-
-const orders={
-
-"TZ1001":
-"🟡 Siparişiniz hazırlanıyor.",
-
-"TZ1002":
-"🚚 Siparişiniz kargoda.",
-
-"TZ1003":
-"🟢 Siparişiniz teslim edildi."
-
-};
-
-const result=
-document.getElementById(
-"orderResult"
-);
-
-if(!order){
-
-result.innerText=
-"⚠️ Sipariş numaranı gir.";
-
-return;
-
-}
-
-result.innerText=
-orders[order]||
-"❌ Sipariş bulunamadı.";
-
-}
-
-
-/* =====================================================
-   WHATSAPP SİPARİŞ TAKİBİ
-===================================================== */
-
-function whatsappOrder(){
-
-const order=
-document.getElementById("order")
-.value.trim();
-
-const text=
-"Merhaba TeknoBiz, sipariş takibi yapmak istiyorum. Sipariş numaram: "+
-(order||"Henüz bilmiyorum");
-
-window.open(
-"https://wa.me/905059999009?text="+
-encodeURIComponent(text),
-"_blank"
-);
-
-}
-
-
-/* =====================================================
-   KAMPANYA SAYACI
-===================================================== */
-
-let campaignEnd=
-localStorage.getItem(
-"teknoCampaignEnd"
-);
-
-if(!campaignEnd){
-
-campaignEnd=
-Date.now()+
-86400000;
-
-localStorage.setItem(
-"teknoCampaignEnd",
-campaignEnd
-);
-
-}
-
-
-function countdown(){
-
-let remaining=
-parseInt(campaignEnd)-
-Date.now();
-
-if(remaining<=0){
-
-campaignEnd=
-Date.now()+
-86400000;
-
-localStorage.setItem(
-"teknoCampaignEnd",
-campaignEnd
-);
-
-remaining=86400000;
-
-}
-
-const h=
-Math.floor(
-remaining/3600000
-);
-
-const m=
-Math.floor(
-(remaining%3600000)/60000
-);
-
-const s=
-Math.floor(
-(remaining%60000)/1000
-);
-
-const text=
-String(h).padStart(2,"0")+
-":"+
-String(m).padStart(2,"0")+
-":"+
-String(s).padStart(2,"0");
-
-const main=
-document.getElementById(
-"countdown"
-);
-
-const bottom=
-document.getElementById(
-"countdownBottom"
-);
-
-if(main){
-main.innerText=text;
-}
-
-if(bottom){
-bottom.innerText=text;
-}
-
-}
-
-
-/* =====================================================
-   MODAL
-===================================================== */
-
-function openModal(title,content){
-
-const modal=
-document.getElementById("modal");
-
-const modalTitle=
-document.getElementById("modalTitle");
-
-const modalContent=
-document.getElementById("modalContent");
-
-modal.style.display="flex";
-
-modalTitle.innerText=title;
-
-modalContent.innerHTML=content;
-
-}
-
-
-function closeModal(){
-
-document.getElementById(
-"modal"
-).style.display="none";
-
-}
-
-
-/* =====================================================
-   MODAL DIŞINA TIKLAYINCA KAPAT
-===================================================== */
-
-document.getElementById("modal")
-.addEventListener(
-"click",
-function(e){
-
-if(e.target===this){
-
-closeModal();
-
-}
-
-}
-);
-
-
-/* =====================================================
-   ESC İLE MODAL KAPAT
-===================================================== */
-
-document.addEventListener(
-"keydown",
-function(e){
-
-if(e.key==="Escape"){
-
-closeModal();
-
-}
-
-}
-);
-
-
-/* =====================================================
-   HTML GÜVENLİK
-===================================================== */
-
-function escapeHTML(text){
-
-return String(text)
-
-.replace(/&/g,"&amp;")
-
-.replace(/</g,"&lt;")
-
-.replace(/>/g,"&gt;")
-
-.replace(/"/g,"&quot;")
-
-.replace(/'/g,"&#039;");
-
-}
-
-
-function escapeJS(text){
-
-return String(text)
-
-.replace(/\\/g,"\\\\")
-.replace(/'/g,"\\'")
-.replace(/"/g,"&quot;")
-.replace(/\n/g,"\\n")
-.replace(/\r/g,"");
-
-}
-
-
-/* =====================================================
-   BAŞLAT
-===================================================== */
-
-renderProducts();
-
-renderReviews();
-
-updateFavCount();
-
-bestSellers();
-
-openDayProduct();
-
-countdown();
-
-setInterval(
-countdown,
-1000
-);
-
-</script>
-
-</body>
-</html>
+TEKNOLOJİ & AKSESUAR
+Ürün ara... örn: kılıf, kablo, adaptör
+⌕
+🛒 Sepet 0
+❤️ Favoriler 0
+✦ 2016'dan beri TeknoBiz
+Teknolojiye
+Yakından Bak.
+Telefon kılıfları, şarj ürünleri ve teknoloji aksesuarları. Şık tasarım, kolay iletişim ve TeknoBiz güvencesi.
+
+Ürünleri İncele
+💬 WhatsApp
+📱
+Telefon Aksesuarları
+iPhone ve farklı modeller için kılıf ve aksesuarlar.
+
+✨
+Premium Ürünler
+Şık, modern ve günlük kullanıma uygun ürün seçenekleri.
+
+💬
+WhatsApp Destek
+Ürün hakkında bilgi almak için doğrudan bize ulaşabilirsiniz.
+
+🛍️ TeknoBiz Ürünleri
+Sağa sola kaydır
+📱
+Guess 4G iPhone Kılıfı
+750 TL
+📱
+Şeffaf MagSafe Uyumlu iPhone Kılıfı
+750 TL
+📱
+Tek Renk iPhone Kılıfı
+650 TL
+📱
+Taşlı iPhone Kılıfı
+650 TL
+📱
+Karbon iPhone Kılıfı
+1.000 TL
+🛡️
+Anti Statik Kırılmaz Cam
+1.000 TL
+✨
+MagSafe Uyumlu Cüzdan
+500 TL
+✨
+Işıklı Makyaj Aynası
+750 TL
+✨
+Aromatik Difüzör
+1.750 TL
+🔌
+Apple 20W USB-C Güç Adaptörü
+1.149 TL
+🔌
+USB-C - Lightning Kablosu 1 m
+1.149 TL
+🔌
+USB-C - Lightning Kablosu 2 m
+1.599 TL
+🔌
+USB-C - Lightning Adaptörü
+1.599 TL
+📱
+Guess 4G iPhone Kılıfı
+750 TL
+📱
+Şeffaf MagSafe Uyumlu iPhone Kılıfı
+750 TL
+📱
+Tek Renk iPhone Kılıfı
+650 TL
+📱
+Taşlı iPhone Kılıfı
+650 TL
+📱
+Karbon iPhone Kılıfı
+1.000 TL
+🛡️
+Anti Statik Kırılmaz Cam
+1.000 TL
+✨
+MagSafe Uyumlu Cüzdan
+500 TL
+✨
+Işıklı Makyaj Aynası
+750 TL
+✨
+Aromatik Difüzör
+1.750 TL
+🔌
+Apple 20W USB-C Güç Adaptörü
+1.149 TL
+🔌
+USB-C - Lightning Kablosu 1 m
+1.149 TL
+🔌
+USB-C - Lightning Kablosu 2 m
+1.599 TL
+🔌
+USB-C - Lightning Adaptörü
+1.599 TL
+🇹🇷 81 İlde Hava Durumu
+Sağa sola kaydır
+ Adana
+🌤️
+26°
+Çoğunlukla açık
+ Adıyaman
+☁️
+20°
+Kapalı
+ Afyonkarahisar
+🌤️
+15°
+Çoğunlukla açık
+ Ağrı
+🌦️
+13°
+Sağanak
+ Amasya
+☁️
+14°
+Kapalı
+ Ankara
+🌤️
+17°
+Çoğunlukla açık
+ Antalya
+☀️
+25°
+Açık
+ Artvin
+☁️
+19°
+Kapalı
+ Aydın
+☀️
+24°
+Açık
+ Balıkesir
+🌤️
+19°
+Çoğunlukla açık
+ Bilecik
+🌤️
+15°
+Çoğunlukla açık
+ Bingöl
+🌤️
+13°
+Parçalı bulutlu
+ Bitlis
+🌤️
+15°
+Parçalı bulutlu
+ Bolu
+☀️
+14°
+Açık
+ Burdur
+🌤️
+17°
+Çoğunlukla açık
+ Bursa
+🌤️
+18°
+Çoğunlukla açık
+ Çanakkale
+🌤️
+20°
+Çoğunlukla açık
+ Çankırı
+🌤️
+17°
+Parçalı bulutlu
+ Çorum
+🌤️
+14°
+Parçalı bulutlu
+ Denizli
+☀️
+20°
+Açık
+ Diyarbakır
+🌤️
+19°
+Parçalı bulutlu
+ Edirne
+☀️
+20°
+Açık
+ Elazığ
+🌦️
+15°
+Sağanak
+ Erzincan
+🌧️
+12°
+Yağmurlu
+ Erzurum
+🌧️
+11°
+Yağmurlu
+ Eskişehir
+🌤️
+15°
+Çoğunlukla açık
+ Gaziantep
+☁️
+19°
+Kapalı
+ Giresun
+☁️
+18°
+Kapalı
+ Gümüşhane
+🌧️
+14°
+Yağmurlu
+ Hakkari
+☁️
+17°
+Kapalı
+ Hatay
+☁️
+24°
+Kapalı
+ Isparta
+🌤️
+16°
+Çoğunlukla açık
+ Mersin
+🌤️
+26°
+Çoğunlukla açık
+ İstanbul
+🌤️
+20°
+Parçalı bulutlu
+ İzmir
+☀️
+24°
+Açık
+ Kars
+☁️
+13°
+Kapalı
+ Kastamonu
+🌤️
+14°
+Çoğunlukla açık
+ Kayseri
+🌤️
+18°
+Çoğunlukla açık
+ Kırklareli
+☀️
+21°
+Açık
+ Kırşehir
+🌤️
+16°
+Parçalı bulutlu
+ Kocaeli
+🌤️
+16°
+Parçalı bulutlu
+ Konya
+🌤️
+16°
+Çoğunlukla açık
+ Kütahya
+☀️
+14°
+Açık
+ Malatya
+☁️
+16°
+Kapalı
+ Manisa
+☀️
+20°
+Açık
+ Kahramanmaraş
+☁️
+19°
+Kapalı
+ Mardin
+☁️
+21°
+Kapalı
+ Muğla
+🌤️
+21°
+Parçalı bulutlu
+ Muş
+🌤️
+11°
+Parçalı bulutlu
+ Nevşehir
+🌤️
+14°
+Parçalı bulutlu
+ Niğde
+☀️
+16°
+Açık
+ Ordu
+☁️
+18°
+Kapalı
+ Rize
+☁️
+18°
+Kapalı
+ Sakarya
+🌤️
+19°
+Çoğunlukla açık
+ Samsun
+☁️
+19°
+Kapalı
+ Siirt
+☁️
+19°
+Kapalı
+ Sinop
+🌤️
+--°
+Yükleniyor
+ Sivas
+🌤️
+--°
+Yükleniyor
+ Tekirdağ
+🌤️
+--°
+Yükleniyor
+ Tokat
+🌤️
+--°
+Yükleniyor
+ Trabzon
+🌤️
+--°
+Yükleniyor
+ Tunceli
+🌤️
+--°
+Yükleniyor
+ Şanlıurfa
+🌤️
+--°
+Yükleniyor
+ Uşak
+🌤️
+--°
+Yükleniyor
+ Van
+🌤️
+--°
+Yükleniyor
+ Yozgat
+🌤️
+--°
+Yükleniyor
+ Zonguldak
+🌤️
+--°
+Yükleniyor
+ Aksaray
+🌤️
+--°
+Yükleniyor
+ Bayburt
+🌤️
+--°
+Yükleniyor
+ Karaman
+🌤️
+--°
+Yükleniyor
+ Kırıkkale
+🌤️
+--°
+Yükleniyor
+ Batman
+🌤️
+--°
+Yükleniyor
+ Şırnak
+🌤️
+--°
+Yükleniyor
+ Bartın
+🌤️
+--°
+Yükleniyor
+ Ardahan
+🌤️
+--°
+Yükleniyor
+ Iğdır
+🌤️
+--°
+Yükleniyor
+ Yalova
+🌤️
+--°
+Yükleniyor
+ Karabük
+🌤️
+--°
+Yükleniyor
+ Kilis
+🌤️
+--°
+Yükleniyor
+ Osmaniye
+🌤️
+--°
+Yükleniyor
+ Düzce
+🌤️
+--°
+Yükleniyor
+ Adana
+🌤️
+26°
+Çoğunlukla açık
+ Adıyaman
+☁️
+20°
+Kapalı
+ Afyonkarahisar
+🌤️
+15°
+Çoğunlukla açık
+ Ağrı
+🌦️
+13°
+Sağanak
+ Amasya
+☁️
+14°
+Kapalı
+ Ankara
+🌤️
+17°
+Çoğunlukla açık
+ Antalya
+☀️
+25°
+Açık
+ Artvin
+☁️
+19°
+Kapalı
+ Aydın
+☀️
+24°
+Açık
+ Balıkesir
+🌤️
+19°
+Çoğunlukla açık
+ Bilecik
+🌤️
+15°
+Çoğunlukla açık
+ Bingöl
+🌤️
+13°
+Parçalı bulutlu
+ Bitlis
+🌤️
+15°
+Parçalı bulutlu
+ Bolu
+☀️
+14°
+Açık
+ Burdur
+🌤️
+17°
+Çoğunlukla açık
+ Bursa
+🌤️
+18°
+Çoğunlukla açık
+ Çanakkale
+🌤️
+20°
+Çoğunlukla açık
+ Çankırı
+🌤️
+17°
+Parçalı bulutlu
+ Çorum
+🌤️
+14°
+Parçalı bulutlu
+ Denizli
+☀️
+20°
+Açık
+ Diyarbakır
+🌤️
+19°
+Parçalı bulutlu
+ Edirne
+☀️
+20°
+Açık
+ Elazığ
+🌦️
+15°
+Sağanak
+ Erzincan
+🌧️
+12°
+Yağmurlu
+ Erzurum
+🌧️
+11°
+Yağmurlu
+ Eskişehir
+🌤️
+15°
+Çoğunlukla açık
+ Gaziantep
+☁️
+19°
+Kapalı
+ Giresun
+☁️
+18°
+Kapalı
+ Gümüşhane
+🌧️
+14°
+Yağmurlu
+ Hakkari
+☁️
+17°
+Kapalı
+ Hatay
+☁️
+24°
+Kapalı
+ Isparta
+🌤️
+16°
+Çoğunlukla açık
+ Mersin
+🌤️
+26°
+Çoğunlukla açık
+ İstanbul
+🌤️
+20°
+Parçalı bulutlu
+ İzmir
+☀️
+24°
+Açık
+ Kars
+☁️
+13°
+Kapalı
+ Kastamonu
+🌤️
+14°
+Çoğunlukla açık
+ Kayseri
+🌤️
+18°
+Çoğunlukla açık
+ Kırklareli
+☀️
+21°
+Açık
+ Kırşehir
+🌤️
+16°
+Parçalı bulutlu
+ Kocaeli
+🌤️
+16°
+Parçalı bulutlu
+ Konya
+🌤️
+16°
+Çoğunlukla açık
+ Kütahya
+☀️
+14°
+Açık
+ Malatya
+☁️
+16°
+Kapalı
+ Manisa
+☀️
+20°
+Açık
+ Kahramanmaraş
+☁️
+19°
+Kapalı
+ Mardin
+☁️
+21°
+Kapalı
+ Muğla
+🌤️
+21°
+Parçalı bulutlu
+ Muş
+🌤️
+11°
+Parçalı bulutlu
+ Nevşehir
+🌤️
+14°
+Parçalı bulutlu
+ Niğde
+☀️
+16°
+Açık
+ Ordu
+☁️
+18°
+Kapalı
+ Rize
+☁️
+18°
+Kapalı
+ Sakarya
+🌤️
+19°
+Çoğunlukla açık
+ Samsun
+☁️
+19°
+Kapalı
+ Siirt
+☁️
+19°
+Kapalı
+ Sinop
+🌤️
+--°
+Yükleniyor
+ Sivas
+🌤️
+--°
+Yükleniyor
+ Tekirdağ
+🌤️
+--°
+Yükleniyor
+ Tokat
+🌤️
+--°
+Yükleniyor
+ Trabzon
+🌤️
+--°
+Yükleniyor
+ Tunceli
+🌤️
+--°
+Yükleniyor
+ Şanlıurfa
+🌤️
+--°
+Yükleniyor
+ Uşak
+🌤️
+--°
+Yükleniyor
+ Van
+🌤️
+--°
+Yükleniyor
+ Yozgat
+🌤️
+--°
+Yükleniyor
+ Zonguldak
+🌤️
+--°
+Yükleniyor
+ Aksaray
+🌤️
+--°
+Yükleniyor
+ Bayburt
+🌤️
+--°
+Yükleniyor
+ Karaman
+🌤️
+--°
+Yükleniyor
+ Kırıkkale
+🌤️
+--°
+Yükleniyor
+ Batman
+🌤️
+--°
+Yükleniyor
+ Şırnak
+🌤️
+--°
+Yükleniyor
+ Bartın
+🌤️
+--°
+Yükleniyor
+ Ardahan
+🌤️
+--°
+Yükleniyor
+ Iğdır
+🌤️
+--°
+Yükleniyor
+ Yalova
+🌤️
+--°
+Yükleniyor
+ Karabük
+🌤️
+--°
+Yükleniyor
+ Kilis
+🌤️
+--°
+Yükleniyor
+ Osmaniye
+🌤️
+--°
+Yükleniyor
+ Düzce
+🌤️
+--°
+Yükleniyor
+Ürünler
+TeknoBiz ürün seçkisini keşfet.
+
+Tümü
+📱 Kılıflar
+🛡️ Koruma
+🔌 Şarj
+✨ Aksesuar
+TEKNOBİZ • BUGÜNÜN FIRSATLARI
+🔥 Kampanyalı Ürünler
+Seçtiğin ürünü incele, favorilerine ekle veya WhatsApp'tan hızlıca sor.
+
+⏳ Kampanya: 22:13:19
+Ürünlere Git ↓
+TEKNOBİZGuess 4G iPhone Kılıfı
+Telefon Kılıfı
+Guess 4G iPhone Kılıfı
+Premium Guess 4G tasarım iPhone kılıfı.
+750 TL
+İncele
+TEKNOBİZŞeffaf MagSafe Uyumlu iPhone Kılıfı
+Telefon Kılıfı
+Şeffaf MagSafe Uyumlu iPhone Kılıfı
+Şeffaf tasarım ve MagSafe uyumluluğu.
+750 TL
+İncele
+TEKNOBİZTek Renk iPhone Kılıfı
+Telefon Kılıfı
+Tek Renk iPhone Kılıfı
+Sade ve şık tek renk silikon iPhone kılıfı.
+650 TL
+İncele
+TEKNOBİZTaşlı iPhone Kılıfı
+Telefon Kılıfı
+Taşlı iPhone Kılıfı
+Kristal taş detaylı şık iPhone kılıfı.
+650 TL
+İncele
+TEKNOBİZKarbon iPhone Kılıfı
+Telefon Kılıfı
+Karbon iPhone Kılıfı
+Karbon fiber görünüm ve premium tasarım.
+1.000 TL
+İncele
+TEKNOBİZAnti Statik Kırılmaz Cam
+Telefon Koruma
+Anti Statik Kırılmaz Cam
+Telefon ekranı için koruyucu ekran camı.
+1.000 TL
+İncele
+TEKNOBİZMagSafe Uyumlu Cüzdan
+Aksesuar
+MagSafe Uyumlu Cüzdan
+MagSafe uyumlu pratik kartlık.
+500 TL
+İncele
+TEKNOBİZIşıklı Makyaj Aynası
+Aksesuar
+Işıklı Makyaj Aynası
+LED aydınlatmalı masaüstü makyaj aynası.
+750 TL
+İncele
+TEKNOBİZAromatik Difüzör
+Aksesuar
+Aromatik Difüzör
+Ortam için aromatik difüzör.
+1.750 TL
+İncele
+TEKNOBİZApple 20W USB-C Güç Adaptörü
+Şarj
+Apple 20W USB-C Güç Adaptörü
+USB-C hızlı şarj güç adaptörü.
+1.149 TL
+İncele
+TEKNOBİZUSB-C - Lightning Kablosu 1 m
+Şarj
+USB-C - Lightning Kablosu 1 m
+1 metre USB-C - Lightning kablosu.
+1.149 TL
+İncele
+TEKNOBİZUSB-C - Lightning Kablosu 2 m
+Şarj
+USB-C - Lightning Kablosu 2 m
+2 metre USB-C - Lightning kablosu.
+1.599 TL
+İncele
+TEKNOBİZUSB-C - Lightning Adaptörü
+Şarj
+USB-C - Lightning Adaptörü
+USB-C ve Lightning bağlantı adaptörü.
+1.599 TL
+İncele
+💱 Güncel Kur
+🇺🇸 1 USD	49.16 TL
+🇪🇺 1 EUR	55.32 TL
+🇬🇧 1 GBP	65.09 TL
+Kur bilgisi internet üzerinden güncellenmektedir.
+🌤️ Bucak Hava Durumu
+🌤️
+19°
+Parçalı bulutlu
+💧 Nem
+52%
+💨 Rüzgar
+3 km/s
+TeknoBiz
+2016'dan beri teknoloji ve telefon aksesuarları alanında hizmet veriyoruz. İşimizi temiz yapıyoruz ve müşterilerimize ihtiyaçlarına uygun ürünleri sunmayı amaçlıyoruz.
+
+✓ 2016'dan beri hizmet
+✓ Telefon kılıfları ve aksesuarlar
+✓ WhatsApp iletişim
+✓ Bucak / Burdur
+📍 Mağaza
+Süleyman Demirel Bulvarı No:15
+Bucak / Burdur
+
+🕘 09:00 - 21:00
+Pazar: Kapalı
+
+📞 0505 999 90 09
+TeknoBiz
+Teknoloji & aksesuarın adresi.
+
+İletişim
+📞 0505 999 90 09
+✉️ teknobiz15@gmail.com
+💬 WhatsApp
+Sosyal Medya
+📸 Instagram: Teknobiz7
+👍 Facebook: bucakteknobiz15
+© 2016 - 2026 TeknoBiz. Tüm hakları saklıdır.
+💬 Destek☎
