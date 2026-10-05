@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>TeknoBiz | Teknoloji & Aksesuar</title>
 <meta name="description" content="TeknoBiz Bucak teknoloji, telefon kılıfları ve aksesuar mağazası.">
 <meta name="theme-color" content="#07111f">
@@ -10,276 +10,181 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Arial,sans-serif;
-background:#050914;color:#fff;-webkit-font-smoothing:antialiased
-}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#050914;color:#fff}
 button,input,select{font:inherit}
 button{cursor:pointer}
 a{color:inherit;text-decoration:none}
+.wrap{max-width:1250px;margin:auto;padding:0 20px}
 
-header{
-position:sticky;top:0;z-index:1000;
-background:rgba(5,9,20,.95);
-backdrop-filter:blur(20px);
-border-bottom:1px solid rgba(255,255,255,.08)
-}
-.nav{
-width:100%;max-width:1250px;min-height:76px;margin:auto;
-padding:12px 20px;display:flex;align-items:center;gap:18px
-}
-.logo{min-width:155px;font-size:28px;font-weight:800;letter-spacing:-1.5px}
+header{position:sticky;top:0;z-index:1000;background:rgba(5,9,20,.96);backdrop-filter:blur(18px);border-bottom:1px solid #18263a}
+.nav{min-height:74px;display:flex;align-items:center;gap:15px}
+.logo{font-size:27px;font-weight:900;white-space:nowrap}
 .logo span{color:#2997ff}
-.logo small{display:block;margin-top:-3px;color:#7e8b9f;font-size:8px;letter-spacing:3px}
+.logo small{display:block;color:#718096;font-size:8px;letter-spacing:3px}
 .search{flex:1;position:relative}
-.search input{
-width:100%;padding:14px 48px 14px 17px;
-border:1px solid #26354b;border-radius:15px;outline:none;
-background:#101827;color:#fff;font-size:15px
-}
-.search input:focus{border-color:#2997ff;box-shadow:0 0 0 3px rgba(41,151,255,.12)}
-.search-icon{position:absolute;right:17px;top:50%;transform:translateY(-50%);color:#8996a8;font-size:22px}
-.cart-button{
-border:0;padding:13px 17px;border-radius:14px;background:#2997ff;color:#fff;font-weight:700
-}
-.cart-button span{
-margin-left:5px;padding:2px 7px;border-radius:20px;background:#fff;color:#1682e9
-}
+.search input{width:100%;padding:13px 44px 13px 16px;border:1px solid #26354b;border-radius:14px;outline:0;background:#101827;color:#fff}
+.search-icon{position:absolute;right:15px;top:50%;transform:translateY(-50%);color:#8a97aa}
+.cart-btn,.blue{border:0;background:#2997ff;color:#fff;border-radius:13px;padding:13px 16px;font-weight:800}
+.cart-btn span{background:#fff;color:#1682e9;padding:2px 7px;border-radius:20px;margin-left:4px}
 
-.hero{
-min-height:500px;display:flex;align-items:center;
-background:
-radial-gradient(circle at 80% 25%,rgba(41,151,255,.24),transparent 30%),
-radial-gradient(circle at 15% 85%,rgba(0,80,200,.14),transparent 35%),
-linear-gradient(135deg,#040711,#0a1425,#050914)
-}
-.hero-inner{width:100%;max-width:1250px;margin:auto;padding:80px 20px}
-.hero-badge{
-display:inline-block;padding:8px 14px;border:1px solid rgba(41,151,255,.35);
-border-radius:30px;background:rgba(41,151,255,.08);color:#72bdff;font-size:13px;font-weight:700
-}
-.hero h1{
-margin-top:20px;font-size:clamp(45px,7vw,78px);
-line-height:.98;letter-spacing:-4px;font-weight:800
-}
+.hero{background:radial-gradient(circle at 80% 25%,rgba(41,151,255,.25),transparent 30%),linear-gradient(135deg,#040711,#0a1425,#050914)}
+.hero .wrap{padding-top:75px;padding-bottom:75px}
+.badge,.tag{display:inline-block;padding:7px 12px;border:1px solid #246aa5;border-radius:30px;background:#0c2741;color:#72bdff;font-size:12px;font-weight:800}
+.hero h1{font-size:clamp(44px,7vw,76px);line-height:.98;letter-spacing:-4px;margin-top:18px}
 .hero h1 span{color:#2997ff}
-.hero p{max-width:650px;margin-top:22px;color:#a5afbf;font-size:17px;line-height:1.7}
-.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.btn{
-display:inline-flex;align-items:center;justify-content:center;
-padding:14px 20px;border:1px solid #29384e;border-radius:14px;font-weight:700
-}
-.btn-blue{border-color:#2997ff;background:#2997ff}
-.btn-dark{background:#101827}
+.hero p{max-width:650px;color:#a5afbf;line-height:1.7;margin-top:20px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.dark-btn,.tool{border:1px solid #29384e;background:#101827;color:#fff;border-radius:13px;padding:13px 17px;font-weight:800}
 
-.info{max-width:1250px;margin:auto;padding:25px 20px 35px}
-.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.info-card{
-padding:22px;border:1px solid #202d41;border-radius:20px;
-background:linear-gradient(145deg,#111a29,#0b111d)
-}
-.info-icon{margin-bottom:8px;font-size:28px}
-.info-card h3{font-size:17px}
-.info-card p{margin-top:6px;color:#8996a9;font-size:13px;line-height:1.6}
+.info{padding:25px 20px}
+.info-grid,.dash-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.info-card,.dash-card,.about-box{padding:20px;border:1px solid #202d41;border-radius:19px;background:linear-gradient(145deg,#111a29,#0b111d)}
+.info-card p,.dash-card p,.about p{color:#8996a9;font-size:13px;line-height:1.6;margin-top:6px}
 
-.product-marquee-section{width:100%;padding:10px 0 30px;overflow:hidden}
-.marquee-title{
-width:100%;max-width:1250px;margin:0 auto 12px;padding:0 20px;
-display:flex;align-items:center;justify-content:space-between
-}
-.marquee-title h3{font-size:19px;letter-spacing:-.5px}
-.marquee-title span{color:#718096;font-size:11px}
-.product-track-wrap{width:100%;overflow:hidden}
-.product-track{
-display:flex;width:max-content;gap:12px;
-animation:productScroll 35s linear infinite
-}
-.product-track:hover{animation-play-state:paused}
-.product-mini{
-min-width:190px;padding:13px 16px;border:1px solid #223047;border-radius:16px;
-background:linear-gradient(135deg,#101a2b,#0b1220);
-display:flex;align-items:center;gap:10px;white-space:nowrap
-}
-.product-mini-icon{
-width:34px;height:34px;flex:none;display:flex;align-items:center;justify-content:center;
-border-radius:10px;background:#162944;font-size:17px
-}
-.product-mini strong{font-size:12px}
-.product-mini small{display:block;margin-top:2px;color:#5caeff;font-size:10px}
-@keyframes productScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marquee{overflow:hidden;padding:10px 0 28px}
+.marquee h3,.weather-head{max-width:1250px;margin:0 auto 12px;padding:0 20px}
+.track{display:flex;width:max-content;gap:10px;animation:scroll 38s linear infinite}
+.track:hover{animation-play-state:paused}
+.mini,.weather-card{padding:12px 15px;border:1px solid #223047;border-radius:15px;background:#0d1726;flex:none}
+.mini{min-width:190px}
+.mini small{display:block;color:#5caeff;margin-top:3px}
+@keyframes scroll{to{transform:translateX(-50%)}}
 
-.province-weather-section{width:100%;padding:5px 0 35px;overflow:hidden}
-.weather-head{
-width:100%;max-width:1250px;margin:0 auto 12px;padding:0 20px;
-display:flex;align-items:center;justify-content:space-between
-}
-.weather-head h3{font-size:19px}
-.weather-head span{color:#718096;font-size:11px}
-.weather-track-wrap{width:100%;overflow:hidden}
-.weather-track{
-display:flex;width:max-content;gap:10px;
-animation:weatherScroll 70s linear infinite
-}
-.weather-track:hover{animation-play-state:paused}
-.weather-card{
-width:155px;min-height:105px;padding:13px;border:1px solid #202f44;
-border-radius:17px;background:linear-gradient(145deg,#101a29,#0b121e);flex:none
-}
-.weather-city{font-size:13px;font-weight:800}
-.weather-main{display:flex;align-items:center;gap:8px;margin-top:10px}
-.weather-main-icon{font-size:25px}
-.weather-temp{font-size:21px;font-weight:800}
-.weather-condition{margin-top:3px;color:#8090a6;font-size:9px}
-@keyframes weatherScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.weather-card{width:155px}
+.weather-card .city{font-weight:800}
+.weather-card .wmain{display:flex;align-items:center;gap:8px;margin-top:8px}
+.weather-card .ico{font-size:25px}
+.weather-card .temp{font-size:20px;font-weight:900}
+.weather-card small{color:#7f8da2}
 
-.products{max-width:1250px;margin:auto;padding:25px 20px 80px}
-.section-title{margin-bottom:25px}
-.section-title h2{font-size:36px;letter-spacing:-1.5px}
-.section-title p{margin-top:5px;color:#8290a5}
-.filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:24px}
-.filter{
-padding:9px 15px;border:1px solid #29384e;border-radius:30px;
-background:#0d1624;color:#9ca8ba;font-size:13px
-}
-.filter.active,.filter:hover{border-color:#2997ff;background:#2997ff;color:#fff}
+section.products{padding:25px 20px 70px;max-width:1250px;margin:auto}
+.section-title{margin-bottom:20px}
+.section-title h2{font-size:34px}
+.section-title p{color:#8290a5;margin-top:5px}
+
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.filter{padding:9px 14px;border:1px solid #29384e;border-radius:30px;background:#0d1624;color:#9ca8ba}
+.filter.active,.filter:hover{background:#2997ff;color:#fff;border-color:#2997ff}
+
+.campaign{margin:18px 0;padding:22px;border:1px solid #24557e;border-radius:20px;background:linear-gradient(110deg,#0a2037,#101827)}
+.campaign-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:12px}
+.timer{font-weight:900;color:#72bdff}
+
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.card{
-overflow:hidden;border:1px solid #202d41;border-radius:21px;
-background:linear-gradient(145deg,#111a29,#0b111c);transition:.25s
-}
-.card:hover{
-transform:translateY(-5px);border-color:#2997ff;
-box-shadow:0 18px 45px rgba(0,0,0,.3)
-}
-.card-image{
-position:relative;height:260px;display:flex;align-items:center;
-justify-content:center;overflow:hidden;background:#fff
-}
-.card-image img{
-width:100%;height:100%;padding:8px;object-fit:contain;transition:.3s
-}
-.card:hover .card-image img{transform:scale(1.04)}
-.badge{
-position:absolute;top:12px;left:12px;z-index:2;padding:6px 9px;
-border-radius:20px;background:#2997ff;color:#fff;font-size:10px;font-weight:800
-}
-.card-content{padding:16px}
-.category{color:#5eb0ff;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
-.card h3{margin:5px 0 7px;font-size:17px}
-.description{min-height:40px;color:#8794a7;font-size:12px;line-height:1.5}
-.card-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:15px}
-.price{font-size:20px;font-weight:800}
-.price small{color:#8794a7;font-size:11px}
-.inspect{
-padding:9px 12px;border:0;border-radius:11px;background:#2997ff;color:#fff;
-font-size:12px;font-weight:700
-}
+.card{overflow:hidden;border:1px solid #202d41;border-radius:20px;background:linear-gradient(145deg,#111a29,#0b111c);transition:.2s}
+.card:hover{transform:translateY(-4px);border-color:#2997ff}
 
-.dashboard{max-width:1250px;margin:auto;padding:0 20px 70px}
-.dashboard-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.dashboard-card{
-padding:23px;border:1px solid #202d41;border-radius:22px;
-background:linear-gradient(145deg,#101827,#0b111d)
-}
-.dashboard-card h3{margin-bottom:18px;font-size:19px}
-.currency{width:100%;border-collapse:collapse}
-.currency td{padding:12px 2px;border-bottom:1px solid #202b3c;font-size:14px}
-.currency td:last-child{text-align:right;font-weight:800}
-.note{margin-top:10px;color:#68768b;font-size:10px}
-.local-weather{display:flex;align-items:center;gap:18px}
-.local-weather-icon{font-size:55px}
-.local-temp{font-size:42px;font-weight:800}
-.local-weather-text{color:#94a0b2}
-.weather-details{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
-.weather-box{
-padding:12px;border:1px solid #1e2a3b;border-radius:12px;
-background:#090f19;color:#8f9bad;font-size:12px
-}
-.weather-box strong{display:block;margin-top:4px;color:#fff}
+.pic{height:245px;background:#fff;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.pic img{width:100%;height:100%;object-fit:contain;padding:7px}
+.pic .brand{position:absolute;left:10px;top:10px;background:#2997ff;padding:5px 8px;border-radius:16px;font-size:9px;font-weight:900}
 
-footer{
-border-top:1px solid #202d41;
-background:#030711;
-padding:45px 20px
-}
-.footer-inner{max-width:1250px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
-footer h3{margin-bottom:12px}
-footer p,footer li{color:#8491a4;font-size:13px;line-height:1.8}
-footer ul{list-style:none}
-footer a:hover{color:#2997ff}
+.fav{position:absolute;right:10px;top:10px;border:0;border-radius:50%;width:36px;height:36px;background:rgba(5,9,20,.82);color:#fff;font-size:20px}
+.fav.active{color:#ff5577}
 
-.modal{
-display:none;position:fixed;inset:0;z-index:5000;
-background:rgba(0,0,0,.75);backdrop-filter:blur(8px);
-align-items:center;justify-content:center;padding:20px
-}
-.modal.active{display:flex}
-.modal-box{
-width:min(600px,100%);max-height:90vh;overflow:auto;
-background:#0b1321;border:1px solid #27364c;border-radius:24px;padding:25px
-}
-.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
-.close{
-border:0;background:#172337;color:#fff;width:38px;height:38px;border-radius:50%;font-size:20px
-}
-.modal-product{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.modal-product img{width:100%;height:300px;object-fit:contain;background:#fff;border-radius:15px}
-.modal-info h2{font-size:25px;margin-bottom:10px}
-.modal-price{font-size:27px;font-weight:800;color:#2997ff;margin:15px 0}
-.modal-info select,.modal-info input{
-width:100%;padding:12px;margin:7px 0;
-background:#101a29;border:1px solid #29384e;color:#fff;border-radius:10px
-}
-.modal-actions{display:flex;gap:10px;margin-top:15px}
-.modal-actions button{flex:1;padding:13px;border:0;border-radius:12px;font-weight:700}
-.add-cart{background:#2997ff;color:#fff}
-.whatsapp{background:#20c763;color:#fff}
+.stock{position:absolute;left:10px;bottom:10px;background:#071a11;color:#62e39b;border:1px solid #1b6843;padding:4px 7px;border-radius:12px;font-size:9px}
 
-.cart-list{display:flex;flex-direction:column;gap:10px}
-.cart-item{
-display:flex;align-items:center;gap:12px;padding:12px;
-border:1px solid #202d41;border-radius:14px;background:#101827
-}
-.cart-item img{width:65px;height:65px;background:#fff;object-fit:contain;border-radius:10px}
-.cart-item-info{flex:1}
-.cart-item-info strong{display:block}
-.cart-item-info small{color:#8290a5}
-.cart-total{
-margin-top:20px;padding-top:15px;border-top:1px solid #29384e;
-display:flex;justify-content:space-between;font-size:20px;font-weight:800
-}
+.card-body{padding:15px}
+.cat{font-size:10px;color:#5eb0ff;font-weight:800}
+.card h3{font-size:16px;margin:6px 0}
+.desc{font-size:12px;color:#8996a9;min-height:36px}
+.bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:13px}
+.price{font-size:21px;font-weight:900}
+.price small{font-size:11px}
+.inspect{border:0;background:#fff;color:#07111f;padding:9px 12px;border-radius:11px;font-weight:900}
+.quick{width:100%;margin-top:9px;border:1px solid #1e5f91;background:#0b2136;color:#72bdff;border-radius:10px;padding:8px;font-size:11px;font-weight:800}
+.no-result{text-align:center;padding:30px;color:#8795aa;display:none}
 
-.whatsapp-float{
-position:fixed;right:20px;bottom:20px;z-index:3000;
-width:58px;height:58px;border-radius:50%;background:#20c763;
-display:flex;align-items:center;justify-content:center;
-font-size:28px;box-shadow:0 8px 30px rgba(0,0,0,.4)
-}
+.dashboard{padding:10px 20px 55px}
+.currency{width:100%;margin-top:15px;border-collapse:collapse}
+.currency td{padding:9px;border-bottom:1px solid #1d293a}
+.local{display:flex;align-items:center;gap:12px;margin-top:18px}
+.local .ico{font-size:42px}
+.local .temp{font-size:32px;font-weight:900}
+.details{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.detail{padding:12px;border:1px solid #223047;border-radius:12px;color:#8996a9}
+.detail b{display:block;color:#fff;margin-top:4px}
 
-@media(max-width:1000px){
+.about{padding:60px 20px;background:#080f1b}
+.about-inner{max-width:1250px;margin:auto;display:grid;grid-template-columns:1.5fr 1fr;gap:20px}
+.about h2{font-size:34px}
+.list{margin-top:18px;display:grid;gap:8px;color:#b8c2d0}
+
+.footer{max-width:1250px;margin:auto;padding:35px 20px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px}
+.footer h3{margin-bottom:10px}
+.footer a{display:block;color:#a4b0c0;margin:8px 0;font-size:13px}
+.copy{text-align:center;border-top:1px solid #18263a;padding:16px;color:#6f7c90;font-size:11px}
+
+.wa,.support{position:fixed;right:20px;border:0;z-index:900}
+.wa{bottom:20px;width:54px;height:54px;border-radius:50%;background:#25d366;color:#fff;font-size:24px}
+.support{bottom:85px;border-radius:14px;background:#2997ff;color:#fff;padding:11px 14px;font-weight:800}
+
+.modal,.panel,.zoom{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:2000;padding:15px}
+.modal.show,.panel.show,.zoom.show{display:flex}
+
+.box{width:min(680px,100%);max-height:92vh;overflow:auto;background:#0c1422;border:1px solid #26354b;border-radius:20px;padding:22px;position:relative}
+.close{position:absolute;right:12px;top:10px;border:0;background:transparent;color:#fff;font-size:30px}
+
+.modal-product{display:grid;grid-template-columns:180px 1fr;gap:18px;align-items:center}
+.modal-product img{width:180px;height:180px;object-fit:contain;background:#fff;border-radius:14px;cursor:zoom-in}
+.modal-price{font-size:25px;color:#72bdff;font-weight:900;margin-top:8px}
+
+.field{margin-top:14px}
+.field label{display:block;font-size:12px;color:#8e9aae;margin-bottom:6px}
+.field input,.field select{width:100%;padding:11px;border:1px solid #29384e;background:#101827;color:#fff;border-radius:11px;outline:0}
+
+.modal-buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.modal-buttons button,.checkout{padding:13px;border:0;border-radius:12px;font-weight:900}
+.add{background:#fff;color:#07111f}
+.wbutton{background:#25d366;color:#fff}
+
+.cart-list{display:grid;gap:10px;margin-top:15px}
+.cart-item{display:flex;align-items:center;gap:10px;padding:10px;border:1px solid #223047;border-radius:12px}
+.cart-item img{width:60px;height:60px;object-fit:contain;background:#fff;border-radius:8px}
+.cart-item main{flex:1}
+.remove{border:0;background:#25131a;color:#ff7891;border-radius:9px;padding:8px}
+.total{display:flex;justify-content:space-between;font-weight:900;font-size:18px;padding:15px 0}
+.checkout{width:100%;background:#25d366;color:#fff}
+
+.qty{display:flex;align-items:center;gap:12px;margin-top:10px}
+.qty button{border:0;background:#16243a;color:#fff;width:34px;height:34px;border-radius:9px}
+
+.tools{position:fixed;right:20px;top:84px;z-index:1100}
+.tool{padding:8px 11px;font-size:12px}
+
+.fav-row{display:flex;align-items:center;gap:10px;border:1px solid #223047;border-radius:12px;padding:9px;margin-top:9px}
+.fav-row img{width:55px;height:55px;object-fit:contain;background:#fff;border-radius:8px}
+.fav-row main{flex:1}
+
+.zoom img{max-width:90%;max-height:85%;background:#fff;border-radius:16px}
+.zoom .close{z-index:2}
+
+.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:15px}
+.feature{padding:15px;border:1px solid #223047;border-radius:15px;background:#0d1726}
+.feature h3{font-size:15px}
+.feature p{font-size:11px;color:#8b98aa;margin-top:5px}
+
+.reviews{margin-top:15px;display:grid;gap:8px}
+.review{padding:12px;border:1px solid #223047;border-radius:12px}
+.stars{color:#ffd54a}
+.hidden{display:none!important}
+
+@media(max-width:950px){
 .grid{grid-template-columns:repeat(3,1fr)}
-.info-grid{grid-template-columns:1fr 1fr}
+.info-grid,.dash-grid{grid-template-columns:1fr 1fr}
+.footer{grid-template-columns:1fr 1fr}
 }
-@media(max-width:750px){
-.nav{flex-wrap:wrap}
+
+@media(max-width:680px){
+.nav{flex-wrap:wrap;padding:10px 14px}
 .logo{min-width:auto}
 .search{order:3;flex-basis:100%}
-.hero{min-height:430px}
-.hero h1{letter-spacing:-2px}
-.grid{grid-template-columns:repeat(2,1fr);gap:12px}
-.card-image{height:220px}
-.dashboard-grid{grid-template-columns:1fr}
-.footer-inner{grid-template-columns:1fr}
+.hero .wrap{padding:55px 20px}
+.grid{grid-template-columns:repeat(2,1fr);gap:10px}
+.pic{height:205px}
+.info-grid,.dash-grid,.about-inner,.footer{grid-template-columns:1fr}
 .modal-product{grid-template-columns:1fr}
-}
-@media(max-width:480px){
-.info-grid{grid-template-columns:1fr}
-.grid{grid-template-columns:1fr 1fr}
-.card-image{height:190px}
-.card-content{padding:12px}
-.card h3{font-size:14px}
-.price{font-size:17px}
-.inspect{padding:8px;font-size:11px}
+.modal-product img{width:100%;height:230px}
+.feature-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -287,116 +192,172 @@ font-size:28px;box-shadow:0 8px 30px rgba(0,0,0,.4)
 <body>
 
 <header>
-<nav class="nav">
-<a href="#" class="logo">Tekno<span>Biz</span><small>TEKNOLOJİ & AKSESUAR</small></a>
+<div class="wrap nav">
+<div class="logo">Tekno<span>Biz</span><small>TEKNOLOJİ & AKSESUAR</small></div>
 
 <div class="search">
-<input id="searchInput" type="search" placeholder="Ürün ara...">
-<span class="search-icon">⌕</span>
+<input id="search" placeholder="Ürün ara... örn: powerbank, kılıf, kablo">
+<div class="search-icon">⌕</div>
 </div>
 
-<button class="cart-button" onclick="openCart()">🛒 Sepet <span id="cartCount">0</span></button>
-</nav>
+<button class="cart-btn" onclick="openCart()">🛒 Sepet <span id="cartCount">0</span></button>
+</div>
 </header>
 
 <section class="hero">
-<div class="hero-inner">
-<div class="hero-badge">✦ 2016'dan beri TeknoBiz</div>
+<div class="wrap">
+<span class="badge">✦ 2016'dan beri TeknoBiz</span>
 <h1>Teknolojiye<br><span>Yakından Bak.</span></h1>
 <p>
 Telefon kılıfları, kırılmaz camlar, şarj ürünleri ve teknoloji aksesuarları.
-Bucak'ta güvenilir alışverişin adresi TeknoBiz.
+Bucak'ta güvenilir alışveriş için TeknoBiz.
 </p>
-<div class="hero-buttons">
-<a href="#urunler" class="btn btn-blue">Ürünleri İncele</a>
-<a href="https://wa.me/905059999009" target="_blank" class="btn btn-dark">💬 WhatsApp</a>
+
+<div class="actions">
+<a href="#products" class="blue">Ürünleri Gör</a>
+<button class="dark-btn" onclick="openSupport()">🤖 TeknoBiz Asistan</button>
+<button class="dark-btn" onclick="openFeaturePanel()">⭐ Özellikler</button>
 </div>
 </div>
 </section>
 
 <section class="info">
-<div class="info-grid">
+<div class="wrap info-grid">
+
 <div class="info-card">
-<div class="info-icon">🚚</div>
-<h3>Hızlı Alışveriş</h3>
-<p>Beğendiğin ürünü kolayca seç, WhatsApp üzerinden bize ulaş.</p>
+<h3>🚚 Hızlı Alışveriş</h3>
+<p>Ürünü seç, modelini belirle ve WhatsApp üzerinden kolayca iletişime geç.</p>
 </div>
+
 <div class="info-card">
-<div class="info-icon">🛡️</div>
-<h3>Güvenilir Hizmet</h3>
-<p>2016'dan beri teknoloji ve aksesuar alanında hizmet veriyoruz.</p>
+<h3>💳 Kolay Ödeme</h3>
+<p>Nakit veya kart seçenekleriyle alışverişini kolaylaştır.</p>
 </div>
+
 <div class="info-card">
-<div class="info-icon">💬</div>
-<h3>7/24 İletişim</h3>
-<p>Ürünler hakkında bilgi almak için bize WhatsApp üzerinden ulaşabilirsin.</p>
+<h3>📍 Bucak'ta TeknoBiz</h3>
+<p>Süleyman Demirel Bulvarı No:15, Bucak, Burdur.</p>
 </div>
+
 </div>
 </section>
 
-<section class="product-marquee-section">
-<div class="marquee-title">
-<h3>🔥 Popüler Ürünler</h3>
-<span>Sağa doğru kayan ürün standı</span>
-</div>
-<div class="product-track-wrap">
-<div class="product-track" id="productTrack"></div>
-</div>
+<section class="marquee">
+<h3>🛍️ Ürünlerimiz</h3>
+<div class="track" id="productTrack"></div>
 </section>
 
-<section class="province-weather-section">
-<div class="weather-head">
-<h3>🌤️ 81 İl Hava Durumu</h3>
-<span>Şehirler arasında gez</span>
-</div>
-<div class="weather-track-wrap">
-<div class="weather-track" id="weatherTrack"></div>
-</div>
+<section class="marquee">
+<h3 class="weather-head">🌤️ 81 İl Hava Durumu</h3>
+<div class="track" id="weatherTrack"></div>
 </section>
 
-<section class="products" id="urunler">
+<section class="products" id="products">
+
 <div class="section-title">
-<h2>Ürünlerimiz</h2>
-<p>TeknoBiz'de öne çıkan teknoloji ve aksesuar ürünleri.</p>
+<h2>Ürünler</h2>
+<p>İhtiyacın olan teknoloji ürününü bul.</p>
 </div>
 
 <div class="filters">
-<button class="filter active" onclick="filterProducts('all',this)">Tümü</button>
-<button class="filter" onclick="filterProducts('kilif',this)">Kılıf</button>
-<button class="filter" onclick="filterProducts('cam',this)">Kırılmaz Cam</button>
-<button class="filter" onclick="filterProducts('sarj',this)">Şarj</button>
-<button class="filter" onclick="filterProducts('aksesuar',this)">Aksesuar</button>
+<button class="filter active" data-filter="all">Tümü</button>
+<button class="filter" data-filter="Kılıf">Kılıf</button>
+<button class="filter" data-filter="Cam">Cam</button>
+<button class="filter" data-filter="Kablo">Kablo</button>
+<button class="filter" data-filter="Aksesuar">Aksesuar</button>
+</div>
+
+<div class="campaign">
+<div>
+<span class="tag">🔥 TEKNOBİZ KAMPANYA</span>
+<h2 style="margin-top:9px">Bugünün fırsatlarını kaçırma!</h2>
+</div>
+
+<div class="campaign-row">
+<div>
+<span style="color:#8996a9">Kampanyanın bitmesine</span>
+<div class="timer" id="tzTimer">24:00:00</div>
+</div>
+
+<button class="blue" onclick="openFeaturePanel()">🎁 Sürpriz Kampanya</button>
+</div>
 </div>
 
 <div class="grid" id="productGrid"></div>
-<div class="no-result" id="noResult">Aradığın ürün bulunamadı.</div>
+<div class="no-result" id="noResult">Aramana uygun ürün bulunamadı.</div>
+
 </section>
 
 <section class="dashboard">
-<div class="dashboard-grid">
+<div class="wrap">
 
-<div class="dashboard-card">
-<h3>💱 Güncel Döviz</h3>
+<div class="dash-grid">
+
+<div class="dash-card">
+<h3>💱 Güncel Kurlar</h3>
 <table class="currency">
-<tr><td>🇺🇸 Dolar</td><td id="usd">Yükleniyor...</td></tr>
-<tr><td>🇪🇺 Euro</td><td id="eur">Yükleniyor...</td></tr>
-<tr><td>🇬🇧 Sterlin</td><td id="gbp">Yükleniyor...</td></tr>
+<tr><td>🇺🇸 USD</td><td id="usd">...</td></tr>
+<tr><td>🇪🇺 EUR</td><td id="eur">...</td></tr>
+<tr><td>🇬🇧 GBP</td><td id="gbp">...</td></tr>
 </table>
-<p class="note">Kur bilgileri internet bağlantısına göre güncellenir.</p>
 </div>
 
-<div class="dashboard-card">
+<div class="dash-card">
 <h3>🌤️ Bucak Hava Durumu</h3>
-<div class="local-weather">
-<div class="local-weather-icon">🌤️</div>
+<div class="local">
+<div class="ico" id="localIcon">🌤️</div>
 <div>
-<div class="local-temp" id="localTemp">--°</div>
-<div class="local-weather-text" id="localCondition">Yükleniyor...</div>
+<div class="temp" id="localTemp">--°</div>
+<div id="localText" style="color:#8996a9">Yükleniyor</div>
 </div>
 </div>
-<div class="weather-details">
-<div class="weather-box">💧 Nem<strong id="humidity">--%</strong></div>
-<div class="weather-box">💨 Rüzgar<strong id="wind">-- km/s</strong></div>
+
+<div class="details">
+<div class="detail">Nem<b id="humidity">--</b></div>
+<div class="detail">Rüzgar<b id="wind">--</b></div>
+</div>
+</div>
+
+<div class="dash-card">
+<h3>⭐ Müşteri Memnuniyeti</h3>
+<p style="font-size:32px;margin-top:14px">★★★★★</p>
+<p>Temiz iş, güler yüz ve teknoloji.</p>
+<p style="margin-top:14px">TeknoBiz, 2016'dan beri.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="about">
+<div class="about-inner">
+
+<div class="about-box">
+<h2>TeknoBiz</h2>
+<p>
+2016'dan beri telefon ve teknoloji aksesuarları alanında hizmet veriyoruz.
+İşimizi temiz yapıyoruz. Müşterilerimizin ihtiyacına uygun ürünü bulmasına
+yardımcı oluyoruz.
+</p>
+
+<div class="list">
+<div>✓ Telefon kılıfları</div>
+<div>✓ Kırılmaz camlar</div>
+<div>✓ Şarj kabloları ve adaptörler</div>
+<div>✓ Kulaklık ve hoparlörler</div>
+<div>✓ Powerbankler</div>
+<div>✓ Akıllı saat ve teknoloji ürünleri</div>
+</div>
+</div>
+
+<div class="about-box">
+<h3>📍 İletişim</h3>
+<p style="margin-top:12px">Süleyman Demirel Bulvarı No:15<br>Bucak / Burdur</p>
+<p>Her gün 09:00 - 21:00<br>Pazar: Kapalı</p>
+
+<div style="margin-top:18px">
+<a class="blue" href="tel:05059999009">📞 0505 999 90 09</a>
 </div>
 </div>
 
@@ -404,453 +365,917 @@ Bucak'ta güvenilir alışverişin adresi TeknoBiz.
 </section>
 
 <footer>
-<div class="footer-inner">
 <div>
 <h3>Tekno<span style="color:#2997ff">Biz</span></h3>
-<p>2016'dan beri teknoloji ve aksesuar alanında hizmet veriyoruz. İşimizi temiz yapıyoruz.</p>
-<p>📍 Süleyman Demirel Bulvarı No:15, Bucak / Burdur</p>
+<p style="color:#8996a9;font-size:13px;line-height:1.6">
+Teknoloji ve aksesuar ihtiyaçlarınız için TeknoBiz.
+</p>
 </div>
+
+<div>
+<h3>Bağlantılar</h3>
+<a href="https://instagram.com/Teknobiz7" target="_blank">📸 Instagram</a>
+<a href="https://facebook.com/bucakteknobiz15" target="_blank">📘 Facebook</a>
+<a href="mailto:teknobiz15@gmail.com">✉️ E-posta</a>
+</div>
+
 <div>
 <h3>İletişim</h3>
-<ul>
-<li>📞 0505 999 9009</li>
-<li>📧 teknobiz15@gmail.com</li>
-<li>📸 Instagram: Teknobiz7</li>
-</ul>
-</div>
-<div>
-<h3>Çalışma Saatleri</h3>
-<ul>
-<li>09:00 - 21:00</li>
-<li>Pazar: Kapalı</li>
-</ul>
-</div>
+<a href="tel:05059999009">📞 0505 999 90 09</a>
+<a href="https://wa.me/905059999009" target="_blank">💬 WhatsApp</a>
 </div>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/905059999009" target="_blank">💬</a>
+<div class="copy">
+© 2016 - 2026 TeknoBiz • Burak BESDİLLİ
+</div>
 
+<button class="support" onclick="openSupport()">🤖 TeknoBiz Asistan</button>
+<a class="wa" href="https://wa.me/905059999009" target="_blank">☏</a>
+
+<!-- ÜRÜN MODALI -->
 <div class="modal" id="productModal">
-<div class="modal-box">
-<div class="modal-head">
-<h2>Ürün Detayı</h2>
+<div class="box">
+
 <button class="close" onclick="closeModal('productModal')">×</button>
+
+<div class="modal-product">
+
+<img id="modalImage" alt="TeknoBiz ürün">
+
+<div>
+<div style="color:#5eb0ff;font-size:11px">TEKNOBİZ</div>
+<h2 id="modalTitle">Ürün</h2>
+<div class="modal-price" id="modalPrice">0 TL</div>
+<div id="options"></div>
 </div>
-<div id="productDetail"></div>
+
+</div>
+
+<div class="field">
+<label>Ad Soyad</label>
+<input id="customerName" placeholder="Adınız Soyadınız">
+</div>
+
+<div class="field">
+<label>Telefon</label>
+<input id="customerPhone" placeholder="05xx xxx xx xx">
+</div>
+
+<div class="modal-buttons">
+<button class="add" onclick="addSelectedToCart()">🛒 Sepete Ekle</button>
+<button class="wbutton" onclick="whatsappProduct()">💬 WhatsApp</button>
+</div>
+
 </div>
 </div>
 
+<!-- SEPET -->
 <div class="modal" id="cartModal">
-<div class="modal-box">
-<div class="modal-head">
-<h2>🛒 Sepetim</h2>
+<div class="box">
+
 <button class="close" onclick="closeModal('cartModal')">×</button>
-</div>
-<div id="cartList"></div>
-<div class="cart-total">
+
+<h2>🛒 Sepetim</h2>
+<div class="cart-list" id="cartList"></div>
+
+<div class="total">
 <span>Toplam</span>
 <span id="cartTotal">0 TL</span>
 </div>
-<div class="modal-actions">
-<button class="whatsapp" onclick="sendWhatsAppOrder()">WhatsApp'tan Sipariş Ver</button>
+
+<button class="checkout" onclick="whatsappCart()">💬 WhatsApp'tan Sipariş Ver</button>
+
 </div>
 </div>
+
+<!-- ASİSTAN -->
+<div class="modal" id="supportModal">
+<div class="box">
+
+<button class="close" onclick="closeModal('supportModal')">×</button>
+
+<span class="tag">🤖 TEKNOBİZ ASİSTAN</span>
+
+<h2 style="margin-top:12px">Size nasıl yardımcı olabiliriz?</h2>
+
+<div class="feature-grid">
+
+<div class="feature">
+<h3>📱 Ürün Bulma</h3>
+<p>Arama bölümünden istediğin ürünü yazabilirsin.</p>
+</div>
+
+<div class="feature">
+<h3>📦 Sipariş</h3>
+<p>Ürünü sepete ekleyip WhatsApp üzerinden sipariş oluşturabilirsin.</p>
+</div>
+
+<div class="feature">
+<h3>📞 İletişim</h3>
+<p>TeknoBiz: 0505 999 90 09</p>
+</div>
+
+<div class="feature">
+<h3>📍 Mağaza</h3>
+<p>Süleyman Demirel Bulvarı No:15, Bucak, Burdur.</p>
+</div>
+
+</div>
+
+<div style="margin-top:18px;padding:15px;border:1px solid #223047;border-radius:15px;background:#0d1726">
+<b>Mustafa Bey</b>
+<p style="color:#8996a9;margin-top:5px;font-size:13px">
+TeknoBiz hakkında bilgi almak için mağazamızla iletişime geçebilirsiniz.
+</p>
+</div>
+
+</div>
+</div>
+
+<!-- ÖZELLİKLER -->
+<div class="modal" id="featureModal">
+<div class="box">
+
+<button class="close" onclick="closeModal('featureModal')">×</button>
+
+<span class="tag">⭐ TEKNOBİZ ÖZELLİKLERİ</span>
+
+<div class="feature-grid">
+
+<div class="feature">
+<h3>❤️ Favoriler</h3>
+<p>Beğendiğin ürünleri favorilerine ekle.</p>
+<button class="tool" style="margin-top:9px" onclick="openFavorites()">Favorileri Aç</button>
+</div>
+
+<div class="feature">
+<h3>🌟 Günün Ürünü</h3>
+<p id="dailyText">Günün ürünü burada.</p>
+</div>
+
+<div class="feature">
+<h3>🎁 Sürpriz Kampanya</h3>
+<p>Her gün değişen kampanya fırsatlarını takip et.</p>
+</div>
+
+<div class="feature">
+<h3>🔥 Çok Satanlar</h3>
+<p>En çok ilgi gören ürünleri keşfet.</p>
+</div>
+
+<div class="feature">
+<h3>💸 İndirim Hesaplayıcı</h3>
+
+<input id="calcPrice" placeholder="Fiyat" type="number"
+style="width:100%;padding:9px;margin-top:8px;background:#101827;color:#fff;border:1px solid #29384e;border-radius:9px">
+
+<input id="calcDiscount" placeholder="İndirim %" type="number"
+style="width:100%;padding:9px;margin-top:7px;background:#101827;color:#fff;border:1px solid #29384e;border-radius:9px">
+
+<button class="tool" style="margin-top:8px" onclick="calcDiscount()">Hesapla</button>
+
+<p id="calcResult" style="margin-top:8px"></p>
+</div>
+
+<div class="feature">
+<h3>🎟️ Kupon Sistemi</h3>
+
+<input id="coupon" placeholder="Kupon kodu"
+style="width:100%;padding:9px;margin-top:8px;background:#101827;color:#fff;border:1px solid #29384e;border-radius:9px">
+
+<button class="tool" style="margin-top:8px" onclick="applyCoupon()">Kuponu Kullan</button>
+
+<p id="couponResult" style="margin-top:8px"></p>
+</div>
+
+<div class="feature">
+<h3>📦 Sipariş Takibi</h3>
+
+<input id="orderCode" placeholder="Örn: TZ1001"
+style="width:100%;padding:9px;margin-top:8px;background:#101827;color:#fff;border:1px solid #29384e;border-radius:9px">
+
+<button class="tool" style="margin-top:8px" onclick="trackOrder()">Sorgula</button>
+
+<p id="orderResult" style="margin-top:8px"></p>
+</div>
+
+<div class="feature">
+<h3>⭐ Müşteri Yorumları</h3>
+
+<div class="reviews">
+<div class="review">
+<div class="stars">★★★★★</div>
+<p style="margin-top:5px;color:#aab4c2">Ürünler güzel, hizmet hızlı.</p>
+</div>
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p style="margin-top:5px;color:#aab4c2">Güler yüzlü ve ilgili.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- FAVORİLER -->
+<div class="modal" id="favModal">
+<div class="box">
+
+<button class="close" onclick="closeModal('favModal')">×</button>
+
+<h2>❤️ Favorilerim</h2>
+
+<div id="favList"></div>
+
+</div>
+</div>
+
+<!-- ZOOM -->
+<div class="zoom" id="zoom" onclick="closeZoom()">
+<button class="close">×</button>
+<img id="zoomImg" alt="Ürün">
 </div>
 
 <script>
 
+const WA="905059999009";
+
 const PRODUCTS=[
+
 {
 id:1,
 name:"Guess 4G iPhone Kılıfı",
 price:750,
-category:"kilif",
+cat:"Kılıf",
+desc:"Guess 4G klasik tasarımlı iPhone kılıfı.",
 image:"https://casestore.bg/cdn/img/products/97871/case-guess-4g-big-4g-classic-logo-for-iphone-17-pro-black-gold-68cadf90e87c8.jpeg?height=800&v=1777547965&width=800",
-desc:"Şık Guess 4G tasarımlı premium telefon kılıfı."
+models:true
 },
+
 {
 id:2,
 name:"Şeffaf MagSafe Uyumlu iPhone Kılıfı",
 price:750,
-category:"kilif",
+cat:"Kılıf",
+desc:"Şeffaf tasarım, MagSafe uyumlu.",
 image:"https://myproduct.lk/uploads/products/1671986755572-for-magsafe-magnetic-wireless-charging-case-for-iphone.jpg",
-desc:"Şeffaf tasarım ve MagSafe uyumluluğu."
+models:true
 },
+
 {
 id:3,
 name:"Tek Renk iPhone Kılıfı",
 price:650,
-category:"kilif",
-image:"https://images.unsplash.com/photo-1603313011105-320f26a4f6f6?auto=format&fit=crop&w=800&q=80",
-desc:"Lacivert, siyah, beyaz, kırmızı, mor ve yeşil renk seçenekleri."
+cat:"Kılıf",
+desc:"Sade ve şık tek renk iPhone kılıfı.",
+image:"https://down-br.img.susercontent.com/file/sg-11134201-822wy-mo5w6qqjk35wba",
+models:true,
+colors:["Lacivert","Siyah","Beyaz","Kırmızı","Mor","Yeşil"]
 },
+
 {
 id:4,
 name:"Taşlı iPhone Kılıfı",
 price:650,
-category:"kilif",
-image:"https://images.unsplash.com/photo-1541877944-ac82a091518a?auto=format&fit=crop&w=800&q=80",
-desc:"Şık ve dikkat çekici taşlı telefon kılıfı."
+cat:"Kılıf",
+desc:"Taş detaylı şık iPhone kılıfı.",
+image:"https://justandbest.com/cdn/shop/files/iphone14promaxdiamondscover_7b2c7594-950e-4a74-81df-a73d57c7e865.webp?v=1721885752&width=1024",
+models:true
 },
+
 {
 id:5,
-name:"Karbon 14+ Kılıf",
+name:"Karbon iPhone 14+ Kılıf",
 price:1000,
-category:"kilif",
-image:"https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80",
-desc:"Karbon görünümlü dayanıklı telefon kılıfı."
+cat:"Kılıf",
+desc:"Karbon görünümlü dayanıklı tasarım.",
+image:"https://m.media-amazon.com/images/I/71H0mQv5qUL._AC_SL1500_.jpg",
+models:true
 },
+
 {
 id:6,
 name:"Anti Statik Kırılmaz Cam",
 price:1000,
-category:"cam",
-image:"https://images.unsplash.com/photo-1609592424827-0f4d7d1a3f8b?auto=format&fit=crop&w=800&q=80",
-desc:"Telefon ekranını çizilmelere ve darbelere karşı korumaya yardımcı olur."
+cat:"Cam",
+desc:"Telefon ekranı için anti statik kırılmaz cam.",
+image:"https://m.media-amazon.com/images/I/71G8Yq0ZQwL._AC_SL1500_.jpg",
+models:true
 },
+
 {
 id:7,
 name:"MagSafe Cüzdan",
 price:500,
-category:"aksesuar",
-image:"https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80",
-desc:"MagSafe uyumlu pratik kartlık."
+cat:"Aksesuar",
+desc:"MagSafe uyumlu manyetik cüzdan.",
+image:"https://m.media-amazon.com/images/I/61V7xGJQKVL._AC_SL1200_.jpg"
 },
+
 {
 id:8,
 name:"Işıklı Makyaj Aynası",
 price:750,
-category:"aksesuar",
-image:"https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=800&q=80",
-desc:"LED ışıklı şık makyaj aynası."
+cat:"Aksesuar",
+desc:"LED ışıklı makyaj aynası.",
+image:"https://m.media-amazon.com/images/I/61Q4Jv0x7BL._AC_SL1200_.jpg"
 },
+
 {
 id:9,
 name:"Aromatik Difüzör",
 price:1750,
-category:"aksesuar",
-image:"https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=800&q=80",
-desc:"Ortam için dekoratif aromatik difüzör."
+cat:"Aksesuar",
+desc:"Ortam için aromatik difüzör.",
+image:"https://m.media-amazon.com/images/I/71wq7Q7JqRL._AC_SL1500_.jpg"
 },
+
 {
 id:10,
 name:"Apple 20W Adaptör",
 price:1149,
-category:"sarj",
-image:"https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=800&q=80",
-desc:"20W hızlı şarj adaptörü."
+cat:"Aksesuar",
+desc:"Apple 20W hızlı şarj adaptörü.",
+image:"https://m.media-amazon.com/images/I/61M1r7K8QUL._AC_SL1500_.jpg"
 },
+
 {
 id:11,
-name:"USB-C Lightning 1m",
+name:"USB-C Lightning Kablo 1m",
 price:1149,
-category:"sarj",
-image:"https://images.unsplash.com/photo-1587033411391-5d9e51cce126?auto=format&fit=crop&w=800&q=80",
-desc:"1 metre şarj ve veri kablosu."
+cat:"Kablo",
+desc:"USB-C Lightning 1 metre şarj kablosu.",
+image:"https://m.media-amazon.com/images/I/61uFJj1l8OL._AC_SL1500_.jpg"
 },
+
 {
 id:12,
-name:"USB-C Lightning 2m",
+name:"USB-C Lightning Kablo 2m",
 price:1599,
-category:"sarj",
-image:"https://images.unsplash.com/photo-1591290619762-c588f2e1f4f5?auto=format&fit=crop&w=800&q=80",
-desc:"2 metre uzunluğunda şarj ve veri kablosu."
+cat:"Kablo",
+desc:"USB-C Lightning 2 metre şarj kablosu.",
+image:"https://m.media-amazon.com/images/I/61uFJj1l8OL._AC_SL1500_.jpg"
 },
+
 {
 id:13,
-name:"Şarj Adaptörü",
+name:"Apple Şarj Adaptörü",
 price:1599,
-category:"sarj",
-image:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
-desc:"Günlük kullanım için pratik şarj adaptörü."
+cat:"Aksesuar",
+desc:"Apple uyumlu şarj adaptörü.",
+image:"https://m.media-amazon.com/images/I/61M1r7K8QUL._AC_SL1500_.jpg"
 }
+
 ];
 
-let cart=JSON.parse(localStorage.getItem("teknoCart")||"[]");
+const PROVINCES=[
+["Adana",37.0,35.3],["Adıyaman",37.76,38.28],["Afyonkarahisar",38.76,30.54],
+["Ağrı",39.72,43.05],["Aksaray",38.37,34.03],["Amasya",40.65,35.83],
+["Ankara",39.93,32.86],["Antalya",36.89,30.70],["Ardahan",41.11,42.70],
+["Artvin",41.18,41.82],["Aydın",37.85,27.84],["Balıkesir",39.65,27.88],
+["Bartın",41.63,32.34],["Batman",37.88,41.13],["Bayburt",40.26,40.22],
+["Bilecik",40.15,29.98],["Bingöl",38.89,40.50],["Bitlis",38.40,42.11],
+["Bolu",40.73,31.61],["Burdur",37.72,30.29],["Bursa",40.19,29.06],
+["Çanakkale",40.15,26.41],["Çankırı",40.60,33.62],["Çorum",40.55,34.95],
+["Denizli",37.77,29.08],["Diyarbakır",37.91,40.23],["Düzce",40.84,31.16],
+["Edirne",41.68,26.56],["Elazığ",38.67,39.22],["Erzincan",39.75,39.49],
+["Erzurum",39.90,41.27],["Eskişehir",39.78,30.52],["Gaziantep",37.06,37.38],
+["Giresun",40.91,38.39],["Gümüşhane",40.46,39.48],["Hakkari",37.57,43.74],
+["Hatay",36.20,36.16],["Iğdır",39.92,44.04],["Isparta",37.76,30.55],
+["İstanbul",41.01,28.97],["İzmir",38.42,27.14],["Kahramanmaraş",37.58,36.93],
+["Karabük",41.20,32.63],["Karaman",37.18,33.22],["Kars",40.60,43.10],
+["Kastamonu",41.39,33.78],["Kayseri",38.72,35.48],["Kilis",36.72,37.12],
+["Kırıkkale",39.84,33.52],["Kırklareli",41.74,27.23],["Kırşehir",39.15,34.16],
+["Kocaeli",40.77,29.94],["Konya",37.87,32.49],["Kütahya",39.42,29.98],
+["Malatya",38.35,38.31],["Manisa",38.62,27.43],["Mardin",37.32,40.73],
+["Mersin",36.81,34.64],["Muğla",37.22,28.36],["Muş",38.73,41.49],
+["Nevşehir",38.62,34.72],["Niğde",37.97,34.68],["Ordu",40.98,37.88],
+["Osmaniye",37.07,36.25],["Rize",41.02,40.52],["Sakarya",40.78,30.40],
+["Samsun",41.28,36.33],["Siirt",37.93,41.94],["Sinop",42.02,35.15],
+["Sivas",39.75,37.02],["Şanlıurfa",37.17,38.79],["Şırnak",37.52,42.46],
+["Tekirdağ",40.98,27.51],["Tokat",40.31,36.55],["Trabzon",41.00,39.72],
+["Tunceli",39.11,39.55],["Uşak",38.68,29.41],["Van",38.50,43.38],
+["Yalova",40.65,29.27],["Yozgat",39.82,34.81],["Zonguldak",41.45,31.79]
+];
 
-function money(n){
-return Number(n).toLocaleString("tr-TR")+" TL";
+let cart=[];
+let favs=JSON.parse(localStorage.getItem("tzFavs")||"[]");
+let selected=null;
+let qty=1;
+let search="";
+let filter="all";
+
+function icon(code){
+if(code===0)return"☀️";
+if(code<=3)return"🌤️";
+if(code<=48)return"🌫️";
+if(code<=67)return"🌧️";
+if(code<=77)return"🌨️";
+if(code<=82)return"🌦️";
+return"⛈️";
 }
 
-function renderProducts(list=PRODUCTS){
+function render(){
 
-const grid=document.getElementById("productGrid");
+let list=PRODUCTS.filter(p=>{
+let okFilter=filter==="all"||p.cat===filter;
+let okSearch=!search||
+p.name.toLowerCase().includes(search)||
+p.desc.toLowerCase().includes(search)||
+p.cat.toLowerCase().includes(search);
 
-grid.innerHTML=list.map(p=>`
-<div class="card">
-<div class="card-image">
-<div class="badge">TeknoBiz</div>
+return okFilter&&okSearch;
+});
+
+document.getElementById("productGrid").innerHTML=list.map(p=>`
+
+<article class="card">
+
+<div class="pic">
+
 <img src="${p.image}" alt="${p.name}" loading="lazy">
+
+<div class="brand">TEKNOBİZ</div>
+
+<button class="fav ${favs.includes(p.id)?"active":""}" onclick="toggleFav(${p.id})">
+${favs.includes(p.id)?"♥":"♡"}
+</button>
+
+<div class="stock">✓ Stokta</div>
+
 </div>
-<div class="card-content">
-<div class="category">${p.category}</div>
+
+<div class="card-body">
+
+<div class="cat">${p.cat}</div>
+
 <h3>${p.name}</h3>
-<div class="description">${p.desc}</div>
-<div class="card-bottom">
-<div class="price">${money(p.price)}</div>
-<button class="inspect" onclick="openProduct(${p.id})">İncele</button>
+
+<div class="desc">${p.desc}</div>
+
+<div class="bottom">
+
+<div class="price">
+${p.price.toLocaleString("tr-TR")} <small>TL</small>
 </div>
+
+<button class="inspect" onclick="openProduct(${p.id})">
+İncele
+</button>
+
 </div>
+
+<button class="quick" onclick="waProduct(${p.id})">
+💬 WhatsApp'tan Bilgi Al
+</button>
+
 </div>
+
+</article>
+
 `).join("");
 
 document.getElementById("noResult").style.display=list.length?"none":"block";
 }
 
-function filterProducts(category,button){
-
-document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));
-button.classList.add("active");
-
-if(category==="all")renderProducts(PRODUCTS);
-else renderProducts(PRODUCTS.filter(p=>p.category===category));
-}
-
-document.getElementById("searchInput").addEventListener("input",function(){
-
-const q=this.value.toLowerCase().trim();
-
-if(!q){
-renderProducts(PRODUCTS);
-return;
-}
-
-renderProducts(
-PRODUCTS.filter(p=>
-p.name.toLowerCase().includes(q) ||
-p.desc.toLowerCase().includes(q) ||
-p.category.toLowerCase().includes(q)
-)
-);
-
-});
-
 function openProduct(id){
 
-const p=PRODUCTS.find(x=>x.id===id);
-if(!p)return;
+selected=PRODUCTS.find(p=>p.id===id);
+qty=1;
 
-document.getElementById("productDetail").innerHTML=`
-<div class="modal-product">
-<img src="${p.image}" alt="${p.name}">
-<div class="modal-info">
-<div class="category">${p.category}</div>
-<h2>${p.name}</h2>
-<p>${p.desc}</p>
-<div class="modal-price">${money(p.price)}</div>
+document.getElementById("modalImage").src=selected.image;
+document.getElementById("modalImage").onclick=()=>openZoom(selected.image);
 
-<label>Adet</label>
-<input id="productQty" type="number" min="1" value="1">
+document.getElementById("modalTitle").textContent=selected.name;
+document.getElementById("modalPrice").textContent=selected.price.toLocaleString("tr-TR")+" TL";
 
-<div class="modal-actions">
-<button class="add-cart" onclick="addToCart(${p.id})">🛒 Sepete Ekle</button>
-<button class="whatsapp" onclick="directWhatsApp(${p.id})">💬 WhatsApp</button>
+let o="";
+
+if(selected.models){
+
+let models=[
+"iPhone 11","iPhone 11 Pro","iPhone 11 Pro Max",
+"iPhone 12","iPhone 12 mini","iPhone 12 Pro","iPhone 12 Pro Max",
+"iPhone 13","iPhone 13 mini","iPhone 13 Pro","iPhone 13 Pro Max",
+"iPhone 14","iPhone 14 Plus","iPhone 14 Pro","iPhone 14 Pro Max",
+"iPhone 15","iPhone 15 Plus","iPhone 15 Pro","iPhone 15 Pro Max",
+"iPhone 16","iPhone 16 Plus","iPhone 16 Pro","iPhone 16 Pro Max",
+"iPhone 17","iPhone 17 Air","iPhone 17 Pro","iPhone 17 Pro Max",
+"iPhone 18","iPhone 18 Pro","iPhone 18 Pro Max",
+"Samsung Galaxy S24","Samsung Galaxy S24 Plus","Samsung Galaxy S24 Ultra",
+"Samsung Galaxy S25","Samsung Galaxy S25 Plus","Samsung Galaxy S25 Ultra"
+];
+
+o+=`
+<div class="field">
+<label>Telefon Modeli</label>
+<select id="model">
+<option value="">Model seçiniz</option>
+${models.map(x=>`<option>${x}</option>`).join("")}
+</select>
 </div>
-</div>
+`;
+}
+
+if(selected.colors){
+
+o+=`
+<div class="field">
+<label>Renk</label>
+<select id="color">
+<option value="">Renk seçiniz</option>
+${selected.colors.map(x=>`<option>${x}</option>`).join("")}
+</select>
 </div>
 `;
 
-document.getElementById("productModal").classList.add("active");
 }
 
-function addToCart(id){
+o+=`
+<div class="qty">
+<b>Adet</b>
+<button onclick="setQty(-1)">−</button>
+<b id="qty">1</b>
+<button onclick="setQty(1)">+</button>
+</div>
+`;
 
-const p=PRODUCTS.find(x=>x.id===id);
-if(!p)return;
+document.getElementById("options").innerHTML=o;
+document.getElementById("productModal").classList.add("show");
 
-const qty=Math.max(1,Number(document.getElementById("productQty")?.value||1));
+}
 
-const existing=cart.find(x=>x.id===id);
+function setQty(d){
 
-if(existing)existing.qty+=qty;
-else cart.push({...p,qty});
+qty=Math.max(1,qty+d);
+document.getElementById("qty").textContent=qty;
 
-saveCart();
+}
+
+function addSelectedToCart(){
+
+let model=document.getElementById("model")?.value||"";
+let color=document.getElementById("color")?.value||"";
+
+for(let i=0;i<qty;i++){
+
+cart.push({
+...selected,
+model,
+color
+});
+
+}
+
+updateCart();
 closeModal("productModal");
+
+alert("Ürün sepete eklendi. 🛒");
+
 }
 
-function saveCart(){
+function updateCart(){
 
-localStorage.setItem("teknoCart",JSON.stringify(cart));
-updateCartCount();
-}
+document.getElementById("cartCount").textContent=cart.length;
 
-function updateCartCount(){
-
-document.getElementById("cartCount").textContent=
-cart.reduce((a,b)=>a+b.qty,0);
 }
 
 function openCart(){
 
-renderCart();
-document.getElementById("cartModal").classList.add("active");
-}
+let l=document.getElementById("cartList");
 
-function renderCart(){
+l.innerHTML=cart.length?
 
-const box=document.getElementById("cartList");
+cart.map((p,i)=>`
 
-if(!cart.length){
-box.innerHTML="<p style='color:#8996a9;text-align:center;padding:30px'>Sepetin şu anda boş.</p>";
-document.getElementById("cartTotal").textContent="0 TL";
-return;
-}
-
-box.innerHTML=cart.map((p,i)=>`
 <div class="cart-item">
-<img src="${p.image}" alt="${p.name}">
-<div class="cart-item-info">
-<strong>${p.name}</strong>
-<small>${p.qty} adet × ${money(p.price)}</small>
-</div>
-<button class="close" onclick="removeCart(${i})">×</button>
-</div>
-`).join("");
 
-const total=cart.reduce((a,b)=>a+(b.price*b.qty),0);
-document.getElementById("cartTotal").textContent=money(total);
+<img src="${p.image}">
+
+<main>
+
+<b>${p.name}</b>
+
+<small style="display:block;color:#8996a9">
+
+${p.model||""}${p.color?" • "+p.color:""}
+
+<br>
+
+${p.price.toLocaleString("tr-TR")} TL
+
+</small>
+
+</main>
+
+<button class="remove" onclick="removeCart(${i})">✕</button>
+
+</div>
+
+`).join("")
+
+:
+
+"<div style='padding:30px;text-align:center;color:#8996a9'>Sepetiniz boş. 🛒</div>";
+
+let total=cart.reduce((s,p)=>s+p.price,0);
+
+document.getElementById("cartTotal").textContent=
+total.toLocaleString("tr-TR")+" TL";
+
+document.getElementById("cartModal").classList.add("show");
+
 }
 
 function removeCart(i){
 
 cart.splice(i,1);
-saveCart();
-renderCart();
+updateCart();
+openCart();
+
 }
 
-function sendWhatsAppOrder(){
+function msgFor(p){
 
-if(!cart.length){
-alert("Sepetiniz boş.");
-return;
+let model=document.getElementById("model")?.value||"";
+let color=document.getElementById("color")?.value||"";
+let name=document.getElementById("customerName")?.value.trim()||"";
+let phone=document.getElementById("customerPhone")?.value.trim()||"";
+
+return `Merhaba TeknoBiz, web sitesinden sipariş vermek istiyorum.
+
+🛍️ Ürün: ${p.name}
+💰 Fiyat: ${p.price.toLocaleString("tr-TR")} TL
+${model?"📱 Model: "+model+"\n":""}${color?"🎨 Renk: "+color+"\n":""}${name?"👤 Ad Soyad: "+name+"\n":""}${phone?"📞 Telefon: "+phone:""}`;
+
 }
 
-let message="Merhaba TeknoBiz, sipariş vermek istiyorum.%0A%0A";
+function waProduct(id){
 
-cart.forEach(p=>{
-message+=`• ${p.name} x${p.qty} = ${p.price*p.qty} TL%0A`;
-});
-
-const total=cart.reduce((a,b)=>a+(b.price*b.qty),0);
-
-message+=`%0AToplam: ${total} TL`;
-
-window.open("https://wa.me/905059999009?text="+message,"_blank");
-}
-
-function directWhatsApp(id){
-
-const p=PRODUCTS.find(x=>x.id===id);
-if(!p)return;
-
-const message=
-`Merhaba TeknoBiz, ${p.name} ürünü hakkında bilgi almak istiyorum. Fiyat: ${p.price} TL`;
+let p=PRODUCTS.find(x=>x.id===id);
 
 window.open(
-"https://wa.me/905059999009?text="+encodeURIComponent(message),
+"https://wa.me/"+WA+
+"?text="+encodeURIComponent(
+`Merhaba TeknoBiz, ${p.name} hakkında bilgi almak istiyorum. Fiyat: ${p.price.toLocaleString("tr-TR")} TL`
+),
 "_blank"
 );
+
+}
+
+function whatsappProduct(){
+
+if(!selected)return;
+
+window.open(
+"https://wa.me/"+WA+
+"?text="+encodeURIComponent(msgFor(selected)),
+"_blank"
+);
+
+}
+
+function whatsappCart(){
+
+if(!cart.length)return alert("Sepetiniz boş.");
+
+let t=cart.reduce((s,p)=>s+p.price,0);
+
+let m="Merhaba TeknoBiz, web sitesinden sipariş vermek istiyorum.\n\n";
+
+cart.forEach((p,i)=>{
+
+m+=`${i+1}. ${p.name}${p.model?" | "+p.model:""}${p.color?" | "+p.color:""} | ${p.price.toLocaleString("tr-TR")} TL\n`;
+
+});
+
+m+=`\n💰 TOPLAM: ${t.toLocaleString("tr-TR")} TL`;
+
+window.open(
+"https://wa.me/"+WA+"?text="+encodeURIComponent(m),
+"_blank"
+);
+
 }
 
 function closeModal(id){
-document.getElementById(id).classList.remove("active");
+
+document.getElementById(id).classList.remove("show");
+
 }
 
-document.querySelectorAll(".modal").forEach(modal=>{
-modal.addEventListener("click",e=>{
-if(e.target===modal)modal.classList.remove("active");
-});
-});
+function openSupport(){
 
-const track=document.getElementById("productTrack");
+document.getElementById("supportModal").classList.add("show");
 
-function createProductMarquee(){
+}
 
-const items=PRODUCTS.map(p=>`
-<div class="product-mini">
-<div class="product-mini-icon">📱</div>
+function openFeaturePanel(){
+
+document.getElementById("featureModal").classList.add("show");
+
+let d=PRODUCTS[new Date().getDate()%PRODUCTS.length];
+
+document.getElementById("dailyText").textContent=
+d.name+" • "+d.price.toLocaleString("tr-TR")+" TL";
+
+}
+
+function openZoom(src){
+
+document.getElementById("zoomImg").src=src;
+document.getElementById("zoom").classList.add("show");
+
+}
+
+function closeZoom(){
+
+document.getElementById("zoom").classList.remove("show");
+
+}
+
+function toggleFav(id){
+
+favs=favs.includes(id)
+?favs.filter(x=>x!==id)
+:[...favs,id];
+
+localStorage.setItem("tzFavs",JSON.stringify(favs));
+
+render();
+
+}
+
+function openFavorites(){
+
+let a=PRODUCTS.filter(p=>favs.includes(p.id));
+
+document.getElementById("favList").innerHTML=a.length?
+
+a.map(p=>`
+
+<div class="fav-row">
+
+<img src="${p.image}">
+
+<main>
+<b>${p.name}</b>
+<small style="display:block;color:#8996a9">
+${p.price.toLocaleString("tr-TR")} TL
+</small>
+</main>
+
+<button class="tool" onclick="openProduct(${p.id});closeModal('favModal')">
+İncele
+</button>
+
+</div>
+
+`).join("")
+
+:
+
+"<p style='color:#8996a9;margin-top:15px'>Henüz favori ürününüz yok. ❤️</p>";
+
+document.getElementById("favModal").classList.add("show");
+
+}
+
+function calcDiscount(){
+
+let p=Number(document.getElementById("calcPrice").value);
+let d=Number(document.getElementById("calcDiscount").value);
+
+document.getElementById("calcResult").textContent=
+p&&d>=0
+?`İndirimli fiyat: ${(p-p*d/100).toLocaleString("tr-TR")} TL`
+:"Fiyat ve indirim gir.";
+
+}
+
+function applyCoupon(){
+
+let c=document.getElementById("coupon").value.trim().toUpperCase();
+
+document.getElementById("couponResult").textContent=
+c==="TEKNO10"
+?"%10 indirim kuponu geçerli."
+:c==="TEKNO50"
+?"50 TL indirim kuponu geçerli."
+:"Kupon bulunamadı.";
+
+}
+
+function trackOrder(){
+
+let c=document.getElementById("orderCode").value.trim().toUpperCase();
+
+let s={
+TZ1001:"Hazırlanıyor",
+TZ1002:"Kargoda",
+TZ1003:"Teslim Edildi"
+}[c];
+
+document.getElementById("orderResult").textContent=
+s
+?`Sipariş ${c}: ${s}`
+:"Sipariş kodu bulunamadı.";
+
+}
+
+function buildStand(){
+
+let a=[...PRODUCTS,...PRODUCTS];
+
+document.getElementById("productTrack").innerHTML=
+a.map(p=>`
+
+<div class="mini" onclick="openProduct(${p.id})">
+📦 <b>${p.name}</b>
+<small>${p.price.toLocaleString("tr-TR")} TL</small>
+</div>
+
+`).join("");
+
+}
+
+function buildWeather(){
+
+let a=[...PROVINCES,...PROVINCES];
+
+document.getElementById("weatherTrack").innerHTML=
+a.map(c=>`
+
+<div class="weather-card" data-city="${c[0]}">
+
+<div class="city">📍 ${c[0]}</div>
+
+<div class="wmain">
+
+<span class="ico">🌤️</span>
+
 <div>
-<strong>${p.name}</strong>
-<small>${money(p.price)}</small>
+<div class="temp">--°</div>
+<small>Yükleniyor</small>
 </div>
+
 </div>
+
+</div>
+
 `).join("");
 
-track.innerHTML=items+items;
-}
-
-const cities=[
-"Adana","Adıyaman","Afyonkarahisar","Ağrı","Amasya","Ankara","Antalya",
-"Artvin","Aydın","Balıkesir","Bilecik","Bingöl","Bitlis","Bolu","Burdur",
-"Bursa","Çanakkale","Çankırı","Çorum","Denizli","Diyarbakır","Edirne",
-"Elazığ","Erzincan","Erzurum","Eskişehir","Gaziantep","Giresun","Gümüşhane",
-"Hakkari","Hatay","Isparta","Mersin","İstanbul","İzmir","Kars","Kastamonu",
-"Kayseri","Kırklareli","Kırşehir","Kocaeli","Konya","Kütahya","Malatya",
-"Manisa","Kahramanmaraş","Mardin","Muğla","Muş","Nevşehir","Niğde",
-"Ordu","Rize","Sakarya","Samsun","Siirt","Sinop","Sivas","Şanlıurfa",
-"Şırnak","Tekirdağ","Tokat","Trabzon","Tunceli","Uşak","Van","Yalova",
-"Yozgat","Zonguldak","Aksaray","Bayburt","Karaman","Kırıkkale","Batman",
-"Ardahan","Bartın","Iğdır","Kilis","Osmaniye","Düzce"
-];
-
-function createWeatherCards(){
-
-const weather=document.getElementById("weatherTrack");
-
-const items=cities.map((city,i)=>`
-<div class="weather-card">
-<div class="weather-city">${city}</div>
-<div class="weather-main">
-<div class="weather-main-icon">${["☀️","🌤️","⛅","🌥️","🌦️"][i%5]}</div>
-<div class="weather-temp">${18+(i%16)}°</div>
-</div>
-<div class="weather-condition">${["Açık","Parçalı Bulutlu","Bulutlu","Güneşli","Hafif Yağış"][i%5]}</div>
-</div>
-`).join("");
-
-weather.innerHTML=items+items;
-}
-
-async function getCurrency(){
+PROVINCES.forEach(async c=>{
 
 try{
 
-const r=await fetch("https://api.frankfurter.app/latest?from=USD&to=TRY,EUR,GBP");
-const d=await r.json();
-
-document.getElementById("usd").textContent=
-d.rates.TRY.toFixed(2)+" TL";
-
-document.getElementById("eur").textContent=
-(d.rates.TRY/d.rates.EUR).toFixed(2)+" TL";
-
-document.getElementById("gbp").textContent=
-(d.rates.TRY/d.rates.GBP).toFixed(2)+" TL";
-
-}catch(e){
-
-document.getElementById("usd").textContent="Güncellenemedi";
-document.getElementById("eur").textContent="Güncellenemedi";
-document.getElementById("gbp").textContent="Güncellenemedi";
-
-}
-}
-
-async function getWeather(){
-
-try{
-
-const r=await fetch(
-"https://api.open-meteo.com/v1/forecast?latitude=37.459&longitude=30.586&current=temperature_2m,relative_humidity_2m,wind_speed_10m"
+let r=await fetch(
+`https://api.open-meteo.com/v1/forecast?latitude=${c[1]}&longitude=${c[2]}&current=temperature_2m,weather_code&timezone=Europe%2FIstanbul`
 );
 
-const d=await r.json();
+let d=await r.json();
+
+let t=Math.round(d.current.temperature_2m);
+let i=icon(d.current.weather_code);
+
+document.querySelectorAll(
+`.weather-card[data-city="${c[0]}"]`
+).forEach(x=>{
+
+x.querySelector(".ico").textContent=i;
+x.querySelector(".temp").textContent=t+"°";
+x.querySelector("small").textContent="Güncel";
+
+});
+
+}catch(e){}
+
+});
+
+}
+
+async function localWeather(){
+
+try{
+
+let r=await fetch(
+"https://api.open-meteo.com/v1/forecast?latitude=37.4593&longitude=30.5950&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&timezone=Europe%2FIstanbul"
+);
+
+let d=await r.json();
 
 document.getElementById("localTemp").textContent=
 Math.round(d.current.temperature_2m)+"°";
 
-document.getElementById("localCondition").textContent="Bucak, Burdur";
+document.getElementById("localIcon").textContent=
+icon(d.current.weather_code);
+
+document.getElementById("localText").textContent="Güncel";
 
 document.getElementById("humidity").textContent=
 d.current.relative_humidity_2m+"%";
@@ -860,17 +1285,123 @@ Math.round(d.current.wind_speed_10m)+" km/s";
 
 }catch(e){
 
-document.getElementById("localCondition").textContent="Hava durumu alınamadı";
+document.getElementById("localText").textContent=
+"Hava durumu alınamadı";
 
 }
+
 }
 
-createProductMarquee();
-createWeatherCards();
-renderProducts();
-updateCartCount();
-getCurrency();
-getWeather();
+async function currency(){
+
+try{
+
+let r=await fetch("https://open.er-api.com/v6/latest/TRY");
+let d=await r.json();
+
+document.getElementById("usd").textContent=
+(1/d.rates.USD).toFixed(2)+" TL";
+
+document.getElementById("eur").textContent=
+(1/d.rates.EUR).toFixed(2)+" TL";
+
+document.getElementById("gbp").textContent=
+(1/d.rates.GBP).toFixed(2)+" TL";
+
+}catch(e){
+
+["usd","eur","gbp"].forEach(x=>
+document.getElementById(x).textContent="Alınamadı"
+);
+
+}
+
+}
+
+const endKey="tzEnd";
+
+let end=Number(localStorage.getItem(endKey)||0);
+
+if(!end||end<Date.now()){
+
+end=Date.now()+86400000;
+localStorage.setItem(endKey,end);
+
+}
+
+setInterval(()=>{
+
+let d=Math.max(0,end-Date.now());
+
+let h=Math.floor(d/3600000);
+
+d%=3600000;
+
+let m=Math.floor(d/60000);
+
+d%=60000;
+
+let s=Math.floor(d/1000);
+
+document.getElementById("tzTimer").textContent=
+[h,m,s].map(x=>String(x).padStart(2,"0")).join(":");
+
+},1000);
+
+document.getElementById("search").oninput=e=>{
+
+search=e.target.value.toLowerCase().trim();
+
+render();
+
+};
+
+document.querySelectorAll(".filter").forEach(b=>{
+
+b.onclick=()=>{
+
+document.querySelectorAll(".filter")
+.forEach(x=>x.classList.remove("active"));
+
+b.classList.add("active");
+
+filter=b.dataset.filter;
+
+render();
+
+};
+
+});
+
+document.querySelectorAll(".modal").forEach(m=>{
+
+m.addEventListener("click",e=>{
+
+if(e.target===m)m.classList.remove("show");
+
+});
+
+});
+
+document.addEventListener("keydown",e=>{
+
+if(e.key==="Escape"){
+
+document.querySelectorAll(".modal")
+.forEach(x=>x.classList.remove("show"));
+
+closeZoom();
+
+}
+
+});
+
+buildStand();
+buildWeather();
+render();
+updateCart();
+localWeather();
+currency();
 
 </script>
 
