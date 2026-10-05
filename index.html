@@ -2,352 +2,858 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TeknoBiz | Teknoloji & Aksesuar</title>
-<meta name="description" content="TeknoBiz Bucak teknoloji, telefon kılıfları ve aksesuar mağazası.">
-<meta name="theme-color" content="#07111f">
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
 body{
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-background:#050914;color:#fff
+font-family:Arial,Helvetica,sans-serif;
+background:#050914;
+color:#fff;
 }
 button,input,select{font:inherit}
 button{cursor:pointer}
-a{color:inherit;text-decoration:none}
+a{text-decoration:none;color:inherit}
 
 header{
-position:sticky;top:0;z-index:1000;
-background:rgba(5,9,20,.96);
-backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(255,255,255,.08)
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(5,9,20,.97);
+border-bottom:1px solid #1e2b3d;
 }
 .nav{
-max-width:1250px;margin:auto;min-height:76px;padding:12px 20px;
-display:flex;align-items:center;gap:15px
+max-width:1250px;
+margin:auto;
+padding:12px 20px;
+display:flex;
+align-items:center;
+gap:15px;
+flex-wrap:wrap;
 }
-.logo{min-width:155px;font-size:28px;font-weight:900}
+.logo{
+font-size:28px;
+font-weight:900;
+min-width:150px;
+}
 .logo span{color:#2997ff}
-.logo small{display:block;color:#7e8b9f;font-size:8px;letter-spacing:3px}
-
-.search{flex:1;position:relative}
-.search input{
-width:100%;padding:14px 45px 14px 17px;
-border:1px solid #26354b;border-radius:15px;
-outline:0;background:#101827;color:#fff
+.logo small{
+display:block;
+font-size:8px;
+letter-spacing:3px;
+color:#718096;
 }
-.search input:focus{border-color:#2997ff;box-shadow:0 0 0 3px rgba(41,151,255,.12)}
-.search-icon{position:absolute;right:17px;top:50%;transform:translateY(-50%);color:#8996a8;font-size:22px}
-
-.cart-button,.blue{
-border:0;padding:13px 17px;border-radius:14px;
-background:#2997ff;color:#fff;font-weight:800
+.search{
+flex:1;
+position:relative;
+min-width:220px;
+}
+.search input{
+width:100%;
+padding:14px 45px 14px 16px;
+border-radius:14px;
+border:1px solid #26364b;
+background:#101827;
+color:white;
+outline:none;
+}
+.search input:focus{border-color:#2997ff}
+.search-icon{
+position:absolute;
+right:16px;
+top:50%;
+transform:translateY(-50%);
+font-size:21px;
+color:#7f8ca0;
+}
+.cart-button{
+padding:13px 17px;
+border:0;
+border-radius:13px;
+background:#2997ff;
+color:white;
+font-weight:800;
 }
 .cart-button span{
-margin-left:5px;padding:2px 7px;border-radius:20px;
-background:#fff;color:#1682e9
+background:white;
+color:#1479ff;
+padding:2px 7px;
+border-radius:20px;
+margin-left:4px;
 }
 
+/* HERO */
 .hero{
-min-height:500px;display:flex;align-items:center;
+min-height:480px;
+display:flex;
+align-items:center;
 background:
-radial-gradient(circle at 80% 25%,rgba(41,151,255,.24),transparent 30%),
-radial-gradient(circle at 15% 85%,rgba(0,80,200,.14),transparent 35%),
-linear-gradient(135deg,#040711,#0a1425,#050914)
+radial-gradient(circle at 80% 20%,rgba(41,151,255,.25),transparent 30%),
+linear-gradient(135deg,#040711,#0b1526,#050914);
 }
-.hero-inner{max-width:1250px;width:100%;margin:auto;padding:80px 20px}
-.badge-top{
-display:inline-block;padding:8px 14px;border:1px solid rgba(41,151,255,.35);
-border-radius:30px;background:rgba(41,151,255,.08);
-color:#72bdff;font-size:13px;font-weight:800
+.hero-inner{
+max-width:1250px;
+width:100%;
+margin:auto;
+padding:80px 20px;
 }
-.hero h1{margin-top:20px;font-size:clamp(45px,7vw,78px);line-height:.98;letter-spacing:-4px}
+.badge{
+display:inline-block;
+padding:8px 13px;
+border:1px solid #24547d;
+border-radius:30px;
+background:#091a2c;
+color:#70c1ff;
+font-size:12px;
+font-weight:800;
+}
+.hero h1{
+font-size:clamp(45px,7vw,78px);
+line-height:.98;
+letter-spacing:-4px;
+margin-top:20px;
+}
 .hero h1 span{color:#2997ff}
-.hero p{max-width:650px;margin-top:22px;color:#a5afbf;font-size:17px;line-height:1.7}
-.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.btn{
-display:inline-flex;align-items:center;justify-content:center;
-padding:14px 20px;border:1px solid #29384e;border-radius:14px;font-weight:800
+.hero p{
+max-width:650px;
+margin-top:22px;
+color:#9aa8ba;
+line-height:1.7;
 }
-.btn-blue{background:#2997ff;border-color:#2997ff}
+.hero-buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 20px;
+border-radius:14px;
+border:1px solid #29384e;
+font-weight:800;
+}
+.btn-blue{
+background:#2997ff;
+border-color:#2997ff;
+}
 .btn-dark{background:#101827}
 
-.info{max-width:1250px;margin:auto;padding:25px 20px 35px}
-.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.info-card,.panel{
-padding:22px;border:1px solid #202d41;border-radius:20px;
-background:linear-gradient(145deg,#111a29,#0b111d)
+/* GENEL */
+.section{
+max-width:1250px;
+margin:auto;
+padding:35px 20px;
 }
-.info-icon{font-size:28px;margin-bottom:8px}
-.info-card p,.muted{margin-top:6px;color:#8996a9;font-size:13px;line-height:1.6}
-
-.section{max-width:1250px;margin:auto;padding:30px 20px}
-.section-title{margin-bottom:20px}
-.section-title h2{font-size:36px;letter-spacing:-1.5px}
-.section-title p{margin-top:5px;color:#8290a5}
-
-.filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:24px}
-.filter{
-padding:9px 15px;border:1px solid #29384e;border-radius:30px;
-background:#0d1624;color:#9ca8ba;font-size:13px
+.section-title{
+margin-bottom:20px;
 }
-.filter.active,.filter:hover{border-color:#2997ff;background:#2997ff;color:#fff}
+.section-title h2{
+font-size:34px;
+}
+.section-title p{
+margin-top:6px;
+color:#8190a4;
+}
 
+.info-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+.info-card{
+padding:22px;
+border:1px solid #202d41;
+border-radius:20px;
+background:linear-gradient(145deg,#111a29,#0b111d);
+}
+.info-icon{
+font-size:28px;
+margin-bottom:8px;
+}
+.info-card p{
+color:#8795a8;
+font-size:13px;
+line-height:1.6;
+margin-top:7px;
+}
+
+/* KAMPANYA */
 .campaign{
-margin:10px 0 25px;padding:24px;
-border:1px solid #24415f;border-radius:24px;
-background:linear-gradient(135deg,#0b1625,#111e30)
+padding:25px;
+border:1px solid #254462;
+border-radius:23px;
+background:
+radial-gradient(circle at 90% 10%,rgba(41,151,255,.18),transparent 30%),
+linear-gradient(135deg,#0a1625,#111e30);
+margin-bottom:20px;
 }
-.campaign small{color:#68b9ff;font-weight:900;letter-spacing:1.5px}
-.campaign h2{margin:8px 0 5px}
-.campaign p{color:#92a3b8}
-.campaign-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:15px}
+.campaign small{
+color:#67baff;
+font-weight:900;
+letter-spacing:1.5px;
+}
+.campaign h2{
+margin-top:8px;
+}
+.campaign p{
+color:#8e9caf;
+margin-top:5px;
+}
+.campaign-row{
+display:flex;
+align-items:center;
+gap:10px;
+flex-wrap:wrap;
+margin-top:17px;
+}
 .timer{
-padding:10px 13px;border:1px solid #30465f;
-border-radius:11px;background:#07101c;font-weight:900
+padding:10px 13px;
+border-radius:11px;
+background:#07101b;
+border:1px solid #30445c;
+font-weight:900;
 }
 
+/* BİRLİKTE AL */
+.together-box{
+padding:23px;
+margin-bottom:22px;
+border:1px solid #263a52;
+border-radius:22px;
+background:linear-gradient(145deg,#0d1827,#09111d);
+}
+.together-box h2{
+margin-bottom:6px;
+}
+.together-box>p{
+color:#8997aa;
+font-size:13px;
+margin-bottom:17px;
+}
+.together-grid{
+display:grid;
+grid-template-columns:1fr 1fr auto;
+gap:10px;
+align-items:end;
+}
+.select-group label{
+display:block;
+font-size:11px;
+color:#8291a5;
+margin-bottom:6px;
+}
+.select-group select{
+width:100%;
+padding:13px;
+border-radius:11px;
+border:1px solid #2a3c53;
+background:#070e18;
+color:#fff;
+outline:none;
+}
+.together-button{
+height:46px;
+padding:0 17px;
+border:0;
+border-radius:11px;
+background:#2997ff;
+color:white;
+font-weight:900;
+}
+
+/* FİLTRE */
+.filters{
+display:flex;
+flex-wrap:wrap;
+gap:9px;
+margin-bottom:20px;
+}
+.filter{
+padding:9px 15px;
+border:1px solid #29384e;
+border-radius:30px;
+background:#0d1624;
+color:#9da9ba;
+}
+.filter.active,
+.filter:hover{
+background:#2997ff;
+border-color:#2997ff;
+color:white;
+}
+
+/* ÜRÜNLER */
 .grid{
-display:grid;grid-template-columns:repeat(4,1fr);gap:18px
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
 }
 .card{
-overflow:hidden;border:1px solid #202d41;border-radius:21px;
+overflow:hidden;
+border:1px solid #202d41;
+border-radius:21px;
 background:linear-gradient(145deg,#111a29,#0b111c);
-transition:.25s
+transition:.25s;
 }
 .card:hover{
-transform:translateY(-5px);border-color:#2997ff;
-box-shadow:0 18px 45px rgba(0,0,0,.3)
+transform:translateY(-5px);
+border-color:#2997ff;
 }
 .card-image{
-height:260px;position:relative;display:flex;
-align-items:center;justify-content:center;
-overflow:hidden;background:#fff
+height:260px;
+background:#fff;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
 }
 .card-image img{
-width:100%;height:100%;padding:8px;object-fit:contain;
-transition:.3s
+width:100%;
+height:100%;
+object-fit:contain;
+padding:8px;
 }
-.card:hover .card-image img{transform:scale(1.04)}
-
 .product-fav{
-position:absolute;right:10px;top:10px;z-index:5;
-width:38px;height:38px;border-radius:50%;
-border:1px solid #34475e;background:rgba(5,10,18,.9);
-color:#fff;font-size:19px
+position:absolute;
+top:10px;
+right:10px;
+z-index:5;
+width:38px;
+height:38px;
+border-radius:50%;
+border:1px solid #34475e;
+background:rgba(5,10,18,.9);
+color:white;
+font-size:20px;
 }
-.product-fav.active{color:#ff5d78;border-color:#ff5d78}
+.product-fav.active{
+color:#ff5b79;
+border-color:#ff5b79;
+}
 .stock{
-position:absolute;left:10px;bottom:10px;
-padding:6px 9px;border-radius:18px;
-background:rgba(5,12,20,.9);border:1px solid #294764;
-color:#8bd0ff;font-size:10px;font-weight:900
+position:absolute;
+left:10px;
+bottom:10px;
+padding:6px 9px;
+border-radius:18px;
+background:rgba(5,12,20,.9);
+border:1px solid #294764;
+color:#8bd0ff;
+font-size:10px;
+font-weight:900;
 }
-.card-content{padding:16px}
-.category{color:#5eb0ff;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
-.card h3{margin:5px 0 7px;font-size:17px}
-.description{min-height:40px;color:#8794a7;font-size:12px;line-height:1.5}
+.card-content{
+padding:16px;
+}
+.category{
+color:#5eb0ff;
+font-size:10px;
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:1px;
+}
+.card h3{
+margin:6px 0;
+font-size:17px;
+}
+.description{
+min-height:40px;
+color:#8794a7;
+font-size:12px;
+line-height:1.5;
+}
 .card-bottom{
-display:flex;align-items:center;justify-content:space-between;
-gap:8px;margin-top:15px
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:8px;
+margin-top:15px;
 }
-.price{font-size:20px;font-weight:900}
-.price small{color:#8794a7;font-size:11px}
+.price{
+font-size:20px;
+font-weight:900;
+}
+.price small{
+color:#8794a7;
+font-size:11px;
+}
 .inspect{
-padding:9px 12px;border:0;border-radius:11px;
-background:#2997ff;color:#fff;font-size:12px;font-weight:800
+padding:9px 12px;
+border:0;
+border-radius:11px;
+background:#2997ff;
+color:#fff;
+font-weight:800;
 }
 .whatsapp-small{
-width:100%;margin-top:9px;padding:10px;
-border:1px solid #24425e;border-radius:10px;
-background:#0b1928;color:#fff;font-weight:800
+width:100%;
+margin-top:9px;
+padding:10px;
+border:1px solid #24425e;
+border-radius:10px;
+background:#0b1928;
+color:#fff;
+font-weight:800;
 }
-.no-result{text-align:center;padding:60px;color:#8491a4;display:none}
+.no-result{
+display:none;
+padding:60px;
+text-align:center;
+color:#8390a4;
+}
 
-.tools{
-display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px
+/* 81 İL */
+.weather-section{
+background:#080e18;
+border-top:1px solid #172435;
+border-bottom:1px solid #172435;
+overflow:hidden;
+}
+.weather-title{
+max-width:1250px;
+margin:auto;
+padding:30px 20px 15px;
+}
+.weather-title h2{
+font-size:30px;
+}
+.weather-title p{
+color:#8290a4;
+margin-top:6px;
+font-size:13px;
+}
+.weather-track-wrap{
+overflow:hidden;
+padding:15px 0 30px;
+}
+.weather-track{
+display:flex;
+gap:12px;
+width:max-content;
+animation:weatherMove 75s linear infinite;
+}
+.weather-track:hover{
+animation-play-state:paused;
+}
+.weather-card{
+width:170px;
+min-height:115px;
+padding:15px;
+border:1px solid #26364c;
+border-radius:17px;
+background:linear-gradient(145deg,#101a29,#0a111c);
+flex-shrink:0;
+}
+.weather-city{
+font-weight:900;
+font-size:14px;
+}
+.weather-icon{
+font-size:27px;
+margin:8px 0;
+}
+.weather-temp{
+font-size:19px;
+font-weight:900;
+}
+.weather-desc{
+font-size:10px;
+color:#8190a4;
+margin-top:4px;
+}
+@keyframes weatherMove{
+from{transform:translateX(0)}
+to{transform:translateX(-50%)}
+}
+
+/* DASHBOARD */
+.dashboard-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+.panel{
+padding:22px;
+border:1px solid #202d41;
+border-radius:20px;
+background:linear-gradient(145deg,#111a29,#0b111d);
+}
+.currency{
+width:100%;
+border-collapse:collapse;
+margin-top:12px;
+}
+.currency td{
+padding:12px 2px;
+border-bottom:1px solid #202b3c;
+font-size:14px;
+}
+.currency td:last-child{
+text-align:right;
+font-weight:900;
+}
+.muted{
+color:#8491a4;
+font-size:13px;
+line-height:1.6;
+}
+
+/* ÖZELLİKLER */
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+.feature-card{
+padding:20px;
+border:1px solid #202d41;
+border-radius:18px;
+background:linear-gradient(145deg,#111a29,#0b111d);
+}
+.feature-card h3{
+margin-bottom:7px;
+}
+.feature-card p{
+color:#8996a9;
+font-size:13px;
+line-height:1.5;
 }
 .tool{
-padding:10px 13px;border:1px solid #263b56;
-background:#0d1725;color:#fff;border-radius:12px;font-weight:800
+padding:10px 13px;
+margin-top:12px;
+border:1px solid #263b56;
+background:#0d1725;
+color:white;
+border-radius:12px;
+font-weight:800;
 }
-.tool:hover{border-color:#2997ff;background:#12253b}
 
-.dashboard-grid{
-display:grid;grid-template-columns:1fr 1fr;gap:18px
-}
-.currency{width:100%;border-collapse:collapse}
-.currency td{
-padding:12px 2px;border-bottom:1px solid #202b3c;font-size:14px
-}
-.currency td:last-child{text-align:right;font-weight:900}
-
+/* ABOUT */
 .about{
-border-top:1px solid #182333;border-bottom:1px solid #182333;
-background:#080d16
+border-top:1px solid #182333;
+border-bottom:1px solid #182333;
+background:#080d16;
 }
 .about-inner{
-max-width:1250px;margin:auto;padding:70px 20px;
-display:grid;grid-template-columns:1.2fr .8fr;gap:30px
+max-width:1250px;
+margin:auto;
+padding:65px 20px;
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:30px;
 }
-.about h2{margin-bottom:12px;font-size:40px}
-.about p{max-width:680px;color:#929eaf;line-height:1.7}
-.about-list{display:grid;gap:8px;margin-top:20px;color:#bdc6d3}
+.about h2{
+font-size:40px;
+margin-bottom:12px;
+}
+.about p{
+color:#929eaf;
+line-height:1.7;
+}
+.about-list{
+display:grid;
+gap:8px;
+margin-top:20px;
+color:#bdc6d3;
+}
 
-footer{padding:45px 20px 25px;background:#050810}
-.footer{
-max-width:1250px;margin:auto;
-display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px
+/* FOOTER */
+footer{
+padding:45px 20px 25px;
+background:#050810;
 }
-.footer p,.footer a{display:block;margin:8px 0;color:#7f8c9f;font-size:14px}
+.footer{
+max-width:1250px;
+margin:auto;
+display:grid;
+grid-template-columns:1.4fr 1fr 1fr;
+gap:30px;
+}
+.footer p,
+.footer a{
+display:block;
+margin:8px 0;
+color:#7f8c9f;
+font-size:14px;
+}
 .footer a:hover{color:#2997ff}
 .copy{
-max-width:1250px;margin:30px auto 0;padding-top:20px;
-border-top:1px solid #172131;color:#566376;font-size:11px
+max-width:1250px;
+margin:30px auto 0;
+padding-top:20px;
+border-top:1px solid #172131;
+color:#566376;
+font-size:11px;
 }
 
+/* SABİT BUTONLAR */
 .whatsapp{
-position:fixed;right:20px;bottom:20px;z-index:2000;
-width:60px;height:60px;border-radius:50%;
-display:flex;align-items:center;justify-content:center;
-background:#25d366;font-size:28px;
-box-shadow:0 10px 30px rgba(0,0,0,.35)
+position:fixed;
+right:20px;
+bottom:20px;
+z-index:2000;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#25d366;
+font-size:28px;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
 .support{
-position:fixed;right:20px;bottom:92px;z-index:1999;
-padding:10px 15px;border:1px solid #2c3c53;border-radius:30px;
-background:#101a29;color:#fff;font-size:12px
+position:fixed;
+right:20px;
+bottom:92px;
+z-index:1999;
+padding:10px 15px;
+border:1px solid #2c3c53;
+border-radius:30px;
+background:#101a29;
+color:#fff;
+font-size:12px;
 }
 
+/* MODAL */
 .modal{
-position:fixed;inset:0;z-index:3000;display:none;
-align-items:center;justify-content:center;padding:15px;
-background:rgba(0,0,0,.78);backdrop-filter:blur(10px)
+position:fixed;
+inset:0;
+z-index:3000;
+display:none;
+align-items:center;
+justify-content:center;
+padding:15px;
+background:rgba(0,0,0,.78);
+backdrop-filter:blur(10px);
 }
 .modal.show{display:flex}
 .modal-box{
-position:relative;width:100%;max-width:700px;max-height:92vh;
-overflow:auto;padding:24px;border:1px solid #28384f;
-border-radius:24px;background:#0d1523
+position:relative;
+width:100%;
+max-width:700px;
+max-height:92vh;
+overflow:auto;
+padding:24px;
+border:1px solid #28384f;
+border-radius:24px;
+background:#0d1523;
 }
 .close{
-position:absolute;top:14px;right:15px;width:36px;height:36px;
-border:1px solid #304057;border-radius:50%;
-background:#111b2b;color:#fff;font-size:20px
+position:absolute;
+right:15px;
+top:14px;
+width:36px;
+height:36px;
+border:1px solid #304057;
+border-radius:50%;
+background:#111b2b;
+color:#fff;
+font-size:20px;
 }
-.modal-product{display:grid;grid-template-columns:190px 1fr;gap:20px;margin-bottom:20px}
+.modal-product{
+display:grid;
+grid-template-columns:190px 1fr;
+gap:20px;
+margin-bottom:20px;
+}
 .modal-product img{
-width:190px;height:190px;object-fit:contain;
-border-radius:15px;background:#fff;cursor:zoom-in
+width:190px;
+height:190px;
+object-fit:contain;
+background:#fff;
+border-radius:15px;
 }
-.modal h2{margin-bottom:7px;font-size:24px}
-.modal-price{margin-bottom:10px;color:#55adff;font-size:23px;font-weight:900}
-.field{margin-top:14px}
-.field label{display:block;margin-bottom:6px;color:#9ba7b9;font-size:12px}
-.field input,.field select{
-width:100%;padding:13px;outline:0;
-border:1px solid #2a3a50;border-radius:11px;
-background:#080e18;color:#fff
+.modal h2{margin-bottom:7px}
+.modal-price{
+font-size:23px;
+font-weight:900;
+color:#55adff;
+margin-bottom:10px;
 }
-.modal-buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.field{
+margin-top:14px;
+}
+.field label{
+display:block;
+margin-bottom:6px;
+color:#9ba7b9;
+font-size:12px;
+}
+.field input,
+.field select{
+width:100%;
+padding:13px;
+border:1px solid #2a3a50;
+border-radius:11px;
+background:#080e18;
+color:#fff;
+outline:none;
+}
+.modal-buttons{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin-top:18px;
+}
 .modal-button{
-padding:14px;border:0;border-radius:13px;font-weight:900
+padding:14px;
+border:0;
+border-radius:13px;
+font-weight:900;
 }
-.add-cart{background:#18263a;color:#fff}
-.whatsapp-order,.checkout{background:#25d366;color:#fff}
+.add-cart{
+background:#18263a;
+color:white;
+}
+.whatsapp-order,
+.checkout{
+background:#25d366;
+color:white;
+}
 
-.cart-list{display:grid;gap:10px;margin-top:18px}
+/* SEPET */
+.cart-list{
+display:grid;
+gap:10px;
+margin-top:18px;
+}
 .cart-item{
-display:flex;align-items:center;gap:12px;padding:10px;
-border:1px solid #202d40;border-radius:13px;background:#09101b
+display:flex;
+align-items:center;
+gap:12px;
+padding:10px;
+border:1px solid #202d40;
+border-radius:13px;
+background:#09101b;
 }
 .cart-item img{
-width:65px;height:65px;object-fit:contain;
-border-radius:9px;background:#fff
+width:65px;
+height:65px;
+object-fit:contain;
+background:#fff;
+border-radius:9px;
 }
 .cart-info{flex:1}
-.cart-info strong{display:block;font-size:13px}
-.cart-info small{color:#7d899c;line-height:1.5}
+.cart-info strong{
+display:block;
+font-size:13px;
+}
+.cart-info small{
+color:#7d899c;
+line-height:1.5;
+}
 .remove{
-padding:8px;border:0;border-radius:8px;
-background:#29161a;color:#ff6977
+padding:8px;
+border:0;
+border-radius:8px;
+background:#29161a;
+color:#ff6977;
 }
 .total{
-display:flex;justify-content:space-between;margin-top:18px;
-padding-top:17px;border-top:1px solid #273448;
-font-size:20px;font-weight:900
+display:flex;
+justify-content:space-between;
+margin-top:18px;
+padding-top:17px;
+border-top:1px solid #273448;
+font-size:20px;
+font-weight:900;
 }
-.checkout{width:100%;margin-top:14px;padding:14px;border:0;border-radius:13px;font-weight:900}
+.checkout{
+width:100%;
+margin-top:14px;
+padding:14px;
+border:0;
+border-radius:13px;
+font-weight:900;
+}
 
-.feature-grid{
-display:grid;grid-template-columns:repeat(3,1fr);gap:15px
-}
-.feature-card{
-padding:20px;border:1px solid #202d41;border-radius:18px;
-background:linear-gradient(145deg,#111a29,#0b111d)
-}
-.feature-card h3{margin-bottom:7px}
-.feature-card p{color:#8996a9;font-size:13px;line-height:1.5}
-
+/* YORUM */
 .review{
-padding:14px;border:1px solid #26364d;border-radius:15px;
-background:#09111e;margin-top:10px
+padding:14px;
+border:1px solid #26364d;
+border-radius:15px;
+background:#09111e;
+margin-top:10px;
 }
-.stars{color:#ffd84d;font-size:18px}
-.review small{color:#7e8b9e}
-
-.together{
-display:grid;grid-template-columns:1fr 1fr;gap:12px
+.stars{
+color:#ffd84d;
+font-size:18px;
 }
-.together select{width:100%}
 
+/* MOBİL */
 @media(max-width:1000px){
 .grid{grid-template-columns:repeat(3,1fr)}
 }
+
 @media(max-width:760px){
-.nav{flex-wrap:wrap}
-.logo{font-size:24px}
-.search{order:3;flex-basis:100%}
-.info-grid,.dashboard-grid,.about-inner,.footer,.feature-grid{grid-template-columns:1fr}
-.grid{grid-template-columns:repeat(2,1fr);gap:12px}
-.card-image{height:190px}
-.modal-product{grid-template-columns:1fr}
-.modal-product img{width:100%;height:230px}
+.info-grid,
+.dashboard-grid,
+.about-inner,
+.footer,
+.feature-grid{
+grid-template-columns:1fr;
 }
+.grid{
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+.card-image{
+height:190px;
+}
+.together-grid{
+grid-template-columns:1fr;
+}
+.modal-product{
+grid-template-columns:1fr;
+}
+.modal-product img{
+width:100%;
+height:230px;
+}
+}
+
 @media(max-width:430px){
-.hero h1{font-size:39px}
-.card-image{height:165px}
-.section-title h2{font-size:29px}
-.together{grid-template-columns:1fr}
+.hero h1{font-size:40px}
+.grid{grid-template-columns:1fr}
+.card-image{height:230px}
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
 <div class="nav">
+
 <a href="#" class="logo">
 Tekno<span>Biz</span>
 <small>TEKNOLOJİ & AKSESUAR</small>
 </a>
 
 <div class="search">
-<input id="search" type="text" placeholder="Ürün ara... örn: kılıf, kablo, adaptör">
+<input id="search" type="text" placeholder="Ürün ara...">
 <div class="search-icon">⌕</div>
 </div>
 
 <button class="cart-button" onclick="openCart()">
 🛒 Sepet <span id="cartCount">0</span>
 </button>
+
 </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
 <div class="hero-inner">
-<div class="badge-top">✦ 2016'dan beri TeknoBiz</div>
+
+<div class="badge">✦ 2016'dan beri TeknoBiz</div>
 
 <h1>
 Teknolojiye<br>
@@ -361,12 +867,17 @@ Telefon kılıfları, şarj ürünleri ve teknoloji aksesuarları.
 
 <div class="hero-buttons">
 <a href="#urunler" class="btn btn-blue">Ürünleri İncele</a>
-<a href="https://wa.me/905059999009" target="_blank" class="btn btn-dark">💬 WhatsApp</a>
+<a href="https://wa.me/905059999009" target="_blank" class="btn btn-dark">
+💬 WhatsApp
+</a>
 </div>
+
 </div>
 </section>
 
-<section class="info">
+<!-- BİLGİ KARTLARI -->
+<section class="section">
+
 <div class="info-grid">
 
 <div class="info-card">
@@ -378,61 +889,108 @@ Telefon kılıfları, şarj ürünleri ve teknoloji aksesuarları.
 <div class="info-card">
 <div class="info-icon">✨</div>
 <h3>Premium Ürünler</h3>
-<p>Şık, modern ve günlük kullanıma uygun ürün seçenekleri.</p>
+<p>Şık ve günlük kullanıma uygun teknoloji ürünleri.</p>
 </div>
 
 <div class="info-card">
 <div class="info-icon">💬</div>
 <h3>WhatsApp Destek</h3>
-<p>Ürün hakkında bilgi almak için doğrudan bize ulaşabilirsiniz.</p>
+<p>Ürünler hakkında hızlıca bilgi alın.</p>
 </div>
 
 </div>
+
 </section>
 
-<section class="section">
-<div class="section-title">
-<h2>🛍️ TeknoBiz Ürünleri</h2>
-<p>Ürünlerimizi hızlıca keşfet.</p>
-</div>
-<div id="miniProducts" class="tools"></div>
-</section>
-
+<!-- ÜRÜNLER -->
 <section class="section" id="urunler">
 
 <div class="section-title">
-<h2>Ürünler</h2>
-<p>TeknoBiz ürün seçkisini keşfet.</p>
+<h2>🛍️ Ürünler</h2>
+<p>TeknoBiz ürünlerini keşfet.</p>
 </div>
 
-<div class="tools">
-<button class="tool" onclick="showFavorites()">❤️ Favoriler <span id="favCount">0</span></button>
-<button class="tool" onclick="showCalculator()">💸 İndirim Hesapla</button>
-<button class="tool" onclick="showCoupon()">🎟️ Kupon</button>
-<button class="tool" onclick="showTracking()">📦 Sipariş Takibi</button>
-</div>
-
-<div class="filters">
-<button class="filter active" data-filter="all">Tümü</button>
-<button class="filter" data-filter="kilif">📱 Kılıflar</button>
-<button class="filter" data-filter="koruma">🛡️ Koruma</button>
-<button class="filter" data-filter="sarj">🔌 Şarj</button>
-<button class="filter" data-filter="aksesuar">✨ Aksesuar</button>
-</div>
-
+<!-- KAMPANYA -->
 <div class="campaign">
+
 <small>TEKNOBİZ • BUGÜNÜN FIRSATI</small>
+
 <h2>🔥 Kampanyalı Ürünler</h2>
-<p>Favorilerine ekle, WhatsApp'tan sor veya hemen sepete ekle.</p>
+
+<p>
+Seçili ürünlerde fırsatları kaçırma.
+</p>
 
 <div class="campaign-row">
-<span class="timer">⏳ Kampanya: <b id="campaignTimer">23:59:59</b></span>
+
+<span class="timer">
+⏳ Kampanya:
+<b id="campaignTimer">23:59:59</b>
+</span>
+
 <button class="tool" onclick="document.getElementById('productGrid').scrollIntoView({behavior:'smooth'})">
 Ürünlere Git ↓
 </button>
-</div>
+
 </div>
 
+</div>
+
+<!-- BİRLİKTE AL -->
+<div class="together-box">
+
+<h2>🛍️ Birlikte Al</h2>
+
+<p>
+İki ürünü seç, ikisini tek seferde sepete ekle.
+</p>
+
+<div class="together-grid">
+
+<div class="select-group">
+<label>1. Ürün</label>
+<select id="together1"></select>
+</div>
+
+<div class="select-group">
+<label>2. Ürün</label>
+<select id="together2"></select>
+</div>
+
+<button class="together-button" onclick="addTogether()">
+🛒 Birlikte Al
+</button>
+
+</div>
+
+</div>
+
+<!-- FİLTRELER -->
+<div class="filters">
+
+<button class="filter active" data-filter="all">
+Tümü
+</button>
+
+<button class="filter" data-filter="kilif">
+📱 Kılıflar
+</button>
+
+<button class="filter" data-filter="koruma">
+🛡️ Koruma
+</button>
+
+<button class="filter" data-filter="sarj">
+🔌 Şarj
+</button>
+
+<button class="filter" data-filter="aksesuar">
+✨ Aksesuar
+</button>
+
+</div>
+
+<!-- ÜRÜN GRID -->
 <div class="grid" id="productGrid"></div>
 
 <div class="no-result" id="noResult">
@@ -441,109 +999,184 @@ Telefon kılıfları, şarj ürünleri ve teknoloji aksesuarları.
 
 </section>
 
+<!-- 81 İL HAVA DURUMU -->
+<section class="weather-section">
+
+<div class="weather-title">
+
+<h2>🇹🇷 81 İl Hava Durumu</h2>
+
+<p>
+Türkiye'nin 81 ilini yatay olarak inceleyebilirsiniz.
+Kartların üzerine gelerek hareketi durdurabilirsiniz.
+</p>
+
+</div>
+
+<div class="weather-track-wrap">
+
+<div class="weather-track" id="weatherTrack"></div>
+
+</div>
+
+</section>
+
+<!-- ÖZELLİKLER -->
 <section class="section">
 
 <div class="section-title">
 <h2>⭐ TeknoBiz Özellikleri</h2>
-<p>Müşterilerimiz için daha kolay alışveriş.</p>
+<p>Alışveriş deneyimini kolaylaştıran özellikler.</p>
 </div>
 
 <div class="feature-grid">
 
 <div class="feature-card">
 <h3>🌟 Günün Ürünü</h3>
-<p>Her gün seçilen ürünü öne çıkaran özel alan.</p>
-<button class="tool" style="margin-top:12px" onclick="dailyProduct()">Günün Ürününü Göster</button>
+<p>Bugünün öne çıkan ürününü görüntüle.</p>
+<button class="tool" onclick="dailyProduct()">Günün Ürününü Göster</button>
 </div>
 
 <div class="feature-card">
 <h3>🎁 Sürpriz Kampanya</h3>
-<p>Sürpriz indirim hakkını kontrol et.</p>
-<button class="tool" style="margin-top:12px" onclick="surpriseCampaign()">Sürprizi Aç</button>
+<p>Sürpriz indirim fırsatını keşfet.</p>
+<button class="tool" onclick="surpriseCampaign()">Sürprizi Aç</button>
 </div>
 
 <div class="feature-card">
 <h3>🔥 Çok Satanlar</h3>
-<p>TeknoBiz'in öne çıkan ürünleri.</p>
-<button class="tool" style="margin-top:12px" onclick="bestSellers()">Çok Satanları Göster</button>
+<p>En çok ilgi gören ürünleri görüntüle.</p>
+<button class="tool" onclick="bestSellers()">Çok Satanları Göster</button>
 </div>
 
 <div class="feature-card">
-<h3>🛍️ Birlikte Al</h3>
-<p>İki ürünü seç ve birlikte sepete ekle.</p>
-
-<div class="together" style="margin-top:12px">
-<select id="together1"></select>
-<select id="together2"></select>
-</div>
-
-<button class="tool" style="margin-top:12px" onclick="addTogether()">
-İkisini de Sepete Ekle
-</button>
+<h3>❤️ Favoriler</h3>
+<p>Beğendiğin ürünleri favorilerine ekle.</p>
+<button class="tool" onclick="showFavorites()">Favoriler</button>
 </div>
 
 <div class="feature-card">
-<h3>💬 Müşteri Yorumları</h3>
+<h3>💸 İndirim Hesaplayıcı</h3>
+<p>İndirimli ürün fiyatını hesapla.</p>
+<button class="tool" onclick="showCalculator()">Hesapla</button>
+</div>
+
+<div class="feature-card">
+<h3>🎟️ Kupon Sistemi</h3>
+<p>TeknoBiz kuponlarını kontrol et.</p>
+<button class="tool" onclick="showCoupon()">Kupon Kullan</button>
+</div>
+
+<div class="feature-card">
+<h3>📦 Sipariş Takibi</h3>
+<p>Sipariş numaranla durumunu kontrol et.</p>
+<button class="tool" onclick="showTracking()">Sipariş Takip</button>
+</div>
+
+<div class="feature-card">
+<h3>⭐ Müşteri Yorumları</h3>
 <div id="reviews"></div>
-<button class="tool" style="margin-top:12px" onclick="addReview()">Yorum Ekle</button>
+<button class="tool" onclick="addReview()">Yorum Ekle</button>
 </div>
 
 <div class="feature-card">
 <h3>📲 WhatsApp Sipariş</h3>
-<p>Ürünü seçip doğrudan TeknoBiz WhatsApp hattına gönder.</p>
-<button class="tool" style="margin-top:12px" onclick="window.open('https://wa.me/905059999009','_blank')">
+<p>TeknoBiz'e doğrudan WhatsApp üzerinden ulaş.</p>
+<button class="tool" onclick="window.open('https://wa.me/905059999009','_blank')">
 WhatsApp'a Git
 </button>
 </div>
 
 </div>
+
 </section>
 
+<!-- KUR + BUCak HAVA -->
 <section class="section">
+
 <div class="dashboard-grid">
 
 <div class="panel">
+
 <h3>💱 Güncel Kur</h3>
+
 <table class="currency">
-<tr><td>🇺🇸 1 USD</td><td id="usd">Yükleniyor...</td></tr>
-<tr><td>🇪🇺 1 EUR</td><td id="eur">Yükleniyor...</td></tr>
-<tr><td>🇬🇧 1 GBP</td><td id="gbp">Yükleniyor...</td></tr>
+
+<tr>
+<td>🇺🇸 1 USD</td>
+<td id="usd">Yükleniyor...</td>
+</tr>
+
+<tr>
+<td>🇪🇺 1 EUR</td>
+<td id="eur">Yükleniyor...</td>
+</tr>
+
+<tr>
+<td>🇬🇧 1 GBP</td>
+<td id="gbp">Yükleniyor...</td>
+</tr>
+
 </table>
-<p class="muted">Kur bilgisi internet üzerinden güncellenmektedir.</p>
+
+<p class="muted">
+Kur bilgisi internet üzerinden alınmaktadır.
+</p>
+
 </div>
 
 <div class="panel">
+
 <h3>🌤️ Bucak Hava Durumu</h3>
-<div style="font-size:40px;margin:15px 0" id="weatherIcon">🌤️</div>
-<div style="font-size:38px;font-weight:900" id="temperature">--°</div>
-<div class="muted" id="weatherText">Yükleniyor...</div>
+
+<div id="weatherIcon" style="font-size:42px;margin:15px 0">
+🌤️
+</div>
+
+<div id="temperature" style="font-size:38px;font-weight:900">
+--°
+</div>
+
+<div id="weatherText" class="muted">
+Yükleniyor...
 </div>
 
 </div>
+
+</div>
+
 </section>
 
+<!-- HAKKIMIZDA -->
 <section class="about">
+
 <div class="about-inner">
 
 <div>
+
 <h2>TeknoBiz</h2>
 
 <p>
 2016'dan beri teknoloji ve telefon aksesuarları alanında hizmet veriyoruz.
-İşimizi temiz yapıyoruz ve müşterilerimize ihtiyaçlarına uygun ürünleri
-sunmayı amaçlıyoruz.
+İşimizi temiz yapıyoruz. Müşterilerimize kaliteli ve kullanışlı ürünleri
+uygun şekilde sunmayı amaçlıyoruz.
 </p>
 
 <div class="about-list">
+
 <div>✓ 2016'dan beri hizmet</div>
 <div>✓ Telefon kılıfları ve aksesuarlar</div>
 <div>✓ WhatsApp iletişim</div>
 <div>✓ Bucak / Burdur</div>
+
 </div>
+
 </div>
 
 <div class="info-card">
+
 <h3>📍 Mağaza</h3>
+
 <p>
 Süleyman Demirel Bulvarı No:15<br>
 Bucak / Burdur
@@ -554,33 +1187,66 @@ Bucak / Burdur
 Pazar: Kapalı
 </p>
 
-<a href="tel:05059999009" class="btn btn-blue" style="width:100%;margin-top:18px">
+<a
+href="tel:05059999009"
+class="btn btn-blue"
+style="width:100%;margin-top:18px">
 📞 0505 999 90 09
 </a>
+
 </div>
 
 </div>
+
 </section>
 
+<!-- FOOTER -->
 <footer>
+
 <div class="footer">
 
 <div>
-<div class="logo">Tekno<span>Biz</span></div>
-<p>Teknoloji & aksesuarın adresi.</p>
+
+<div class="logo">
+Tekno<span>Biz</span>
+</div>
+
+<p>
+Teknoloji & aksesuarın adresi.
+</p>
+
 </div>
 
 <div>
+
 <h3>İletişim</h3>
-<a href="tel:05059999009">📞 0505 999 90 09</a>
-<a href="mailto:teknobiz15@gmail.com">✉️ teknobiz15@gmail.com</a>
-<a href="https://wa.me/905059999009" target="_blank">💬 WhatsApp</a>
+
+<a href="tel:05059999009">
+📞 0505 999 90 09
+</a>
+
+<a href="mailto:teknobiz15@gmail.com">
+✉️ teknobiz15@gmail.com
+</a>
+
+<a href="https://wa.me/905059999009" target="_blank">
+💬 WhatsApp
+</a>
+
 </div>
 
 <div>
+
 <h3>Sosyal Medya</h3>
-<a href="https://instagram.com/Teknobiz7" target="_blank">📸 Instagram: Teknobiz7</a>
-<a href="https://facebook.com/bucakteknobiz15" target="_blank">👍 Facebook: bucakteknobiz15</a>
+
+<a href="https://instagram.com/Teknobiz7" target="_blank">
+📸 Instagram: Teknobiz7
+</a>
+
+<a href="https://facebook.com/bucakteknobiz15" target="_blank">
+👍 Facebook: bucakteknobiz15
+</a>
+
 </div>
 
 </div>
@@ -588,70 +1254,109 @@ Pazar: Kapalı
 <div class="copy">
 © 2016 - 2026 TeknoBiz. Tüm hakları saklıdır.
 </div>
+
 </footer>
 
-<button class="support" onclick="openModal('supportModal')">💬 Destek</button>
+<!-- WHATSAPP -->
+<a
+class="whatsapp"
+href="https://wa.me/905059999009"
+target="_blank">
+☎
+</a>
 
-<a class="whatsapp" href="https://wa.me/905059999009" target="_blank">☎</a>
+<button class="support" onclick="openModal('supportModal')">
+💬 Destek
+</button>
 
-<!-- ÜRÜN MODALI -->
+<!-- ÜRÜN MODAL -->
 <div class="modal" id="productModal">
+
 <div class="modal-box">
 
-<button class="close" onclick="closeModal('productModal')">×</button>
+<button class="close" onclick="closeModal('productModal')">
+×
+</button>
 
 <div class="modal-product">
+
 <img id="modalImage" src="" alt="Ürün">
 
 <div>
+
 <h2 id="modalTitle"></h2>
+
 <div class="modal-price" id="modalPrice"></div>
 
 <p class="muted">
-Model ve renk seçeneklerini belirleyerek ürünü sepete ekleyebilir
-veya WhatsApp üzerinden sipariş oluşturabilirsiniz.
+Model ve renk seçeneklerini belirleyerek ürünü sepete ekleyebilirsiniz.
 </p>
+
 </div>
+
 </div>
 
 <div id="options"></div>
 
 <div class="field">
+
 <label>Ad Soyad</label>
-<input id="customerName" placeholder="Adınız Soyadınız">
+
+<input
+id="customerName"
+placeholder="Adınız Soyadınız">
+
 </div>
 
 <div class="field">
+
 <label>Telefon</label>
-<input id="customerPhone" placeholder="05xx xxx xx xx">
+
+<input
+id="customerPhone"
+placeholder="05xx xxx xx xx">
+
 </div>
 
 <div class="modal-buttons">
-<button class="modal-button add-cart" onclick="addSelectedToCart()">
+
+<button class="modal-button add-cart"
+onclick="addSelectedToCart()">
 🛒 Sepete Ekle
 </button>
 
-<button class="modal-button whatsapp-order" onclick="whatsappProduct()">
+<button class="modal-button whatsapp-order"
+onclick="whatsappProduct()">
 💬 WhatsApp
 </button>
+
 </div>
 
 </div>
+
 </div>
 
-<!-- SEPET -->
+<!-- SEPET MODAL -->
 <div class="modal" id="cartModal">
+
 <div class="modal-box">
 
-<button class="close" onclick="closeModal('cartModal')">×</button>
+<button class="close" onclick="closeModal('cartModal')">
+×
+</button>
 
 <h2>🛒 Sepetim</h2>
 
 <div class="cart-list" id="cartList"></div>
 
 <div class="total">
+
 <span>Toplam</span>
-<span id="cartTotal">0 TL</span>
+
+<span id="cartTotal">
+0 TL
+</span>
+
 </div>
 
 <button class="checkout" onclick="whatsappCart()">
@@ -659,38 +1364,45 @@ veya WhatsApp üzerinden sipariş oluşturabilirsiniz.
 </button>
 
 </div>
+
 </div>
 
 <!-- DESTEK -->
 <div class="modal" id="supportModal">
+
 <div class="modal-box">
 
-<button class="close" onclick="closeModal('supportModal')">×</button>
+<button class="close" onclick="closeModal('supportModal')">
+×
+</button>
 
 <h2>💬 TeknoBiz Destek</h2>
 
-<p class="muted" style="margin-top:10px">
-Merhaba 👋 Ürünler ve siparişler hakkında bilgi almak için
-WhatsApp üzerinden bizimle iletişime geçebilirsiniz.
+<p class="muted" style="margin-top:12px">
+Ürünler ve siparişler hakkında bilgi almak için
+WhatsApp üzerinden bize ulaşabilirsiniz.
 </p>
 
-<div class="info-card" style="margin-top:20px">
-<h3>TeknoBiz Destek</h3>
-<p>
-Ürün modeli, renk, fiyat ve sipariş konusunda yardımcı oluyoruz.
-</p>
-</div>
-
-<a href="https://wa.me/905059999009" target="_blank"
-class="checkout" style="display:block;text-align:center">
+<a
+href="https://wa.me/905059999009"
+target="_blank"
+class="checkout"
+style="display:block;text-align:center">
 💬 WhatsApp'a Git
 </a>
 
 </div>
+
 </div>
 
 <script>
+
+/* =========================================================
+   ÜRÜNLER
+   ========================================================= */
+
 const PRODUCTS=[
+
 {
 id:1,
 name:"Guess 4G iPhone Kılıfı",
@@ -700,6 +1412,7 @@ desc:"Premium Guess 4G tasarım iPhone kılıfı.",
 image:"https://casestore.bg/cdn/img/products/97871/case-guess-4g-big-4g-classic-logo-for-iphone-17-pro-black-gold-68cadf90e87c8.jpeg?height=800&v=1777547965&width=800",
 models:true
 },
+
 {
 id:2,
 name:"Şeffaf MagSafe Uyumlu iPhone Kılıfı",
@@ -709,16 +1422,25 @@ desc:"Şeffaf tasarım ve MagSafe uyumluluğu.",
 image:"https://myproduct.lk/uploads/products/1671986755572-for-magsafe-magnetic-wireless-charging-case-for-iphone.jpg",
 models:true
 },
+
 {
 id:3,
 name:"Tek Renk iPhone Kılıfı",
 price:650,
 category:"kilif",
-desc:"Sade ve şık tek renk silikon iPhone kılıfı.",
+desc:"Sade ve şık tek renk iPhone kılıfı.",
 image:"https://down-br.img.susercontent.com/file/sg-11134201-822wy-mo5w6qqjk35wba",
 models:true,
-colors:["Lacivert","Siyah","Beyaz","Kırmızı","Mor","Yeşil"]
+colors:[
+"Lacivert",
+"Siyah",
+"Beyaz",
+"Kırmızı",
+"Mor",
+"Yeşil"
+]
 },
+
 {
 id:4,
 name:"Taşlı iPhone Kılıfı",
@@ -728,6 +1450,7 @@ desc:"Kristal taş detaylı şık iPhone kılıfı.",
 image:"https://justandbest.com/cdn/shop/files/iphone14promaxdiamondscover_7b2c7594-950e-4a74-81df-a73d57c7e865.webp?v=1721885752&width=1024",
 models:true
 },
+
 {
 id:5,
 name:"Karbon iPhone Kılıfı",
@@ -737,6 +1460,7 @@ desc:"Karbon fiber görünüm ve premium tasarım.",
 image:"https://www.simplycarbonfiber.com/cdn/shop/products/iphone-15-pro-max-real-carbon-fiber-case-classic-series-apple-phone-case-simply-carbon-fiber-471587.jpg?v=1694633851&width=900",
 models:true
 },
+
 {
 id:6,
 name:"Anti Statik Kırılmaz Cam",
@@ -746,6 +1470,7 @@ desc:"Telefon ekranı için koruyucu ekran camı.",
 image:"https://shoplineimg.com/63c7575b600b0a0044c2edac/6458ae4a209e1b000e69600a/800x.png",
 models:true
 },
+
 {
 id:7,
 name:"MagSafe Uyumlu Cüzdan",
@@ -754,6 +1479,7 @@ category:"aksesuar",
 desc:"MagSafe uyumlu pratik kartlık.",
 image:"https://telesalon.pl/hpeciai/ec9c80d567dd33b3a1ea1a6322747a51/pol_pl_Portfel-Apple-Leather-Wallet-iPhone-MagSafe-brazowy-Saddle-Brown-11433_5.jpg"
 },
+
 {
 id:8,
 name:"Işıklı Makyaj Aynası",
@@ -762,6 +1488,7 @@ category:"aksesuar",
 desc:"LED aydınlatmalı masaüstü makyaj aynası.",
 image:"https://pursonicusa.com/cdn/shop/products/PURSONICTM16HIRES6_1024x1024.jpg?v=1659988782"
 },
+
 {
 id:9,
 name:"Aromatik Difüzör",
@@ -770,6 +1497,7 @@ category:"aksesuar",
 desc:"Ortam için aromatik difüzör.",
 image:"https://i.ebayimg.com/thumbs/images/g/kyoAAeSwNRdqooUT/s-l500.jpg"
 },
+
 {
 id:10,
 name:"Apple 20W USB-C Güç Adaptörü",
@@ -778,6 +1506,7 @@ category:"sarj",
 desc:"USB-C hızlı şarj güç adaptörü.",
 image:"https://i.ebayimg.com/images/g/yyUAAOSwF61mVQwr/s-l400.jpg"
 },
+
 {
 id:11,
 name:"USB-C - Lightning Kablosu 1 m",
@@ -786,6 +1515,7 @@ category:"sarj",
 desc:"1 metre USB-C - Lightning kablosu.",
 image:"https://images.mobilefun.co.uk/graphics/productgalleries/86581/a.jpg"
 },
+
 {
 id:12,
 name:"USB-C - Lightning Kablosu 2 m",
@@ -794,6 +1524,7 @@ category:"sarj",
 desc:"2 metre USB-C - Lightning kablosu.",
 image:"https://a.allegroimg.com/s512/119a31/76de576b4403b2dfcd34262a80cc/Kabel-Apple-USB-typ-C-Apple-Lightning-2-m-bialy"
 },
+
 {
 id:13,
 name:"USB-C - Lightning Adaptörü",
@@ -802,224 +1533,510 @@ category:"sarj",
 desc:"USB-C ve Lightning bağlantı adaptörü.",
 image:"https://cf.shopee.tw/file/tw-11134207-7r98w-lx20iecbl3xs3a"
 }
+
 ];
+
+
+/* =========================================================
+   TELEFON MODELLERİ
+   ========================================================= */
+
+const models=[
+
+"iPhone 11",
+"iPhone 11 Pro",
+"iPhone 11 Pro Max",
+
+"iPhone 12",
+"iPhone 12 mini",
+"iPhone 12 Pro",
+"iPhone 12 Pro Max",
+
+"iPhone 13",
+"iPhone 13 mini",
+"iPhone 13 Pro",
+"iPhone 13 Pro Max",
+
+"iPhone 14",
+"iPhone 14 Plus",
+"iPhone 14 Pro",
+"iPhone 14 Pro Max",
+
+"iPhone 15",
+"iPhone 15 Plus",
+"iPhone 15 Pro",
+"iPhone 15 Pro Max",
+
+"iPhone 16",
+"iPhone 16 Plus",
+"iPhone 16 Pro",
+"iPhone 16 Pro Max",
+
+"iPhone 17",
+"iPhone 17 Air",
+"iPhone 17 Pro",
+"iPhone 17 Pro Max",
+
+"iPhone 18",
+"iPhone 18 Pro",
+"iPhone 18 Pro Max",
+
+"Samsung Galaxy S24",
+"Samsung Galaxy S24 Plus",
+"Samsung Galaxy S24 Ultra",
+
+"Samsung Galaxy S25",
+"Samsung Galaxy S25 Plus",
+"Samsung Galaxy S25 Ultra"
+
+];
+
+
+/* =========================================================
+   DEĞİŞKENLER
+   ========================================================= */
 
 let activeFilter="all";
 let searchText="";
 let selectedProduct=null;
 let cart=[];
-let favorites=JSON.parse(localStorage.getItem("teknobiz_favorites_v1")||"[]");
 
-const models=[
-"iPhone 11","iPhone 11 Pro","iPhone 11 Pro Max",
-"iPhone 12","iPhone 12 mini","iPhone 12 Pro","iPhone 12 Pro Max",
-"iPhone 13","iPhone 13 mini","iPhone 13 Pro","iPhone 13 Pro Max",
-"iPhone 14","iPhone 14 Plus","iPhone 14 Pro","iPhone 14 Pro Max",
-"iPhone 15","iPhone 15 Plus","iPhone 15 Pro","iPhone 15 Pro Max",
-"iPhone 16","iPhone 16 Plus","iPhone 16 Pro","iPhone 16 Pro Max",
-"iPhone 17","iPhone 17 Air","iPhone 17 Pro","iPhone 17 Pro Max",
-"iPhone 18","iPhone 18 Pro","iPhone 18 Pro Max",
-"Samsung Galaxy S24","Samsung Galaxy S24 Plus","Samsung Galaxy S24 Ultra",
-"Samsung Galaxy S25","Samsung Galaxy S25 Plus","Samsung Galaxy S25 Ultra"
-];
+let favorites=JSON.parse(
+localStorage.getItem("teknobiz_favorites_v1")||"[]"
+);
 
-function categoryName(c){
-if(c==="kilif")return"Telefon Kılıfı";
-if(c==="koruma")return"Telefon Koruma";
-if(c==="sarj")return"Şarj";
-return"Aksesuar";
-}
+
+/* =========================================================
+   ÜRÜN LİSTELE
+   ========================================================= */
 
 function renderProducts(){
+
 const grid=document.getElementById("productGrid");
 const no=document.getElementById("noResult");
 
 const filtered=PRODUCTS.filter(p=>{
-const cat=activeFilter==="all"||p.category===activeFilter;
-const text=(p.name+" "+p.desc).toLowerCase();
-return cat&&(!searchText||text.includes(searchText));
+
+const cat=
+activeFilter==="all"||
+p.category===activeFilter;
+
+const text=
+(p.name+" "+p.desc).toLowerCase();
+
+return cat &&
+(!searchText || text.includes(searchText));
+
 });
 
 grid.innerHTML="";
 
 if(!filtered.length){
+
 no.style.display="block";
 return;
+
 }
 
 no.style.display="none";
 
 filtered.forEach(p=>{
+
 const fav=favorites.includes(p.id);
 
 const card=document.createElement("div");
+
 card.className="card";
 
 card.innerHTML=`
+
 <div class="card-image">
 
-<div class="badge-top" style="position:absolute;top:10px;left:10px;z-index:4;padding:6px 9px;font-size:10px">
-TEKNOBİZ
-</div>
-
-<button class="product-fav ${fav?"active":""}"
+<button
+class="product-fav ${fav?"active":""}"
 onclick="event.stopPropagation();toggleFavorite(${p.id})">
+
 ${fav?"♥":"♡"}
+
 </button>
 
-<img src="${p.image}" alt="${p.name}" loading="lazy">
+<img
+src="${p.image}"
+alt="${p.name}"
+loading="lazy">
 
-<div class="stock">🟢 Stokta</div>
+<div class="stock">
+🟢 Stokta
+</div>
 
 </div>
 
 <div class="card-content">
 
-<div class="category">${categoryName(p.category)}</div>
+<div class="category">
+${categoryName(p.category)}
+</div>
 
-<h3>${p.name}</h3>
+<h3>
+${p.name}
+</h3>
 
-<div class="description">${p.desc}</div>
+<div class="description">
+${p.desc}
+</div>
 
 <div class="card-bottom">
+
 <div class="price">
-${p.price.toLocaleString("tr-TR")} <small>TL</small>
+${p.price.toLocaleString("tr-TR")}
+<small>TL</small>
 </div>
 
-<button class="inspect" onclick="openProduct(${p.id})">
+<button
+class="inspect"
+onclick="openProduct(${p.id})">
 İncele
 </button>
+
 </div>
 
-<button class="whatsapp-small" onclick="whatsappDirect(${p.id})">
+<button
+class="whatsapp-small"
+onclick="whatsappDirect(${p.id})">
+
 💬 WhatsApp'tan Bilgi Al
+
 </button>
 
 </div>
 `;
 
 grid.appendChild(card);
+
 });
+
 }
 
-function renderMiniProducts(){
-const box=document.getElementById("miniProducts");
+
+function categoryName(c){
+
+if(c==="kilif")return"Telefon Kılıfı";
+
+if(c==="koruma")return"Telefon Koruma";
+
+if(c==="sarj")return"Şarj";
+
+return"Aksesuar";
+
+}
+
+
+/* =========================================================
+   BİRLİKTE AL
+   ========================================================= */
+
+function fillTogether(){
+
+const a=document.getElementById("together1");
+const b=document.getElementById("together2");
+
+a.innerHTML="";
+b.innerHTML="";
 
 PRODUCTS.forEach(p=>{
-const b=document.createElement("button");
-b.className="tool";
-b.textContent="🛍️ "+p.name;
-b.onclick=()=>openProduct(p.id);
-box.appendChild(b);
+
+a.innerHTML+=`
+<option value="${p.id}">
+${p.name}
+</option>
+`;
+
+b.innerHTML+=`
+<option value="${p.id}">
+${p.name}
+</option>
+`;
+
 });
+
+if(PRODUCTS.length>1){
+
+b.value=PRODUCTS[1].id;
+
 }
 
+}
+
+
+function addTogether(){
+
+const id1=Number(
+document.getElementById("together1").value
+);
+
+const id2=Number(
+document.getElementById("together2").value
+);
+
+if(!id1 || !id2){
+
+alert("Lütfen iki ürün seç.");
+
+return;
+
+}
+
+if(id1===id2){
+
+alert("İki farklı ürün seçmelisin.");
+
+return;
+
+}
+
+const p1=PRODUCTS.find(p=>p.id===id1);
+const p2=PRODUCTS.find(p=>p.id===id2);
+
+cart.push({...p1});
+cart.push({...p2});
+
+updateCart();
+
+alert(
+"🛍️ Birlikte Al\n\n"+
+p1.name+"\n"+
+p2.name+
+"\n\nİki ürün de sepete eklendi."
+);
+
+}
+
+
+/* =========================================================
+   ÜRÜN MODAL
+   ========================================================= */
+
 function openProduct(id){
-selectedProduct=PRODUCTS.find(p=>p.id===id);
+
+selectedProduct=
+PRODUCTS.find(p=>p.id===id);
+
 if(!selectedProduct)return;
 
-document.getElementById("modalImage").src=selectedProduct.image;
-document.getElementById("modalTitle").textContent=selectedProduct.name;
+document.getElementById("modalImage").src=
+selectedProduct.image;
+
+document.getElementById("modalTitle").textContent=
+selectedProduct.name;
+
 document.getElementById("modalPrice").textContent=
 selectedProduct.price.toLocaleString("tr-TR")+" TL";
 
 let html="";
 
 if(selectedProduct.models){
+
 html+=`
+
 <div class="field">
-<label>Telefon Modeli</label>
+
+<label>
+Telefon Modeli
+</label>
+
 <select id="model">
-<option value="">Model seçiniz</option>
-${models.map(x=>`<option>${x}</option>`).join("")}
+
+<option value="">
+Model seçiniz
+</option>
+
+${models.map(x=>`
+<option>${x}</option>
+`).join("")}
+
 </select>
-</div>`;
+
+</div>
+
+`;
+
 }
 
 if(selectedProduct.colors){
+
 html+=`
+
 <div class="field">
-<label>Renk</label>
+
+<label>
+Renk
+</label>
+
 <select id="color">
-<option value="">Renk seçiniz</option>
-${selectedProduct.colors.map(x=>`<option>${x}</option>`).join("")}
+
+<option value="">
+Renk seçiniz
+</option>
+
+${selectedProduct.colors.map(x=>`
+<option>${x}</option>
+`).join("")}
+
 </select>
-</div>`;
+
+</div>
+
+`;
+
 }
 
 document.getElementById("options").innerHTML=html;
+
 openModal("productModal");
+
 }
+
+
+/* =========================================================
+   SEPET
+   ========================================================= */
 
 function addSelectedToCart(){
+
 if(!selectedProduct)return;
 
-const model=document.getElementById("model")?.value||"";
-const color=document.getElementById("color")?.value||"";
+const model=
+document.getElementById("model")?.value||"";
 
-cart.push({...selectedProduct,model,color});
+const color=
+document.getElementById("color")?.value||"";
+
+cart.push({
+...selectedProduct,
+model,
+color
+});
 
 updateCart();
+
 closeModal("productModal");
 
-alert("Ürün sepete eklendi. 🛒");
+alert("🛒 Ürün sepete eklendi.");
+
 }
+
 
 function updateCart(){
-document.getElementById("cartCount").textContent=cart.length;
+
+document.getElementById("cartCount").textContent=
+cart.length;
+
 }
+
 
 function openCart(){
+
 renderCart();
+
 openModal("cartModal");
+
 }
 
+
 function renderCart(){
-const list=document.getElementById("cartList");
+
+const list=
+document.getElementById("cartList");
 
 if(!cart.length){
-list.innerHTML=`<div style="text-align:center;padding:35px;color:#7f8c9f">Sepetiniz boş. 🛒</div>`;
-document.getElementById("cartTotal").textContent="0 TL";
+
+list.innerHTML=`
+<div style="text-align:center;padding:35px;color:#7f8c9f">
+Sepetiniz boş. 🛒
+</div>
+`;
+
+document.getElementById("cartTotal").textContent=
+"0 TL";
+
 return;
+
 }
 
 let total=0;
 
 list.innerHTML=cart.map((p,i)=>{
+
 total+=p.price;
 
 return`
+
 <div class="cart-item">
 
-<img src="${p.image}" alt="${p.name}">
+<img
+src="${p.image}"
+alt="${p.name}">
 
 <div class="cart-info">
-<strong>${p.name}</strong>
+
+<strong>
+${p.name}
+</strong>
+
 <small>
+
 ${p.model||""}
+
 ${p.color?" • "+p.color:""}
+
 <br>
+
 ${p.price.toLocaleString("tr-TR")} TL
+
 </small>
+
 </div>
 
-<button class="remove" onclick="removeCart(${i})">✕</button>
+<button
+class="remove"
+onclick="removeCart(${i})">
 
-</div>`;
+✕
+
+</button>
+
+</div>
+
+`;
+
 }).join("");
 
 document.getElementById("cartTotal").textContent=
 total.toLocaleString("tr-TR")+" TL";
+
 }
+
 
 function removeCart(i){
+
 cart.splice(i,1);
+
 updateCart();
+
 renderCart();
+
 }
 
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
 function whatsappDirect(id){
-const p=PRODUCTS.find(x=>x.id===id);
+
+const p=
+PRODUCTS.find(x=>x.id===id);
+
 if(!p)return;
 
 const text=
@@ -1028,51 +2045,77 @@ const text=
 "💰 Fiyat: "+p.price.toLocaleString("tr-TR")+" TL";
 
 window.open(
-"https://wa.me/905059999009?text="+encodeURIComponent(text),
+"https://wa.me/905059999009?text="+
+encodeURIComponent(text),
 "_blank"
 );
+
 }
 
+
 function whatsappProduct(){
+
 if(!selectedProduct)return;
 
-const name=document.getElementById("customerName").value.trim();
-const phone=document.getElementById("customerPhone").value.trim();
+const name=
+document.getElementById("customerName").value.trim();
 
-const model=document.getElementById("model")?.value||"";
-const color=document.getElementById("color")?.value||"";
+const phone=
+document.getElementById("customerPhone").value.trim();
 
 if(!name){
+
 alert("Lütfen adınızı yazın.");
+
 return;
+
 }
 
 if(!phone){
+
 alert("Lütfen telefon numaranızı yazın.");
+
 return;
+
 }
+
+const model=
+document.getElementById("model")?.value||"";
+
+const color=
+document.getElementById("color")?.value||"";
 
 let text=
 "Merhaba TeknoBiz, web sitesinden sipariş vermek istiyorum.\n\n"+
 "🛍️ Ürün: "+selectedProduct.name+"\n"+
 "💰 Fiyat: "+selectedProduct.price.toLocaleString("tr-TR")+" TL\n";
 
-if(model)text+="📱 Model: "+model+"\n";
-if(color)text+="🎨 Renk: "+color+"\n";
+if(model)
+text+="📱 Model: "+model+"\n";
+
+if(color)
+text+="🎨 Renk: "+color+"\n";
 
 text+="👤 Ad Soyad: "+name+"\n";
 text+="📞 Telefon: "+phone;
 
 window.open(
-"https://wa.me/905059999009?text="+encodeURIComponent(text),
+"https://wa.me/905059999009?text="+
+encodeURIComponent(text),
 "_blank"
 );
+
 }
 
+
 function whatsappCart(){
+
 if(!cart.length){
+
 alert("Sepetiniz boş.");
+
 return;
+
 }
 
 let total=0;
@@ -1081,31 +2124,52 @@ let text=
 "Merhaba TeknoBiz, web sitesinden sipariş vermek istiyorum.\n\n";
 
 cart.forEach((p,i)=>{
+
 total+=p.price;
 
 text+=
 (i+1)+". "+p.name+"\n"+
 "Fiyat: "+p.price.toLocaleString("tr-TR")+" TL\n";
 
-if(p.model)text+="Model: "+p.model+"\n";
-if(p.color)text+="Renk: "+p.color+"\n";
+if(p.model)
+text+="Model: "+p.model+"\n";
+
+if(p.color)
+text+="Renk: "+p.color+"\n";
 
 text+="\n";
+
 });
 
-text+="💰 TOPLAM: "+total.toLocaleString("tr-TR")+" TL";
+text+=
+"💰 TOPLAM: "+
+total.toLocaleString("tr-TR")+
+" TL";
 
 window.open(
-"https://wa.me/905059999009?text="+encodeURIComponent(text),
+"https://wa.me/905059999009?text="+
+encodeURIComponent(text),
 "_blank"
 );
+
 }
 
+
+/* =========================================================
+   FAVORİLER
+   ========================================================= */
+
 function toggleFavorite(id){
+
 if(favorites.includes(id)){
-favorites=favorites.filter(x=>x!==id);
+
+favorites=
+favorites.filter(x=>x!==id);
+
 }else{
+
 favorites.push(id);
+
 }
 
 localStorage.setItem(
@@ -1113,97 +2177,222 @@ localStorage.setItem(
 JSON.stringify(favorites)
 );
 
-document.getElementById("favCount").textContent=favorites.length;
 renderProducts();
+
 }
 
+
 function showFavorites(){
-const list=PRODUCTS.filter(p=>favorites.includes(p.id));
+
+const list=
+PRODUCTS.filter(p=>favorites.includes(p.id));
 
 if(!list.length){
+
 alert("Henüz favori ürününüz yok. ❤️");
+
 return;
+
 }
 
 alert(
-"❤️ Favorileriniz:\n\n"+
-list.map(p=>p.name+" - "+p.price.toLocaleString("tr-TR")+" TL").join("\n")
+"❤️ FAVORİLER\n\n"+
+list.map(p=>
+p.name+
+" - "+
+p.price.toLocaleString("tr-TR")+
+" TL"
+).join("\n")
 );
+
 }
 
+
+/* =========================================================
+   DİĞER ÖZELLİKLER
+   ========================================================= */
+
 function dailyProduct(){
-const p=PRODUCTS[new Date().getDate()%PRODUCTS.length];
+
+const p=
+PRODUCTS[
+new Date().getDate()%
+PRODUCTS.length
+];
 
 alert(
 "🌟 GÜNÜN ÜRÜNÜ\n\n"+
-p.name+"\n"+
-p.price.toLocaleString("tr-TR")+" TL"
+p.name+
+"\n"+
+p.price.toLocaleString("tr-TR")+
+" TL"
 );
 
 openProduct(p.id);
+
 }
 
+
 function surpriseCampaign(){
-const discounts=[10,15,20,25,30];
-const discount=discounts[Math.floor(Math.random()*discounts.length)];
+
+const discounts=[
+10,
+15,
+20,
+25,
+30
+];
+
+const discount=
+discounts[
+Math.floor(
+Math.random()*
+discounts.length
+)
+];
 
 alert(
 "🎁 SÜRPRİZ KAMPANYA!\n\n"+
-"Bugün sana özel %"+discount+" indirim fırsatı çıktı! 🎉"
+"Bugün sana özel %"+
+discount+
+" indirim fırsatı çıktı!"
 );
+
 }
 
+
 function bestSellers(){
-const best=[PRODUCTS[0],PRODUCTS[1],PRODUCTS[2]];
+
+const best=[
+PRODUCTS[0],
+PRODUCTS[1],
+PRODUCTS[2]
+];
 
 alert(
 "🔥 ÇOK SATANLAR\n\n"+
 best.map((p,i)=>
-(i+1)+". "+p.name+" - "+p.price.toLocaleString("tr-TR")+" TL"
+(i+1)+". "+
+p.name+
+" - "+
+p.price.toLocaleString("tr-TR")+
+" TL"
 ).join("\n")
 );
+
 }
 
-function addTogether(){
-const a=Number(document.getElementById("together1").value);
-const b=Number(document.getElementById("together2").value);
 
-if(!a||!b||a===b){
-alert("Lütfen iki farklı ürün seç.");
-return;
+function showCalculator(){
+
+const price=
+Number(
+prompt("Ürün fiyatını TL olarak yazın:")
+);
+
+if(!price)return;
+
+const discount=
+Number(
+prompt("İndirim yüzdesini yazın:")
+);
+
+if(isNaN(discount))return;
+
+const newPrice=
+price-(price*discount/100);
+
+alert(
+"💸 İNDİRİM HESABI\n\n"+
+"Eski fiyat: "+
+price.toLocaleString("tr-TR")+
+" TL\n"+
+"İndirim: %"+
+discount+
+"\nYeni fiyat: "+
+newPrice.toLocaleString("tr-TR")+
+" TL"
+);
+
 }
 
-const p1=PRODUCTS.find(p=>p.id===a);
-const p2=PRODUCTS.find(p=>p.id===b);
 
-cart.push({...p1});
-cart.push({...p2});
+function showCoupon(){
 
-updateCart();
+const code=
+prompt(
+"Kupon kodunu yazın:\n\n"+
+"TEKNO10 = %10 indirim\n"+
+"TEKNO50 = 50 TL indirim"
+);
 
-alert("İki ürün de sepete eklendi. 🛍️");
+if(!code)return;
+
+if(code.toUpperCase()==="TEKNO10"){
+
+alert("🎟️ TEKNO10 kuponu: %10 indirim.");
+
+}else if(code.toUpperCase()==="TEKNO50"){
+
+alert("🎟️ TEKNO50 kuponu: 50 TL indirim.");
+
+}else{
+
+alert("❌ Geçersiz kupon kodu.");
+
 }
 
-function fillTogether(){
-const a=document.getElementById("together1");
-const b=document.getElementById("together2");
-
-PRODUCTS.forEach(p=>{
-a.innerHTML+=`<option value="${p.id}">${p.name}</option>`;
-b.innerHTML+=`<option value="${p.id}">${p.name}</option>`;
-});
-
-if(PRODUCTS.length>1)b.value=PRODUCTS[1].id;
 }
+
+
+function showTracking(){
+
+const order=
+prompt(
+"Sipariş numaranızı yazın:\n\n"+
+"TZ1001\n"+
+"TZ1002\n"+
+"TZ1003"
+);
+
+if(!order)return;
+
+const orders={
+
+TZ1001:"📦 Sipariş hazırlanıyor.",
+
+TZ1002:"🚚 Sipariş kargoda.",
+
+TZ1003:"✅ Sipariş teslim edildi."
+
+};
+
+alert(
+orders[order.toUpperCase()]||
+"❌ Sipariş bulunamadı."
+);
+
+}
+
+
+/* =========================================================
+   YORUMLAR
+   ========================================================= */
 
 function addReview(){
-const name=prompt("Adınız:");
+
+const name=
+prompt("Adınız:");
+
 if(!name)return;
 
-const text=prompt("Yorumunuz:");
+const text=
+prompt("Yorumunuz:");
+
 if(!text)return;
 
-const reviews=JSON.parse(
+const reviews=
+JSON.parse(
 localStorage.getItem("teknobiz_reviews")||"[]"
 );
 
@@ -1218,173 +2407,527 @@ JSON.stringify(reviews)
 );
 
 renderReviews();
+
 }
 
-function renderReviews(){
-const box=document.getElementById("reviews");
 
-const reviews=JSON.parse(
+function renderReviews(){
+
+const box=
+document.getElementById("reviews");
+
+const reviews=
+JSON.parse(
 localStorage.getItem("teknobiz_reviews")||"[]"
 );
 
 if(!reviews.length){
+
 box.innerHTML=`
+
 <div class="review">
-<div class="stars">★★★★★</div>
-<strong>TeknoBiz müşterisi</strong>
-<p class="muted">Ürünlerimizi deneyin, yorumunuzu siz de bırakın.</p>
-</div>`;
+
+<div class="stars">
+★★★★★
+</div>
+
+<strong>
+TeknoBiz müşterisi
+</strong>
+
+<p class="muted">
+Ürünlerimizi deneyin, yorumunuzu siz de bırakın.
+</p>
+
+</div>
+
+`;
+
 return;
+
 }
 
-box.innerHTML=reviews.slice(-3).map(r=>`
+box.innerHTML=
+reviews.slice(-3).map(r=>`
+
 <div class="review">
-<div class="stars">★★★★★</div>
-<strong>${escapeHTML(r.name)}</strong>
-<p class="muted">${escapeHTML(r.text)}</p>
+
+<div class="stars">
+★★★★★
 </div>
+
+<strong>
+${escapeHTML(r.name)}
+</strong>
+
+<p class="muted">
+${escapeHTML(r.text)}
+</p>
+
+</div>
+
 `).join("");
+
 }
+
 
 function escapeHTML(text){
+
 return String(text)
 .replaceAll("&","&amp;")
 .replaceAll("<","&lt;")
 .replaceAll(">","&gt;")
 .replaceAll('"',"&quot;")
 .replaceAll("'","&#039;");
+
 }
 
-function showCalculator(){
-const price=Number(
-prompt("Ürün fiyatını TL olarak yazın:")
-);
 
-if(!price||price<0)return;
-
-const discount=Number(
-prompt("İndirim yüzdesini yazın:")
-);
-
-if(!discount&&discount!==0)return;
-
-const newPrice=price-(price*discount/100);
-
-alert(
-"💸 İNDİRİM HESABI\n\n"+
-"Eski fiyat: "+price.toLocaleString("tr-TR")+" TL\n"+
-"İndirim: %"+discount+"\n"+
-"Yeni fiyat: "+newPrice.toLocaleString("tr-TR")+" TL"
-);
-}
-
-function showCoupon(){
-const code=prompt(
-"Kupon kodunu yazın:\n\nTEKNO10 = %10 indirim\nTEKNO50 = 50 TL indirim"
-);
-
-if(!code)return;
-
-if(code.toUpperCase()==="TEKNO10"){
-alert("🎟️ TEKNO10 kuponu: %10 indirim.");
-}else if(code.toUpperCase()==="TEKNO50"){
-alert("🎟️ TEKNO50 kuponu: 50 TL indirim.");
-}else{
-alert("❌ Geçersiz kupon kodu.");
-}
-}
-
-function showTracking(){
-const order=prompt(
-"Sipariş numaranızı yazın:\n\n"+
-"TZ1001\nTZ1002\nTZ1003"
-);
-
-if(!order)return;
-
-const orders={
-TZ1001:"📦 Sipariş hazırlanıyor.",
-TZ1002:"🚚 Sipariş kargoda.",
-TZ1003:"✅ Sipariş teslim edildi."
-};
-
-alert(
-orders[order.toUpperCase()]||
-"❌ Sipariş bulunamadı."
-);
-}
+/* =========================================================
+   MODAL
+   ========================================================= */
 
 function openModal(id){
-document.getElementById(id).classList.add("show");
+
+document
+.getElementById(id)
+.classList.add("show");
+
 }
+
 
 function closeModal(id){
-document.getElementById(id).classList.remove("show");
+
+document
+.getElementById(id)
+.classList.remove("show");
+
 }
 
-document.querySelectorAll(".modal").forEach(m=>{
+
+document
+.querySelectorAll(".modal")
+.forEach(m=>{
+
 m.addEventListener("click",e=>{
-if(e.target===m)m.classList.remove("show");
-});
+
+if(e.target===m)
+m.classList.remove("show");
+
 });
 
-document.getElementById("search").addEventListener("input",function(){
-searchText=this.value.toLowerCase().trim();
+});
+
+
+/* =========================================================
+   ARAMA
+   ========================================================= */
+
+document
+.getElementById("search")
+.addEventListener("input",function(){
+
+searchText=
+this.value
+.toLowerCase()
+.trim();
+
 renderProducts();
+
 });
 
-document.querySelectorAll(".filter").forEach(button=>{
+
+/* =========================================================
+   FİLTRE
+   ========================================================= */
+
+document
+.querySelectorAll(".filter")
+.forEach(button=>{
+
 button.addEventListener("click",function(){
 
-document.querySelectorAll(".filter")
-.forEach(x=>x.classList.remove("active"));
+document
+.querySelectorAll(".filter")
+.forEach(x=>
+x.classList.remove("active")
+);
 
 this.classList.add("active");
-activeFilter=this.dataset.filter;
+
+activeFilter=
+this.dataset.filter;
 
 renderProducts();
+
 });
+
 });
+
+
+/* =========================================================
+   KAMPANYA SAYACI
+   ========================================================= */
 
 function campaignTimer(){
 
-let end=Number(
-localStorage.getItem("teknobiz_campaign_end")||0
+let end=
+Number(
+localStorage.getItem(
+"teknobiz_campaign_end"
+)||0
 );
 
-if(!end||end<Date.now()){
-end=Date.now()+24*60*60*1000;
+if(!end || end<Date.now()){
+
+end=
+Date.now()+
+24*60*60*1000;
+
 localStorage.setItem(
 "teknobiz_campaign_end",
 String(end)
 );
+
 }
 
 function update(){
 
-let remaining=Math.max(0,end-Date.now());
+let remaining=
+Math.max(
+0,
+end-Date.now()
+);
 
-let h=Math.floor(remaining/3600000);
+let h=
+Math.floor(
+remaining/3600000
+);
+
 remaining%=3600000;
 
-let m=Math.floor(remaining/60000);
+let m=
+Math.floor(
+remaining/60000
+);
+
 remaining%=60000;
 
-let s=Math.floor(remaining/1000);
+let s=
+Math.floor(
+remaining/1000
+);
 
-document.getElementById("campaignTimer").textContent=
-[h,m,s].map(x=>String(x).padStart(2,"0")).join(":");
+document
+.getElementById("campaignTimer")
+.textContent=
+[h,m,s]
+.map(x=>
+String(x).padStart(2,"0")
+)
+.join(":");
+
 }
 
 update();
+
 setInterval(update,1000);
+
 }
 
-async function loadWeather(){
+
+/* =========================================================
+   81 İL HAVA DURUMU
+   ========================================================= */
+
+const cities=[
+
+["Adana",37.0,35.3],
+["Adıyaman",37.76,38.28],
+["Afyonkarahisar",38.75,30.54],
+["Ağrı",39.72,43.05],
+["Aksaray",38.37,34.03],
+["Amasya",40.65,35.83],
+["Ankara",39.93,32.86],
+["Antalya",36.89,30.70],
+["Ardahan",41.11,42.70],
+["Artvin",41.18,41.82],
+["Aydın",37.85,27.84],
+["Balıkesir",39.65,27.88],
+["Bartın",41.63,32.34],
+["Batman",37.88,41.13],
+["Bayburt",40.25,40.22],
+["Bilecik",40.15,29.98],
+["Bingöl",38.89,40.50],
+["Bitlis",38.40,42.11],
+["Bolu",40.73,31.61],
+["Burdur",37.72,30.29],
+["Bursa",40.19,29.06],
+["Çanakkale",40.15,26.41],
+["Çankırı",40.60,33.62],
+["Çorum",40.55,34.95],
+["Denizli",37.78,29.09],
+["Diyarbakır",37.91,40.23],
+["Düzce",40.84,31.16],
+["Edirne",41.68,26.56],
+["Elazığ",38.67,39.22],
+["Erzincan",39.75,39.49],
+["Erzurum",39.90,41.27],
+["Eskişehir",39.77,30.52],
+["Gaziantep",37.06,37.38],
+["Giresun",40.91,38.39],
+["Gümüşhane",40.46,39.48],
+["Hakkari",37.58,43.74],
+["Hatay",36.20,36.16],
+["Iğdır",39.92,44.05],
+["Isparta",37.76,30.55],
+["İstanbul",41.01,28.98],
+["İzmir",38.42,27.14],
+["Kahramanmaraş",37.58,36.93],
+["Karabük",41.20,32.63],
+["Karaman",37.18,33.22],
+["Kars",40.60,43.10],
+["Kastamonu",41.38,33.78],
+["Kayseri",38.72,35.49],
+["Kilis",36.72,37.12],
+["Kırıkkale",39.85,33.51],
+["Kırklareli",41.73,27.22],
+["Kırşehir",39.15,34.16],
+["Kocaeli",40.77,29.94],
+["Konya",37.87,32.49],
+["Kütahya",39.42,29.98],
+["Malatya",38.35,38.31],
+["Manisa",38.61,27.43],
+["Mardin",37.32,40.72],
+["Mersin",36.80,34.63],
+["Muğla",37.22,28.36],
+["Muş",38.73,41.49],
+["Nevşehir",38.62,34.71],
+["Niğde",37.97,34.68],
+["Ordu",40.98,37.88],
+["Osmaniye",37.07,36.25],
+["Rize",41.02,40.52],
+["Sakarya",40.78,30.40],
+["Samsun",41.28,36.33],
+["Siirt",37.93,41.94],
+["Sinop",42.02,35.15],
+["Sivas",39.75,37.02],
+["Şanlıurfa",37.16,38.79],
+["Şırnak",37.52,42.46],
+["Tekirdağ",40.98,27.51],
+["Tokat",40.31,36.55],
+["Trabzon",41.00,39.72],
+["Tunceli",39.11,39.55],
+["Uşak",38.68,29.41],
+["Van",38.50,43.38],
+["Yalova",40.65,29.27],
+["Yozgat",39.82,34.81],
+["Zonguldak",41.45,31.79]
+
+];
+
+
+/* 81 İL KARTLARI */
+
+function createWeatherCards(){
+
+const track=
+document.getElementById("weatherTrack");
+
+let html="";
+
+cities.forEach((city,index)=>{
+
+html+=`
+
+<div
+class="weather-card"
+id="weather-${index}">
+
+<div class="weather-city">
+${city[0]}
+</div>
+
+<div class="weather-icon">
+🌤️
+</div>
+
+<div class="weather-temp">
+--°
+</div>
+
+<div class="weather-desc">
+Yükleniyor...
+</div>
+
+</div>
+
+`;
+
+});
+
+/* sonsuz kayan görünüm için ikinci kez */
+track.innerHTML=html+html;
+
+}
+
+
+/* HAVA DURUMUNU AL */
+
+async function load81Weather(){
+
+for(let i=0;i<cities.length;i++){
+
+const city=cities[i];
 
 try{
 
-const response=await fetch(
+const response=
+await fetch(
+"https://api.open-meteo.com/v1/forecast"+
+"?latitude="+city[1]+
+"&longitude="+city[2]+
+"&current=temperature_2m,weather_code"+
+"&timezone=Europe%2FIstanbul"
+);
+
+const data=
+await response.json();
+
+const temp=
+Math.round(
+data.current.temperature_2m
+);
+
+const code=
+data.current.weather_code;
+
+let icon="🌤️";
+let desc="Parçalı bulutlu";
+
+if(code===0){
+
+icon="☀️";
+desc="Açık";
+
+}else if(code<=2){
+
+icon="🌤️";
+desc="Parçalı bulutlu";
+
+}else if(code===3){
+
+icon="☁️";
+desc="Kapalı";
+
+}else if(code<=67){
+
+icon="🌧️";
+desc="Yağmurlu";
+
+}else if(code<=77){
+
+icon="❄️";
+desc="Karlı";
+
+}else if(code<=82){
+
+icon="🌦️";
+desc="Sağanak";
+
+}else if(code>=95){
+
+icon="⛈️";
+desc="Gök gürültülü";
+
+}
+
+
+/* İLK KART */
+const card=
+document.getElementById(
+"weather-"+i
+);
+
+if(card){
+
+card.querySelector(
+".weather-icon"
+).textContent=icon;
+
+card.querySelector(
+".weather-temp"
+).textContent=
+temp+"°";
+
+card.querySelector(
+".weather-desc"
+).textContent=
+desc;
+
+}
+
+
+/* İKİNCİ KOPYA */
+const copyCards=
+document.querySelectorAll(
+".weather-card"
+);
+
+const second=
+copyCards[i+cities.length];
+
+if(second){
+
+second.querySelector(
+".weather-icon"
+).textContent=icon;
+
+second.querySelector(
+".weather-temp"
+).textContent=
+temp+"°";
+
+second.querySelector(
+".weather-desc"
+).textContent=
+desc;
+
+}
+
+}catch(error){
+
+const card=
+document.getElementById(
+"weather-"+i
+);
+
+if(card){
+
+card.querySelector(
+".weather-desc"
+).textContent=
+"Bilgi alınamadı";
+
+}
+
+}
+
+}
+
+}
+
+
+/* =========================================================
+   BUCAK HAVA
+   ========================================================= */
+
+async function loadBucakWeather(){
+
+try{
+
+const response=
+await fetch(
 "https://api.open-meteo.com/v1/forecast"+
 "?latitude=37.4593"+
 "&longitude=30.5950"+
@@ -1392,42 +2935,86 @@ const response=await fetch(
 "&timezone=Europe%2FIstanbul"
 );
 
-const data=await response.json();
+const data=
+await response.json();
 
-document.getElementById("temperature").textContent=
-Math.round(data.current.temperature_2m)+"°";
+document.getElementById(
+"temperature"
+).textContent=
+Math.round(
+data.current.temperature_2m
+)+"°";
 
-const code=data.current.weather_code;
+const code=
+data.current.weather_code;
 
 let icon="🌤️";
 let text="Değişken";
 
-if(code===0){icon="☀️";text="Açık"}
-else if(code<=2){icon="🌤️";text="Parçalı bulutlu"}
-else if(code===3){icon="☁️";text="Kapalı"}
-else if(code<=67){icon="🌧️";text="Yağmurlu"}
-else if(code<=77){icon="❄️";text="Karlı"}
-else if(code<=82){icon="🌦️";text="Sağanak"}
-else if(code>=95){icon="⛈️";text="Gök gürültülü"}
+if(code===0){
+icon="☀️";
+text="Açık";
+}
+else if(code<=2){
+icon="🌤️";
+text="Parçalı bulutlu";
+}
+else if(code===3){
+icon="☁️";
+text="Kapalı";
+}
+else if(code<=67){
+icon="🌧️";
+text="Yağmurlu";
+}
+else if(code<=77){
+icon="❄️";
+text="Karlı";
+}
+else if(code<=82){
+icon="🌦️";
+text="Sağanak";
+}
+else if(code>=95){
+icon="⛈️";
+text="Gök gürültülü";
+}
 
-document.getElementById("weatherIcon").textContent=icon;
-document.getElementById("weatherText").textContent=text;
+document.getElementById(
+"weatherIcon"
+).textContent=icon;
+
+document.getElementById(
+"weatherText"
+).textContent=text;
 
 }catch(e){
-document.getElementById("weatherText").textContent=
+
+document.getElementById(
+"weatherText"
+).textContent=
 "Hava durumu alınamadı";
+
 }
+
 }
+
+
+/* =========================================================
+   KUR
+   ========================================================= */
 
 async function loadCurrency(){
 
 try{
 
-const response=await fetch(
+const response=
+await fetch(
 "https://open.er-api.com/v6/latest/TRY"
 );
 
-const data=await response.json();
+const data=
+await response.json();
 
 document.getElementById("usd").textContent=
 (1/data.rates.USD).toFixed(2)+" TL";
@@ -1440,29 +3027,61 @@ document.getElementById("gbp").textContent=
 
 }catch(e){
 
-document.getElementById("usd").textContent="Alınamadı";
-document.getElementById("eur").textContent="Alınamadı";
-document.getElementById("gbp").textContent="Alınamadı";
-}
+document.getElementById("usd").textContent=
+"Alınamadı";
+
+document.getElementById("eur").textContent=
+"Alınamadı";
+
+document.getElementById("gbp").textContent=
+"Alınamadı";
+
 }
 
-document.getElementById("favCount").textContent=favorites.length;
+}
+
+
+/* =========================================================
+   BAŞLAT
+   ========================================================= */
 
 renderProducts();
-renderMiniProducts();
+
 fillTogether();
+
 renderReviews();
+
 updateCart();
+
 campaignTimer();
-loadWeather();
+
+createWeatherCards();
+
+load81Weather();
+
+loadBucakWeather();
+
 loadCurrency();
 
-document.addEventListener("keydown",e=>{
+
+/* ESC */
+document.addEventListener(
+"keydown",
+e=>{
+
 if(e.key==="Escape"){
-document.querySelectorAll(".modal")
-.forEach(x=>x.classList.remove("show"));
+
+document
+.querySelectorAll(".modal")
+.forEach(x=>
+x.classList.remove("show")
+);
+
 }
-});
+
+}
+);
+
 </script>
 
 </body>
